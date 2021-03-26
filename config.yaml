@@ -8,6 +8,6 @@ webdriver:
 portal_ui:
 
   base_url: https://quicklly.com
-  admin_user: raqeeb.irfalaman@gmail.com
+  admin_user: raqeeb.alaman@gmail.com
   admin_password: abc123!
 
