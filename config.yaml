@@ -1,0 +1,13 @@
+webdriver:
+  desired_capabilities:
+    acceptInsecureCerts: True
+  options: [ --allow-running-insecure-content, --ignore-certificate-errors , ]
+
+
+
+portal_ui:
+
+  base_url: https://quicklly.com
+  admin_user: raqeeb.irfalaman@gmail.com
+  admin_password: abc123!
+

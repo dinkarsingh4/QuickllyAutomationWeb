@@ -1,0 +1,96 @@
+"""
+"""
+
+from selenium.webdriver.common.by import By
+
+
+class LogIn:
+    # Main page locators
+    learn_more_link = (By.ID, 'learn-more-link')
+    back_to_safety_button = (By.ID, 'primary-button')
+    SignIn_button = (By.ID, 'procedcheckoutBtn')
+    email_textbox = (By.ID, 'user_email')
+    email = (By.XPATH, '//*[@id="user_email"]')
+    pasw = (By.XPATH, '//*[@id="password"]')
+    password_textbox = (By.ID, 'password')
+    login_button = (By.ID, 'btn-login')
+    login_heading = (By.CLASS_NAME, 'frmheading')
+
+
+class ContinueAsGuest:
+    ContinueAsGuest_button = (By.XPATH, '//*[@id="gustusrlogin"]/span')
+    firstname = (By.NAME, 'fname')
+    lastname = (By.NAME, 'lname')
+    fullAddress = (By.NAME, 'full_address')
+    Apartment = (By.NAME, 'apt')
+    MobileNumber = (By.NAME, 'mobile')
+    EmailAddress = (By.NAME, 'email')
+    submit_button = (By.ID, 'shippingUpprdtcsubbtn')
+    firstname_error = (By.ID, 'fname-error')
+    signin_button = (By.XPATH, '//*[@id="procedcheckoutBtn"]')
+
+
+class NeedAnAccount:
+    NeedAnAccount_button = (By.XPATH, '//*[@id="signupformmodal"]/div/div/div[2]/div/div[1]/div/div[1]/p[1]/span')
+    firname = (By.XPATH, '//*[@id="reg-form"]/div[1]/input')
+    lasname = (By.XPATH, '//*[@id="reg-form"]/div[2]/input')
+    enteraddress = (By.XPATH, '//*[@id="autocomplete"]')
+    apartmentno = (By.ID, 'apt_no')
+    mobileno = (By.XPATH, '//*[@id="reg-form"]/div[5]/input[2]')
+    email2 = (By.XPATH, '//*[@id="reg-form"]/div[6]/input')
+    pass2 = (By.XPATH, '//*[@id="reg-form"]/div[7]/input')
+    ConfirmPassword = (By.NAME, 'confpassword')
+    register_button = (By.ID, 'btn-reg')
+    signin = (By.XPATH, '//*[@id="procedcheckoutBtn"]')
+
+class ForgetPassword:
+    SI_button = (By.XPATH, '//*[@id="procedcheckoutBtn"]')
+    ForgetPassword_button = (By.XPATH, '//*[@id="apiformprodct"]/div[1]/div/div/div[3]/span/a')
+    registered_email = (By.XPATH, '//*[@id="email"]')
+    submit_button = (By.XPATH, '//*[@id="form"]/div[3]/input')
+    Uer_login = (By.XPATH, '//*[@id="signupformmodal"]/div/div/div[2]/div/div[1]/div/div[1]/p[3]/span')
+    heading1 = (By.XPATH, '//*[@id="searchhide"]/div[5]/div[1]/div[1]/h3')
+    heading2 = (By.XPATH, '//*[@id="searchhide"]/div[5]/div[3]/div[1]/h3')
+
+
+
+class CommonLocators:
+    learn_more_link = (By.ID, 'learn-more-link')
+    main_loader = (By.XPATH, '/html/body/header/a/img')
+
+    buttons = (By.XPATH, '//button[@type="submit"]')
+    main_heading = (By.XPATH, '//h3')
+    table = (By.XPATH, "//table")
+    table_xpath = '(//table)[{}]'
+    xpath_head = (By.XPATH, "//table[contains(@class,'table')]//th")
+    heading_xpath = '(//table[contains(@class,"table")])[{}]//th'
+    next_page = (By.XPATH, '//table//a[@aria-label="Next page"]')
+    next_page_xpath = '(//table)[{}]//a[@aria-label="Next page"]'
+    success_toast_msg = (By.XPATH, "//div[contains(@class,'alert-success')]")
+    global_toast_message = (By.XPATH, '//*[local-name()="global-messages"]//div[contains(@class,"alert-")]')
+    toast_message_close_button = (By.XPATH, '//*[local-name()="global-messages"]//button')
+    table_headings = (By.XPATH, '//thead//th')
+    add_button = (By.XPATH, '//span[contains(@class,"btn btn-primary pull-right")]')
+    ng_spinner = (By.XPATH, '//div[contains(@class, "ng-spinner-loader")]')
+    alert_2 = (By.XPATH, '//*[local-name()="global-messages"]//div[contains(@role,"alert")]')
+    spinner = (By.XPATH, '//app-activity-indicator/..')
+    verification_textbox = (By.XPATH, '//app-password-verification//input')
+    verification_confirm_button = (By.XPATH, '//app-password-verification//button[contains(@class,"btn-primary")]')
+    verification_cancel_button = (By.XPATH, '//app-password-verification//button[contains(@class,"cancel_button")]')
+    next_page_button = (By.XPATH, '//a[@aria-label="Next page"]')
+    # main_loader = (By.XPATH, '//app-activity-indicator//div[@id="loader"]')
+    sub_page_loader = (By.XPATH, '//app-spinner')
+
+
+class PrivacyErrorPageLocators:
+    # Privacy Error Page Locators
+    learn_more_link = (By.ID, 'learn-more-link')
+    err_cert_common_name_invalid = (By.ID, 'error-code')
+    improve_chrome_security_checkbox = (By.ID, 'opt-in-checkbox')
+    advanced_button = (By.ID, 'details-button')
+    proceed_link = (By.ID, 'proceed-link')
+    back_to_safety_button = (By.ID, 'primary-button')
+
+
+def email_textbox_id():
+    return None
