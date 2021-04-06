@@ -42,4 +42,3 @@ class guest(BasePage):
 
     def click_submit(self):
         self.click(ContinueAsGuest.submit_button)
-        print("shipping address was entered successfully")

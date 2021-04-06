@@ -48,13 +48,13 @@ class BasePage:
             chrome_options.add_argument(c)
         caps = selenium.webdriver.DesiredCapabilities.CHROME.copy()
         caps.update(env.get_config_value('webdriver', 'desired_capabilities'))
-        driver = selenium.webdriver.Chrome(options=chrome_options, desired_capabilities=caps, executable_path='/home/excellence/PycharmProjects/quicklly/drivers/chromedriver')
+        driver = selenium.webdriver.Chrome(options=chrome_options, desired_capabilities=caps, executable_path='/home/excellence/PycharmProjects/gitAutomation/drivers/chromedriver')
         driver.maximize_window()
         # driver.set_page_load_timeout(cls.page_load_timeout)
         # driver.set_script_timeout(cls.page_load_timeout)
         return driver
 
-    def capture_screen_shot(self):
+    def capture_screen_shot(self) -> object:
         if not os.path.exists('screenshots'):
             os.makedirs('screenshots')
 
@@ -101,7 +101,7 @@ class BasePage:
                 time.sleep(2)
         return element_text_list
 
-    def get_attribute(self, by_locator, attr):
+    def get_attribute(self, by_locator, attr) -> object:
         return self.find_element(by_locator).get_attribute(attr)
 
     def get_text_field_value(self, by_locator):

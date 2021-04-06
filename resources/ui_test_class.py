@@ -22,11 +22,7 @@ class UIClass(unittest.TestCase):
     driver: Remote = None
     const_data = DataClass
 
-    # Type Hints
     base_page: BasePage = None
-
-    # guest_page: BasePage = None
-    # need_page: BasePage = None
 
     @classmethod
     def setUpClass(cls):
@@ -35,18 +31,11 @@ class UIClass(unittest.TestCase):
         cls.common_methods = Common(cls.driver)
         cls.driver = cls.base_page.get_browser_instance()
         cls.base_page.driver = cls.driver
-
-
-        # cls.end_user_client = AutoIt(cls.driver)
-
-        # UI Pages
-        # cls.home_page = HomePage(cls.driver)
         cls.maine_page = Login(cls.driver)
 
 
     @classmethod
     def tearDownClass(cls):
-        # To do the cleanup after test has executed.
         cls.driver.close()
         cls.driver.quit()
         super(UIClass, cls).tearDownClass()
@@ -59,28 +48,18 @@ class UIIClass(unittest.TestCase):
 
     guest_page: BasePage = None
 
-    # Type Hints
-    # base_page: BasePage = None
-    # guest_page: BasePage = None
-    # need_page: BasePage = None
-
     @classmethod
     def setUpClass(cls):
         super(UIIClass, cls).setUpClass()
         cls.guest_page = BasePage(cls.driver)
         cls.common_methods = Common(cls.driver)
         cls.driver = cls.guest_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
         cls.guest_page.driver = cls.driver
-
-        # cls.end_user_client = AutoIt(cls.driver)
-
-        # UI Pages
-        # cls.home_page = HomePage(cls.driver)
         cls.guest_page = guest(cls.driver)
 
     @classmethod
     def tearDownClass(cls):
-        # To do the cleanup after test has executed.
         cls.driver.close()
         cls.driver.quit()
         super(UIIClass, cls).tearDownClass()
@@ -91,9 +70,6 @@ class UIIIClass(unittest.TestCase):
     driver: Remote = None
     const_data = DataClass
 
-    # Type Hints
-    # base_page: BasePage = None
-    # guest_page: BasePage = None
     need_page: BasePage = None
 
     @classmethod
@@ -102,17 +78,12 @@ class UIIIClass(unittest.TestCase):
         cls.need_page = BasePage(cls.driver)
         cls.common_methods = Common(cls.driver)
         cls.driver = cls.need_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
         cls.need_page.driver = cls.driver
-
-        # cls.end_user_client = AutoIt(cls.driver)
-
-        # UI Pages
-        # cls.home_page = HomePage(cls.driver)
         cls.need_page = needanaccount(cls.driver)
 
     @classmethod
     def tearDownClass(cls):
-        # To do the cleanup after test has executed.
         cls.driver.close()
         cls.driver.quit()
         super(UIIIClass, cls).tearDownClass()
@@ -123,10 +94,7 @@ class UIIIIClass(unittest.TestCase):
     driver: Remote = None
     const_data = DataClass
 
-    # Type Hints
-    # base_page: BasePage = None
-    # guest_page: BasePage = None
-    # need_page: BasePage = None
+    forgot_page: BasePage = None
 
     @classmethod
     def setUpClass(cls):
@@ -134,17 +102,12 @@ class UIIIIClass(unittest.TestCase):
         cls.forget_page = BasePage(cls.driver)
         cls.common_methods = Common(cls.driver)
         cls.driver = cls.forget_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
         cls.forget_page.driver = cls.driver
-
-        # cls.end_user_client = AutoIt(cls.driver)
-
-        # UI Pages
-        # cls.home_page = HomePage(cls.driver)
         cls.forget_page = forgetpass(cls.driver)
 
     @classmethod
     def tearDownClass(cls):
-        # To do the cleanup after test has executed.
         cls.driver.close()
         cls.driver.quit()
         super(UIIIIClass, cls).tearDownClass()

@@ -1,9 +1,8 @@
 from resources import ui_test_class
-# import HTMLTestRunner
-# import unittest
+import HtmlTestRunner
+import unittest
 from resources.page_objects.guest import ContinueAsGuest
 from resources.page_objects.guest import guest
-
 
 
 class TesCAG(ui_test_class.UIIClass):
@@ -15,8 +14,13 @@ class TesCAG(ui_test_class.UIIClass):
     expected_res5 = "Apartment, Suite, Building (Optional)"
     expected_res6 = "Phone (ex:333-545-6789)"
     expected_res7 = "Email Address"
+    expected_res_text_1 = "Shipping Address"
+    expected_res_text_2 = "Submit"
+    expected_error_1 = ""
 
-    dict = {}
+    dictpl = {}
+    dicttext = {}
+    dictfr = {}
 
     @classmethod
     def setUpClass(cls):
@@ -25,85 +29,175 @@ class TesCAG(ui_test_class.UIIClass):
     @classmethod
     def tearDownClass(cls):
         super(TesCAG, cls).tearDownClass()
-        # cls.driver.close()
         cls.driver.quit()
 
-    def compare_res(self):
+    def setUp(self):
+        super(TesCAG, self).setUp()
+        self.base_page.driver.refresh()
+
+
+    def compare_res_placeholders(self):
 
         firstname_placeholder = self.guest_page.get_attribute(ContinueAsGuest.firstname, 'placeholder')
-        self.lastname_placeholder = self.guest_page.get_attribute(ContinueAsGuest.lastname, 'placeholder')
-        self.address_placeholder = self.guest_page.get_attribute(ContinueAsGuest.fullAddress, 'placeholder')
-        self.apartment_placeholder = self.guest_page.get_attribute(ContinueAsGuest.Apartment, 'placeholder')
-        self.mob_placeholder = self.guest_page.get_attribute(ContinueAsGuest.MobileNumber, 'placeholder')
-        self.mail_placeholder = self.guest_page.get_attribute(ContinueAsGuest.EmailAddress, 'placeholder')
+        lastname_placeholder = self.guest_page.get_attribute(ContinueAsGuest.lastname, 'placeholder')
+        address_placeholder = self.guest_page.get_attribute(ContinueAsGuest.fullAddress, 'placeholder')
+        apartment_placeholder = self.guest_page.get_attribute(ContinueAsGuest.Apartment, 'placeholder')
+        mob_placeholder = self.guest_page.get_attribute(ContinueAsGuest.MobileNumber, 'placeholder')
+        mail_placeholder = self.guest_page.get_attribute(ContinueAsGuest.EmailAddress, 'placeholder')
 
         if self.expected_res2 == firstname_placeholder:
-            self.dict['firstname'] = True
+            self.dictpl['firstname'] = True
 
         else:
-            self.dict['firstname'] = False
+            self.dictpl['firstname'] = False
 
-        if self.expected_res3 == self.lastname_placeholder:
-            self.dict['lastname'] = True
-
-
-        else:
-            self.dict['lastname'] = False
-
-        # pass
-
-        if self.expected_res4 == self.address_placeholder:
-            self.dict['full address'] = True
+        if self.expected_res3 == lastname_placeholder:
+            self.dictpl['lastname'] = True
 
         else:
-            self.dict['full address'] = False
+            self.dictpl['lastname'] = False
 
-        if self.expected_res5 == self.apartment_placeholder:
-            self.dict['Apartment'] = True
-
-        else:
-            self.dict['Apartment'] = False
-
-
-        if self.expected_res6 == self.mob_placeholder:
-            self.dict['mobile number'] = True
+        if self.expected_res4 == address_placeholder:
+            self.dictpl['full address'] = True
 
         else:
-            self.dict['mobile number'] = False
+            self.dictpl['full address'] = False
 
-        if self.expected_res7 == self.mail_placeholder:
-            self.dict['email'] = True
-            print(self.dict)
+        if self.expected_res5 == apartment_placeholder:
+            self.dictpl['Apartment'] = True
 
         else:
-            self.dict['email'] = False
-            print(self.dict)
+            self.dictpl['Apartment'] = False
 
-        self.assertTrue(all(self.dict.values()), self.dict)
+        if self.expected_res6 == mob_placeholder:
+            self.dictpl['mobile number'] = True
+
+        else:
+            self.dictpl['mobile number'] = False
+
+        if self.expected_res7 == mail_placeholder:
+            self.dictpl['email'] = True
+            print(self.dictpl)
+
+        else:
+            self.dictpl['email'] = False
+            print(self.dictpl)
+
+        self.assertTrue(all(self.dictpl.values()), self.dictpl)
+
+
+    def compare_res_texts(self):
+
+        shippingaddress_Text = self.guest_page.get_attribute(ContinueAsGuest.Shipping_address, 'innerHTML')
+        submit_text = self.guest_page.get_attribute(ContinueAsGuest.Submit_name, 'innerHTML')
+
+        if self.expected_res_text_1 == shippingaddress_Text:
+            self.dicttext['Shipping Address'] = True
+
+        else:
+            self.dicttext['Shipping Address'] = False
+
+        if self.expected_res_text_2 == submit_text:
+            self.dicttext['Submit'] = True
+            print(self.dicttext)
+
+        else:
+            self.dicttext['Submit'] = False
+            print(self.dicttext)
+
+        self.assertTrue(all(self.dicttext.values()), self.dicttext)
+
+    def compare_res_requiredfields(self):
+
+        self.guest_page.click_submit()
+        firstname_field = self.guest_page.get_attribute(ContinueAsGuest.firstname_error, 'innerHTML')
+        print(firstname_field)
+        address_field = self.guest_page.get_attribute(ContinueAsGuest.Address_error, 'innerHTML')
+        print(address_field)
+        mobile_field = self.guest_page.get_attribute(ContinueAsGuest.Mobile_error, 'innerHTML')
+        print(mobile_field)
+        email_field = self.guest_page.get_attribute(ContinueAsGuest.email_error, 'innerHTML')
+        print(email_field)
+
+    def test_checkingSignIn_link(self):
+
+        """Main Page"""
+        signin_button_check = self.guest_page.get_attribute(ContinueAsGuest.signin_button, 'innerHTML')
+        print(signin_button_check)
 
     def test_ContinueAsGuest(self):
 
         """ContinueAsGuest"""
-
         self.guest_page.signin_button()
         self.guest_page.click_Continue_As_Guest()
-        self.guest_page.first_name("saad")
+        self.guest_page.first_name("Saad")
         self.guest_page.last_name("Adil")
         self.guest_page.full_address("Lahore, Pakistan")
         self.guest_page.apartment("")
         self.guest_page.mobile_number("333-416-3429")
         self.guest_page.email_address('saadadil3@gmail.com')
         self.guest_page.click_submit()
+        print("shipping address was entered successfully")
+        self.base_page.capture_screen_shot()
+
+    def test_checkNeedAnAccount_link(self):
+
+        """ContinueAsGuest Page"""
+        NeedAnAccount_check = self.guest_page.get_attribute(ContinueAsGuest.needanaccount_signin, 'innerHTML')
+        print(NeedAnAccount_check)
+
+    def test_UserLogIn_link(self):
+
+        """ContinueAsGuest Page"""
+        LogIn_check = self.guest_page.get_attribute(ContinueAsGuest.user_login, 'innerHTML')
+        print(LogIn_check)
+
 
     def test_placeholders(self):
 
         """Placeholders for ContinueAsGuest Page"""
-        self.compare_res()
-        # self.assertTrue(all(self.dict.values()), self.dict)
+        self.guest_page.signin_button()
+        self.guest_page.click_Continue_As_Guest()
+        self.compare_res_placeholders()
+        self.base_page.capture_screen_shot()
+
+
+    def test_texts(self):
+
+        """Headings for ContinueAsGuest Page"""
+        self.guest_page.signin_button()
+        self.guest_page.click_Continue_As_Guest()
+        self.compare_res_texts()
+
+    def test_fieldsRequired(self):
+
+        """Fields required for ContinueAsGuest Page"""
+        self.guest_page.signin_button()
+        self.guest_page.click_Continue_As_Guest()
+        self.compare_res_requiredfields()
+
+    def test_check_invalidMob_input(self):
+
+        """Mobile Input check for ContinueAsGuest Page"""
+        self.guest_page.signin_button()
+        self.guest_page.click_Continue_As_Guest()
+        self.guest_page.mobile_number("1234")
+        self.guest_page.click_submit()
+        mob_invalid_check = self.guest_page.get_attribute(ContinueAsGuest.invalid_mobile, 'innerHTML')
+        print(mob_invalid_check)
+
+    def test_check_invalidEmail_input(self):
+
+        """Email Input check for ContinueAsGuest Page"""
+        self.guest_page.signin_button()
+        self.guest_page.click_Continue_As_Guest()
+        self.guest_page.email_address("msamiadil")
+        self.guest_page.click_submit()
+        email_invalid_check = self.guest_page.get_attribute(ContinueAsGuest.invalid_Email, 'innerHTML')
+        print(email_invalid_check)
+
 
 
 if __name__ == "__main__":
 
-    import HtmlTestRunner, unittest
-
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='./reports', report_title='Signup'))
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='./reports', report_title='Signup - ContinueAsGuest'))

@@ -16,9 +16,9 @@ class needanaccount(BasePage):
     def click_NeedAnAccount(self):
         self.click(NeedAnAccount.NeedAnAccount_button)
 
-    def Firstname(self, finame):
+    def Firstname(self, first_name):
         self.find_elements(NeedAnAccount.firname).clear()
-        self.find_element(NeedAnAccount.firname).send_keys(finame)
+        self.find_element(NeedAnAccount.firname).send_keys(first_name)
 
     def Lastname(self, lastname):
         self.find_elements(NeedAnAccount.lasname).clear()
@@ -51,5 +51,4 @@ class needanaccount(BasePage):
 
     def register_button(self):
         self.click(NeedAnAccount.register_button)
-        print("Registered Successfully")
 

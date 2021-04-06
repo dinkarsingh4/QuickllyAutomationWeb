@@ -4,7 +4,7 @@ from resources.page_objects.base_page import BasePage
 
 
 class Login(BasePage):
-    """Privacy Error Page of Invisily Admin Portal"""
+    """Log In Page of Quicklly.com"""
 
     def __init__(self, driver):
         super().__init__(driver)
@@ -26,8 +26,11 @@ class Login(BasePage):
         print('Login Successful')
         self.click(LogIn.login_button)
 
+    def click_Privacy(self):
+        self.click(LogIn.privacy_link)
 
-    #def click_ForgetPassword(self):
-        #self.click(LogIn.ForgetPassword_button)
+    def click_TermsAndConditions(self):
+        self.click(LogIn.terms_link)
 
-
+    def click_home(self):
+        self.click(LogIn.home_button)

@@ -510,10 +510,6 @@ class HTMLTestRunner(TemplateMixin):
     def _generate_ending(self):
         return self.ENDING_TEMPLATE
 
-    @classmethod
-    def HtmlTestRunner(cls, output, report_title):
-        pass
-
 
 ##############################################################################
 # Facilities for running tests from the command line

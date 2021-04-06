@@ -1,4 +1,4 @@
-html-testRunner
+HtmlTestRunner
 lxml~=4.6.2
 psutil~=5.8.0
 locust

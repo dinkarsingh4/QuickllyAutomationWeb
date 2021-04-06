@@ -1,13 +1,15 @@
 from resources import ui_test_class
 from resources.page_objects.forgetpassword import ForgetPassword
-from resources.page_objects.forgetpassword import forgetpass
+import HtmlTestRunner
+import unittest
 
 
 class TesFP(ui_test_class.UIIIIClass):
-    expected_res16 = "Enter your registed Email Id"
+    expected_res16 = "Enter your registered Email Id"
     expected_res17 = "Forgot Password"
     expected_res18 = "Why register with us."
     fp = {}
+    fp1 = {}
 
     @classmethod
     def setUpClass(cls):
@@ -18,45 +20,38 @@ class TesFP(ui_test_class.UIIIIClass):
         super(TesFP, cls).tearDownClass()
         cls.driver.quit()
 
-    def compare_result2(self):
+    def compare_res_Headings(self):
 
         forgotpassword_heading = self.forget_page.get_attribute(ForgetPassword.heading1, 'innerHTML')
         whyregister_heading = self.forget_page.get_attribute(ForgetPassword.heading2, 'innerHTML')
-        registeredemail_placeholder = self.forget_page.get_attribute(ForgetPassword.registered_email, 'placeholder')
 
         if self.expected_res17 == forgotpassword_heading:
             self.fp['forgot password'] = True
-            print(self.fp)
-
 
         else:
             self.fp['forgot password'] = False
-            print(self.fp)
 
         if self.expected_res18 == whyregister_heading:
             self.fp['why register with us.'] = True
             print(self.fp)
 
-
         else:
             self.fp['why register with us.'] = False
             print(self.fp)
 
-        self.assertTrue(all(self.fp.values()), self.fp)
+    def compare_res_Placeholders(self):
 
-        # pass
-        #
-        # if self.expected_res4 == self.address_placeholder:
-        #     self.dict = {'full address': True}
-        #     for pair in self.dict.items():
-        #         print(pair)
-        #
-        # else:
-        #     self.dict = {'full address': False}
-        #     for pair in self.dict.items():
-        #         print(pair)
+        registeredemail_placeholder = self.forget_page.get_attribute(ForgetPassword.registered_email, 'placeholder')
 
 
+        if self.expected_res16 == registeredemail_placeholder:
+            self.fp1['Enter your registered Email Id'] = True
+            print(self.fp1)
+
+
+        else:
+            self.fp1['Enter your registered Email Id'] = False
+            print(self.fp1)
 
     def test_ForgetPassword(self):
         """Forget Password"""
@@ -65,15 +60,21 @@ class TesFP(ui_test_class.UIIIIClass):
         self.forget_page.click_forgetpassword()
         self.forget_page.registred_email("saadadil3@gmail.com")
         self.forget_page.click_submit()
-        # print("placeholders are correct")
-        # print("Headings are correct")
+        invalid_email = self.forget_page.get_attribute(ForgetPassword.invalid_email, 'innerHTML')
+        print(invalid_email)
+
 
     def test_headings(self):
-        self.compare_result2()
+        """Headings for ForgotPassword page"""
+        self.compare_res_Headings()
+        self.assertTrue(all(self.fp.values()), self.fp)
 
+    def test_placeholders(self):
+        """Placeholders for ForgotPassword page"""
+        self.compare_res_Placeholders()
+        self.assertTrue(all(self.fp1.values()), self.fp1)
 
 
 if __name__ == "__main__":
-    import HtmlTestRunner, unittest
 
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='./reports', report_title='Signup'))
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='./reports', report_title='Signup - ForgotPassword'))
