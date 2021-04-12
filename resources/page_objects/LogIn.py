@@ -11,6 +11,7 @@ class Login(BasePage):
         self.driver.get(DataClass.BASE_URL)
 
     def click_SignIn(self):
+        self.scroll_to_element(LogIn.SignIn_button)
         self.click(LogIn.SignIn_button)
 
     def enter_email(self, email):
@@ -22,8 +23,8 @@ class Login(BasePage):
         self.find_element(LogIn.password_textbox).send_keys(password)
 
     def click_login(self):
-        # self.find_element_by_id(MainPage.login_button).click()
         print('Login Successful')
+        self.scroll_to_element(LogIn.login_button)
         self.click(LogIn.login_button)
 
     def click_Privacy(self):

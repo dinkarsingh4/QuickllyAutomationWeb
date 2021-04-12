@@ -46,6 +46,8 @@ class BasePage:
         chrome_options = selenium.webdriver.ChromeOptions()
         for c in env.get_config_value('webdriver', 'options'):
             chrome_options.add_argument(c)
+            # chrome_options.add_argument("--no-sandbox")
+            # chrome_options.add_argument("--headless")
         caps = selenium.webdriver.DesiredCapabilities.CHROME.copy()
         caps.update(env.get_config_value('webdriver', 'desired_capabilities'))
         driver = selenium.webdriver.Chrome(options=chrome_options, desired_capabilities=caps, executable_path='/home/excellence/PycharmProjects/gitAutomation/drivers/chromedriver')

@@ -1,4 +1,3 @@
-
 from selenium.webdriver.common.by import By
 
 
@@ -49,6 +48,7 @@ class ContinueAsGuest:
     invalid_mobile = (By.XPATH, '//*[@id="mobile-error"]')
     invalid_Email = (By.XPATH, '//*[@id="email-error"]')
 
+
 class NeedAnAccount:
     NeedAnAccount_button = (By.XPATH, '//*[@id="signupformmodal"]/div/div/div[2]/div/div[1]/div/div[1]/p[1]/span')
     firname = (By.CSS_SELECTOR, '#reg-form > div:nth-child(2) > input')
@@ -84,7 +84,6 @@ class ForgetPassword:
     heading1 = (By.XPATH, '//*[@id="searchhide"]/div[5]/div[1]/div[1]/h3')
     heading2 = (By.XPATH, '//*[@id="searchhide"]/div[5]/div[3]/div[1]/h3')
     invalid_email = (By.XPATH, '//*[@id="form"]/div[1]')
-
 
 
 class CommonLocators:

@@ -11,9 +11,11 @@ class guest(BasePage):
         self.driver.get(DataClass.BASE_URL)
 
     def signin_button(self):
+        self.scroll_to_element(ContinueAsGuest.signin_button)
         self.click(ContinueAsGuest.signin_button)
 
     def click_Continue_As_Guest(self):
+        self.scroll_to_element(ContinueAsGuest.ContinueAsGuest_button)
         self.click(ContinueAsGuest.ContinueAsGuest_button)
 
     def first_name(self, firstname):
