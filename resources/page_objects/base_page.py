@@ -46,7 +46,7 @@ class BasePage:
         chrome_options = selenium.webdriver.ChromeOptions()
         for c in env.get_config_value('webdriver', 'options'):
             chrome_options.add_argument(c)
-            # chrome_options.add_argument("--no-sandbox")
+            chrome_options.add_argument("--no-sandbox")
             # chrome_options.add_argument("--headless")
         caps = selenium.webdriver.DesiredCapabilities.CHROME.copy()
         caps.update(env.get_config_value('webdriver', 'desired_capabilities'))
@@ -103,14 +103,14 @@ class BasePage:
                 time.sleep(2)
         return element_text_list
 
-    def get_attribute(self, by_locator, attr) -> object:
+    def get_attribute(self, by_locator, attr):
         return self.find_element(by_locator).get_attribute(attr)
 
     def get_text_field_value(self, by_locator):
         return self.find_element(by_locator).get_attribute('value')
 
     # this function performs click on web element whose locator is passed to it.
-    def click(self, by_locator) -> object:
+    def click(self, by_locator):
         try:
             WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(by_locator)).click()
         except:

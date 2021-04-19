@@ -11,6 +11,7 @@ from resources.page_objects.LogIn import Login
 from resources.page_objects.guest import guest
 from resources.page_objects.needaccount import needanaccount
 from resources.page_objects.forgetpassword import forgetpass
+from resources.page_objects.cart import Cart
 from selenium.webdriver import Remote
 
 
@@ -32,7 +33,6 @@ class UIClass(unittest.TestCase):
         cls.driver = cls.base_page.get_browser_instance()
         cls.base_page.driver = cls.driver
         cls.maine_page = Login(cls.driver)
-
 
     @classmethod
     def tearDownClass(cls):
@@ -111,6 +111,30 @@ class UIIIIClass(unittest.TestCase):
         cls.driver.close()
         cls.driver.quit()
         super(UIIIIClass, cls).tearDownClass()
+
+
+class UVClass(unittest.TestCase):
+    aut_prefix = 'automation_'
+    driver: Remote = None
+    const_data = DataClass
+
+    cart_page: BasePage = None
+
+    @classmethod
+    def setUpClass(cls):
+        super(UVClass, cls).setUpClass()
+        cls.cart_page = BasePage(cls.driver)
+        cls.common_methods = Common(cls.driver)
+        cls.driver = cls.cart_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
+        cls.cart_page.driver = cls.driver
+        cls.cart_page = Cart(cls.driver)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
+        super(UVClass, cls).tearDownClass()
 
     @classmethod
     def login(cls):
