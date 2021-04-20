@@ -15,6 +15,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 from selenium.webdriver import Remote
 
+from resources.config_methods import DataClass
 from resources.locators import CommonLocators
 
 
@@ -50,7 +51,7 @@ class BasePage:
             # chrome_options.add_argument("--headless")
         caps = selenium.webdriver.DesiredCapabilities.CHROME.copy()
         caps.update(env.get_config_value('webdriver', 'desired_capabilities'))
-        driver = selenium.webdriver.Chrome(options=chrome_options, desired_capabilities=caps, executable_path='/home/excellence/PycharmProjects/gitAutomation/drivers/chromedriver')
+        driver = selenium.webdriver.Chrome(options=chrome_options, desired_capabilities=caps, executable_path=DataClass.CHROME_DRIVER_PATH)
         driver.maximize_window()
         # driver.set_page_load_timeout(cls.page_load_timeout)
         # driver.set_script_timeout(cls.page_load_timeout)
