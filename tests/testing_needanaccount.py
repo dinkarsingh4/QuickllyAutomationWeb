@@ -147,12 +147,12 @@ class TesNAC(ui_test_class.UIIIClass):
         self.need_page.register_button()
         print("Registered Successfully")
 
-    def test_placeholders(self):
-
-        """Placeholders for NeedAnAccount Page"""
-        self.need_page.click_sign_button()
-        self.need_page.click_NeedAnAccount()
-        self.compare_res_placeholders()
+    # def test_placeholders(self):
+    #
+    #     """Placeholders for NeedAnAccount Page"""
+    #     self.need_page.click_sign_button()
+    #     self.need_page.click_NeedAnAccount()
+    #     self.compare_res_placeholders()
 
     # def test_FieldsRequired(self):
     #
