@@ -102,7 +102,7 @@ class MiniCart:
     NameOfItem = (By.XPATH, '//*[@id="minicart"]/div/div[2]/div/div/div/p[1]')
     PriceOfItem = (By.XPATH, '//*[@id="minicart"]/div/div[2]/div/div/div/p[2]/span[1]')
     ItemQuantity = (By.XPATH, '/html/body/div[1]/div/div[2]/div/div/div/p[2]/span[2]/span')
-    PlusQuantity = (By.CSS_SELECTOR, '#qty_cart_\[pid\] > a:nth-child(3)')
+    # PlusQuantity = (By.CSS_SELECTOR, '#qty_cart_\[pid\] > a:nth-child(3)')
     empty_cart = (By.ID, 'lblCartEmpty')
     delete_item = (By.ID, 'lnk_cart_[pid]')
 
