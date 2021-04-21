@@ -11,6 +11,7 @@ class needanaccount(BasePage):
         self.driver.get(DataClass.BASE_URL)
 
     def click_sign_button(self):
+        self.scroll_to_element(NeedAnAccount.signin)
         self.click(NeedAnAccount.signin)
 
     def click_NeedAnAccount(self):
