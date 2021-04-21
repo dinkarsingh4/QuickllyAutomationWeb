@@ -140,61 +140,61 @@ class TesCAG(ui_test_class.UIIClass):
         print("shipping address was entered successfully")
         self.base_page.capture_screen_shot()
 
-    def test_checkNeedAnAccount_link(self):
-
-        """ContinueAsGuest Page"""
-        NeedAnAccount_check = self.guest_page.get_attribute(ContinueAsGuest.needanaccount_signin, 'innerHTML')
-        print(NeedAnAccount_check)
-
-    def test_UserLogIn_link(self):
-
-        """ContinueAsGuest Page"""
-        LogIn_check = self.guest_page.get_attribute(ContinueAsGuest.user_login, 'innerHTML')
-        print(LogIn_check)
-
-
-    def test_placeholders(self):
-
-        """Placeholders for ContinueAsGuest Page"""
-        self.guest_page.signin_button()
-        self.guest_page.click_Continue_As_Guest()
-        self.compare_res_placeholders()
-        self.base_page.capture_screen_shot()
-
-
-    def test_texts(self):
-
-        """Headings for ContinueAsGuest Page"""
-        self.guest_page.signin_button()
-        self.guest_page.click_Continue_As_Guest()
-        self.compare_res_texts()
-
-    def test_fieldsRequired(self):
-
-        """Fields required for ContinueAsGuest Page"""
-        self.guest_page.signin_button()
-        self.guest_page.click_Continue_As_Guest()
-        self.compare_res_requiredfields()
-
-    def test_check_invalidMob_input(self):
-
-        """Mobile Input check for ContinueAsGuest Page"""
-        self.guest_page.signin_button()
-        self.guest_page.click_Continue_As_Guest()
-        self.guest_page.mobile_number("1234")
-        self.guest_page.click_submit()
-        mob_invalid_check = self.guest_page.get_attribute(ContinueAsGuest.invalid_mobile, 'innerHTML')
-        print(mob_invalid_check)
-
-    def test_check_invalidEmail_input(self):
-
-        """Email Input check for ContinueAsGuest Page"""
-        self.guest_page.signin_button()
-        self.guest_page.click_Continue_As_Guest()
-        self.guest_page.email_address("msamiadil")
-        self.guest_page.click_submit()
-        email_invalid_check = self.guest_page.get_attribute(ContinueAsGuest.invalid_Email, 'innerHTML')
-        print(email_invalid_check)
+    # def test_checkNeedAnAccount_link(self):
+    #
+    #     """ContinueAsGuest Page"""
+    #     NeedAnAccount_check = self.guest_page.get_attribute(ContinueAsGuest.needanaccount_signin, 'innerHTML')
+    #     print(NeedAnAccount_check)
+    #
+    # def test_UserLogIn_link(self):
+    #
+    #     """ContinueAsGuest Page"""
+    #     LogIn_check = self.guest_page.get_attribute(ContinueAsGuest.user_login, 'innerHTML')
+    #     print(LogIn_check)
+    #
+    #
+    # def test_placeholders(self):
+    #
+    #     """Placeholders for ContinueAsGuest Page"""
+    #     self.guest_page.signin_button()
+    #     self.guest_page.click_Continue_As_Guest()
+    #     self.compare_res_placeholders()
+    #     self.base_page.capture_screen_shot()
+    #
+    #
+    # def test_texts(self):
+    #
+    #     """Headings for ContinueAsGuest Page"""
+    #     self.guest_page.signin_button()
+    #     self.guest_page.click_Continue_As_Guest()
+    #     self.compare_res_texts()
+    #
+    # def test_fieldsRequired(self):
+    #
+    #     """Fields required for ContinueAsGuest Page"""
+    #     self.guest_page.signin_button()
+    #     self.guest_page.click_Continue_As_Guest()
+    #     self.compare_res_requiredfields()
+    #
+    # def test_check_invalidMob_input(self):
+    #
+    #     """Mobile Input check for ContinueAsGuest Page"""
+    #     self.guest_page.signin_button()
+    #     self.guest_page.click_Continue_As_Guest()
+    #     self.guest_page.mobile_number("1234")
+    #     self.guest_page.click_submit()
+    #     mob_invalid_check = self.guest_page.get_attribute(ContinueAsGuest.invalid_mobile, 'innerHTML')
+    #     print(mob_invalid_check)
+    #
+    # def test_check_invalidEmail_input(self):
+    #
+    #     """Email Input check for ContinueAsGuest Page"""
+    #     self.guest_page.signin_button()
+    #     self.guest_page.click_Continue_As_Guest()
+    #     self.guest_page.email_address("msamiadil")
+    #     self.guest_page.click_submit()
+    #     email_invalid_check = self.guest_page.get_attribute(ContinueAsGuest.invalid_Email, 'innerHTML')
+    #     print(email_invalid_check)
 
 
 if __name__ == "__main__":
