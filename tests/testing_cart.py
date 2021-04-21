@@ -41,6 +41,7 @@ class TesCART(ui_test_class.UVClass):
         CheckOut_button = self.cart_page.get_attribute(MiniCart.proceed_to_checkOut, 'innerHTML')
         print(CheckOut_button)
 
+
     def test_countItemAndPriceOfItem(self):
 
         self.cart_page.click_cart()
