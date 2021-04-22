@@ -147,64 +147,64 @@ class TesNAC(ui_test_class.UIIIClass):
         self.need_page.register_button()
         print("Registered Successfully")
 
-    # def test_placeholders(self):
-    #
-    #     """Placeholders for NeedAnAccount Page"""
-    #     self.need_page.click_sign_button()
-    #     self.need_page.click_NeedAnAccount()
-    #     self.compare_res_placeholders()
+    def test_placeholders(self):
 
-    # def test_FieldsRequired(self):
-    #
-    #     """Fields Required for NeedAnAccount Page"""
-    #     self.need_page.click_sign_button()
-    #     self.need_page.click_NeedAnAccount()
-    #     self.need_page.register_button()
-    #     self.compare_res_fieldsRequired()
-    #
-    # def test_Texts(self):
-    #
-    #     """Headings for NeedAnAccount Page"""
-    #     self.need_page.click_sign_button()
-    #     self.need_page.click_NeedAnAccount()
-    #     self.compare_res_getTexts()
-    #     self.assertTrue(all(self.dicttxt.values()), self.dicttxt)
-    #
-    # def test_check_UserLogin(self):
-    #
-    #     """NeedAnAccount Page"""
-    #     self.need_page.click_sign_button()
-    #     self.need_page.click_NeedAnAccount()
-    #     userlogin_check = self.need_page.get_attribute(NeedAnAccount.userlogin_link, 'innerHTML')
-    #     print(userlogin_check)
-    #
-    # def test_check_ContinueAsGuest(self):
-    #
-    #     """NeedAnAccount Page"""
-    #     self.need_page.click_sign_button()
-    #     self.need_page.click_NeedAnAccount()
-    #     CAG_check = self.need_page.get_attribute(NeedAnAccount.continue_as_guest_link, 'innerHTML')
-    #     print(CAG_check)
-    #
-    # """Invalid Inputs for NeedAnAccount Page"""
-    #
-    # def test_check_invalidMob_input(self):
-    #
-    #     self.need_page.click_sign_button()
-    #     self.need_page.click_NeedAnAccount()
-    #     self.need_page.mobile("1234")
-    #     self.need_page.register_button()
-    #     mob_invalid_check = self.need_page.get_attribute(NeedAnAccount.mobile_invalid, 'innerHTML')
-    #     print(mob_invalid_check)
-    #
-    # def test_check_invalidEmail_input(self):
-    #
-    #     self.need_page.click_sign_button()
-    #     self.need_page.click_NeedAnAccount()
-    #     self.need_page.enteremail("msamiadil")
-    #     self.need_page.register_button()
-    #     email_invalid_check = self.need_page.get_attribute(NeedAnAccount.email_invalid, 'innerHTML')
-    #     print(email_invalid_check)
+        """Placeholders for NeedAnAccount Page"""
+        self.need_page.click_sign_button()
+        self.need_page.click_NeedAnAccount()
+        self.compare_res_placeholders()
+
+    def test_FieldsRequired(self):
+
+        """Fields Required for NeedAnAccount Page"""
+        self.need_page.click_sign_button()
+        self.need_page.click_NeedAnAccount()
+        self.need_page.register_button()
+        self.compare_res_fieldsRequired()
+
+    def test_Texts(self):
+
+        """Headings for NeedAnAccount Page"""
+        self.need_page.click_sign_button()
+        self.need_page.click_NeedAnAccount()
+        self.compare_res_getTexts()
+        self.assertTrue(all(self.dicttxt.values()), self.dicttxt)
+
+    def test_check_UserLogin(self):
+
+        """NeedAnAccount Page"""
+        self.need_page.click_sign_button()
+        self.need_page.click_NeedAnAccount()
+        userlogin_check = self.need_page.get_attribute(NeedAnAccount.userlogin_link, 'innerHTML')
+        print(userlogin_check)
+
+    def test_check_ContinueAsGuest(self):
+
+        """NeedAnAccount Page"""
+        self.need_page.click_sign_button()
+        self.need_page.click_NeedAnAccount()
+        CAG_check = self.need_page.get_attribute(NeedAnAccount.continue_as_guest_link, 'innerHTML')
+        print(CAG_check)
+
+    """Invalid Inputs for NeedAnAccount Page"""
+
+    def test_check_invalidMob_input(self):
+
+        self.need_page.click_sign_button()
+        self.need_page.click_NeedAnAccount()
+        self.need_page.mobile("1234")
+        self.need_page.register_button()
+        mob_invalid_check = self.need_page.get_attribute(NeedAnAccount.mobile_invalid, 'innerHTML')
+        print(mob_invalid_check)
+
+    def test_check_invalidEmail_input(self):
+
+        self.need_page.click_sign_button()
+        self.need_page.click_NeedAnAccount()
+        self.need_page.enteremail("msamiadil")
+        self.need_page.register_button()
+        email_invalid_check = self.need_page.get_attribute(NeedAnAccount.email_invalid, 'innerHTML')
+        print(email_invalid_check)
 
 
 if __name__ == "__main__":

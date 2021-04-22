@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge branch 'main' of https://github.com/RaqeebAlam786/gitAutomation into main">
-      <change beforePath="$PROJECT_DIR$/tests/testing_continueasguest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_continueasguest.py" afterDir="false" />
+    <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="uncomment cases">
+      <change beforePath="$PROJECT_DIR$/tests/testing_MiniCart.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_MiniCart.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_cart.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_cart.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_main_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_main_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_needanaccount.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_needanaccount.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -321,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619041501488</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="uncomment cases">
+      <created>1619106730492</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1619106730492</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -348,7 +358,8 @@
     <MESSAGE value="fixed chromedriver path" />
     <MESSAGE value="added support for headless" />
     <MESSAGE value="Merge branch 'main' of https://github.com/RaqeebAlam786/gitAutomation into main" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'main' of https://github.com/RaqeebAlam786/gitAutomation into main" />
+    <MESSAGE value="uncomment cases" />
+    <option name="LAST_COMMIT_MESSAGE" value="uncomment cases" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
