@@ -63,6 +63,7 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
         <env name="PYTHONPATH" value="$PWD" />
       </envs>
       <option name="SDK_HOME" value="$PROJECT_DIR$/../pythonProject/venv/bin/python" />
@@ -84,6 +85,7 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
         <env name="PYTHONPATH" value="$PWD" />
       </envs>
       <option name="SDK_HOME" value="/usr/bin/python3.8" />
@@ -152,9 +154,9 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.testing_MiniCart" />
       <item itemvalue="Python.testing_cart" />
       <item itemvalue="Python.testing_continueasguest" />
-      <item itemvalue="Python.testing_MiniCart" />
       <item itemvalue="Python tests.Unittests for testing_cart.TesCART" />
       <item itemvalue="Python tests.Unittests for testing_continueasguest.TesCAG" />
     </list>
