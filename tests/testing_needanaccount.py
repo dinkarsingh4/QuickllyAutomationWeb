@@ -1,5 +1,4 @@
 from resources import ui_test_class
-import HtmlTestRunner
 import unittest
 from resources.page_objects.needaccount import NeedAnAccount
 from resources.page_objects.needaccount import needanaccount
@@ -205,7 +204,3 @@ class TesNAC(ui_test_class.UIIIClass):
         self.need_page.register_button()
         email_invalid_check = self.need_page.get_attribute(NeedAnAccount.email_invalid, 'innerHTML')
         print(email_invalid_check)
-
-
-if __name__ == "__main__":
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='./reports', report_title='Signup - Need_an_Account'))

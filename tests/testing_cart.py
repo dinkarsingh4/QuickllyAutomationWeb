@@ -1,5 +1,4 @@
 from resources import ui_test_class
-import HtmlTestRunner
 import unittest
 from resources.page_objects.cart import MiniCart
 from resources.page_objects.cart import Cart
@@ -77,7 +76,3 @@ class TesCART(ui_test_class.UVClass):
 
 
         self.cart_page.click_plus()
-
-
-if __name__ == "__main__":
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='./reports', report_title='Cart'))

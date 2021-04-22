@@ -1,5 +1,4 @@
 from resources import ui_test_class
-import HtmlTestRunner
 import unittest
 from resources.page_objects.guest import ContinueAsGuest
 from resources.page_objects.guest import guest
@@ -195,8 +194,3 @@ class TesCAG(ui_test_class.UIIClass):
         self.guest_page.click_submit()
         email_invalid_check = self.guest_page.get_attribute(ContinueAsGuest.invalid_Email, 'innerHTML')
         print(email_invalid_check)
-
-
-if __name__ == "__main__":
-
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='./reports', report_title='Signup - ContinueAsGuest'))

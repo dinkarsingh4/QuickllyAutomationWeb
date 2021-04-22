@@ -1,7 +1,6 @@
 from resources import ui_test_class
 from resources.page_objects.cart import MiniCart
 from resources.page_objects.cart import Cart
-import HtmlTestRunner
 import unittest
 
 
@@ -40,5 +39,3 @@ class TesCART(ui_test_class.UVClass):
         self.cart_page.click_AddToCart()
         CheckOut_button = self.cart_page.get_attribute(MiniCart.proceed_to_checkOut, 'innerHTML')
         print(CheckOut_button)
-
-

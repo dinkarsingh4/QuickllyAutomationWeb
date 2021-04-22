@@ -1,6 +1,5 @@
 from resources import ui_test_class
 from resources.page_objects.forgetpassword import ForgetPassword
-import HtmlTestRunner
 import unittest
 
 
@@ -73,8 +72,3 @@ class TesFP(ui_test_class.UIIIIClass):
         """Placeholders for ForgotPassword page"""
         self.compare_res_Placeholders()
         self.assertTrue(all(self.fp1.values()), self.fp1)
-
-
-if __name__ == "__main__":
-
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='./reports', report_title='Signup - ForgotPassword'))

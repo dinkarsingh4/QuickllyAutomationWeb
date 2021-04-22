@@ -1,5 +1,4 @@
 from resources import ui_test_class
-import HtmlTestRunner
 import unittest
 from resources.page_objects.LogIn import LogIn
 
@@ -267,9 +266,3 @@ class TesLogin(ui_test_class.UIClass):
         self.maine_page.click_login()
         error_messages = self.maine_page.get_attribute(LogIn.doesnt_match, 'innerHTML')
         print(error_messages)
-
-
-
-
-if __name__ == "__main__":
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='./reports', report_title='Signup - Login'))
