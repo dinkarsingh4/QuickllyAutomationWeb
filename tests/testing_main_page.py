@@ -53,6 +53,9 @@ class TesLogin(ui_test_class.UIClass):
         heading_login = self.maine_page.get_attribute(LogIn.login_heading, 'innerHTML')
         emailtext_heading = self.maine_page.get_attribute(LogIn.email_text, 'innerHTML')
         passwordtext_heading = self.maine_page.get_attribute(LogIn.password_text, 'innerHTML')
+        print(heading_login)
+        print(emailtext_heading)
+        print(passwordtext_heading)
 
         if self.expected_res19 == heading_login:
             self.mp1['login'] = True

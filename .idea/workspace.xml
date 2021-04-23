@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="uncomment cases">
-      <change beforePath="$PROJECT_DIR$/tests/testing_MiniCart.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_MiniCart.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_cart.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_cart.py" afterDir="false" />
+    <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="updated git ignore">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out.html" beforeDir="false" afterPath="$PROJECT_DIR$/out.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/base_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/testing_main_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_main_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_needanaccount.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_needanaccount.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,9 +155,9 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.testing_MiniCart" />
       <item itemvalue="Python.testing_cart" />
       <item itemvalue="Python.testing_continueasguest" />
+      <item itemvalue="Python.testing_MiniCart" />
       <item itemvalue="Python tests.Unittests for testing_cart.TesCART" />
       <item itemvalue="Python tests.Unittests for testing_continueasguest.TesCAG" />
     </list>
@@ -333,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619106730492</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="updated git ignore">
+      <created>1619109753752</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1619109753752</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -361,7 +369,8 @@
     <MESSAGE value="added support for headless" />
     <MESSAGE value="Merge branch 'main' of https://github.com/RaqeebAlam786/gitAutomation into main" />
     <MESSAGE value="uncomment cases" />
-    <option name="LAST_COMMIT_MESSAGE" value="uncomment cases" />
+    <MESSAGE value="updated git ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated git ignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
