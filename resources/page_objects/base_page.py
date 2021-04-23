@@ -1,7 +1,11 @@
 # !/usr/bin/env python
+import ftplib
 import os
 from datetime import datetime, timedelta
+
 import time
+from pathlib import Path
+
 from lxml import html
 
 import selenium
@@ -61,12 +65,28 @@ class BasePage:
     def capture_screen_shot(self) -> object:
         if not os.path.exists('screenshots'):
             os.makedirs('screenshots')
-
         name = datetime.strftime(datetime.now(), '%m-%d_%H-%M-%S')
-        path = os.path.join('screenshots', f'screenshot_{name}.png')
-        print(path)
-        self.driver.save_screenshot(path)
-        return path
+        filename = os.path.join('screenshots', f'screenshot_{name}.png')
+        print(filename)
+        self.driver.save_screenshot(filename)
+        #upload image
+        file_path = Path(filename)
+        FTP_HOST='dev.quicklly.com'
+        FTP_USER='automation_Images@dev.quicklly.com'
+        FTP_PASS='nOswlt4*2QT~'
+        ftp = ftplib.FTP(FTP_HOST, FTP_USER, FTP_PASS)
+        ftpfolderName=datetime.today().strftime('%Y%m%d')
+        #create fodler if not exist
+        if self.directory_exists(ftpfolderName, ftp) is False:
+            ftp.mkd(ftpfolderName)
+        with open(file_path, "rb") as file:
+            ftp.storbinary(f"STOR /{ftpfolderName}/{file_path.name}", file)
+        return f"http://dev.quicklly.com/automation_Images/{ftpfolderName}/{file_path.name}"
+
+    def directory_exists(self,dir,ftp):
+        filelist = []
+        ftp.retrlines('LIST',filelist.append)
+        return any(f.split()[-1] == dir and f.upper().startswith('D') for f in filelist)
 
     # this function performs click on web element whose locator is passed to it.
     def find_element(self, by_locator):
