@@ -194,5 +194,3 @@ class TesCAG(ui_test_class.UIIClass):
         self.guest_page.click_submit()
         email_invalid_check = self.guest_page.get_attribute(ContinueAsGuest.invalid_Email, 'innerHTML')
         print(email_invalid_check)
-    def test_log_image(self):
-        assert 1==2

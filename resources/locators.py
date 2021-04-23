@@ -91,20 +91,22 @@ class ForgetPassword:
 class MiniCart:
     enter_zip = (By.ID, 'zipcode')
     submit_zip = (By.ID, 'zipsubmitbtn')
-    click_cart = (By.XPATH, '/html/body/header/div[4]')
+    click_cart = (By.XPATH, '/html/body/header/div[4]/a')
     ItemCount = (By.XPATH, '//*[@id="minicart"]/div/div[1]/p/span')
     min_order = (By.XPATH, '//*[@id="minicart"]/div/div[2]/p[2]')
     proceed_to_checkOut = (By.ID, 'lnkProceedToCheckout')
     select_button = (By.XPATH, '//*[@id="nationwide"]/div[2]/div[2]/a')
     Add1 = (By.XPATH, '//*[@id="searchhide"]/div[3]/div[2]/div/div[1]/div[2]/div[2]')
-    free_delivery = (By.XPATH, '//*[@id="minicart"]/div/div[2]/p[3]/text()')
+    shop_total = (By.XPATH, '//*[@id="minicart"]/div/div[2]/p[4]')
     image = (By.XPATH, '//*[@id="minicart"]/div/div[2]/div/div/img')
     NameOfItem = (By.XPATH, '//*[@id="minicart"]/div/div[2]/div/div/div/p[1]')
-    PriceOfItem = (By.XPATH, '//*[@id="minicart"]/div/div[2]/div/div/div/p[2]/span[1]')
+    PriceOfItem = (By.CSS_SELECTOR, '#minicart > div > div.clsContent > div > div:nth-child(1) > div > p:nth-child(2) > span.price')
     ItemQuantity = (By.XPATH, '/html/body/div[1]/div/div[2]/div/div/div/p[2]/span[2]/span')
-    # PlusQuantity = (By.CSS_SELECTOR, '#qty_cart_\[pid\] > a:nth-child(3)')
+    PlusQuantity = (By.XPATH, '//*[@id="qty_cart_[pid]"]/a[2]')
+    MinusQuantity = (By.XPATH, '//*[@id="qty_cart_[pid]"]/a[1]')
     empty_cart = (By.ID, 'lblCartEmpty')
     delete_item = (By.ID, 'lnk_cart_[pid]')
+    shop_name = (By.XPATH, '//*[@id="minicart"]/div/div[1]/div/div/div/a')
 
 
 
