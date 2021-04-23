@@ -52,7 +52,7 @@ class BasePage:
                 chrome_options.add_argument("--headless")
         caps = selenium.webdriver.DesiredCapabilities.CHROME.copy()
         caps.update(env.get_config_value('webdriver', 'desired_capabilities'))
-        driver = selenium.webdriver.Chrome(options=chrome_options, desired_capabilities=caps)
+        driver = selenium.webdriver.Chrome(options=chrome_options, desired_capabilities=caps,executable_path="C:\\Users\\Abdul\\PycharmProjects\\QA_Automation\\drivers\\chromedriver.exe")
         driver.maximize_window()
         # driver.set_page_load_timeout(cls.page_load_timeout)
         # driver.set_script_timeout(cls.page_load_timeout)
@@ -66,6 +66,7 @@ class BasePage:
         path = os.path.join('screenshots', f'screenshot_{name}.png')
         print(path)
         self.driver.save_screenshot(path)
+        return path
 
     # this function performs click on web element whose locator is passed to it.
     def find_element(self, by_locator):
