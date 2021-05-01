@@ -1,4 +1,4 @@
-from typing import Tuple
+# from typing import Tuple
 
 from selenium.webdriver.common.by import By
 
@@ -91,11 +91,13 @@ class ForgetPassword:
 class MiniCart:
     enter_zip = (By.ID, 'zipcode')
     submit_zip = (By.ID, 'zipsubmitbtn')
-    click_cart = (By.XPATH, '/html/body/header/div[4]/a')
+    click_cart = (By.CLASS_NAME, 'clsCart2')
     ItemCount = (By.XPATH, '//*[@id="minicart"]/div/div[1]/p/span')
     min_order = (By.XPATH, '//*[@id="minicart"]/div/div[2]/p[2]')
     proceed_to_checkOut = (By.ID, 'lnkProceedToCheckout')
-    select_button = (By.XPATH, '//*[@id="nationwide"]/div[2]/div[2]/a')
+    # select_button1 = (By.XPATH, '//*[@id="searchhide"]/div[8]/div/div/div[1]/div/div/div/div[1]/div/a')
+    # select_button2 = (By.XPATH, '//*[@id="searchhide"]/div[8]/div/div/div[1]/div/div/div/div[5]/div/a')
+    # select_button3 = (By.XPATH, '//*[@id="load_data"]/div[2]/div/div[2]/div/div/div[1]/div/a')
     Add1 = (By.XPATH, '//*[@id="searchhide"]/div[3]/div[2]/div/div[1]/div[2]/div[2]')
     shop_total = (By.XPATH, '//*[@id="minicart"]/div/div[2]/p[4]')
     image = (By.XPATH, '//*[@id="minicart"]/div/div[2]/div/div/img')
@@ -107,7 +109,28 @@ class MiniCart:
     empty_cart = (By.ID, 'lblCartEmpty')
     delete_item = (By.ID, 'lnk_cart_[pid]')
     shop_name = (By.XPATH, '//*[@id="minicart"]/div/div[1]/div/div/div/a')
+    # shop_name1 =
+    shopping_carts = (By.XPATH, '//*[@id="searchhide"]/div[4]/div[1]/div[1]/h3')
+    Email = (By.ID, 'user_email')
+    Pass = (By.ID, 'password')
+    LoginButton = (By.XPATH, '//*[@id="btn-login"]')
+    SignInButton = (By.ID, 'procedcheckoutBtn')
+    additem = (By.XPATH, '//*[@id="load_data"]/div[1]/div/div[2]/div/div/div[1]/a')
+    additem2 = (By.XPATH, '//*[@id="searchhide"]/div[5]/div/section[2]/div/a[1]')
+    orderFood = (By.XPATH, '//*[@id="searchhide"]/div[4]/div/div/div/div/a[1]')
+    express = (By.XPATH, '//*[@id="load_data"]/div[1]/div[2]')
+    item1 = (By.XPATH, '//*[@id="load_data"]/div/div/div/div/div[1]/a')
+    additem1 = (By.XPATH, '//*[@id="dvDialog-Custom"]/div/div[2]/a')
+    addToCart = (By.XPATH, '//*[@id="searchhide"]/div[5]/div/section[2]/div/a[1]')
 
+    allStores = (By.XPATH, '//*[@id="searchhide"]/div[4]/div[1]/div[2]/h3')
+    shops_name = (By.XPATH, '//*[@id="searchhide"]/div[5]/div/div[3]')
+    price_label = (By.XPATH, '//*[@id="searchhide"]/div[6]/div[1]/div')
+    count_label = (By.XPATH, '//*[@id="searchhide"]/div[6]/div[2]/div')
+    price1 = (By.XPATH, '//*[@id="searchhide"]/div[8]/div[1]/div')
+    price2 = (By.XPATH, '//*[@id="searchhide"]/div[10]/div/div')
+    CurbsidePickup = (By.XPATH, '//*[@id="load_data"]/div[1]/div[1]/div')
+    Delivery = (By.XPATH, '//*[@id="load_data"]/div[2]/div[2]/div/div')
 
 
 
