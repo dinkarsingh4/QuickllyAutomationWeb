@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main">
-      <change afterPath="$PROJECT_DIR$/Test Results - Unittests_for_testing_cart_TesCART.xml" afterDir="false" />
+    <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="fix">
       <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/locators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/base_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/page_objects/cart.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/cart.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/testing_MiniCart.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_MiniCart.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/testing_cart.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_cart.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_continueasguest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_continueasguest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExportTestResults" exportFormat="Xml" outputFolder="$PROJECT_DIR$" userTempatePath="" />
+  <component name="ExportTestResults" outputFolder="$PROJECT_DIR$" userTempatePath="" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -39,9 +40,9 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/resources/page_objects/cart.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/resources/locators.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/resources/page_objects/guest.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/resources/page_objects/cart.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/tests/testing_cart.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/tests/testing_continueasguest.py" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -62,7 +63,7 @@
     <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="settings.editor.splitter.proportion" value="0.2487757" />
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for testing_MiniCart.TesCART">
+  <component name="RunManager" selected="Python tests.Unittests for testing_main_page.TesLogin">
     <configuration name="testing_MiniCart" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -151,10 +152,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests for testing_MiniCart.TesCART" />
-        <item itemvalue="Python tests.Unittests for testing_cart.TesCART" />
         <item itemvalue="Python tests.Unittests for testing_main_page.TesLogin" />
+        <item itemvalue="Python tests.Unittests for testing_cart.TesCART" />
         <item itemvalue="Python tests.Unittests for testing_cart" />
+        <item itemvalue="Python tests.Unittests for testing_MiniCart.TesCART" />
         <item itemvalue="Python.testing_MiniCart" />
       </list>
     </recent_temporary>
@@ -336,21 +337,7 @@
       <option name="project" value="LOCAL" />
       <updated>1619187446707</updated>
     </task>
-    <task id="LOCAL-00025" summary="Merge remote-tracking branch 'github/main' into main">
-      <created>1619865580143</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1619865580152</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Merge remote-tracking branch 'github/main' into main">
-      <created>1619865624024</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1619865624024</updated>
-    </task>
-    <option name="localTasksCounter" value="27" />
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -380,8 +367,7 @@
     <MESSAGE value="uncomment cases" />
     <MESSAGE value="updated git ignore" />
     <MESSAGE value="fix" />
-    <MESSAGE value="Merge remote-tracking branch 'github/main' into main" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'github/main' into main" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
