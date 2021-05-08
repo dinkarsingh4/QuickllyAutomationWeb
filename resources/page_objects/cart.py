@@ -51,18 +51,6 @@ class Cart(BasePage):
     def click_CheckOut(self):
         self.click(MiniCart.proceed_to_checkOut)
 
-    # def click_select(self):
-    #     # self.scroll_to_element(MiniCart.select_button1)
-    #     self.click(MiniCart.select_button1)
-    #
-    # def click_select2(self):
-    #     self.scroll_to_element(MiniCart.select_button2)
-    #     self.click(MiniCart.select_button2)
-    #
-    # def click_select3(self):
-    #     self.scroll_to_element(MiniCart.select_button3)
-    #     self.click(MiniCart.select_button3)
-
     def click_AddToCart(self):
         self.scroll_to_element(MiniCart.Add1)
         self.click(MiniCart.Add1)
@@ -76,18 +64,14 @@ class Cart(BasePage):
         self.click(MiniCart.MinusQuantity)
 
     def click_delete(self):
-        # WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(MiniCart.delete_item)).click()
         self.click(MiniCart.delete_item)
 
     def click_Checkout(self):
         self.click(MiniCart.proceed_to_checkOut)
 
     def click_additem(self):
-        # WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="searchhide"]/div[8]/div/div/div[1]/div/div/div/div[5]/div/a'))).click()
-        # self.scroll_to_element(MiniCart.additem)
         self.driver.implicitly_wait(60)
         self.click(MiniCart.additem)
-        # self.driver.execute_script(MiniCart.additem)
 
     def click_AddItem1(self):
         self.scroll_to_element(MiniCart.additem2)
@@ -105,8 +89,83 @@ class Cart(BasePage):
         self.click(MiniCart.item1)
 
     def click_additem1(self):
-        # self.scroll_to_element(MiniCart.additem1)
         self.click(MiniCart.additem1)
 
     def click_Additem2(self):
         self.click(MiniCart.addToCart)
+
+    def click_rightArrow(self):
+        self.click(MiniCart.right_arrow)
+
+    def click_leftArrow(self):
+        self.click(MiniCart.left_arrow)
+
+    def click_dropDown1(self):
+        self.click(MiniCart.drop_down1)
+
+    def click_dropDown2(self):
+        self.click(MiniCart.drop_down2)
+
+    def click_quantity(self):
+        self.click(MiniCart.drop_quantity)
+
+    def click_remove(self):
+        self.click(MiniCart.remove2)
+
+    def click_eVoucher(self):
+        self.click(MiniCart.eVoucher)
+
+    def click_reward(self):
+        self.click(MiniCart.reward)
+
+    def click_wallet(self):
+        self.click(MiniCart.wallet)
+
+    def enter_eVoucher(self, eVoucher):
+        self.find_elements(MiniCart.eVoucher_text).clear()
+        self.find_element(MiniCart.eVoucher_text).send_keys(eVoucher)
+
+    def enter_reward(self, reward):
+        self.scroll_to_element(MiniCart.reward_text)
+        self.find_elements(MiniCart.reward_text).clear()
+        self.find_element(MiniCart.eVoucher_text).send_keys(reward)
+
+    def click_NoTIp(self):
+        self.scroll_to_element(MiniCart.NoTip)
+        self.click(MiniCart.NoTip)
+
+    def click_Tip5(self):
+        self.scroll_to_element(MiniCart.Tip5)
+        self.click(MiniCart.Tip5)
+
+    def click_Tip10(self):
+        self.scroll_to_element(MiniCart.Tip10)
+        self.click(MiniCart.Tip10)
+
+    def click_Tip15(self):
+        self.scroll_to_element(MiniCart.Tip15)
+        self.click(MiniCart.Tip15)
+
+    def click_Tip20(self):
+        self.scroll_to_element(MiniCart.Tip20)
+        self.click(MiniCart.Tip20)
+
+    def click_changeAddress(self):
+        self.scroll_to_element(MiniCart.ChangeAddress)
+        self.click(MiniCart.ChangeAddress)
+
+    def click_Cross(self):
+        self.click(MiniCart.clickCross)
+
+    def enter_notes(self, notes):
+        self.scroll_to_element(MiniCart.Notes_text)
+        self.find_elements(MiniCart.Notes_text).clear()
+        self.find_element(MiniCart.Notes_text).send_keys(notes)
+
+    def click_payment(self):
+        self.scroll_to_element(MiniCart.ProceedToPayment)
+        self.click(MiniCart.ProceedToPayment)
+
+    def click_apply(self):
+        self.click(MiniCart.Apply)
+
