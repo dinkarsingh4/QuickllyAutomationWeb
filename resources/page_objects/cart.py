@@ -51,18 +51,6 @@ class Cart(BasePage):
     def click_CheckOut(self):
         self.click(MiniCart.proceed_to_checkOut)
 
-    # def click_select(self):
-    #     # self.scroll_to_element(MiniCart.select_button1)
-    #     self.click(MiniCart.select_button1)
-    #
-    # def click_select2(self):
-    #     self.scroll_to_element(MiniCart.select_button2)
-    #     self.click(MiniCart.select_button2)
-    #
-    # def click_select3(self):
-    #     self.scroll_to_element(MiniCart.select_button3)
-    #     self.click(MiniCart.select_button3)
-
     def click_AddToCart(self):
         self.scroll_to_element(MiniCart.Add1)
         self.click(MiniCart.Add1)
@@ -110,3 +98,15 @@ class Cart(BasePage):
 
     def click_Additem2(self):
         self.click(MiniCart.addToCart)
+
+    def click_rightArrow(self):
+        self.click(MiniCart.right_arrow)
+
+    def click_leftArrow(self):
+        self.click(MiniCart.left_arrow)
+
+    def click_dropDown1(self):
+        self.click(MiniCart.drop_down1)
+
+    def click_dropDown2(self):
+        self.click(MiniCart.drop_down2)
