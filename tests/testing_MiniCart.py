@@ -458,10 +458,10 @@ class TesCART(ui_test_class.UVClass):
     def test_notes(self):
         self.cart_page.enter_notes("Please be on time")
 
-    def test_proceedToPayment(self):
-        self.cart_page.click_payment()
-        payment = self.cart_page.get_attribute(MiniCart.ProceedToPayment, 'innerHTML')
-        print(payment)
+    # def test_proceedToPayment(self):
+    #     self.cart_page.click_payment()
+    #     payment = self.cart_page.get_attribute(MiniCart.ProceedToPayment, 'innerHTML')
+    #     print(payment)
 
     def test_invalid_coupon(self):
         self.cart_page.click_eVoucher()

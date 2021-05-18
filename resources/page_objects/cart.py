@@ -128,7 +128,7 @@ class Cart(BasePage):
     def enter_reward(self, reward):
         self.scroll_to_element(MiniCart.reward_text)
         self.find_elements(MiniCart.reward_text).clear()
-        self.find_element(MiniCart.eVoucher_text).send_keys(reward)
+        self.find_element(MiniCart.reward_text).send_keys(reward)
 
     def click_NoTIp(self):
         self.scroll_to_element(MiniCart.NoTip)
