@@ -1,5 +1,6 @@
+#!/usr/local/bin/python
+# -*- coding: utf-42 -*-
 from resources import ui_test_class
-import unittest
 from resources.page_objects.LogIn import LogIn
 
 
