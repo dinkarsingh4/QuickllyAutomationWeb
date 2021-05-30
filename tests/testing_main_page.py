@@ -86,7 +86,7 @@ class TesLogin(ui_test_class.UIClass):
         print(email_field + ": Email")
         print(password_field + ": Password")
 
-    def Test_Login(self):
+    def test_Login(self):
 
         """Login"""
         self.maine_page.click_SignIn()

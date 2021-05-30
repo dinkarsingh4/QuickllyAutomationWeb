@@ -6,7 +6,7 @@ import pytest
 
 # import unittest
 #
-@pytest.mark
+
 class TesCART(ui_test_class.UVClass):
     cart_page: Cart
     cart_page: MiniCart
