@@ -1,11 +1,12 @@
 from resources import ui_test_class
 from resources.page_objects.cart import MiniCart
 from resources.page_objects.cart import Cart
+import pytest
 
 
 # import unittest
 #
-
+@pytest.mark
 class TesCART(ui_test_class.UVClass):
     cart_page: Cart
     cart_page: MiniCart

@@ -1,13 +1,6 @@
-# from selenium.webdriver.support import expected_conditions as ec
-# from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
 from resources.config_methods import DataClass
 from resources.locators import MiniCart
 from resources.page_objects.base_page import BasePage
-# from selenium.common.exceptions import WebDriverException
-# import time
 
 
 class Cart(BasePage):
@@ -131,9 +124,9 @@ class Cart(BasePage):
     def click_wallet(self):
         self.click(MiniCart.wallet)
 
-    def enter_eVoucher(self, eVoucher):
+    def enter_eVoucher(self, evoucher):
         self.find_elements(MiniCart.eVoucher_text).clear()
-        self.find_element(MiniCart.eVoucher_text).send_keys(eVoucher)
+        self.find_element(MiniCart.eVoucher_text).send_keys(evoucher)
 
     def enter_reward(self, reward):
         self.scroll_to_element(MiniCart.reward_text)
@@ -178,7 +171,7 @@ class Cart(BasePage):
 
     def click_payment(self):
         self.scroll_to_element(MiniCart.ProceedToPayment)
-        # self.wait_for_loader(30)
+        # self.wait_for_loader(1)
         self.click(MiniCart.ProceedToPayment)
 
     def click_apply(self):
@@ -199,4 +192,3 @@ class Cart(BasePage):
 
     def click_SecondShop(self):
         self.click(MiniCart.secondShop)
-
