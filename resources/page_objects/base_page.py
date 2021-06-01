@@ -73,8 +73,8 @@ class BasePage:
         #upload image
         file_path = Path(filename)
         FTP_HOST='dev.quicklly.com'
-        FTP_USER='automation_Images@dev.quicklly.com'
-        FTP_PASS='nOswlt4*2QT~'
+        FTP_USER='testaccount@quicklly.com'
+        FTP_PASS='123456'
         ftp = ftplib.FTP(FTP_HOST, FTP_USER, FTP_PASS)
         ftpfolderName=datetime.today().strftime('%Y%m%d')
         #create fodler if not exist

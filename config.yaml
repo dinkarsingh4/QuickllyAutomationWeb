@@ -7,7 +7,7 @@ webdriver:
 
 portal_ui:
 
-  base_url: https://dev.quicklly.com
-  admin_user: raqeeb.alaman@gmail.com
-  admin_password: abc123!
+  base_url: https://www.dev.quicklly.com
+  admin_user: Excellence Delivered
+  admin_password: 1234
 

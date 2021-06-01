@@ -1,11 +1,8 @@
 from resources import ui_test_class
 from resources.page_objects.cart import MiniCart
 from resources.page_objects.cart import Cart
-import pytest
+from ftplib import FTP, error_perm
 
-
-# import unittest
-#
 
 class TesCART(ui_test_class.UVClass):
     cart_page: Cart
@@ -87,6 +84,21 @@ class TesCART(ui_test_class.UVClass):
         self.cart_page.click_item()
         self.cart_page.click_Additem2()
 
+    def Addmethod(self):
+        self.cart_page.click_payment()
+        self.cart_page.click_changeMethod()
+        self.cart_page.click_Addmethod()
+        self.cart_page.EnterCardNumber("4005519200000004")
+        self.cart_page.EnterExpiry("0226")
+        self.cart_page.EnterCVV("158")
+
+    def test_ZsignIN(self):
+        self.cart_page.select_dropdown()
+        self.cart_page.click_signin()
+        self.cart_page.EnterEmail("testaccount@quicklly.com")
+        self.cart_page.EnterPass("123456")
+        self.cart_page.click_login()
+
     def test_ZipCode(self):
         self.cart_page.zip("60611")
         self.cart_page.submit_zip()
@@ -95,9 +107,6 @@ class TesCART(ui_test_class.UVClass):
         print(empty)
 
     def test_checkout(self):
-        self.cart_page.EnterEmail("testaccount@quicklly.com")
-        self.cart_page.EnterPass("123456")
-        self.cart_page.click_login()
         check = self.cart_page.get_attribute(MiniCart.proceed_to_checkOut, 'innerHTML')
         print(check)
         self.assertEqual(self.actual2, check)
@@ -505,4 +514,20 @@ class TesCART(ui_test_class.UVClass):
         self.cart_page.click_SecondShop()
         quantity = self.cart_page.get_attribute(MiniCart.SecondItemQuanitity, 'innerHTML')
         print(quantity)
-        #ADD ASERTION
+        # ADD ASERTION
+
+    def test_ypaymentMethod(self):
+        self.cart_page.click_payment()
+        self.cart_page.click_Pay()
+
+        # self.cart_page.click_changeMethod()
+        # self.cart_page.click_Addmethod()
+        # self.cart_page.EnterCardNumber("4005519200000004")
+        # self.cart_page.EnterExpiry("0226")
+        # self.cart_page.EnterCVV("158")
+
+
+if __name__ == "__main__":
+    ftp_host = "your_host"
+    username = "excellence delivered"
+    password = "1234"

@@ -192,3 +192,30 @@ class Cart(BasePage):
 
     def click_SecondShop(self):
         self.click(MiniCart.secondShop)
+
+    def select_dropdown(self):
+        # self.select(MiniCart.yourAccount, "Sign In")
+        self.click(MiniCart.yourAccount)
+
+    def click_changeMethod(self):
+        self.scroll_to_element(MiniCart.ChangePaymentMethod)
+        self.wait_for_page_load(15)
+        self.click(MiniCart.ChangePaymentMethod)
+
+    def click_Addmethod(self):
+        self.click(MiniCart.AddPaymentMethod)
+
+    def EnterCardNumber(self, credit):
+        self.find_elements(MiniCart.CreditCardNumber).clear()
+        self.find_element(MiniCart.CreditCardNumber).send_keys(credit)
+
+    def EnterExpiry(self, expiration):
+        self.find_elements(MiniCart.Expiration).clear()
+        self.find_element(MiniCart.Expiration).send_keys(expiration)
+
+    def EnterCVV(self, Cvv):
+        self.find_elements(MiniCart.CVV).clear()
+        self.find_element(MiniCart.CVV).send_keys(Cvv)
+
+    def click_Pay(self):
+        self.click(MiniCart.Pay)

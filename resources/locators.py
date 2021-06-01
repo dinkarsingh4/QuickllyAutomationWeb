@@ -110,8 +110,8 @@ class MiniCart:
     Email = (By.ID, 'user_email')
     Pass = (By.ID, 'password')
     LoginButton = (By.XPATH, '//*[@id="btn-login"]')
-    SignInButton = (By.ID, 'procedcheckoutBtn')
-    additem = (By.XPATH, '//*[@id="load_data"]/div[1]/div/div[2]/div/div/div[1]/a')
+    SignInButton = (By.XPATH, '//*[@id="procedcheckoutBtn"]')
+    additem = (By.XPATH, '//*[@id="searchhide"]/div[8]/div/div/div[1]/div/div/div/div[3]')
     additem2 = (By.XPATH, '//*[@id="searchhide"]/div[5]/div/section[2]/div/a[1]')
     orderFood = (By.XPATH, '//*[@id="searchhide"]/div[4]/div/div/div/div/a[1]')
     express = (By.XPATH, '//*[@id="load_data"]/div[1]/div[2]')
@@ -191,6 +191,13 @@ class MiniCart:
     SecondItemName = (By.XPATH, '//*[@id="minicart"]/div/div[2]/div/div/div/p[1]')
     SecondItemPrice = (By.XPATH, '//*[@id="minicart"]/div/div[2]/div/div/div/p[2]/span[1]')
     SecondItemQuanitity = (By.XPATH, '//*[@id="qty_cart_51875"]/span')
+    yourAccount = (By.XPATH, '//*[@id="searchhide"]/header/div[3]/span')
+    ChangePaymentMethod = (By.CLASS_NAME, 'link link-small')
+    AddPaymentMethod = (By.XPATH, '/html/body/div[2]/div/div/div[1]/div[1]/div[2]/div[2]/span')
+    CreditCardNumber = (By.ID, 'credit-card-number')
+    Expiration = (By.ID, 'expiration')
+    CVV = (By.ID, 'cvv')
+    Pay = (By.ID, 'pay_amount')
 
 
 
