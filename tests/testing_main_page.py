@@ -64,7 +64,7 @@ class TesLogin(ui_test_class.UIClass):
             self.mp1['login'] = False
 
         if self.expected_res20 == emailtext_heading:
-            self.mp1['email'] = False
+            self.mp1['email'] = True
 
         else:
             self.mp1['email'] = False
@@ -86,14 +86,13 @@ class TesLogin(ui_test_class.UIClass):
         print(email_field + ": Email")
         print(password_field + ": Password")
 
-    def test_Login(self):
+    def test_login(self):
 
         """Login"""
         self.maine_page.click_SignIn()
         self.maine_page.enter_email("admin@gmail.com")
         self.maine_page.enter_password("admin1234")
         self.maine_page.click_login()
-        self.base_page.capture_screen_shot()
 
     def test_login_placeholders(self):
 

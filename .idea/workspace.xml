@@ -58,7 +58,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.general" />
     <property name="settings.editor.splitter.proportion" value="0.2487757" />
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for testing_MiniCart.TesCART">
+  <component name="RunManager" selected="Python tests.Unittests for testing_main_page.TesLogin">
     <configuration name="locators" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -145,8 +145,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests for testing_MiniCart.TesCART" />
         <item itemvalue="Python tests.Unittests for testing_main_page.TesLogin" />
+        <item itemvalue="Python tests.Unittests for testing_MiniCart.TesCART" />
         <item itemvalue="Python tests.Unittests for testing_MiniCart.TesCART.test_ckhange_address" />
         <item itemvalue="Python.locators" />
         <item itemvalue="Python tests.Unittests for testing_cart.TesCART" />
