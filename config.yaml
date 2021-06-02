@@ -8,6 +8,6 @@ webdriver:
 portal_ui:
 
   base_url: https://www.dev.quicklly.com
-  admin_user: Excellence Delivered
-  admin_password: 1234
+  admin_user: testaccount@quicklly.com
+  admin_password: 123456
 

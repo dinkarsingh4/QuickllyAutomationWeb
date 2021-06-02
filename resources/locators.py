@@ -111,7 +111,7 @@ class MiniCart:
     Pass = (By.ID, 'password')
     LoginButton = (By.XPATH, '//*[@id="btn-login"]')
     SignInButton = (By.XPATH, '//*[@id="procedcheckoutBtn"]')
-    additem = (By.XPATH, '//*[@id="searchhide"]/div[8]/div/div/div[1]/div/div/div/div[3]')
+    additem = (By.XPATH, '//*[@id="searchhide"]/div[11]/div/div/div[1]/div/div/div/div[3]')
     additem2 = (By.XPATH, '//*[@id="searchhide"]/div[5]/div/section[2]/div/a[1]')
     orderFood = (By.XPATH, '//*[@id="searchhide"]/div[4]/div/div/div/div/a[1]')
     express = (By.XPATH, '//*[@id="load_data"]/div[1]/div[2]')

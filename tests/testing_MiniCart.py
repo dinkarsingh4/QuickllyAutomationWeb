@@ -1,7 +1,7 @@
 from resources import ui_test_class
 from resources.page_objects.cart import MiniCart
 from resources.page_objects.cart import Cart
-from ftplib import FTP, error_perm
+# import ftplib
 
 
 class TesCART(ui_test_class.UVClass):
@@ -527,7 +527,11 @@ class TesCART(ui_test_class.UVClass):
         # self.cart_page.EnterCVV("158")
 
 
-if __name__ == "__main__":
-    ftp_host = "your_host"
-    username = "excellence delivered"
-    password = "1234"
+#
+# if __name__ == "__main__":
+#     ftp_host = "https://www.dev.quicklly.com"
+#     username = "excellence delivered"
+#     password = "1234"
+#
+# ftp = ftplib.FTP("https://www.dev.quicklly.com")
+# ftp.login("testaccount@quicklly.com", "123456")
