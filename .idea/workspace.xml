@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main">
-      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/base_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/testing_MiniCart.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_MiniCart.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_continueasguest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_continueasguest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +56,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.general" />
     <property name="settings.editor.splitter.proportion" value="0.2487757" />
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for testing_forgotpassword.TesFP">
+  <component name="RunManager" selected="Python tests.Unittests for testing_MiniCart.TesCART">
     <configuration name="Unittests for testing_MiniCart.TesCART" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -139,9 +136,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for testing_MiniCart.TesCART" />
         <item itemvalue="Python tests.Unittests for testing_forgotpassword.TesFP" />
         <item itemvalue="Python tests.Unittests for testing_continueasguest.TesCAG" />
-        <item itemvalue="Python tests.Unittests for testing_MiniCart.TesCART" />
         <item itemvalue="Python tests.Unittests for testing_main_page.TesLogin" />
         <item itemvalue="Python tests.Unittests for testing_MiniCart.TesCART.test_ckhange_address" />
       </list>
@@ -471,7 +468,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623141453097</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1623141463734</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1623141463734</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">

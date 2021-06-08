@@ -1,4 +1,4 @@
-from selenium.webdriver.support.wait import WebDriverWait
+# from selenium.webdriver.support.wait import WebDriverWait
 
 from resources import ui_test_class
 from resources.page_objects.cart import MiniCart
