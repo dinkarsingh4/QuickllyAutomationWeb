@@ -1,5 +1,5 @@
 from resources import ui_test_class
-import unittest
+# import unittest
 from resources.page_objects.guest import ContinueAsGuest
 from resources.page_objects.guest import guest
 
@@ -137,7 +137,6 @@ class TesCAG(ui_test_class.UIIClass):
         self.guest_page.email_address('saadadil3@gmail.com')
         self.guest_page.click_submit()
         print("shipping address was entered successfully")
-        self.base_page.capture_screen_shot()
 
     def test_checkNeedAnAccount_link(self):
 
@@ -158,7 +157,6 @@ class TesCAG(ui_test_class.UIIClass):
         self.guest_page.signin_button()
         self.guest_page.click_Continue_As_Guest()
         self.compare_res_placeholders()
-        self.base_page.capture_screen_shot()
 
 
     def test_texts(self):

@@ -38,6 +38,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/tests/testing_forgotpassword.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/tests/testing_main_page.py">
           <value>
             <Attribute>

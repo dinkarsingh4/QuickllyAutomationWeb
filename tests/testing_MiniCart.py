@@ -530,18 +530,18 @@ class TesCART(ui_test_class.UVClass):
         print(quantity)
         # ADD ASERTION
 
-    def test_paymentMethod1(self):
-        self.cart_page.click_payment1()
-        self.cart_page.click_Pay()
-        # self.cart_page.click_Department()
-        # self.cart_page.click_ShopByGrocery()
+    # def test_paymentMethod1(self):
+    #     self.cart_page.click_payment1()
+    #     self.cart_page.click_Pay()
+    #     # self.cart_page.click_Department()
+    #     # self.cart_page.click_ShopByGrocery()
 
-    def test_paymentMethod2(self):
-        self.cart_page.click_Department()
-        self.cart_page.click_ShopByGrocery()
-        self.AddItem()
-        self.cart_page.click_MiniCart()
-        self.cart_page.click_Checkout()
+    # def test_paymentMethod2(self):
+    #     self.cart_page.click_Department()
+    #     self.cart_page.click_ShopByGrocery()
+    #     self.AddItem()
+    #     self.cart_page.click_MiniCart()
+    #     self.cart_page.click_Checkout()
 
         # self.cart_page.click_changeMethod()
         # self.cart_page.click_Addmethod()
