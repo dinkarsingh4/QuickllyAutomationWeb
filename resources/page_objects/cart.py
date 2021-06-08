@@ -1,6 +1,9 @@
 from resources.config_methods import DataClass
 from resources.locators import MiniCart
 from resources.page_objects.base_page import BasePage
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
 
 
 class Cart(BasePage):
@@ -114,9 +117,13 @@ class Cart(BasePage):
         self.click(MiniCart.remove2)
 
     def click_eVoucher(self):
+        self.scroll_to(1494, -36)
+        wait = WebDriverWait(self.driver, 10)
+        element = wait.until(EC.element_to_be_clickable(MiniCart.eVoucher))
+        element.click()
         # self.scroll_to_element(MiniCart.eVoucher)
-        self.wait_for_loader(15)
-        self.click(MiniCart.eVoucher)
+        # self.wait_for_loader(15)
+        # self.click(MiniCart.eVoucher)
 
     def click_reward(self):
         self.click(MiniCart.reward)
@@ -170,11 +177,17 @@ class Cart(BasePage):
         self.find_element(MiniCart.Notes_text).send_keys(notes)
 
     def click_payment(self):
-        self.scroll_to_element(MiniCart.ProceedToPayment)
+        self.scroll_to_element(MiniCart.Payment)
+        self.scroll_to(1653, 1031)
+        wait = WebDriverWait(self.driver, 10)
+        element = wait.until(EC.element_to_be_clickable(MiniCart.Payment))
+        element.click()
         # self.wait_for_loader(1)
-        self.click(MiniCart.ProceedToPayment)
+        # self.click(MiniCart.ProceedToPayment)
 
     def click_apply(self):
+        self.scroll_to_element(MiniCart.Apply)
+        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(MiniCart.Apply)).click()
         self.click(MiniCart.Apply)
 
     def click_paypal(self):
@@ -219,3 +232,23 @@ class Cart(BasePage):
 
     def click_Pay(self):
         self.click(MiniCart.Pay)
+
+    def deliveryLabel(self):
+        wait = WebDriverWait(self.driver, 10)
+        wait.until(EC.presence_of_element_located(MiniCart.DeliveryLabel))
+
+    def click_payment1(self):
+        self.scroll_to_element(MiniCart.Payment)
+        self.scroll_to(1653, 1048)
+        wait = WebDriverWait(self.driver, 15)
+        element = wait.until(EC.element_to_be_clickable(MiniCart.Payment))
+        element.click()
+
+    def click_Department(self):
+        self.click(MiniCart.Department)
+
+    def click_ShopByGrocery(self):
+        self.click(MiniCart.GroceryShop)
+
+
+

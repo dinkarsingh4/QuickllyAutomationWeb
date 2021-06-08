@@ -1,6 +1,12 @@
+# from selenium.webdriver.support.wait import WebDriverWait
+
 from resources import ui_test_class
 from resources.page_objects.cart import MiniCart
 from resources.page_objects.cart import Cart
+# from selenium.webdriver.support import expected_conditions as EC
+# from selenium.webdriver.common.by import By
+
+
 # import ftplib
 
 
@@ -110,6 +116,7 @@ class TesCART(ui_test_class.UVClass):
         check = self.cart_page.get_attribute(MiniCart.proceed_to_checkOut, 'innerHTML')
         print(check)
         self.assertEqual(self.actual2, check)
+
 
     def test_name(self):
         self.cart_page.click_MiniCart()
@@ -238,7 +245,7 @@ class TesCART(ui_test_class.UVClass):
     def test_arrow1(self):
         self.AddItem()
         self.cart_page.click_MiniCart()
-        self.cart_page.click_rightArrow()
+        # self.cart_page.click_rightArrow()
 
     def test_cjarrow2(self):
         self.cart_page.click_MiniCart()
@@ -338,6 +345,7 @@ class TesCART(ui_test_class.UVClass):
         self.assertEqual(self.actual35, wEmpty)
 
     def test_order_summary(self):
+        self.cart_page.scroll_to_element(MiniCart.orderSummary)
         summary = self.cart_page.get_attribute(MiniCart.orderSummary, 'innerHTML')
         print(summary)
         self.assertEqual(self.actual36, summary)
@@ -397,6 +405,7 @@ class TesCART(ui_test_class.UVClass):
         self.assertEqual(self.actual45, Minimum)
 
     def test_minimum_price(self):
+        self.sleep(10)
         MinimumPrice = self.cart_page.get_attribute(MiniCart.MinimumChargePrice, 'innerHTML')
         print(MinimumPrice)
         self.assertEqual(self.actual46, MinimumPrice)
@@ -437,6 +446,7 @@ class TesCART(ui_test_class.UVClass):
         self.cart_page.click_Tip20()
 
     def test_estimated_order(self):
+        self.cart_page.scroll_to_element(MiniCart.EstimatedOrder)
         EstimatedOrder = self.cart_page.get_attribute(MiniCart.EstimatedOrder, 'innerHTML')
         print(EstimatedOrder)
         self.assertEqual(self.actual51, EstimatedOrder)
@@ -447,6 +457,8 @@ class TesCART(ui_test_class.UVClass):
         self.assertEqual(self.actual52, OrderPrice)
 
     def test_delivery_label(self):
+        # wait = WebDriverWait(self.driver, 10)
+        # wait.until(EC.presence_of_element_located(MiniCart.DeliveryLabel))
         deliveryLabel = self.cart_page.get_attribute(MiniCart.DeliveryLabel, 'innerHTML')
         print(deliveryLabel)
         self.assertEqual(self.actual53, deliveryLabel)
@@ -463,7 +475,9 @@ class TesCART(ui_test_class.UVClass):
         estimatedDelivery_label = self.cart_page.get_attribute(MiniCart.EstimatedDelivery, 'innerHTML')
         print(estimatedDelivery_label)
 
-    def test_delivery_notes(self):
+    def test_label_delivery_notes(self):
+
+        self.cart_page.scroll_to_element(MiniCart.DeliveryNotes)
         notes = self.cart_page.get_attribute(MiniCart.DeliveryNotes, 'innerHTML')
         print(notes)
 
@@ -471,10 +485,10 @@ class TesCART(ui_test_class.UVClass):
         self.cart_page.enter_notes("Please be on time")
 
     def test_proceedToPayment(self):
-        payment = self.cart_page.get_attribute(MiniCart.ProceedToPayment, 'innerHTML')
+        payment = self.cart_page.get_attribute(MiniCart.Payment, 'innerHTML')
         print(payment)
 
-    def test_invalid_coupon(self):
+    def test_eVoucher_invalid_coupon(self):
         # self.cart_page.click_eVoucher()
         self.cart_page.enter_eVoucher("12345")
         self.cart_page.click_apply()
@@ -516,16 +530,24 @@ class TesCART(ui_test_class.UVClass):
         print(quantity)
         # ADD ASERTION
 
-    def test_ypaymentMethod(self):
-        self.cart_page.click_payment()
+    def test_paymentMethod1(self):
+        self.cart_page.click_payment1()
         self.cart_page.click_Pay()
+        # self.cart_page.click_Department()
+        # self.cart_page.click_ShopByGrocery()
+
+    def test_paymentMethod2(self):
+        self.cart_page.click_Department()
+        self.cart_page.click_ShopByGrocery()
+        self.AddItem()
+        self.cart_page.click_MiniCart()
+        self.cart_page.click_Checkout()
 
         # self.cart_page.click_changeMethod()
         # self.cart_page.click_Addmethod()
         # self.cart_page.EnterCardNumber("4005519200000004")
         # self.cart_page.EnterExpiry("0226")
         # self.cart_page.EnterCVV("158")
-
 
 #
 # if __name__ == "__main__":

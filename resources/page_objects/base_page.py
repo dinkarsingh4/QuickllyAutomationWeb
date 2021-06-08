@@ -72,9 +72,9 @@ class BasePage:
         self.driver.save_screenshot(filename)
         #upload image
         file_path = Path(filename)
-        FTP_HOST='dev.quicklly.com'
-        FTP_USER='testaccount@quicklly.com'
-        FTP_PASS='123456'
+        FTP_HOST='www.dev.quicklly.com'
+        FTP_USER='Excellence Delivered'
+        FTP_PASS='1234'
         ftp = ftplib.FTP(FTP_HOST, FTP_USER, FTP_PASS)
         ftpfolderName=datetime.today().strftime('%Y%m%d')
         #create fodler if not exist
@@ -82,7 +82,7 @@ class BasePage:
             ftp.mkd(ftpfolderName)
         with open(file_path, "rb") as file:
             ftp.storbinary(f"STOR /{ftpfolderName}/{file_path.name}", file)
-        return f"http://dev.quicklly.com/automation_Images/{ftpfolderName}/{file_path.name}"
+        return f"http://www.dev.quicklly.com/automation_Images/{ftpfolderName}/{file_path.name}"
 
     def directory_exists(self,dir,ftp):
         filelist = []
@@ -99,7 +99,7 @@ class BasePage:
             return self.driver.find_element(*by_locator)
         except:
             print('@screenshot@')
-            self.capture_screen_shot()
+            # self.capture_screen_shot()
             raise
 
     def find_elements(self, by_locator):
@@ -138,7 +138,7 @@ class BasePage:
         try:
             WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(by_locator)).click()
         except:
-            self.capture_screen_shot()
+            # self.capture_screen_shot()
             raise
 
     # this function performs text entry of the passed in text, in a web element whose locator is passed to it.
