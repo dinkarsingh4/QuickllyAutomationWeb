@@ -36,3 +36,5 @@ def pytest_runtest_makereport(item, call):
     report = outcome.get_result()
     report.description = str(item.function.__doc__)
     report.nodeid = report.nodeid.encode("utf-8").decode("unicode_escape")
+
+
