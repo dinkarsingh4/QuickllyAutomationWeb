@@ -34,7 +34,7 @@ class Cart(BasePage):
 
     def submit_zip(self):
         self.scroll_to_element(MiniCart.submit_zip)
-        self.scroll_to(492, -542)
+        # self.scroll_to(492, -542)
         wait = WebDriverWait(self.driver, 10)
         element = wait.until(EC.element_to_be_clickable(MiniCart.submit_zip))
         element.click()
