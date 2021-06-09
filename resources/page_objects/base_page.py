@@ -32,7 +32,6 @@ class BasePage:
     base_url = env.get_config_value('portal_ui', 'base_url')
     # curr_user = env.get_config_value('portal_ui', 'curr_user')
 
-
     page_load_timeout = 20
     wait = 20
     driver: Remote = None
@@ -63,30 +62,30 @@ class BasePage:
         # driver.set_script_timeout(cls.page_load_timeout)
         return driver
 
-    def capture_screen_shot(self) -> object:
-        if not os.path.exists('screenshots'):
-            os.makedirs('screenshots')
-        name = datetime.strftime(datetime.now(), '%m-%d_%H-%M-%S')
-        filename = os.path.join('screenshots', f'screenshot_{name}.png')
-        print(filename)
-        self.driver.save_screenshot(filename)
-        #upload image
-        file_path = Path(filename)
-        FTP_HOST='anonymous'
-        FTP_USER=''
-        FTP_PASS=''
-        ftp = ftplib.FTP(FTP_HOST, FTP_USER, FTP_PASS)
-        ftpfolderName=datetime.today().strftime('%Y%m%d')
-        #create fodler if not exist
-        if self.directory_exists(ftpfolderName, ftp) is False:
-            ftp.mkd(ftpfolderName)
-        with open(file_path, "rb") as file:
-            ftp.storbinary(f"STOR /{ftpfolderName}/{file_path.name}", file)
-        return f"http://www.dev.quicklly.com/automation_Images/{ftpfolderName}/{file_path.name}"
+    # def capture_screen_shot(self) -> object:
+    #     if not os.path.exists('screenshots'):
+    #         os.makedirs('screenshots')
+    #     name = datetime.strftime(datetime.now(), '%m-%d_%H-%M-%S')
+    #     filename = os.path.join('screenshots', f'screenshot_{name}.png')
+    #     print(filename)
+    #     self.driver.save_screenshot(filename)
+    #     #upload image
+    #     file_path = Path(filename)
+    #     FTP_HOST='anonymous'
+    #     FTP_USER=''
+    #     FTP_PASS=''
+    #     ftp = ftplib.FTP(FTP_HOST, FTP_USER, FTP_PASS)
+    #     ftpfolderName=datetime.today().strftime('%Y%m%d')
+    #     #create fodler if not exist
+    #     if self.directory_exists(ftpfolderName, ftp) is False:
+    #         ftp.mkd(ftpfolderName)
+    #     with open(file_path, "rb") as file:
+    #         ftp.storbinary(f"STOR /{ftpfolderName}/{file_path.name}", file)
+    #     return f"http://www.dev.quicklly.com/automation_Images/{ftpfolderName}/{file_path.name}"
 
-    def directory_exists(self,dir,ftp):
+    def directory_exists(self, dir, ftp):
         filelist = []
-        ftp.retrlines('LIST',filelist.append)
+        ftp.retrlines('LIST', filelist.append)
         return any(f.split()[-1] == dir and f.upper().startswith('D') for f in filelist)
 
     # this function performs click on web element whose locator is passed to it.
@@ -98,7 +97,7 @@ class BasePage:
             # self.driver.switch_to
             return self.driver.find_element(*by_locator)
         except:
-            print('@screenshot@')
+            # print('@screenshot@')
             # self.capture_screen_shot()
             raise
 
@@ -229,7 +228,7 @@ class BasePage:
             hov = ActionChains(self.driver).move_to_element(element)
             hov.perform()
         except BaseException as e:
-            self.capture_screen_shot()
+            # self.capture_screen_shot()
             raise
 
     def check_presence_of_element(self, by_locator):
