@@ -434,7 +434,7 @@ class BasePage:
             print('Waited [{}s] for "{}"'.format(wait, by_locator))
             if screenshot:
                 print(e)
-                self.capture_screen_shot()
+                # self.capture_screen_shot()
             if re_raise:
                 raise
         return False
@@ -446,7 +446,7 @@ class BasePage:
             WebDriverWait(self.driver, wait).until(EC.invisibility_of_element(by_locator))
             return True
         except BaseException as e:
-            self.capture_screen_shot()
+            # self.capture_screen_shot()
             raise
         # return False
 
