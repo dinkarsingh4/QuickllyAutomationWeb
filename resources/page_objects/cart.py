@@ -33,12 +33,12 @@ class Cart(BasePage):
         self.find_element(MiniCart.enter_zip).send_keys(zipcode)
 
     def submit_zip(self):
-        self.scroll_to_element(MiniCart.submit_zip)
-        # self.scroll_to(492, -542)
-        wait = WebDriverWait(self.driver, 10)
-        element = wait.until(EC.element_to_be_clickable(MiniCart.submit_zip))
-        element.click()
-        # self.click(MiniCart.submit_zip)
+        # self.scroll_to_element(MiniCart.submit_zip)
+        # # self.scroll_to(492, -542)
+        # wait = WebDriverWait(self.driver, 10)
+        # element = wait.until(EC.element_to_be_clickable(MiniCart.submit_zip))
+        # element.click()
+        self.click(MiniCart.submit_zip)
 
     def click_MiniCart(self):
         # WebDriverWait(self.driver, 10).until(ec.element_to_be_clickable(MiniCart.click_cart)).click()
@@ -183,6 +183,7 @@ class Cart(BasePage):
     def click_payment(self):
         self.scroll_to_element(MiniCart.Payment)
         self.scroll_to(1653, 1031)
+        # self.wait_for_loader(15)
         wait = WebDriverWait(self.driver, 10)
         element = wait.until(EC.element_to_be_clickable(MiniCart.Payment))
         element.click()
@@ -215,8 +216,8 @@ class Cart(BasePage):
         self.click(MiniCart.yourAccount)
 
     def click_changeMethod(self):
-        self.scroll_to_element(MiniCart.ChangePaymentMethod)
-        self.wait_for_page_load(15)
+        # self.scroll_to_element(MiniCart.ChangePaymentMethod)
+        # self.wait_for_page_load(15)
         self.click(MiniCart.ChangePaymentMethod)
 
     def click_Addmethod(self):

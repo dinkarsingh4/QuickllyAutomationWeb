@@ -192,7 +192,7 @@ class MiniCart:
     SecondItemPrice = (By.XPATH, '//*[@id="minicart"]/div/div[2]/div/div/div/p[2]/span[1]')
     SecondItemQuanitity = (By.XPATH, '//*[@id="qty_cart_51875"]/span')
     yourAccount = (By.XPATH, '//*[@id="searchhide"]/header/div[3]/span')
-    ChangePaymentMethod = (By.CLASS_NAME, 'link link-small')
+    ChangePaymentMethod = (By.XPATH, '//*[@id="choose-payment-method"]')
     AddPaymentMethod = (By.XPATH, '/html/body/div[2]/div/div/div[1]/div[1]/div[2]/div[2]/span')
     CreditCardNumber = (By.ID, 'credit-card-number')
     Expiration = (By.ID, 'expiration')

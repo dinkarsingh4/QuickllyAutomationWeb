@@ -3,6 +3,8 @@
 from resources import ui_test_class
 from resources.page_objects.cart import MiniCart
 from resources.page_objects.cart import Cart
+
+
 # from selenium.webdriver.support import expected_conditions as EC
 # from selenium.webdriver.common.by import By
 
@@ -116,7 +118,6 @@ class TesCART(ui_test_class.UVClass):
         check = self.cart_page.get_attribute(MiniCart.proceed_to_checkOut, 'innerHTML')
         print(check)
         self.assertEqual(self.actual2, check)
-
 
     def test_name(self):
         self.cart_page.click_MiniCart()
@@ -496,7 +497,6 @@ class TesCART(ui_test_class.UVClass):
         print(Invalid)
 
     def test_paypal(self):
-        self.cart_page.click_payment()
         self.cart_page.click_paypal()
 
     def test_click_secondShopName(self):
@@ -530,24 +530,24 @@ class TesCART(ui_test_class.UVClass):
         print(quantity)
         # ADD ASERTION
 
-    # def test_paymentMethod1(self):
-    #     self.cart_page.click_payment1()
-    #     self.cart_page.click_Pay()
-    #     # self.cart_page.click_Department()
-    #     # self.cart_page.click_ShopByGrocery()
+    def test_paymentMethod1(self):
+        self.cart_page.click_payment1()
+        self.cart_page.click_Pay()
+        # self.cart_page.click_Department()
+        # self.cart_page.click_ShopByGrocery()
 
-    # def test_paymentMethod2(self):
-    #     self.cart_page.click_Department()
-    #     self.cart_page.click_ShopByGrocery()
-    #     self.AddItem()
-    #     self.cart_page.click_MiniCart()
-    #     self.cart_page.click_Checkout()
-
-        # self.cart_page.click_changeMethod()
-        # self.cart_page.click_Addmethod()
-        # self.cart_page.EnterCardNumber("4005519200000004")
-        # self.cart_page.EnterExpiry("0226")
-        # self.cart_page.EnterCVV("158")
+    # def test_paymentMethod(self):
+    #     #     self.cart_page.click_Department()
+    #     #     self.cart_page.click_ShopByGrocery()
+    #     #     self.AddItem()
+    #     #     self.cart_page.click_MiniCart()
+    #     #     self.cart_page.click_Checkout()
+    #     self.cart_page.click_payment()
+    #     self.cart_page.click_changeMethod()
+    #     self.cart_page.click_Addmethod()
+    #     self.cart_page.EnterCardNumber("4005519200000004")
+    #     self.cart_page.EnterExpiry("0226")
+    #     self.cart_page.EnterCVV("158")
 
 #
 # if __name__ == "__main__":
