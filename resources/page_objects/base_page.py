@@ -62,26 +62,26 @@ class BasePage:
         # driver.set_script_timeout(cls.page_load_timeout)
         return driver
 
-    # def capture_screen_shot(self) -> object:
-    #     if not os.path.exists('screenshots'):
-    #         os.makedirs('screenshots')
-    #     name = datetime.strftime(datetime.now(), '%m-%d_%H-%M-%S')
-    #     filename = os.path.join('screenshots', f'screenshot_{name}.png')
-    #     print(filename)
-    #     self.driver.save_screenshot(filename)
-    #     #upload image
-    #     file_path = Path(filename)
-    #     FTP_HOST='anonymous'
-    #     FTP_USER=''
-    #     FTP_PASS=''
-    #     ftp = ftplib.FTP(FTP_HOST, FTP_USER, FTP_PASS)
-    #     ftpfolderName=datetime.today().strftime('%Y%m%d')
-    #     #create fodler if not exist
-    #     if self.directory_exists(ftpfolderName, ftp) is False:
-    #         ftp.mkd(ftpfolderName)
-    #     with open(file_path, "rb") as file:
-    #         ftp.storbinary(f"STOR /{ftpfolderName}/{file_path.name}", file)
-    #     return f"http://www.dev.quicklly.com/automation_Images/{ftpfolderName}/{file_path.name}"
+    def capture_screen_shot(self):
+        if not os.path.exists('screenshots'):
+            os.makedirs('screenshots')
+        name = datetime.strftime(datetime.now(), '%m-%d_%H-%M-%S')
+        filename = os.path.join('screenshots', f'screenshot_{name}.png')
+        print(filename)
+        self.driver.save_screenshot(filename)
+        #upload image
+        file_path = Path(filename)
+        FTP_HOST='anonymous'
+        FTP_USER=''
+        FTP_PASS=''
+        ftp = ftplib.FTP(FTP_HOST, FTP_USER, FTP_PASS)
+        ftpfolderName=datetime.today().strftime('%Y%m%d')
+        #create fodler if not exist
+        if self.directory_exists(ftpfolderName, ftp) is False:
+            ftp.mkd(ftpfolderName)
+        with open(file_path, "rb") as file:
+            ftp.storbinary(f"STOR /{ftpfolderName}/{file_path.name}", file)
+        return f"http://www.dev.quicklly.com/automation_Images/{ftpfolderName}/{file_path.name}"
 
     def directory_exists(self, dir, ftp):
         filelist = []
