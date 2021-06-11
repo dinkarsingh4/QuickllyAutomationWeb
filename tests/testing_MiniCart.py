@@ -1,4 +1,4 @@
-# from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support.wait import WebDriverWait
 
 from resources import ui_test_class
 from resources.page_objects.cart import MiniCart
@@ -496,7 +496,8 @@ class TesCART(ui_test_class.UVClass):
         Invalid = self.cart_page.get_attribute(MiniCart.InvalidCoupon, 'innerHTML')
         print(Invalid)
 
-    def test_paypal(self):
+    def test_dpaypal(self):
+        self.cart_page.click_payment()
         self.cart_page.click_paypal()
 
     def test_click_secondShopName(self):
@@ -521,7 +522,7 @@ class TesCART(ui_test_class.UVClass):
         self.cart_page.click_SecondShop()
         ItemPrice = self.cart_page.get_attribute(MiniCart.SecondItemPrice, 'innerHTML')
         print(ItemPrice)
-        # ADD ASERTION
+        # ADD ASERTION-----------------------------------------'[;
 
     def test_click_secondItemQuantity(self):
         self.cart_page.click_MiniCart()

@@ -182,7 +182,7 @@ class Cart(BasePage):
 
     def click_payment(self):
         self.scroll_to_element(MiniCart.Payment)
-        self.scroll_to(1653, 1031)
+        self.scroll_to(1653, 1006)
         # self.wait_for_loader(15)
         wait = WebDriverWait(self.driver, 10)
         element = wait.until(EC.element_to_be_clickable(MiniCart.Payment))
