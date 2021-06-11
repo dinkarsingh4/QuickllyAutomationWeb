@@ -62,6 +62,15 @@ class BasePage:
         # driver.set_script_timeout(cls.page_load_timeout)
         return driver
 
+    def capture_screen_shot(self) -> object:
+        if not os.path.exists('screenshots'):
+            os.makedirs('screenshots')
+
+        name = datetime.strftime(datetime.now(), '%m-%d_%H-%M-%S')
+        path = os.path.join('screenshots', f'screenshot_{name}.png')
+        print(path)
+        self.driver.save_screenshot(path)
+
     # def capture_screen_shot(self):
     #     if not os.path.exists('screenshots'):
     #         os.makedirs('screenshots')
