@@ -135,7 +135,8 @@ class Cart(BasePage):
         self.click(MiniCart.drop_quantity)
 
     def click_remove(self):
-        self.click(MiniCart.remove2)
+        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(MiniCart.remove2)).click()
+        # self.click(MiniCart.remove2)
 
     def click_eVoucher(self):
         # time.sleep(15)

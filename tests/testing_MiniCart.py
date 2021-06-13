@@ -2,6 +2,8 @@ import time
 from resources import ui_test_class
 from resources.page_objects.cart import MiniCart
 from resources.page_objects.cart import Cart
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 class TesCART(ui_test_class.UVClass):
@@ -209,7 +211,9 @@ class TesCART(ui_test_class.UVClass):
         self.assertEqual(self.actual21, label2)
 
     def test_label(self):
+        WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(MiniCart.shops_name))
         label3 = self.cart_page.get_attribute(MiniCart.shops_name, 'src')
+        WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(MiniCart.shops_name1))
         label4 = self.cart_page.get_attribute(MiniCart.shops_name1, 'src')
         print(label3)
         print(label4)
@@ -217,6 +221,7 @@ class TesCART(ui_test_class.UVClass):
         self.assertEqual(self.actual23, label4)
 
     def test_priceAndCount(self):
+        WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(MiniCart.price_label))
         price_label = self.cart_page.get_attribute(MiniCart.price_label, 'innerHTML')
         count_label = self.cart_page.get_attribute(MiniCart.count_label, 'innerHTML')
         print(price_label)
@@ -225,6 +230,7 @@ class TesCART(ui_test_class.UVClass):
         self.assertEqual(self.actual24, count_label)
 
     def test_priceEachShop(self):
+        WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(MiniCart.price1))
         price1 = self.cart_page.get_attribute(MiniCart.price1, 'innerHTML')
         price2 = self.cart_page.get_attribute(MiniCart.price2, 'innerHTML')
         print(price1, price2)
