@@ -106,8 +106,8 @@ class BasePage:
             # self.driver.switch_to
             return self.driver.find_element(*by_locator)
         except:
-            # print('@screenshot@')
-            # self.capture_screen_shot()
+            print('@screenshot@')
+            self.capture_screen_shot()
             raise
 
     def find_elements(self, by_locator):
@@ -146,7 +146,7 @@ class BasePage:
         try:
             WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(by_locator)).click()
         except:
-            # self.capture_screen_shot()
+            self.capture_screen_shot()
             raise
 
     # this function performs text entry of the passed in text, in a web element whose locator is passed to it.
@@ -237,7 +237,7 @@ class BasePage:
             hov = ActionChains(self.driver).move_to_element(element)
             hov.perform()
         except BaseException as e:
-            # self.capture_screen_shot()
+            self.capture_screen_shot()
             raise
 
     def check_presence_of_element(self, by_locator):
@@ -443,7 +443,7 @@ class BasePage:
             print('Waited [{}s] for "{}"'.format(wait, by_locator))
             if screenshot:
                 print(e)
-                # self.capture_screen_shot()
+                self.capture_screen_shot()
             if re_raise:
                 raise
         return False
@@ -455,7 +455,7 @@ class BasePage:
             WebDriverWait(self.driver, wait).until(EC.invisibility_of_element(by_locator))
             return True
         except BaseException as e:
-            # self.capture_screen_shot()
+            self.capture_screen_shot()
             raise
         # return False
 

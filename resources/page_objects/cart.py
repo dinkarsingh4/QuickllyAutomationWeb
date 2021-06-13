@@ -1,9 +1,12 @@
+import time
+
 from resources.config_methods import DataClass
 from resources.locators import MiniCart
 from resources.page_objects.base_page import BasePage
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.action_chains import ActionChains
 
 
 class Cart(BasePage):
@@ -57,13 +60,24 @@ class Cart(BasePage):
         self.click(MiniCart.Add1)
 
     def click_plus(self):
+        # time.sleep(15)
+        button = WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.CSS_SELECTOR, '#qty_cart_270 > a:nth-child(3)')))
+        button.click()
+        # self.wait_for_loader(30)
+        # self.driver.implicitly_wait(25)
+        # element = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(MiniCart.PlusQuantity))
+        # wait = WebDriverWait(self.driver, 10)
+        # element = wait.until(EC.element_to_be_clickable(MiniCart.PlusQuantity))
+        # element.click()
         # self.wait_for_loader(10)
         # self.scroll_to_element(MiniCart.PlusQuantity)
-        self.click(MiniCart.PlusQuantity)
+        # self.click(MiniCart.PlusQuantity)
+        # button = self.driver.find_element_by_class_name("setqty")
+        # self.driver.implicitly_wait(10)
+        # ActionChains(self.driver).move_to_element(button).click(button).perform()
 
     def click_minus(self):
         # self.scroll_to_element(MiniCart.MinusQuantity)
-        # self.wait_for_loader(5)
         self.click(MiniCart.MinusQuantity)
 
     def click_delete(self):
@@ -106,11 +120,14 @@ class Cart(BasePage):
 
     def click_dropDown1(self):
         # self.wait_for_loader(15)
-        # self.scroll_to_element(MiniCart.drop_down1)
+        time.sleep(15)
+        self.scroll_to_element(MiniCart.drop_down1)
         self.click(MiniCart.drop_down1)
 
     def click_dropDown2(self):
         # self.wait_for_loader(15)
+        time.sleep(5)
+        self.scroll_to_element(MiniCart.drop_down2)
         self.click(MiniCart.drop_down2)
 
     def click_quantity(self):
@@ -121,10 +138,14 @@ class Cart(BasePage):
         self.click(MiniCart.remove2)
 
     def click_eVoucher(self):
-        self.scroll_to(1494, -36)
-        wait = WebDriverWait(self.driver, 10)
-        element = wait.until(EC.element_to_be_clickable(MiniCart.eVoucher))
-        element.click()
+        # time.sleep(15)
+        self.scroll_to_element(MiniCart.eVoucher)
+        WebDriverWait(self.driver, 20).until(
+            EC.element_to_be_clickable((By.CSS_SELECTOR, "#vocherRewardWallet-1"))).click()
+        # self.scroll_to(1494, -283)
+        # wait = WebDriverWait(self.driver, 10)
+        # element = wait.until(EC.element_to_be_clickable(MiniCart.eVoucher))
+        # element.click()
         # self.scroll_to_element(MiniCart.eVoucher)
         # self.wait_for_loader(15)
         # self.click(MiniCart.eVoucher)
@@ -133,6 +154,10 @@ class Cart(BasePage):
         self.click(MiniCart.reward)
 
     def click_wallet(self):
+        # time.sleep(15)
+        # self.scroll_to_element(MiniCart.wallet)
+        # WebDriverWait(self.driver, 20).until(
+        #     EC.element_to_be_clickable((By.CSS_SELECTOR, "#vocherRewardWallet-3"))).click()
         self.click(MiniCart.wallet)
 
     def enter_eVoucher(self, evoucher):
@@ -181,8 +206,9 @@ class Cart(BasePage):
         self.find_element(MiniCart.Notes_text).send_keys(notes)
 
     def click_payment(self):
+        time.sleep(15)
         self.scroll_to_element(MiniCart.Payment)
-        self.scroll_to(1653, 1006)
+        self.scroll_to(1653, 1050)
         # self.wait_for_loader(15)
         wait = WebDriverWait(self.driver, 10)
         element = wait.until(EC.element_to_be_clickable(MiniCart.Payment))
@@ -209,16 +235,24 @@ class Cart(BasePage):
         self.click(MiniCart.clickGrocery)
 
     def click_SecondShop(self):
-        self.click(MiniCart.secondShop)
+        time.sleep(15)
+        button = WebDriverWait(self.driver, 30).until(
+            EC.element_to_be_clickable((By.CSS_SELECTOR, '#minicart > div > div.clsHead.basket > div > div > div > a:nth-child(2)')))
+        button.click()
+        # self.click(MiniCart.secondShop)
 
     def select_dropdown(self):
         # self.select(MiniCart.yourAccount, "Sign In")
         self.click(MiniCart.yourAccount)
 
     def click_changeMethod(self):
+        time.sleep(15)
+        button = WebDriverWait(self.driver, 30).until(
+            EC.element_to_be_clickable((By.CSS_SELECTOR, '#choose-payment-method')))
+        button.click()
         # self.scroll_to_element(MiniCart.ChangePaymentMethod)
         # self.wait_for_page_load(15)
-        self.click(MiniCart.ChangePaymentMethod)
+        # self.click(MiniCart.ChangePaymentMethod)
 
     def click_Addmethod(self):
         self.click(MiniCart.AddPaymentMethod)
@@ -254,6 +288,12 @@ class Cart(BasePage):
 
     def click_ShopByGrocery(self):
         self.click(MiniCart.GroceryShop)
+
+    def click_CrossButton(self):
+        self.click(MiniCart.crossButton)
+
+    def click_quicklly(self):
+        self.click(MiniCart.quicklly)
 
 
 

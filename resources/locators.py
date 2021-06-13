@@ -201,6 +201,9 @@ class MiniCart:
     Payment = (By.XPATH, '//*[@id="proceedtopayment"]')
     Department = (By.XPATH, '//*[@id="searchhide"]/header/div[2]/div/div[1]/div[1]')
     GroceryShop = (By.XPATH, '//*[@id="searchhide"]/header/div[2]/div/div[1]/div[1]/div/div/ul/li[1]/a')
+    crossButton = (By.XPATH, '//*[@id="paymentbox"]/div/div/div[1]/button')
+    quicklly = (By.XPATH, '/html/body/header/a/img')
+    orderID = (By.XPATH, '//*[@id="innerlist-products"]/strong"')
 
 
 
