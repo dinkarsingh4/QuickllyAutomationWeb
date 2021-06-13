@@ -531,9 +531,9 @@ class TesCART(ui_test_class.UVClass):
     def test_paymentMethod1(self):
         self.cart_page.click_payment1()
         self.cart_page.click_Pay()
-        orderID = self.cart_page.get_attribute(MiniCart.orderID, 'innerHTML')
-        print(orderID)
-        self.assertEqual(self.actual63, orderID)
+        # orderID = self.cart_page.get_attribute(MiniCart.orderID, 'innerHTML')
+        # print(orderID)
+        # self.assertEqual(self.actual63, orderID)
         self.cart_page.click_quicklly()
         self.cart_page.submit_zip()
         self.AddItem()
