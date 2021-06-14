@@ -204,6 +204,9 @@ class MiniCart:
     crossButton = (By.XPATH, '//*[@id="paymentbox"]/div/div/div[1]/button')
     quicklly = (By.XPATH, '/html/body/header/a/img')
     orderID = (By.XPATH, '//*[@id="innerlist-products"]/strong"')
+    accountName = (By.XPATH, '//*[@id="searchhide"]/header/div[3]/p')
+    eVoucher_text_value = (By.XPATH, '//*[@id="e-vouchercode"]')
+    ThankYou = (By.XPATH, '//*[@id="innerlist-products"]/h1')
 
 
 

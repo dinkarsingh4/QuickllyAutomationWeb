@@ -92,7 +92,7 @@ class Cart(BasePage):
         self.click(MiniCart.additem)
 
     def click_AddItem1(self):
-        self.scroll_to_element(MiniCart.additem2)
+        # self.scroll_to_element(MiniCart.additem2)
         # self.driver.implicitly_wait(20)
         self.click(MiniCart.additem2)
 
@@ -120,7 +120,7 @@ class Cart(BasePage):
 
     def click_dropDown1(self):
         # self.wait_for_loader(15)
-        time.sleep(15)
+        # time.sleep(15)
         self.scroll_to_element(MiniCart.drop_down1)
         self.click(MiniCart.drop_down1)
 
@@ -162,6 +162,7 @@ class Cart(BasePage):
         self.click(MiniCart.wallet)
 
     def enter_eVoucher(self, evoucher):
+        self.scroll_to_element(MiniCart.eVoucher_text)
         self.find_elements(MiniCart.eVoucher_text).clear()
         self.find_element(MiniCart.eVoucher_text).send_keys(evoucher)
 
@@ -219,6 +220,7 @@ class Cart(BasePage):
 
     def click_apply(self):
         self.scroll_to_element(MiniCart.Apply)
+        time.sleep(15)
         WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(MiniCart.Apply)).click()
         self.click(MiniCart.Apply)
 
