@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/cart.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/cart.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_MiniCart.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_MiniCart.py" afterDir="false" />
-    </list>
+    <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -154,13 +149,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616787846440</updated>
-    </task>
-    <task id="LOCAL-00012" summary="fixed chromedriver path">
-      <created>1618940973188</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1618940973188</updated>
     </task>
     <task id="LOCAL-00013" summary="added support for headless">
       <created>1618941365114</created>
@@ -498,7 +486,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623614587078</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1623695847105</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1623695847105</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
