@@ -37,16 +37,6 @@ def _capture_screenshot(name):
 
 
 
-@pytest.fixture(scope='session', autouse=True)
-def browser():
-    global driver
-    if driver is None:
-        driver = webdriver.Chrome()
-    yield driver
-    driver.quit()
-    return driver
-
-
 # @pytest.mark.hookwrapper
 # def pytest_runtest_makereport(item):
 #
