@@ -21,7 +21,6 @@ class forgetpass(BasePage):
 
     def click_submit(self):
         self.click(ForgetPassword.submit_button)
-        print("Password reset successfully")
 
     def click_user_login(self):
         self.click(ForgetPassword.Uer_login)

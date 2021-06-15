@@ -27,6 +27,8 @@ class LogIn:
     terms_link = (By.XPATH, '//*[@id="apiformprodct"]/div[1]/div/div/div[4]/span/strong/a')
     home_button = (By.XPATH, '//*[@id="searchhide"]/div[2]/ul/li[1]/a')
     doesnt_match = (By.XPATH, '//*[@id="error"]/div')
+    Intro = (By.XPATH, '//*[@id="searchhide"]/div[3]/p[2]/strong/u')
+    Terms = (By.XPATH, '//*[@id="searchhide"]/div[3]/p[2]/strong/u')
 
 
 class ContinueAsGuest:
@@ -49,6 +51,7 @@ class ContinueAsGuest:
     needanaccount_signin = (By.XPATH, '//*[@id="signupformmodal"]/div/div/div[2]/div/div[1]/div/div[1]/p[1]/span')
     invalid_mobile = (By.XPATH, '//*[@id="mobile-error"]')
     invalid_Email = (By.XPATH, '//*[@id="email-error"]')
+    googleError = (By.XPATH, '//*[@id="street_number2-error"]')
 
 
 class NeedAnAccount:
@@ -75,6 +78,7 @@ class NeedAnAccount:
     mobile_invalid = (By.XPATH, '//*[@id="mobile-error"]')
     address_invalid = (By.XPATH, '//*[@id="street_number-error"]')
     email_invalid = (By.XPATH, '//*[@id="email-error"]')
+    googleError = (By.XPATH, '//*[@id="street_number2-error"]')
 
 
 class ForgetPassword:
@@ -99,7 +103,8 @@ class MiniCart:
     shop_total = (By.XPATH, '//*[@id="minicart"]/div/div[2]/p[4]')
     image = (By.XPATH, '//*[@id="product"]/div/img')
     NameOfItem = (By.XPATH, '//*[@id="minicart"]/div/div[2]/div/div/div/p[1]')
-    PriceOfItem = (By.CSS_SELECTOR, '#minicart > div > div.clsContent > div > div:nth-child(1) > div > p:nth-child(2) > span.price')
+    PriceOfItem = (
+    By.CSS_SELECTOR, '#minicart > div > div.clsContent > div > div:nth-child(1) > div > p:nth-child(2) > span.price')
     ItemQuantity = (By.XPATH, '//*[@id="qty_cart_270"]/span')
     PlusQuantity = (By.XPATH, '//*[@id="qty_cart_270"]/a[2]')
     MinusQuantity = (By.XPATH, '//*[@id="qty_cart_270"]/a[1]')
@@ -137,12 +142,12 @@ class MiniCart:
     remove1 = (By.XPATH, '//*[@id="lnk_270"]')
     remove2 = (By.XPATH, '//*[@id="lnk_51875"]')
     eVoucher_label = (By.XPATH, '//*[@id="couponfrm"]/div[1]/div/div[1]/label')
-    reward_label =(By.XPATH, '//*[@id="couponfrm"]/div[1]/div/div[2]/label')
+    reward_label = (By.XPATH, '//*[@id="couponfrm"]/div[1]/div/div[2]/label')
     wallet_label = (By.XPATH, '//*[@id="couponfrm"]/div[1]/div/div[3]/label')
     codeOption = (By.XPATH, '//*[@id="parRadioOne"]/p/span')
     maximum_eVoucher = (By.XPATH, '//*[@id="parRadioOne"]/span')
     rewardPoint = (By.XPATH, '//*[@id="parRadioTwo"]/p/span')
-    rewardPointApplicable =(By.XPATH, '//*[@id="parRadioTwo"]/span')
+    rewardPointApplicable = (By.XPATH, '//*[@id="parRadioTwo"]/span')
     walletBalance = (By.XPATH, '//*[@id="parRadioThree"]/p/span')
     walletEmpty = (By.XPATH, '//*[@id="parRadioThree"]/span')
     orderSummary = (By.CLASS_NAME, 'cartboxttl')
@@ -153,21 +158,28 @@ class MiniCart:
     FoodItemTotal = (By.XPATH, '//*[@id="lblSubItemsFood"]')
     FoodPrice = (By.XPATH, '//*[@id="lblGrandTotalFood"]')
     EstimatedTax = (By.XPATH, '//*[@id="tax"]')
-    EstimatedTaxPrice = (By.CSS_SELECTOR, '#searchhide > div.clsCartBox > div.clsCartOptions > div.cartright-box.cartright-box-two > p:nth-child(4) > span.cartboxitemPrice')
+    EstimatedTaxPrice = (By.CSS_SELECTOR,
+                         '#searchhide > div.clsCartBox > div.clsCartOptions > div.cartright-box.cartright-box-two > p:nth-child(4) > span.cartboxitemPrice')
     EstimatedShipping = (By.XPATH, '//*[@id="shippingfee"]/span[1]')
     EstimatedShippingPrice = (By.XPATH, '//*[@id="shippingfee"]/span[2]')
     MinimumCharge = (By.XPATH, '//*[@id="storemincharge"]')
-    MinimumChargePrice = (By.CSS_SELECTOR, '#searchhide > div.clsCartBox > div.clsCartOptions > div.cartright-box.cartright-box-two > p:nth-child(6) > span.cartboxitemPrice')
+    MinimumChargePrice = (By.CSS_SELECTOR,
+                          '#searchhide > div.clsCartBox > div.clsCartOptions > div.cartright-box.cartright-box-two > p:nth-child(6) > span.cartboxitemPrice')
     PackageHandling = (By.XPATH, '//*[@id="pkgcharge"]')
-    PackageHandlingPrice = (By.CSS_SELECTOR, '#searchhide > div.clsCartBox > div.clsCartOptions > div.cartright-box.cartright-box-two > p:nth-child(7) > span.cartboxitemPrice')
-    Tip = (By.CSS_SELECTOR, '#searchhide > div.clsCartBox > div.clsCartOptions > div.cartright-box.cartright-box-two > p.cartboxitemtip > span.cartboxitemName')
+    PackageHandlingPrice = (By.CSS_SELECTOR,
+                            '#searchhide > div.clsCartBox > div.clsCartOptions > div.cartright-box.cartright-box-two > p:nth-child(7) > span.cartboxitemPrice')
+    Tip = (By.CSS_SELECTOR,
+           '#searchhide > div.clsCartBox > div.clsCartOptions > div.cartright-box.cartright-box-two > p.cartboxitemtip > span.cartboxitemName')
     TipPrice = (By.XPATH, '//*[@id="tip"]')
-    EstimatedOrder = (By.CSS_SELECTOR, '#searchhide > div.clsCartBox > div.clsCartOptions > div.cartright-box.cartright-box-two > p:nth-child(10) > span.cartboxitemName.cartboxitemNameBold')
+    EstimatedOrder = (By.CSS_SELECTOR,
+                      '#searchhide > div.clsCartBox > div.clsCartOptions > div.cartright-box.cartright-box-two > p:nth-child(10) > span.cartboxitemName.cartboxitemNameBold')
     EstimatedOrderPrice = (By.XPATH, '//*[@id="tipadd"]')
-    DeliveryLabel = (By.CSS_SELECTOR, '#searchhide > div.clsCartBox > div.clsCartOptions > div.cartright-box.cartright-box-three > p.addrslbl > span')
+    DeliveryLabel = (By.CSS_SELECTOR,
+                     '#searchhide > div.clsCartBox > div.clsCartOptions > div.cartright-box.cartright-box-three > p.addrslbl > span')
     ChangeAddress = (By.XPATH, '//*[@id="changeAddrssBtn"]')
     EstimatedDelivery = (By.CSS_SELECTOR, '#deliverystate > strong')
-    DeliveryNotes = (By.CSS_SELECTOR, '#searchhide > div.clsCartBox > div.clsCartOptions > div.cartright-box.cartright-box-three > div.delivery_notesbox-wrapper > label > b')
+    DeliveryNotes = (By.CSS_SELECTOR,
+                     '#searchhide > div.clsCartBox > div.clsCartOptions > div.cartright-box.cartright-box-three > div.delivery_notesbox-wrapper > label > b')
     ProceedToPayment = (By.XPATH, '//*[@id="searchhide"]/div[3]/div[2]/div[2]/div[2]')
     InvalidCoupon = (By.XPATH, '//*[@id="parRadioOne"]/div')
     drop_quantity = (By.XPATH, '//*[@id="qty_51875"]/option[2]')
@@ -210,7 +222,22 @@ class MiniCart:
 
 
 
-
+class Coupon:
+    zipCode = (By.XPATH, '//*[@id="zipcode"]')
+    submitButton = (By.XPATH, '//*[@id="zipsubmitbtn"]')
+    yourAccount = (By.XPATH, '//*[@id="searchhide"]/header/div[3]/span')
+    SignInButton = (By.XPATH, '//*[@id="procedcheckoutBtn"]')
+    Email = (By.ID, 'user_email')
+    Pass = (By.ID, 'password')
+    LoginButton = (By.XPATH, '//*[@id="btn-login"]')
+    additem = (By.XPATH, '//*[@id="img_270"]')
+    additem2 = (By.XPATH, '//*[@id="searchhide"]/div[5]/div/section[2]/div/a[1]')
+    click_cart = (By.CLASS_NAME, 'clsCart2')
+    proceed_to_checkOut = (By.ID, 'lnkProceedToCheckout')
+    evoucher_text_box = (By.XPATH, '//*[@id="e-vouchercode"]')
+    InvalidCoupon = (By.XPATH, '//*[@id="parRadioOne"]/div')
+    Apply = (By.XPATH, '//*[@id="parRadioOne"]/a')
+    empty_cart = (By.ID, 'lblCartEmpty')
 
 
 class CommonLocators:

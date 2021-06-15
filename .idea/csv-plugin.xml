@@ -24,6 +24,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/resources/page_objects/eVoucher.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/tests/testing_MiniCart.py">
           <value>
             <Attribute>
@@ -45,6 +52,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/tests/testing_eVoucher.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/tests/testing_forgotpassword.py">
           <value>
             <Attribute>
@@ -53,6 +67,13 @@
           </value>
         </entry>
         <entry key="/tests/testing_main_page.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/tests/testing_needanaccount.py">
           <value>
             <Attribute>
               <option name="separator" value=":" />

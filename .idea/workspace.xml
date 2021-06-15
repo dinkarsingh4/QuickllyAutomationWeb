@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main">
-      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/page_objects/eVoucher.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testing_eVoucher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/locators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/LogIn.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/LogIn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ui_test_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ui_test_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_continueasguest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_continueasguest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_forgotpassword.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_forgotpassword.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_main_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_main_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_needanaccount.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_needanaccount.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,35 +65,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.general" />
     <property name="settings.editor.splitter.proportion" value="0.2487757" />
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for testing_MiniCart.TesCART">
-    <configuration name="Unittests for testing_MiniCart.TesCART" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="gitAutomation" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;testing_MiniCart.TesCART&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for testing_MiniCart.TesCART.test_ckhange_address" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="gitAutomation" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;testing_MiniCart.TesCART.test_ckhange_address&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Unittests for testing_forgotpassword.TesFP">
     <configuration name="Unittests for testing_continueasguest.TesCAG" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -95,6 +77,20 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;testing_continueasguest.TesCAG&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for testing_eVoucher.TesEVoucher" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="gitAutomation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;testing_eVoucher.TesEVoucher&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -126,20 +122,34 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests for testing_needanaccount.TesNAC" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="gitAutomation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;testing_needanaccount.TesNAC&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python tests.Unittests for testing_MiniCart.TesCART" />
+      <item itemvalue="Python tests.Unittests for testing_eVoucher.TesEVoucher" />
       <item itemvalue="Python tests.Unittests for testing_main_page.TesLogin" />
-      <item itemvalue="Python tests.Unittests for testing_MiniCart.TesCART.test_ckhange_address" />
       <item itemvalue="Python tests.Unittests for testing_continueasguest.TesCAG" />
+      <item itemvalue="Python tests.Unittests for testing_needanaccount.TesNAC" />
       <item itemvalue="Python tests.Unittests for testing_forgotpassword.TesFP" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests for testing_MiniCart.TesCART" />
         <item itemvalue="Python tests.Unittests for testing_forgotpassword.TesFP" />
+        <item itemvalue="Python tests.Unittests for testing_needanaccount.TesNAC" />
         <item itemvalue="Python tests.Unittests for testing_continueasguest.TesCAG" />
         <item itemvalue="Python tests.Unittests for testing_main_page.TesLogin" />
-        <item itemvalue="Python tests.Unittests for testing_MiniCart.TesCART.test_ckhange_address" />
+        <item itemvalue="Python tests.Unittests for testing_eVoucher.TesEVoucher" />
       </list>
     </recent_temporary>
   </component>
@@ -151,13 +161,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616787846440</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Merge branch 'main' of https://github.com/RaqeebAlam786/gitAutomation into main">
-      <created>1619008878868</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1619008878868</updated>
     </task>
     <task id="LOCAL-00017" summary="Merge branch 'main' of https://github.com/RaqeebAlam786/gitAutomation into main">
       <created>1619010512008</created>
@@ -495,7 +498,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623697757828</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1623697769218</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1623697769218</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">

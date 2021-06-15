@@ -12,6 +12,7 @@ from resources.page_objects.guest import guest
 from resources.page_objects.needaccount import needanaccount
 from resources.page_objects.forgetpassword import forgetpass
 from resources.page_objects.cart import Cart
+from resources.page_objects.eVoucher import evoucher
 from selenium.webdriver import Remote
 
 
@@ -135,6 +136,30 @@ class UVClass(unittest.TestCase):
         cls.driver.close()
         cls.driver.quit()
         super(UVClass, cls).tearDownClass()
+
+
+class UVIClass(unittest.TestCase):
+    aut_prefix = 'automation_'
+    driver: Remote = None
+    const_data = DataClass
+
+    eVoucher_page: BasePage = None
+
+    @classmethod
+    def setUpClass(cls):
+        super(UVIClass, cls).setUpClass()
+        cls.eVoucher_page = BasePage(cls.driver)
+        cls.common_methods = Common(cls.driver)
+        cls.driver = cls.eVoucher_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
+        cls.eVoucher_page.driver = cls.driver
+        cls.eVoucher_page = evoucher(cls.driver)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
+        super(UVIClass, cls).tearDownClass()
 
     @classmethod
     def login(cls):

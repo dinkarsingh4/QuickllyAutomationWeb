@@ -1,5 +1,4 @@
 from resources import ui_test_class
-import unittest
 from resources.page_objects.needaccount import NeedAnAccount
 from resources.page_objects.needaccount import needanaccount
 
@@ -19,6 +18,13 @@ class TesNAC(ui_test_class.UIIIClass):
     expected_text_2 = "Register"
     dict1 = {}
     dicttxt = {}
+
+    actual1 = "This field is required."
+    actual2 = "User Login"
+    actual3 = "Continue as a Guest"
+    actual4 = "Your current address does not look right. Please select a valid address!"
+    actual5 = "Please enter at least 10 characters."
+    actual6 = "Please enter a valid email address."
 
     @classmethod
     def setUpClass(cls):
@@ -94,8 +100,6 @@ class TesNAC(ui_test_class.UIIIClass):
             self.dict1['confirm password'] = False
             print(self.dict1)
 
-        self.assertTrue(all((self.dict1.values())), self.dict1)
-
     def compare_res_fieldsRequired(self):
 
         firstname_field = self.need_page.get_attribute(NeedAnAccount.firstname_error, 'innerHTML')
@@ -132,7 +136,7 @@ class TesNAC(ui_test_class.UIIIClass):
 
     def test_NeedAnAccount(self):
 
-        """Need An Account"""
+        """Adding Details To Register On Need An Account Page"""
         self.need_page.click_sign_button()
         self.need_page.click_NeedAnAccount()
         self.need_page.Firstname("Sami")
@@ -145,6 +149,8 @@ class TesNAC(ui_test_class.UIIIClass):
         self.need_page.confirm_password("sami1234")
         self.need_page.register_button()
         print("Registered Successfully")
+        Error = self.need_page.get_attribute(NeedAnAccount.googleError, 'innerHTML')
+        self.assertEqual(self.actual4, Error)
 
     def test_placeholders(self):
 
@@ -152,6 +158,7 @@ class TesNAC(ui_test_class.UIIIClass):
         self.need_page.click_sign_button()
         self.need_page.click_NeedAnAccount()
         self.compare_res_placeholders()
+        self.assertTrue(all((self.dict1.values())), self.dict1)
 
     def test_FieldsRequired(self):
 
@@ -160,6 +167,8 @@ class TesNAC(ui_test_class.UIIIClass):
         self.need_page.click_NeedAnAccount()
         self.need_page.register_button()
         self.compare_res_fieldsRequired()
+        firstname_field = self.need_page.get_attribute(NeedAnAccount.firstname_error, 'innerHTML')
+        self.assertEqual(self.actual1, firstname_field)
 
     def test_Texts(self):
 
@@ -171,36 +180,42 @@ class TesNAC(ui_test_class.UIIIClass):
 
     def test_check_UserLogin(self):
 
-        """NeedAnAccount Page"""
+        """Checking UserLogin Link On NeedAnAccount Page"""
         self.need_page.click_sign_button()
         self.need_page.click_NeedAnAccount()
         userlogin_check = self.need_page.get_attribute(NeedAnAccount.userlogin_link, 'innerHTML')
         print(userlogin_check)
+        self.assertEqual(self.actual2, userlogin_check)
 
     def test_check_ContinueAsGuest(self):
 
-        """NeedAnAccount Page"""
+        """Checking ContinueAsGuest Link On NeedAnAccount Page"""
         self.need_page.click_sign_button()
         self.need_page.click_NeedAnAccount()
         CAG_check = self.need_page.get_attribute(NeedAnAccount.continue_as_guest_link, 'innerHTML')
         print(CAG_check)
+        self.assertEqual(self.actual3, CAG_check)
 
     """Invalid Inputs for NeedAnAccount Page"""
 
     def test_check_invalidMob_input(self):
 
+        """Checking Invalid Mobile Number"""
         self.need_page.click_sign_button()
         self.need_page.click_NeedAnAccount()
         self.need_page.mobile("1234")
         self.need_page.register_button()
         mob_invalid_check = self.need_page.get_attribute(NeedAnAccount.mobile_invalid, 'innerHTML')
         print(mob_invalid_check)
+        self.assertEqual(self.actual5, mob_invalid_check)
 
     def test_check_invalidEmail_input(self):
 
+        """Checking Invalid Email"""
         self.need_page.click_sign_button()
         self.need_page.click_NeedAnAccount()
         self.need_page.enteremail("msamiadil")
         self.need_page.register_button()
         email_invalid_check = self.need_page.get_attribute(NeedAnAccount.email_invalid, 'innerHTML')
         print(email_invalid_check)
+        self.assertEqual(self.actual6, email_invalid_check)

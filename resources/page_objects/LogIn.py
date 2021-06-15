@@ -23,7 +23,6 @@ class Login(BasePage):
         self.find_element(LogIn.password_textbox).send_keys(password)
 
     def click_login(self):
-        print('Login Successful')
         self.scroll_to_element(LogIn.login_button)
         self.click(LogIn.login_button)
 

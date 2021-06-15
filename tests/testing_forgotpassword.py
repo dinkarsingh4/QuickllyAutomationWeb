@@ -10,6 +10,8 @@ class TesFP(ui_test_class.UIIIIClass):
     fp = {}
     fp1 = {}
 
+    actual1 = "Email ID does not exist, please try again with a valid ID<br>"
+
     @classmethod
     def setUpClass(cls):
         super(TesFP, cls).setUpClass()
@@ -53,7 +55,7 @@ class TesFP(ui_test_class.UIIIIClass):
             print(self.fp1)
 
     def test_ForgetPassword(self):
-        """Forget Password"""
+        """Adding User Details For Forget Password"""
 
         self.forget_page.click_SIbutton()
         self.forget_page.click_forgetpassword()
@@ -61,6 +63,7 @@ class TesFP(ui_test_class.UIIIIClass):
         self.forget_page.click_submit()
         invalid_email = self.forget_page.get_attribute(ForgetPassword.invalid_email, 'innerHTML')
         print(invalid_email)
+        self.assertEqual(self.actual1, invalid_email)
 
 
     def test_headings(self):

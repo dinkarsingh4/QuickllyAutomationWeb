@@ -17,6 +17,14 @@ class TesCAG(ui_test_class.UIIClass):
     expected_res_text_2 = "Submit"
     expected_error_1 = ""
 
+    actual1 = "Need an Account? Signup"
+    actual2 = "User Login"
+    actual3 = "Sign In"
+    actual4 = "This field is required."
+    actual5 = "Please enter at least 10 characters."
+    actual6 = "Please enter a valid email address."
+    actual7 = "Your current address does not look right. Please select a valid address!"
+
     dictpl = {}
     dicttext = {}
     dictfr = {}
@@ -82,9 +90,6 @@ class TesCAG(ui_test_class.UIIClass):
             self.dictpl['email'] = False
             print(self.dictpl)
 
-        self.assertTrue(all(self.dictpl.values()), self.dictpl)
-
-
     def compare_res_texts(self):
 
         shippingaddress_Text = self.guest_page.get_attribute(ContinueAsGuest.Shipping_address, 'innerHTML')
@@ -104,8 +109,6 @@ class TesCAG(ui_test_class.UIIClass):
             self.dicttext['Submit'] = False
             print(self.dicttext)
 
-        self.assertTrue(all(self.dicttext.values()), self.dicttext)
-
     def compare_res_requiredfields(self):
 
         self.guest_page.click_submit()
@@ -120,13 +123,14 @@ class TesCAG(ui_test_class.UIIClass):
 
     def test_checkingSignIn_link(self):
 
-        """Main Page"""
+        """Checking If SignIn Button Is There Or Not"""
         signin_button_check = self.guest_page.get_attribute(ContinueAsGuest.signin_button, 'innerHTML')
         print(signin_button_check)
+        self.assertEqual(self.actual3, signin_button_check)
 
     def test_ContinueAsGuest(self):
 
-        """ContinueAsGuest"""
+        """Adding Shipping Address To ContinueAsGuest"""
         self.guest_page.signin_button()
         self.guest_page.click_Continue_As_Guest()
         self.guest_page.first_name("Saad")
@@ -137,18 +141,22 @@ class TesCAG(ui_test_class.UIIClass):
         self.guest_page.email_address('saadadil3@gmail.com')
         self.guest_page.click_submit()
         print("shipping address was entered successfully")
+        Error = self.guest_page.get_attribute(ContinueAsGuest.googleError, 'innerHTML')
+        self.assertEqual(self.actual7, Error)
 
     def test_checkNeedAnAccount_link(self):
 
-        """ContinueAsGuest Page"""
+        """Checking NeedAnAccount Link On ContinueAsGuest Page"""
         NeedAnAccount_check = self.guest_page.get_attribute(ContinueAsGuest.needanaccount_signin, 'innerHTML')
         print(NeedAnAccount_check)
+        self.assertEqual(self.actual1, NeedAnAccount_check)
 
     def test_UserLogIn_link(self):
 
-        """ContinueAsGuest Page"""
+        """Checking User Login Link On ContinueAsGuest Page"""
         LogIn_check = self.guest_page.get_attribute(ContinueAsGuest.user_login, 'innerHTML')
         print(LogIn_check)
+        self.assertEqual(self.actual2, LogIn_check)
 
 
     def test_placeholders(self):
@@ -157,6 +165,7 @@ class TesCAG(ui_test_class.UIIClass):
         self.guest_page.signin_button()
         self.guest_page.click_Continue_As_Guest()
         self.compare_res_placeholders()
+        self.assertTrue(all(self.dictpl.values()), self.dictpl)
 
 
     def test_texts(self):
@@ -165,6 +174,7 @@ class TesCAG(ui_test_class.UIIClass):
         self.guest_page.signin_button()
         self.guest_page.click_Continue_As_Guest()
         self.compare_res_texts()
+        self.assertTrue(all(self.dicttext.values()), self.dicttext)
 
     def test_fieldsRequired(self):
 
@@ -172,6 +182,8 @@ class TesCAG(ui_test_class.UIIClass):
         self.guest_page.signin_button()
         self.guest_page.click_Continue_As_Guest()
         self.compare_res_requiredfields()
+        firstname_field = self.guest_page.get_attribute(ContinueAsGuest.firstname_error, 'innerHTML')
+        self.assertEqual(self.actual4, firstname_field)
 
     def test_check_invalidMob_input(self):
 
@@ -182,6 +194,7 @@ class TesCAG(ui_test_class.UIIClass):
         self.guest_page.click_submit()
         mob_invalid_check = self.guest_page.get_attribute(ContinueAsGuest.invalid_mobile, 'innerHTML')
         print(mob_invalid_check)
+        self.assertEqual(self.actual5, mob_invalid_check)
 
     def test_check_invalidEmail_input(self):
 
@@ -192,3 +205,4 @@ class TesCAG(ui_test_class.UIIClass):
         self.guest_page.click_submit()
         email_invalid_check = self.guest_page.get_attribute(ContinueAsGuest.invalid_Email, 'innerHTML')
         print(email_invalid_check)
+        self.assertEqual(self.actual6, email_invalid_check)

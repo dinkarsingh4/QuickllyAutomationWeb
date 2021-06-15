@@ -13,6 +13,15 @@ class TesLogin(ui_test_class.UIClass):
     expected_res21 = "Password :"
     mp = {}
     mp1 = {}
+    actual1 = "Need an Account? Signup"
+    actual2 = "Continue as a Guest"
+    actual3 = "Forgot Password?"
+    actual4 = "Introduction"
+    actual5 = "Acceptance of the Terms of Use"
+    actual6 = "&nbsp; Email or Password doesn't match "
+    actual7 = "This field is required."
+    actual8 = "Please enter a valid email address."
+    actual9 = "&nbsp; One or more fields are blanks or doesn't have correct value "
 
     @classmethod
     def setUpClass(cls):
@@ -46,7 +55,7 @@ class TesLogin(ui_test_class.UIClass):
             self.mp['password'] = False
             print(self.mp)
 
-        self.assertTrue(all(self.mp.values()), self.mp)
+
 
     def compare_res_texts(self):
 
@@ -77,7 +86,7 @@ class TesLogin(ui_test_class.UIClass):
             self.mp1['password'] = False
             print(self.mp1)
 
-        self.assertTrue(all(self.mp1.values()), self.mp1)
+
 
     def compare_res_fields_required(self):
 
@@ -93,60 +102,76 @@ class TesLogin(ui_test_class.UIClass):
         self.maine_page.enter_email("admin@gmail.com")
         self.maine_page.enter_password("admin1234")
         self.maine_page.click_login()
+        error_messages = self.maine_page.get_attribute(LogIn.doesnt_match, 'innerHTML')
+        print(error_messages)
+        self.assertEqual(self.actual6, error_messages)
 
     def test_login_placeholders(self):
 
         """placeholders for Login page"""
         self.maine_page.click_SignIn()
         self.compare_placeholders()
+        self.assertTrue(all(self.mp.values()), self.mp)
 
     def test_login_texts(self):
 
         """headings for Login page"""
         self.maine_page.click_SignIn()
         self.compare_res_texts()
+        self.assertTrue(all(self.mp1.values()), self.mp1)
 
     def test_FieldsRequired(self):
 
         """Fields Required for Login Page"""
         self.maine_page.click_SignIn()
         self.maine_page.click_login()
+        email_field = self.maine_page.get_attribute(LogIn.email_field_error, 'innerHTML')
+        self.assertEqual(self.actual7, email_field)
         self.compare_res_fields_required()
 
     def test_checkNeedAnAccount_link(self):
 
-        """Login Page"""
+        """Checking NeedAnAccount Link On Login Page"""
         self.maine_page.click_SignIn()
         NeedAnAccount_check = self.maine_page.get_attribute(LogIn.needanaccount_signin, 'innerHTML')
         print(NeedAnAccount_check)
+        self.assertEqual(self.actual1, NeedAnAccount_check)
 
     def test_checkContinueAsGuest_link(self):
 
-        """Login Page"""
+        """Checking ContinueAsGuest Link On Login Page"""
         self.maine_page.click_SignIn()
         ContinueAsGuest_check = self.maine_page.get_attribute(LogIn.ContinueAsGuest_link, 'innerHTML')
         print(ContinueAsGuest_check)
+        self.assertEqual(self.actual2, ContinueAsGuest_check)
 
     def test_forgotPassword_link(self):
 
-        """Login Page"""
+        """Checking Forgot Password Link On Login Page"""
         self.maine_page.click_SignIn()
         ForgotPassword_check = self.maine_page.get_attribute(LogIn.ForgotPassword_link, 'innerHTML')
         print(ForgotPassword_check)
+        self.assertEqual(self.actual3, ForgotPassword_check)
 
     def test_privacy_link(self):
 
-        """Login Page"""
+        """Checking Privacy Link On Login Page"""
         self.maine_page.click_SignIn()
         self.maine_page.click_Privacy()
+        Introduction = self.maine_page.get_attribute(LogIn.Intro, 'innerHTML')
+        print(Introduction)
+        self.assertEqual(self.actual4, Introduction)
         print("Privacy link is clickable")
 
     def test_TermsAndConditions_link(self):
 
-        """Login Page"""
+        """Checking Terms&Conditions Link On Login Page"""
         self.maine_page.click_SignIn()
         self.maine_page.click_TermsAndConditions()
         self.maine_page.click_home()
+        TermsOfUse = self.maine_page.get_attribute(LogIn.Terms, 'innerHTML')
+        print(TermsOfUse)
+        self.assertEqual(self.actual5, TermsOfUse)
         print("Terms&Condition link is clickable")
 
     def test_DotBetweenEmail(self):
@@ -156,6 +181,9 @@ class TesLogin(ui_test_class.UIClass):
         self.maine_page.enter_email("admin.123@gmail.com")
         self.maine_page.enter_password("admin1234")
         self.maine_page.click_login()
+        error_messages = self.maine_page.get_attribute(LogIn.doesnt_match, 'innerHTML')
+        print(error_messages)
+        self.assertEqual(self.actual6, error_messages)
         print("Accepted")
 
     def test_DotBetweenSubDomain(self):
@@ -165,6 +193,9 @@ class TesLogin(ui_test_class.UIClass):
         self.maine_page.enter_email("admin@gmail.com")
         self.maine_page.enter_password("admin1234")
         self.maine_page.click_login()
+        error_messages = self.maine_page.get_attribute(LogIn.doesnt_match, 'innerHTML')
+        print(error_messages)
+        self.assertEqual(self.actual6, error_messages)
         print("Accepted")
 
     def test_DigitsInEmail(self):
@@ -174,6 +205,9 @@ class TesLogin(ui_test_class.UIClass):
         self.maine_page.enter_email("123@gmail.com")
         self.maine_page.enter_password("admin1234")
         self.maine_page.click_login()
+        error_messages = self.maine_page.get_attribute(LogIn.doesnt_match, 'innerHTML')
+        print(error_messages)
+        self.assertEqual(self.actual6, error_messages)
         print("Accepted")
 
     def test_UnderScoreInEmail(self):
@@ -183,6 +217,9 @@ class TesLogin(ui_test_class.UIClass):
         self.maine_page.enter_email("123_abc@gmail.com")
         self.maine_page.enter_password("admin1234")
         self.maine_page.click_login()
+        error_messages = self.maine_page.get_attribute(LogIn.doesnt_match, 'innerHTML')
+        print(error_messages)
+        self.assertEqual(self.actual6, error_messages)
         print("Accepted")
 
     def test_DashInEmail(self):
@@ -192,6 +229,9 @@ class TesLogin(ui_test_class.UIClass):
         self.maine_page.enter_email("123-abc@gmail.com")
         self.maine_page.enter_password("admin1234")
         self.maine_page.click_login()
+        error_messages = self.maine_page.get_attribute(LogIn.doesnt_match, 'innerHTML')
+        print(error_messages)
+        self.assertEqual(self.actual6, error_messages)
         print("Accepted")
 
     def test_ValidEmail(self):
@@ -203,6 +243,7 @@ class TesLogin(ui_test_class.UIClass):
         self.maine_page.click_login()
         email_field = self.maine_page.get_attribute(LogIn.email_field_error, 'innerHTML')
         print(email_field)
+        self.assertEqual(self.actual8, email_field)
         print("Not Accepted")
 
     def test_ValidEmail2(self):
@@ -214,6 +255,7 @@ class TesLogin(ui_test_class.UIClass):
         self.maine_page.click_login()
         email_field = self.maine_page.get_attribute(LogIn.email_field_error, 'innerHTML')
         print(email_field)
+        self.assertEqual(self.actual8, email_field)
         print("Not Accepted")
 
     def test_ValidEmail3(self):
@@ -225,6 +267,7 @@ class TesLogin(ui_test_class.UIClass):
         self.maine_page.click_login()
         email_field = self.maine_page.get_attribute(LogIn.email_field_error, 'innerHTML')
         print(email_field)
+        self.assertEqual(self.actual8, email_field)
         print("Not Accepted")
 
     def test_ValidEmail4(self):
@@ -236,6 +279,7 @@ class TesLogin(ui_test_class.UIClass):
         self.maine_page.click_login()
         email_field = self.maine_page.get_attribute(LogIn.email_field_error, 'innerHTML')
         print(email_field)
+        self.assertEqual(self.actual8, email_field)
         print("Not Accepted")
 
     def test_ValidEmail5(self):
@@ -247,24 +291,27 @@ class TesLogin(ui_test_class.UIClass):
         self.maine_page.click_login()
         email_field = self.maine_page.get_attribute(LogIn.email_field_error, 'innerHTML')
         print(email_field)
+        self.assertEqual(self.actual8, email_field)
         print("Not Accepted")
 
     def test_EmailAndPassDontMatch(self):
 
-        """Login Page Email&Password Validation"""
+        """Checking EmailAndPassDontMatch Label """
         self.maine_page.click_SignIn()
         self.maine_page.enter_email("admin@gmail.com")
         self.maine_page.enter_password("admin1234")
         self.maine_page.click_login()
         error_messages = self.maine_page.get_attribute(LogIn.doesnt_match, 'innerHTML')
         print(error_messages)
+        self.assertEqual(self.actual6, error_messages)
 
     def test_password_minLength(self):
 
-        """Login Page Password Validation"""
+        """Checking Password Min Length"""
         self.maine_page.click_SignIn()
         self.maine_page.enter_email("admin@gmail.com")
         self.maine_page.enter_password("1234")
         self.maine_page.click_login()
         error_messages = self.maine_page.get_attribute(LogIn.doesnt_match, 'innerHTML')
         print(error_messages)
+        self.assertEqual(self.actual9, error_messages)
