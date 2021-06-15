@@ -50,13 +50,16 @@ def pytest_html_results_table_header(cells):
 #     cells.pop()
 
 @pytest.mark.hookwrapper
-def pytest_runtest_makereport(item, call):
+def pytest_runtest_makereport(item, call, cells):
     pytest_html = item.config.pluginmanager.getplugin('html')
     outcome = yield
     report = outcome.get_result()
     extra = getattr(report, 'extra', [])
     if report.when == 'call':
         # always add url to report
+        cells.insert(2, html.th("Description"))
+        cells.insert(1, html.th("Time", class_="sortable time", col="time"))
+        cells.pop()
         extra.append(pytest_html.extras.url('http://www.dev.quicklly.com/'))
         xfail = hasattr(report, 'wasxfail')
         if (report.skipped and xfail) or (report.failed and not xfail):
