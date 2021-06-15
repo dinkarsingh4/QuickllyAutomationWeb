@@ -24,7 +24,7 @@ def pytest_runtest_makereport(item, call):
         xfail = hasattr(report, 'wasxfail')
         if (report.skipped and xfail) or (report.failed and not xfail):
             # only add additional html on failure
-            extra.append(pytest_html.extras.image('D:/report/scr.png'))
+            extra.append(pytest_html.extras.image('/home/excellence/PycharmProjects/gitAutomation/tests/screenshots'))
             extra.append(pytest_html.extras.html('<div>Additional HTML</div>'))
         report.extra = extra
 
