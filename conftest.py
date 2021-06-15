@@ -20,7 +20,6 @@ def pytest_runtest_makereport(item, call):
             extra.append(pytest_html.extras.image('/home/excellence/PycharmProjects/gitAutomation/tests/screenshots'))
             extra.append(pytest_html.extras.html('<div>Additional HTML</div>'))
         report.extra = extra
-        report.description = str(item.function.__doc__)
 
 
 # @pytest.mark.optionalhook
