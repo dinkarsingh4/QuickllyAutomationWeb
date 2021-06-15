@@ -9,31 +9,24 @@ driver = None
 
 
 @pytest.mark.hookwrapper
-def pytest_runtest_makereport(item):
-    """
-    Extends the PyTest Plugin to take and embed screenshot in html report, whenever test fails.
-    :param item:
-    """
+def pytest_runtest_makereport(item, call):
     pytest_html = item.config.pluginmanager.getplugin('html')
     outcome = yield
     report = outcome.get_result()
     extra = getattr(report, 'extra', [])
+    if report.when == 'call':
 
-    if report.when == 'call' or report.when == "setup":
+        browser.save_screenshot('D:/report/scr.png')
+        extra.append(pytest_html.extras.image('D:/report/scr.png'))
+
+        # always add url to report
+        extra.append(pytest_html.extras.url('http://www.example.com/'))
         xfail = hasattr(report, 'wasxfail')
         if (report.skipped and xfail) or (report.failed and not xfail):
-            file_name = report.nodeid.replace("::", "_")+".png"
-            _capture_screenshot(file_name)
-            if file_name:
-                html = '<div><img src="file:/C:/SeleniumProject/Pytest_HTML_ScreenShot/ScreenShots/%s" alt="screenshot" style="width:600px;height:228px;" ' \
-                       'onclick="window.open(this.src)" align="right"/></div>'%file_name
-                extra.append(pytest_html.extras.html(html))
+            # only add additional html on failure
+            extra.append(pytest_html.extras.image('D:/report/scr.png'))
+            extra.append(pytest_html.extras.html('<div>Additional HTML</div>'))
         report.extra = extra
-
-
-def _capture_screenshot(name):
-    driver.get_screenshot_as_file("C:\\SeleniumProject\\Pytest_HTML_ScreenShot\\ScreenShots\\"+name)
-    # driver.get_screenshot_as_file(name)
 
 
 
@@ -79,25 +72,25 @@ def _capture_screenshot(name):
 #         report.extra = extra
 
 
-@pytest.mark.optionalhook
-def pytest_html_results_table_header(cells):
-    cells.insert(2, html.th('Description'))
-    cells.insert(1, html.th('Time', class_='sortable time', col='time'))
-    cells.pop()
-
-
-@pytest.mark.optionalhook
-def pytest_html_results_table_row(report, cells):
-    cells.insert(2, html.td(report.description))
-    cells.insert(1, html.td(datetime.utcnow(), class_='col-time'))
-    cells.pop()
-
-
-@pytest.mark.hookwrapper
-def pytest_runtest_makereport(item, call):
-    outcome = yield
-    report = outcome.get_result()
-    report.description = str(item.function.__doc__)
+# @pytest.mark.optionalhook
+# def pytest_html_results_table_header(cells):
+#     cells.insert(2, html.th('Description'))
+#     cells.insert(1, html.th('Time', class_='sortable time', col='time'))
+#     cells.pop()
+#
+#
+# @pytest.mark.optionalhook
+# def pytest_html_results_table_row(report, cells):
+#     cells.insert(2, html.td(report.description))
+#     cells.insert(1, html.td(datetime.utcnow(), class_='col-time'))
+#     cells.pop()
+#
+#
+# @pytest.mark.hookwrapper
+# def pytest_runtest_makereport(item, call):
+#     outcome = yield
+#     report = outcome.get_result()
+#     report.description = str(item.function.__doc__)
 
 
 
