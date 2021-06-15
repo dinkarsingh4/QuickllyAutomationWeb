@@ -5,6 +5,41 @@ from py._xmlgen import html
 from datetime import datetime
 
 
+@pytest.mark.hookwrapper
+def pytest_runtest_makereport(item, call):
+    timestamp = datetime.now().strftime('%H-%M-%S')
+
+    pytest_html = item.config.pluginmanager.getplugin('html')
+    outcome = yield
+    report = outcome.get_result()
+    extra = getattr(report, 'extra', [])
+    if report.when == 'call':
+        feature_request = item.funcargs['request']
+
+        driver = feature_request.getfuncargvalue('browser')
+        driver.save_screenshot('D:/report/scr' + timestamp + '.png')
+
+        extra.append(pytest_html.extras.image('D:/report/scr' + timestamp + '.png'))
+
+    # always add url to report
+    extra.append(pytest_html.extras.url('http://www.dev.quicklly.com/'))
+    xfail = hasattr(report, 'wasxfail')
+    if (report.skipped and xfail) or (report.failed and not xfail):
+        # only add additional html on failure
+        extra.append(pytest_html.extras.image('/home/excellence/PycharmProjects/gitAutomation/tests/screenshots'))
+        extra.append(pytest_html.extras.html('<div>Additional HTML</div>'))
+    report.extra = extra
+    report.description = str(item.function.__doc__)
+
+
+@pytest.mark.optionalhook
+def pytest_html_results_table_header(cells):
+    cells.insert(1, html.th('Description'))
+
+
+@pytest.mark.optionalhook
+def pytest_html_results_table_row(report, cells):
+    cells.insert(1, html.td(report.description))
 # @pytest.mark.optionalhook
 # def pytest_html_results_summary(prefix, summary, postfix):
 #     prefix.extend([html.p("Tester: xqc")])
@@ -48,31 +83,31 @@ from datetime import datetime
 #     cells.insert(2, html.td(report.description))
 #     cells.insert(1, html.td(datetime.utcnow(), class_="col-time"))
 #     cells.pop()
-@pytest.mark.optionalhook
-def pytest_html_results_table_header(cells):
-    cells.insert(1, html.th('Description'))
-
-
-@pytest.mark.optionalhook
-def pytest_html_results_table_row(report, cells):
-    cells.insert(1, html.td(report.description))
-
-
-@pytest.mark.hookwrapper
-def pytest_runtest_makereport(item, call):
-    pytest_html = item.config.pluginmanager.getplugin('html')
-    outcome = yield
-    report = outcome.get_result()
-    extra = getattr(report, 'extra', [])
-    if report.when == 'call':
-        # always add url to report
-        extra.append(pytest_html.extras.url('http://www.dev.quicklly.com/'))
-        xfail = hasattr(report, 'wasxfail')
-        if (report.skipped and xfail) or (report.failed and not xfail):
-            # only add additional html on failure
-            extra.append(pytest_html.extras.image('/home/excellence/PycharmProjects/gitAutomation/tests/screenshots'))
-            extra.append(pytest_html.extras.html('<div>Additional HTML</div>'))
-        report.extra = extra
+# @pytest.mark.optionalhook
+# def pytest_html_results_table_header(cells):
+#     cells.insert(1, html.th('Description'))
+#
+#
+# @pytest.mark.optionalhook
+# def pytest_html_results_table_row(report, cells):
+#     cells.insert(1, html.td(report.description))
+#
+#
+# @pytest.mark.hookwrapper
+# def pytest_runtest_makereport(item, call):
+#     pytest_html = item.config.pluginmanager.getplugin('html')
+#     outcome = yield
+#     report = outcome.get_result()
+#     extra = getattr(report, 'extra', [])
+#     if report.when == 'call':
+#         # always add url to report
+#         extra.append(pytest_html.extras.url('http://www.dev.quicklly.com/'))
+#         xfail = hasattr(report, 'wasxfail')
+#         if (report.skipped and xfail) or (report.failed and not xfail):
+#             # only add additional html on failure
+#             extra.append(pytest_html.extras.image('/home/excellence/PycharmProjects/gitAutomation/tests/screenshots'))
+#             extra.append(pytest_html.extras.html('<div>Additional HTML</div>'))
+#         report.extra = extra
 # from selenium.webdriver.chrome import webdriver
 #
 #
@@ -110,4 +145,3 @@ def pytest_runtest_makereport(item, call):
 #                        'onclick="window.open(this.src)" align="right"/></div>' % screen_img
 #                 extra.append(pytest_html.extras.html(html))
 #         report.extra = extra
-
