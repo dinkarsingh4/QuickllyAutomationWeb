@@ -1,8 +1,10 @@
 # !/usr/bin/python
 # --*-- coding:utf-8 --*--
 import pytest
-from py._xmlgen import html
-from datetime import datetime
+
+
+# from py._xmlgen import html
+# from datetime import datetime
 
 
 # @pytest.mark.optionalhook
@@ -46,9 +48,10 @@ def pytest_runtest_makereport(item, call):
     extra = getattr(report, 'extra', [])
     if report.when == 'call':
         # always add url to report
-        extra.append(pytest_html.extras.url('http://www.example.com/'))
+        extra.append(pytest_html.extras.url('http://www.dev.quicklly.com/'))
         xfail = hasattr(report, 'wasxfail')
         if (report.skipped and xfail) or (report.failed and not xfail):
             # only add additional html on failure
+            extra.append(pytest_html.extras.image('/home/excellence/PycharmProjects/gitAutomation/tests/screenshots'))
             extra.append(pytest_html.extras.html('<div>Additional HTML</div>'))
         report.extra = extra
