@@ -38,10 +38,10 @@ from datetime import datetime
 #     report.nodeid = report.nodeid.encode("utf-8").decode("unicode_escape")
 
 
-def pytest_html_results_table_header(cells):
-    cells.insert(2, html.th("Description"))
-    cells.insert(1, html.th("Time", class_="sortable time", col="time"))
-    cells.pop()
+# def pytest_html_results_table_header(cells):
+#     cells.insert(2, html.th("Description"))
+#     cells.insert(1, html.th("Time", class_="sortable time", col="time"))
+#     cells.pop()
 
 
 # def pytest_html_results_table_row(report, cells):
