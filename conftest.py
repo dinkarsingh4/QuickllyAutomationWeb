@@ -45,11 +45,11 @@ def pytest_html_results_table_row(report, cells):
     cells.pop()
 
 
-@pytest.mark.hookwrapper
-def pytest_runtest_makereport(item, call):
-    outcome = yield
-    report = outcome.get_result()
-    report.description = str(item.function.__doc__)
+# @pytest.mark.hookwrapper
+# def pytest_runtest_makereport(item, call):
+#     outcome = yield
+#     report = outcome.get_result()
+#     report.description = str(item.function.__doc__)
 
 
 # @pytest.mark.hookwrapper
