@@ -1,5 +1,6 @@
 # !/usr/bin/python
 # --*-- coding:utf-8 --*--
+import browser as browser
 import pytest
 from py._xmlgen import html
 from datetime import datetime
@@ -8,25 +9,25 @@ import pytest
 driver = None
 
 
-@pytest.mark.hookwrapper
-def pytest_runtest_makereport(item, call):
-    pytest_html = item.config.pluginmanager.getplugin('html')
-    outcome = yield
-    report = outcome.get_result()
-    extra = getattr(report, 'extra', [])
-    if report.when == 'call':
-
-        browser.save_screenshot('D:/report/scr.png')
-        extra.append(pytest_html.extras.image('D:/report/scr.png'))
-
-        # always add url to report
-        extra.append(pytest_html.extras.url('http://www.example.com/'))
-        xfail = hasattr(report, 'wasxfail')
-        if (report.skipped and xfail) or (report.failed and not xfail):
-            # only add additional html on failure
-            extra.append(pytest_html.extras.image('/home/excellence/PycharmProjects/gitAutomation/tests/screenshots'))
-            extra.append(pytest_html.extras.html('<div>Additional HTML</div>'))
-        report.extra = extra
+# @pytest.mark.hookwrapper
+# def pytest_runtest_makereport(item, call):
+#     pytest_html = item.config.pluginmanager.getplugin('html')
+#     outcome = yield
+#     report = outcome.get_result()
+#     extra = getattr(report, 'extra', [])
+#     if report.when == 'call':
+#
+#         browser.save_screenshot('D:/report/scr.png')
+#         extra.append(pytest_html.extras.image('D:/report/scr.png'))
+#
+#         # always add url to report
+#         extra.append(pytest_html.extras.url('http://www.example.com/'))
+#         xfail = hasattr(report, 'wasxfail')
+#         if (report.skipped and xfail) or (report.failed and not xfail):
+#             # only add additional html on failure
+#             extra.append(pytest_html.extras.image('/home/excellence/PycharmProjects/gitAutomation/tests/screenshots'))
+#             extra.append(pytest_html.extras.html('<div>Additional HTML</div>'))
+#         report.extra = extra
 
 
 
@@ -72,25 +73,25 @@ def pytest_runtest_makereport(item, call):
 #         report.extra = extra
 
 
-# @pytest.mark.optionalhook
-# def pytest_html_results_table_header(cells):
-#     cells.insert(2, html.th('Description'))
-#     cells.insert(1, html.th('Time', class_='sortable time', col='time'))
-#     cells.pop()
-#
-#
-# @pytest.mark.optionalhook
-# def pytest_html_results_table_row(report, cells):
-#     cells.insert(2, html.td(report.description))
-#     cells.insert(1, html.td(datetime.utcnow(), class_='col-time'))
-#     cells.pop()
-#
-#
-# @pytest.mark.hookwrapper
-# def pytest_runtest_makereport(item, call):
-#     outcome = yield
-#     report = outcome.get_result()
-#     report.description = str(item.function.__doc__)
+@pytest.mark.optionalhook
+def pytest_html_results_table_header(cells):
+    cells.insert(2, html.th('Description'))
+    cells.insert(1, html.th('Time', class_='sortable time', col='time'))
+    cells.pop()
+
+
+@pytest.mark.optionalhook
+def pytest_html_results_table_row(report, cells):
+    cells.insert(2, html.td(report.description))
+    cells.insert(1, html.td(datetime.utcnow(), class_='col-time'))
+    cells.pop()
+
+
+@pytest.mark.hookwrapper
+def pytest_runtest_makereport(item, call):
+    outcome = yield
+    report = outcome.get_result()
+    report.description = str(item.function.__doc__)
 
 
 
