@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/locators.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/page_objects/LogIn.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/LogIn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/forgetpassword.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/forgetpassword.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/ui_test_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ui_test_class.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/testing_continueasguest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_continueasguest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/testing_forgotpassword.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_forgotpassword.py" afterDir="false" />
@@ -161,13 +162,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616787846440</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Merge branch 'main' of https://github.com/RaqeebAlam786/gitAutomation into main">
-      <created>1619010512008</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1619010512008</updated>
     </task>
     <task id="LOCAL-00018" summary="Merge branch 'main' of https://github.com/RaqeebAlam786/gitAutomation into main">
       <created>1619036830038</created>
@@ -505,7 +499,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623697769218</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1623759674683</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1623759674683</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
