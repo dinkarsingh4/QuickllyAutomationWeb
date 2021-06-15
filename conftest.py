@@ -23,37 +23,39 @@ def pytest_runtest_makereport(item, call):
         report.description = str(item.function.__doc__)
 
 
-@pytest.mark.optionalhook
-def pytest_html_results_table_header(cells):
-    cells.insert(1, html.th('Description'))
-
-
-@pytest.mark.optionalhook
-def pytest_html_results_table_row(report, cells):
-    cells.insert(1, html.td(report.description))
-# @pytest.mark.optionalhook
-# def pytest_html_results_summary(prefix, summary, postfix):
-#     prefix.extend([html.p("Tester: xqc")])
-#
-#
-# def pytest_configure(config):
-#     config._metadata['Test Address'] = 'https://10.12.104.18'
-#
-#
 # @pytest.mark.optionalhook
 # def pytest_html_results_table_header(cells):
-#     cells.insert(2, html.th('Description'))
-#     cells.insert(3, html.th('Time', class_='sortable time', col='time'))
-#     # cells.insert(1,html.th("Test_nodeid"))
-#     cells.pop()
+#     cells.insert(1, html.th('Description'))
 #
 #
 # @pytest.mark.optionalhook
 # def pytest_html_results_table_row(report, cells):
-#     cells.insert(2, html.td(report.description))
-#     cells.insert(3, html.td(datetime.utcnow(), class_='col-time'))
-#     # cells.insert(1,html.td(report.nodeid))
-#     cells.pop()
+#     cells.insert(1, html.td(report.description))
+
+
+@pytest.mark.optionalhook
+def pytest_html_results_summary(prefix, summary, postfix):
+    prefix.extend([html.p("Tester: xqc")])
+
+
+def pytest_configure(config):
+    config._metadata['Test Address'] = 'https://10.12.104.18'
+
+
+@pytest.mark.optionalhook
+def pytest_html_results_table_header(cells):
+    cells.insert(2, html.th('Description'))
+    cells.insert(3, html.th('Time', class_='sortable time', col='time'))
+    # cells.insert(1,html.th("Test_nodeid"))
+    cells.pop()
+
+
+@pytest.mark.optionalhook
+def pytest_html_results_table_row(report, cells):
+    cells.insert(2, html.td(report.description))
+    cells.insert(3, html.td(datetime.utcnow(), class_='col-time'))
+    # cells.insert(1,html.td(report.nodeid))
+    cells.pop()
 
 #
 # @pytest.mark.hookwrapper
@@ -74,6 +76,8 @@ def pytest_html_results_table_row(report, cells):
 #     cells.insert(2, html.td(report.description))
 #     cells.insert(1, html.td(datetime.utcnow(), class_="col-time"))
 #     cells.pop()
+
+
 # @pytest.mark.optionalhook
 # def pytest_html_results_table_header(cells):
 #     cells.insert(1, html.th('Description'))
