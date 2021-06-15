@@ -17,7 +17,7 @@ def pytest_runtest_makereport(item):
     outcome = yield
     report = outcome.get_result()
     extra = getattr(report, 'extra', [])
-    file_name = "/home/excellence/PycharmProjects/gitAutomation/tests/screenshots"
+    file_name = "/screenshots"
     if report.when == 'call' or report.when == "setup":
         xfail = hasattr(report, 'wasxfail')
         if (report.skipped and xfail) or (report.failed and not xfail):
