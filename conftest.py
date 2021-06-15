@@ -48,6 +48,15 @@ from datetime import datetime
 #     cells.insert(2, html.td(report.description))
 #     cells.insert(1, html.td(datetime.utcnow(), class_="col-time"))
 #     cells.pop()
+@pytest.mark.optionalhook
+def pytest_html_results_table_header(cells):
+    cells.insert(1, html.th('Description'))
+
+
+@pytest.mark.optionalhook
+def pytest_html_results_table_row(report, cells):
+    cells.insert(1, html.td(report.description))
+
 
 @pytest.mark.hookwrapper
 def pytest_runtest_makereport(item, call):
@@ -64,3 +73,41 @@ def pytest_runtest_makereport(item, call):
             extra.append(pytest_html.extras.image('/home/excellence/PycharmProjects/gitAutomation/tests/screenshots'))
             extra.append(pytest_html.extras.html('<div>Additional HTML</div>'))
         report.extra = extra
+# from selenium.webdriver.chrome import webdriver
+#
+#
+# @pytest.fixture(scope='module')
+# def driver():
+#     global _driver
+#     print('------------open browser------------')
+#     _driver = webdriver.Chrome()
+#
+#     yield _driver
+#     print('------------close browser------------')
+#     _driver.quit()
+#
+#
+# def _capture_screenshot():
+#     '''The screenshot is saved as base64'''
+#     return _driver.get_screenshot_as_base64()
+#
+#
+# @pytest.mark.hookwrapper
+# def pytest_runtest_makereport(item):
+#     """ When the test fails, automatically take a screenshot and display it in the html report """
+#     pytest_html = item.config.pluginmanager.getplugin('html')
+#     outcome = yield
+#     report = outcome.get_result()
+#     extra = getattr(report, 'extra', [])
+#
+#     if report.when == 'call' or report.when == "setup":
+#         xfail = hasattr(report, 'wasxfail')
+#         if (report.skipped and xfail) or (report.failed and not xfail):
+#             file_name = report.nodeid.replace("::", "_") + ".png"
+#             screen_img = _capture_screenshot()
+#             if file_name:
+#                 html = '<div><img src="data:image/png;base64,%s" alt="screenshot" style="width:600px;height:300px;" ' \
+#                        'onclick="window.open(this.src)" align="right"/></div>' % screen_img
+#                 extra.append(pytest_html.extras.html(html))
+#         report.extra = extra
+
