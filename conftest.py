@@ -50,7 +50,7 @@ from datetime import datetime
 #     cells.pop()
 
 @pytest.mark.hookwrapper
-def pytest_runtest_makereport(item, call, cells):
+def pytest_runtest_makereport(item, call):
     pytest_html = item.config.pluginmanager.getplugin('html')
     outcome = yield
     report = outcome.get_result()
