@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main">
-      <change afterPath="$PROJECT_DIR$/resources/page_objects/eVoucher.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testing_eVoucher.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/LogIn.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/LogIn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/forgetpassword.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/forgetpassword.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/ui_test_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ui_test_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_continueasguest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_continueasguest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_forgotpassword.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_forgotpassword.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_main_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_main_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_needanaccount.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_needanaccount.py" afterDir="false" />
-    </list>
+    <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -162,20 +149,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616787846440</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Merge branch 'main' of https://github.com/RaqeebAlam786/gitAutomation into main">
-      <created>1619036830038</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1619036830038</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Merge branch 'main' of https://github.com/RaqeebAlam786/gitAutomation into main">
-      <created>1619037937760</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1619037937760</updated>
     </task>
     <task id="LOCAL-00020" summary="Merge branch 'main' of https://github.com/RaqeebAlam786/gitAutomation into main">
       <created>1619040380340</created>
@@ -506,7 +479,21 @@
       <option name="project" value="LOCAL" />
       <updated>1623759674683</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1623759686744</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1623759686744</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1623759974447</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1623759974447</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
