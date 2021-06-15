@@ -158,13 +158,6 @@
       <option name="presentableId" value="Default" />
       <updated>1616787846440</updated>
     </task>
-    <task id="LOCAL-00040" summary="Merge remote-tracking branch 'github/main' into main">
-      <created>1623138997899</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1623138997899</updated>
-    </task>
     <task id="LOCAL-00041" summary="Merge remote-tracking branch 'github/main' into main">
       <created>1623139007863</created>
       <option name="number" value="00041" />
@@ -501,7 +494,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623782011923</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1623783004938</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1623783004942</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
