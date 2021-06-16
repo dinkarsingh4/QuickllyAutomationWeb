@@ -208,8 +208,8 @@ class Cart(BasePage):
         # self.click(MiniCart.Tip15)
 
     def click_Tip20(self):
-        self.scroll_to_element(MiniCart.Tip20)
-        self.click(MiniCart.Tip20)
+        element = self.driver.find_element_by_id('tipten')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_changeAddress(self):
         self.scroll_to_element(MiniCart.ChangeAddress)
