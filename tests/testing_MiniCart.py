@@ -449,7 +449,6 @@ class TesCART(ui_test_class.UVClass):
         self.assertEqual(self.actual45, Minimum)
 
     def test_minimum_price(self):
-        self.sleep(10)
         MinimumPrice = self.cart_page.get_attribute(MiniCart.MinimumChargePrice, 'innerHTML')
         print(MinimumPrice)
         self.assertEqual(self.actual46, MinimumPrice)
