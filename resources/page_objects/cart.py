@@ -87,10 +87,12 @@ class Cart(BasePage):
         self.click(MiniCart.proceed_to_checkOut)
 
     def click_additem(self):
-        # element = self.driver.find_element_by_xpath('//*[@id="img_270"]')
-        # self.driver.execute_script("arguments[0].click();", element)
-        # self.scroll_to_element(MiniCart.additem)
-        self.wait(10)
+
+        self.scroll_to_element(MiniCart.additem)
+        element = self.driver.find_element_by_xpath('//*[@id="img_270"]')
+        self.driver.execute_script("arguments[0].click();", element)
+
+        # self.wait(10)
         self.click(MiniCart.additem)
 
     def click_AddItem1(self):
@@ -264,9 +266,11 @@ class Cart(BasePage):
 
     def click_changeMethod(self):
         time.sleep(15)
-        button = WebDriverWait(self.driver, 30).until(
-            EC.element_to_be_clickable((By.CSS_SELECTOR, '#choose-payment-method')))
-        button.click()
+        element = self.driver.find_element_by_xpath('//*[@id="choose-payment-method"]')
+        self.driver.execute_script("arguments[0].click();", element)
+        # button = WebDriverWait(self.driver, 30).until(
+        #     EC.element_to_be_clickable((By.CSS_SELECTOR, '#choose-payment-method')))
+        # button.click()
         # self.scroll_to_element(MiniCart.ChangePaymentMethod)
         # self.wait_for_page_load(15)
         # self.click(MiniCart.ChangePaymentMethod)
