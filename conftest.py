@@ -1,7 +1,5 @@
 # !/usr/bin/python
 # --*-- coding:utf-8 --*--
-import browser as browser
-import pytest
 from py._xmlgen import html
 from datetime import datetime
 from selenium import webdriver
