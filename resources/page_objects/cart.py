@@ -125,10 +125,12 @@ class Cart(BasePage):
         self.click(MiniCart.drop_down1)
 
     def click_dropDown2(self):
+        element = self.driver.find_element_by_xpath('//*[@id="qty_51875"]')
+        self.driver.execute_script("arguments[0].click();", element)
         # self.wait_for_loader(15)
-        time.sleep(5)
-        self.scroll_to_element(MiniCart.drop_down2)
-        self.click(MiniCart.drop_down2)
+        # time.sleep(5)
+        # self.scroll_to_element(MiniCart.drop_down2)
+        # self.click(MiniCart.drop_down2)
 
     def click_quantity(self):
         # self.wait_for_loader(15)
@@ -155,8 +157,10 @@ class Cart(BasePage):
 
     def click_reward(self):
         self.scroll_to_element(MiniCart.reward)
+        element = self.driver.find_element_by_xpath('//*[@id="vocherRewardWallet-2"]')
+        self.driver.execute_script("arguments[0].click();", element)
         # time.sleep(15)
-        self.click(MiniCart.reward)
+        # self.click(MiniCart.reward)
 
     def click_wallet(self):
         # time.sleep(15)
