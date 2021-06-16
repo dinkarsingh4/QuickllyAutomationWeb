@@ -93,7 +93,7 @@ class Cart(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
         # self.wait(10)
-        self.click(MiniCart.additem)
+        # self.click(MiniCart.additem)
 
     def click_AddItem1(self):
         # self.scroll_to_element(MiniCart.additem2)
