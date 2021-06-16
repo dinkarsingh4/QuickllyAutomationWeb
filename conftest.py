@@ -41,6 +41,19 @@ def pytest_runtest_makereport(item, call):
     extra = getattr(report, 'extra', [])
     if report.when == 'call':
         # always add url to report
+        @pytest.mark.optionalhook
+        def pytest_html_results_table_header(cells):
+            cells.append(html.th('Server Name'))
+
+        @pytest.mark.optionalhook
+        def pytest_html_results_table_row(report, cells):
+            cells.append(html.td(report.server_name))
+
+        @pytest.mark.hookwrapper
+        def pytest_runtest_makereport(item, call):
+            outcome = yield
+            report = outcome.get_result()
+            report.server_name = item.function.__doc__
         extra.append(pytest_html.extras.url('http://www.dev.quicklly.com/'))
         xfail = hasattr(report, 'wasxfail')
         if (report.skipped and xfail) or (report.failed and not xfail):
