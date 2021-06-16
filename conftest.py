@@ -7,26 +7,6 @@ import pytest
 driver = None
 
 
-# @pytest.mark.hookwrapper
-# def pytest_runtest_makereport(item, call):
-#     pytest_html = item.config.pluginmanager.getplugin('html')
-#     outcome = yield
-#     report = outcome.get_result()
-#     extra = getattr(report, 'extra', [])
-#     if report.when == 'call':
-#
-#         browser.save_screenshot('D:/report/scr.png')
-#         extra.append(pytest_html.extras.image('D:/report/scr.png'))
-#
-#         # always add url to report
-#         extra.append(pytest_html.extras.url('http://www.example.com/'))
-#         xfail = hasattr(report, 'wasxfail')
-#         if (report.skipped and xfail) or (report.failed and not xfail):
-#             # only add additional html on failure
-#             extra.append(pytest_html.extras.image('/home/excellence/PycharmProjects/gitAutomation/tests/screenshots'))
-#             extra.append(pytest_html.extras.html('<div>Additional HTML</div>'))
-#         report.extra = extra
-
 
 
 # @pytest.mark.hookwrapper
@@ -62,6 +42,7 @@ driver = None
 #     extra = getattr(report, 'extra', [])
 #     if report.when == 'call':
 #         # always add url to report
+#         extra.append(pytest_html.extras.report.Description)
 #         extra.append(pytest_html.extras.url('http://www.dev.quicklly.com/'))
 #         xfail = hasattr(report, 'wasxfail')
 #         if (report.skipped and xfail) or (report.failed and not xfail):
@@ -70,6 +51,32 @@ driver = None
 #             extra.append(pytest_html.extras.html('<div>Additional HTML</div>'))
 #         report.extra = extra
 
+
+@pytest.mark.hookwrapper
+def pytest_runtest_makereport(item, call):
+    timestamp = datetime.now().strftime('%H-%M-%S')
+
+    pytest_html = item.config.pluginmanager.getplugin('html')
+    outcome = yield
+    report = outcome.get_result()
+    extra = getattr(report, 'extra', [])
+    if report.when == 'call':
+
+        feature_request = item.funcargs['request']
+
+        driver = feature_request.getfuncargvalue('browser')
+        driver.save_screenshot('/home/excellence/PycharmProjects/gitAutomation/tests/screenshots')
+
+        extra.append(pytest_html.extras.image('D:/report/scr' + timestamp + '.png'))
+
+        # always add url to report
+        extra.append(pytest_html.extras.url('http://www.example.com/'))
+        xfail = hasattr(report, 'wasxfail')
+        if (report.skipped and xfail) or (report.failed and not xfail):
+            # only add additional html on failure
+            extra.append(pytest_html.extras.image('/home/excellence/PycharmProjects/gitAutomation/tests/screenshots'))
+            extra.append(pytest_html.extras.html('<div>Additional HTML</div>'))
+        report.extra = extra
 
 @pytest.mark.optionalhook
 def pytest_html_results_table_header(cells):
@@ -91,41 +98,3 @@ def pytest_runtest_makereport(item, call):
     report = outcome.get_result()
     report.description = str(item.function.__doc__)
 
-
-
-#
-#
-# @pytest.fixture(scope='module')
-# def driver():
-#     global _driver
-#     print('------------open browser------------')
-#     _driver = webdriver.Chrome()
-#
-#     yield _driver
-#     print('------------close browser------------')
-#     _driver.quit()
-#
-#
-# def _capture_screenshot():
-#     '''The screenshot is saved as base64'''
-#     return _driver.get_screenshot_as_base64()
-#
-#
-# @pytest.mark.hookwrapper
-# def pytest_runtest_makereport(item):
-#     """ When the test fails, automatically take a screenshot and display it in the html report """
-#     pytest_html = item.config.pluginmanager.getplugin('html')
-#     outcome = yield
-#     report = outcome.get_result()
-#     extra = getattr(report, 'extra', [])
-#
-#     if report.when == 'call' or report.when == "setup":
-#         xfail = hasattr(report, 'wasxfail')
-#         if (report.skipped and xfail) or (report.failed and not xfail):
-#             file_name = report.nodeid.replace("::", "_") + ".png"
-#             screen_img = _capture_screenshot()
-#             if file_name:
-#                 html = '<div><img src="data:image/png;base64,%s" alt="screenshot" style="width:600px;height:300px;" ' \
-#                        'onclick="window.open(this.src)" align="right"/></div>' % screen_img
-#                 extra.append(pytest_html.extras.html(html))
-#         report.extra = extra
