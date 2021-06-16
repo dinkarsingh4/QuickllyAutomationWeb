@@ -200,8 +200,10 @@ class Cart(BasePage):
         self.click(MiniCart.Tip10)
 
     def click_Tip15(self):
-        self.scroll_to_element(MiniCart.Tip15)
-        self.click(MiniCart.Tip15)
+        element = self.driver.find_element_by_id('tipseven')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.scroll_to_element(MiniCart.Tip15)
+        # self.click(MiniCart.Tip15)
 
     def click_Tip20(self):
         self.scroll_to_element(MiniCart.Tip20)
@@ -266,7 +268,7 @@ class Cart(BasePage):
 
     def click_changeMethod(self):
         time.sleep(15)
-        element = self.driver.find_element_by_xpath('//*[@id="choose-payment-method"]')
+        element = self.driver.find_element_by_id('choose-payment-method')
         self.driver.execute_script("arguments[0].click();", element)
         # button = WebDriverWait(self.driver, 30).until(
         #     EC.element_to_be_clickable((By.CSS_SELECTOR, '#choose-payment-method')))

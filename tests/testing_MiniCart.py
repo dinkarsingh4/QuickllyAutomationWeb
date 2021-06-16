@@ -226,9 +226,9 @@ class TesCART(ui_test_class.UVClass):
 
     def test_label(self):
         # time.sleep(15)
-        WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(MiniCart.shops_name))
+        # WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(MiniCart.shops_name))
         label3 = self.cart_page.get_attribute(MiniCart.shops_name, 'src')
-        WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(MiniCart.shops_name1))
+        # WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(MiniCart.shops_name1))
         label4 = self.cart_page.get_attribute(MiniCart.shops_name1, 'src')
         print(label3)
         print(label4)
@@ -236,7 +236,7 @@ class TesCART(ui_test_class.UVClass):
         self.assertEqual(self.actual23, label4)
 
     def test_priceAndCount(self):
-        WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(MiniCart.price_label))
+        # WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(MiniCart.price_label))
         time.sleep(15)
         price_label = self.cart_page.get_attribute(MiniCart.price_label, 'innerHTML')
         count_label = self.cart_page.get_attribute(MiniCart.count_label, 'innerHTML')
@@ -246,7 +246,7 @@ class TesCART(ui_test_class.UVClass):
         self.assertEqual(self.actual24, count_label)
 
     def test_priceEachShop(self):
-        WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(MiniCart.price1))
+        # WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(MiniCart.price1))
         # time.sleep(15)
         price1 = self.cart_page.get_attribute(MiniCart.price1, 'innerHTML')
         price2 = self.cart_page.get_attribute(MiniCart.price2, 'innerHTML')
@@ -613,18 +613,19 @@ class TesCART(ui_test_class.UVClass):
         # self.cart_page.click_MiniCart()
         # self.cart_page.click_Checkout()
 
-    # def test_paymentMethod2(self):
-    #     #     self.cart_page.click_Department()
-    #     #     self.cart_page.click_ShopByGrocery()
-    #     #     self.AddItem()
-    #     #     self.cart_page.click_MiniCart()
-    #     #     self.cart_page.click_Checkout()
-    #     self.cart_page.click_payment1()
-    #     self.cart_page.click_changeMethod()
-    #     self.cart_page.click_Addmethod()
-    #     self.cart_page.EnterCardNumber("4005519200000004")
-    #     self.cart_page.EnterExpiry("0226")
-    #     self.cart_page.EnterCVV("158")
+    def test_paymentMethod2(self):
+        #     self.cart_page.click_Department()
+        #     self.cart_page.click_ShopByGrocery()
+        #     self.AddItem()
+        #     self.cart_page.click_MiniCart()
+        #     self.cart_page.click_Checkout()
+        self.cart_page.click_payment1()
+        time.sleep(10)
+        self.cart_page.click_changeMethod()
+        self.cart_page.click_Addmethod()
+        self.cart_page.EnterCardNumber("4005519200000004")
+        self.cart_page.EnterExpiry("0226")
+        self.cart_page.EnterCVV("158")
 #
 # #
 # # if __name__ == "__main__":
