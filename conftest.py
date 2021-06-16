@@ -1,11 +1,9 @@
 # !/usr/bin/python
 # --*-- coding:utf-8 --*--
-from autoit import options
 from py._xmlgen import html
 from datetime import datetime
-from selenium import webdriver
 import pytest
-driver = None
+
 
 
 
