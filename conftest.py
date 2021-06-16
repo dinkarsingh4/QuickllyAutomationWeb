@@ -41,19 +41,22 @@ def pytest_runtest_makereport(item, call):
     extra = getattr(report, 'extra', [])
     if report.when == 'call':
         # always add url to report
-        @pytest.mark.optionalhook
+
         def pytest_html_results_table_header(cells):
-            cells.append(html.th('Server Name'))
+            cells.insert(2, html.th("Description"))
+            cells.insert(1, html.th("Time", class_="sortable time", col="time"))
+            cells.pop()
 
-        @pytest.mark.optionalhook
         def pytest_html_results_table_row(report, cells):
-            cells.append(html.td(report.server_name))
+            cells.insert(2, html.td(report.description))
+            cells.insert(1, html.td(datetime.utcnow(), class_="col-time"))
+            cells.pop()
 
-        @pytest.mark.hookwrapper
+        @pytest.hookimpl(hookwrapper=True)
         def pytest_runtest_makereport(item, call):
             outcome = yield
             report = outcome.get_result()
-            report.server_name = item.function.__doc__
+            report.description = str(item.function.__doc__)
         extra.append(pytest_html.extras.url('http://www.dev.quicklly.com/'))
         xfail = hasattr(report, 'wasxfail')
         if (report.skipped and xfail) or (report.failed and not xfail):
