@@ -32,7 +32,7 @@ def pytest_runtest_makereport(item, call):
     extra = getattr(report, 'extra', [])
     if report.when == 'call':
         # always add url to report
-        report.description = str(item.function.__doc__)
+
         extra.append(pytest_html.extras.url('http://www.dev.quicklly.com/'))
         xfail = hasattr(report, 'wasxfail')
         if (report.skipped and xfail) or (report.failed and not xfail):
@@ -40,6 +40,7 @@ def pytest_runtest_makereport(item, call):
             extra.append(pytest_html.extras.image('screenshots'))
             extra.append(pytest_html.extras.html('<div>djndjnk.fn</div>'))
         report.extra = extra
+        report.description = str(item.function.__doc__)
 
 
 @pytest.mark.optionalhook
