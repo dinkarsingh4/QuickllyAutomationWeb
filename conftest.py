@@ -35,34 +35,6 @@ driver = None
 #                 extra.append(pytest_html.extras.html(html))
 #         report.extra = extra
 
-# @pytest.mark.hookwrapper
-# def pytest_runtest_makereport(item, call):
-#     pytest_html = item.config.pluginmanager.getplugin('html')
-#     outcome = yield
-#     report = outcome.get_result()
-#     extra = getattr(report, 'extra', [])
-#     if report.when == 'call':
-#         # always add url to report
-#         extra.append(pytest_html.extras.report.Description)
-#         extra.append(pytest_html.extras.url('http://www.dev.quicklly.com/'))
-#         xfail = hasattr(report, 'wasxfail')
-#         if (report.skipped and xfail) or (report.failed and not xfail):
-#             # only add additional html on failure
-#             extra.append(pytest_html.extras.image('/home/excellence/PycharmProjects/gitAutomation/tests/screenshots'))
-#             extra.append(pytest_html.extras.html('<div>Additional HTML</div>'))
-#         report.extra = extra
-
-
-@pytest.fixture(scope='session')
-def browser():
-
-    driver = webdriver.Chrome('resources//chromedriver.exe', options=options)
-    driver.get('http://www.gogle.com')
-    driver.implicitly_wait(5)
-
-    return driver
-
-
 @pytest.mark.hookwrapper
 def pytest_runtest_makereport(item, call):
     pytest_html = item.config.pluginmanager.getplugin('html')
@@ -70,18 +42,17 @@ def pytest_runtest_makereport(item, call):
     report = outcome.get_result()
     extra = getattr(report, 'extra', [])
     if report.when == 'call':
-
-        browser.save_screenshot('D:/report/scr.png')
-        extra.append(pytest_html.extras.image('D:/report/scr.png'))
-
         # always add url to report
-        extra.append(pytest_html.extras.url('http://www.example.com/'))
+        extra.append(pytest_html.extras.report.Description)
+        extra.append(pytest_html.extras.url('http://www.dev.quicklly.com/'))
         xfail = hasattr(report, 'wasxfail')
         if (report.skipped and xfail) or (report.failed and not xfail):
             # only add additional html on failure
-            extra.append(pytest_html.extras.image('D:/report/scr.png'))
+            extra.append(pytest_html.extras.image('/home/excellence/PycharmProjects/gitAutomation/tests/screenshots'))
             extra.append(pytest_html.extras.html('<div>Additional HTML</div>'))
         report.extra = extra
+
+
 # @pytest.mark.optionalhook
 # def pytest_html_results_table_header(cells):
 #     cells.insert(2, html.th('Description'))
