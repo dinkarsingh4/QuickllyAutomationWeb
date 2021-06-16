@@ -559,14 +559,14 @@ class TesCART(ui_test_class.UVClass):
         print(Invalid)
         self.assertEqual(self.actual76, Invalid)
 
-    # def test_paypal(self):
-    #     self.cart_page.click_payment()
-    #     self.cart_page.capture_screen_shot()
-    #     self.cart_page.click_paypal()
-    #     self.cart_page.click_CrossButton()
-    #     payment = self.cart_page.get_attribute(MiniCart.Payment, 'innerHTML')
-    #     print(payment)
-    #     self.assertEqual(self.actual60, payment)
+    def test_paypal(self):
+        self.cart_page.click_payment1()
+        self.cart_page.capture_screen_shot()
+        self.cart_page.click_paypal()
+        self.cart_page.click_CrossButton()
+        payment = self.cart_page.get_attribute(MiniCart.Payment, 'innerHTML')
+        print(payment)
+        self.assertEqual(self.actual60, payment)
 
     def test_click_secondShopName(self):
         self.cart_page.click_MiniCart()
