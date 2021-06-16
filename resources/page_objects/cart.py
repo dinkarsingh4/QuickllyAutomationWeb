@@ -129,7 +129,7 @@ class Cart(BasePage):
         self.click(MiniCart.drop_down1)
 
     def click_dropDown2(self):
-        element = self.driver.find_element_by_xpath('//*[@id="qty_51875"]')
+        element = self.driver.find_element_by_id('qty_51875')
         self.driver.execute_script("arguments[0].click();", element)
         # self.wait_for_loader(15)
         # time.sleep(5)
