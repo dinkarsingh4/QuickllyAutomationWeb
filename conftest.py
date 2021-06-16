@@ -41,7 +41,6 @@ def pytest_runtest_makereport(item, call):
     extra = getattr(report, 'extra', [])
     if report.when == 'call':
         # always add url to report
-        extra.append(pytest_html.extras.report.Description)
         extra.append(pytest_html.extras.url('http://www.dev.quicklly.com/'))
         xfail = hasattr(report, 'wasxfail')
         if (report.skipped and xfail) or (report.failed and not xfail):
