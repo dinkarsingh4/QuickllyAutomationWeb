@@ -135,7 +135,9 @@ class Cart(BasePage):
         self.click(MiniCart.drop_quantity)
 
     def click_remove(self):
-        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(MiniCart.remove2)).click()
+        element = self.driver.find_element_by_xpath('//*[@id="lnk_270"]')
+        self.driver.execute_script("arguments[0].click();", element)
+        # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(MiniCart.remove2)).click()
         # self.click(MiniCart.remove2)
 
     def click_eVoucher(self):
@@ -152,6 +154,8 @@ class Cart(BasePage):
         # self.click(MiniCart.eVoucher)
 
     def click_reward(self):
+        self.scroll_to_element(MiniCart.reward)
+        time.sleep(15)
         self.click(MiniCart.reward)
 
     def click_wallet(self):
@@ -219,10 +223,12 @@ class Cart(BasePage):
         # self.click(MiniCart.ProceedToPayment)
 
     def click_apply(self):
-        self.scroll_to_element(MiniCart.Apply)
-        time.sleep(15)
-        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(MiniCart.Apply)).click()
-        self.click(MiniCart.Apply)
+        element = self.driver.find_element_by_xpath('//*[@id="parRadioOne"]/a')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.scroll_to_element(MiniCart.Apply)
+        # time.sleep(15)
+        # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(MiniCart.Apply)).click()
+        # self.click(MiniCart.Apply)
 
     def click_paypal(self):
         # self.wait_for_loader(15)
@@ -280,11 +286,13 @@ class Cart(BasePage):
         wait.until(EC.presence_of_element_located(MiniCart.DeliveryLabel))
 
     def click_payment1(self):
-        self.scroll_to_element(MiniCart.Payment)
-        self.scroll_to(1653, 1048)
-        wait = WebDriverWait(self.driver, 15)
-        element = wait.until(EC.element_to_be_clickable(MiniCart.Payment))
-        element.click()
+        element = self.driver.find_element_by_xpath('//*[@id="proceedtopayment"]')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.scroll_to_element(MiniCart.Payment)
+        # self.scroll_to(1653, 1048)
+        # wait = WebDriverWait(self.driver, 15)
+        # element = wait.until(EC.element_to_be_clickable(MiniCart.Payment))
+        # element.click()
 
     def click_Department(self):
         self.click(MiniCart.Department)
