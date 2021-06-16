@@ -58,5 +58,5 @@ class evoucher(BasePage):
 
     def click_apply(self):
         self.scroll_to_element(Coupon.Apply)
-        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Coupon.Apply)).click()
-        self.click(Coupon.Apply)
+        element = self.driver.find_element_by_xpath('//*[@id="parRadioOne"]/a')
+        self.driver.execute_script("arguments[0].click();", element)
