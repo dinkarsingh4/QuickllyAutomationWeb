@@ -613,19 +613,19 @@ class TesCART(ui_test_class.UVClass):
         # self.cart_page.click_MiniCart()
         # self.cart_page.click_Checkout()
 
-    def test_paymentMethod2(self):
-        #     self.cart_page.click_Department()
-        #     self.cart_page.click_ShopByGrocery()
-        #     self.AddItem()
-        #     self.cart_page.click_MiniCart()
-        #     self.cart_page.click_Checkout()
-        self.cart_page.click_payment1()
-        time.sleep(10)
-        self.cart_page.click_changeMethod()
-        self.cart_page.click_Addmethod()
-        self.cart_page.EnterCardNumber("4005519200000004")
-        self.cart_page.EnterExpiry("0226")
-        self.cart_page.EnterCVV("158")
+    # def test_paymentMethod2(self):
+    #     #     self.cart_page.click_Department()
+    #     #     self.cart_page.click_ShopByGrocery()
+    #     #     self.AddItem()
+    #     #     self.cart_page.click_MiniCart()
+    #     #     self.cart_page.click_Checkout()
+    #     self.cart_page.click_payment1()
+    #     time.sleep(10)
+    #     self.cart_page.click_changeMethod()
+    #     self.cart_page.click_Addmethod()
+    #     self.cart_page.EnterCardNumber("4005519200000004")
+    #     self.cart_page.EnterExpiry("0226")
+    #     self.cart_page.EnterCVV("158")
 #
 # #
 # # if __name__ == "__main__":
