@@ -87,9 +87,11 @@ class Cart(BasePage):
         self.click(MiniCart.proceed_to_checkOut)
 
     def click_additem(self):
-        self.scroll_to_element(MiniCart.additem)
+        element = self.driver.find_element_by_xpath('//*[@id="img_270"]')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.scroll_to_element(MiniCart.additem)
         # self.wait(10)
-        self.click(MiniCart.additem)
+        # self.click(MiniCart.additem)
 
     def click_AddItem1(self):
         # self.scroll_to_element(MiniCart.additem2)
@@ -163,11 +165,13 @@ class Cart(BasePage):
         # self.click(MiniCart.reward)
 
     def click_wallet(self):
+        element = self.driver.find_element_by_xpath('//*[@id="vocherRewardWallet-3"]')
+        self.driver.execute_script("arguments[0].click();", element)
         # time.sleep(15)
         # self.scroll_to_element(MiniCart.wallet)
         # WebDriverWait(self.driver, 20).until(
         #     EC.element_to_be_clickable((By.CSS_SELECTOR, "#vocherRewardWallet-3"))).click()
-        self.click(MiniCart.wallet)
+        # self.click(MiniCart.wallet)
 
     def enter_eVoucher(self, evoucher):
         self.scroll_to_element(MiniCart.eVoucher_text)
