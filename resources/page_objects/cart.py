@@ -87,11 +87,11 @@ class Cart(BasePage):
         self.click(MiniCart.proceed_to_checkOut)
 
     def click_additem(self):
-        element = self.driver.find_element_by_xpath('//*[@id="img_270"]')
-        self.driver.execute_script("arguments[0].click();", element)
+        # element = self.driver.find_element_by_xpath('//*[@id="img_270"]')
+        # self.driver.execute_script("arguments[0].click();", element)
         # self.scroll_to_element(MiniCart.additem)
-        # self.wait(10)
-        # self.click(MiniCart.additem)
+        self.wait(10)
+        self.click(MiniCart.additem)
 
     def click_AddItem1(self):
         # self.scroll_to_element(MiniCart.additem2)
