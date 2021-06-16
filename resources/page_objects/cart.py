@@ -167,7 +167,7 @@ class Cart(BasePage):
         # self.click(MiniCart.reward)
 
     def click_wallet(self):
-        element = self.driver.find_element_by_xpath('//*[@id="vocherRewardWallet-3"]')
+        element = self.driver.find_element_by_id('vocherRewardWallet-3')
         self.driver.execute_script("arguments[0].click();", element)
         # time.sleep(15)
         # self.scroll_to_element(MiniCart.wallet)
