@@ -135,7 +135,7 @@ class Cart(BasePage):
         self.click(MiniCart.drop_quantity)
 
     def click_remove(self):
-        element = self.driver.find_element_by_xpath('//*[@id="lnk_270"]')
+        element = self.driver.find_element_by_xpath('//*[@id="lnk_51875"]')
         self.driver.execute_script("arguments[0].click();", element)
         # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(MiniCart.remove2)).click()
         # self.click(MiniCart.remove2)
@@ -155,7 +155,7 @@ class Cart(BasePage):
 
     def click_reward(self):
         self.scroll_to_element(MiniCart.reward)
-        time.sleep(15)
+        # time.sleep(15)
         self.click(MiniCart.reward)
 
     def click_wallet(self):

@@ -225,7 +225,7 @@ class TesCART(ui_test_class.UVClass):
         self.assertEqual(self.actual21, label2)
 
     def test_label(self):
-        time.sleep(15)
+        # time.sleep(15)
         WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(MiniCart.shops_name))
         label3 = self.cart_page.get_attribute(MiniCart.shops_name, 'src')
         WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(MiniCart.shops_name1))
@@ -247,7 +247,7 @@ class TesCART(ui_test_class.UVClass):
 
     def test_priceEachShop(self):
         WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(MiniCart.price1))
-        time.sleep(15)
+        # time.sleep(15)
         price1 = self.cart_page.get_attribute(MiniCart.price1, 'innerHTML')
         price2 = self.cart_page.get_attribute(MiniCart.price2, 'innerHTML')
         print(price1, price2)
@@ -315,7 +315,7 @@ class TesCART(ui_test_class.UVClass):
         self.assertEqual(self.actual25, itemsInCart)
 
     def test_remove_item(self):
-        time.sleep(15)
+        # time.sleep(15)
         self.cart_page.click_remove()
         ItemTotal = self.cart_page.get_attribute(MiniCart.groceriesItemTotal, 'innerHTML')
         print(ItemTotal)
@@ -609,8 +609,13 @@ class TesCART(ui_test_class.UVClass):
         # self.cart_page.click_Checkout()
 
     def test_paymentMethod2(self):
-        time.sleep(15)
-        self.clickQuicklly()
+        # time.sleep(15)
+        # self.clickQuicklly()
+        self.cart_page.click_quicklly()
+        self.cart_page.submit_zip()
+        self.AddItem()
+        self.cart_page.click_MiniCart()
+        self.cart_page.click_Checkout()
     #     #     self.cart_page.click_Department()
     #     #     self.cart_page.click_ShopByGrocery()
     #     #     self.AddItem()
