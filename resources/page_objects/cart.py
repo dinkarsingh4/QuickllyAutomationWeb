@@ -126,7 +126,9 @@ class Cart(BasePage):
         # self.wait_for_loader(15)
         # time.sleep(15)
         self.scroll_to_element(MiniCart.drop_down1)
-        self.click(MiniCart.drop_down1)
+        element = self.driver.find_element_by_id('qty_270')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(MiniCart.drop_down1)
 
     def click_dropDown2(self):
         element = self.driver.find_element_by_id('qty_51875')
