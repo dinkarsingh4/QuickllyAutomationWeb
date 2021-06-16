@@ -168,9 +168,9 @@ class TesLogin(ui_test_class.UIClass):
         """Checking Terms&Conditions Link On Login Page"""
         self.maine_page.click_SignIn()
         self.maine_page.click_TermsAndConditions()
-        self.maine_page.click_home()
         TermsOfUse = self.maine_page.get_attribute(LogIn.Terms, 'innerHTML')
         print(TermsOfUse)
+        self.maine_page.click_home()
         self.assertEqual(self.actual5, TermsOfUse)
         print("Terms&Condition link is clickable")
 
