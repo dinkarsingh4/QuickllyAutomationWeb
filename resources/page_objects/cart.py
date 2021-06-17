@@ -301,7 +301,7 @@ class Cart(BasePage):
         wait.until(EC.presence_of_element_located(MiniCart.DeliveryLabel))
 
     def click_payment1(self):
-        element = self.driver.find_element_by_xpath('//*[@id="proceedtopayment"]')
+        element = self.driver.find_element_by_id('proceedtopayment')
         self.driver.execute_script("arguments[0].click();", element)
         # self.scroll_to_element(MiniCart.Payment)
         # self.scroll_to(1653, 1048)

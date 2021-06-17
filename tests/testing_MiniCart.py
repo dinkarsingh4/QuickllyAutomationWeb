@@ -228,6 +228,7 @@ class TesCART(ui_test_class.UVClass):
     def test_label(self):
         # time.sleep(15)
         # WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(MiniCart.shops_name))
+        self.cart_page.scroll_to_element(MiniCart.shops_name)
         label3 = self.cart_page.get_attribute(MiniCart.shops_name, 'src')
         # WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(MiniCart.shops_name1))
         label4 = self.cart_page.get_attribute(MiniCart.shops_name1, 'src')
@@ -239,6 +240,7 @@ class TesCART(ui_test_class.UVClass):
     def test_priceAndCount(self):
         WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(MiniCart.price_label))
         time.sleep(15)
+        self.cart_page.scroll_to_element(MiniCart.price_label)
         price_label = self.cart_page.get_attribute(MiniCart.price_label, 'innerHTML')
         count_label = self.cart_page.get_attribute(MiniCart.count_label, 'innerHTML')
         print(price_label)
@@ -604,7 +606,7 @@ class TesCART(ui_test_class.UVClass):
         print(ThankYouLabel)
         self.cart_page.click_quicklly()
         self.cart_page.submit_zip()
-        self.AddItem()
+        # self.AddItem()
         self.cart_page.click_MiniCart()
         self.cart_page.click_Checkout()
         # self.assertEqual(self.actual63, orderID)
