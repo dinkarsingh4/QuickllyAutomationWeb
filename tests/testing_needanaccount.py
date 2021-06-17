@@ -1,5 +1,5 @@
 import time
-
+# from waiting import wait
 from resources import ui_test_class
 from resources.page_objects.needaccount import NeedAnAccount
 from resources.page_objects.needaccount import needanaccount
@@ -30,6 +30,10 @@ class TesNAC(ui_test_class.UIIIClass):
     actual4 = "Your current address does not look right. Please select a valid address!"
     actual5 = "Please enter at least 10 characters."
     actual6 = "Please enter a valid email address."
+
+    def __init__(self, methodName: str = ...):
+        super().__init__(methodName)
+        self.wait = None
 
     @classmethod
     def setUpClass(cls):
@@ -154,7 +158,8 @@ class TesNAC(ui_test_class.UIIIClass):
         self.need_page.confirm_password("sami1234")
         self.need_page.register_button()
         print("Registered Successfully")
-        # WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(NeedAnAccount.googleError))
+        WebDriverWait(self.driver, self.wait).until(EC.presence_of_element_located(NeedAnAccount.googleError))
+
         time.sleep(15)
         Error = self.need_page.get_attribute(NeedAnAccount.googleError, 'innerHTML')
         self.assertEqual(self.actual4, Error)
