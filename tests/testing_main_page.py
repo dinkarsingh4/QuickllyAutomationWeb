@@ -14,7 +14,7 @@ class TesLogin(ui_test_class.UIClass):
     mp = {}
     mp1 = {}
     actual1 = "Need an Account? Signup"
-    actual2 = "Continue as a Guest"
+    actual2 = "Continue as a Guet"
     actual3 = "Forgot Password?"
     actual4 = "Introduction"
     actual5 = "Acceptance of the Terms of Use"
