@@ -98,7 +98,7 @@ class TesLogin(ui_test_class.UIClass):
     def test_login(self):
 
         """Login"""
-        # self.maine_page.click_SignIn()
+        self.maine_page.click_SignIn()
         self.maine_page.enter_email("admin@gmail.com")
         self.maine_page.enter_password("admin1234")
         self.maine_page.click_login()
