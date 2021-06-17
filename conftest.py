@@ -3,6 +3,20 @@
 from py._xmlgen import html
 from datetime import datetime
 import pytest
+import os
+
+@pytest.mark.hookwrapper
+def pytest_runtest_makereport(item, call):
+    outcome = yield
+    report = outcome.get_result()
+    pytest_html = item.config.pluginmanager.getplugin('html')
+    extra = getattr(report, 'extra', [])
+
+    main_script_dir = os.path.dirname(__file__)
+    rel_path = "screenshots"
+    image = pytest_html.extras.image(os.path.join(main_script_dir, rel_path))
+    extra.append(image)
+    report.extra = extra
 
 
 # def pytest_html_results_table_header(cells):
@@ -23,24 +37,24 @@ import pytest
 #     report = outcome.get_result()
 #     report.description = str(item.function.__doc__)
 
-
-@pytest.mark.hookwrapper
-def pytest_runtest_makereport(item, call):
-    pytest_html = item.config.pluginmanager.getplugin('html')
-    outcome = yield
-    report = outcome.get_result()
-    extra = getattr(report, 'extra', [])
-    if report.when == 'call':
-        # always add url to report
-
-        extra.append(pytest_html.extras.url('http://www.dev.quicklly.com/'))
-        xfail = hasattr(report, 'wasxfail')
-        if (report.skipped and xfail) or (report.failed and not xfail):
-            # only add additional html on failure
-            extra.append(pytest_html.extras.image('screenshots'))
-            extra.append(pytest_html.extras.html('<div>djndjnk.fn</div>'))
-        report.extra = extra
-        report.description = str(item.function.__doc__)
+#
+# @pytest.mark.hookwrapper
+# def pytest_runtest_makereport(item, call):
+#     pytest_html = item.config.pluginmanager.getplugin('html')
+#     outcome = yield
+#     report = outcome.get_result()
+#     extra = getattr(report, 'extra', [])
+#     if report.when == 'call':
+#         # always add url to report
+#
+#         extra.append(pytest_html.extras.url('http://www.dev.quicklly.com/'))
+#         xfail = hasattr(report, 'wasxfail')
+#         if (report.skipped and xfail) or (report.failed and not xfail):
+#             # only add additional html on failure
+#             extra.append(pytest_html.extras.image('screenshots'))
+#             extra.append(pytest_html.extras.html('<div>djndjnk.fn</div>'))
+#         report.extra = extra
+#         report.description = str(item.function.__doc__)
 
 
 # @pytest.mark.optionalhook
