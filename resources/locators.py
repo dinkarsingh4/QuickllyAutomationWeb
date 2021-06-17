@@ -78,7 +78,7 @@ class NeedAnAccount:
     mobile_invalid = (By.XPATH, '//*[@id="mobile-error"]')
     address_invalid = (By.XPATH, '//*[@id="street_number-error"]')
     email_invalid = (By.XPATH, '//*[@id="email-error"]')
-    googleError = (By.XPATH, '//*[@id="street_number2-error"]')
+    googleError = (By.XPATH, '//*[@id="street_number-error"]')
 
 
 class ForgetPassword:

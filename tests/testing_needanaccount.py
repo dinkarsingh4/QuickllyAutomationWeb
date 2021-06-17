@@ -3,6 +3,8 @@ import time
 from resources import ui_test_class
 from resources.page_objects.needaccount import NeedAnAccount
 from resources.page_objects.needaccount import needanaccount
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 
@@ -157,8 +159,10 @@ class TesNAC(ui_test_class.UIIIClass):
         self.need_page.confirm_password("sami1234")
         self.need_page.register_button()
         print("Registered Successfully")
-        self.need_page.check_element()
-        # self.assertEqual(self.actual4, Error)
+        WebDriverWait(self.driver, self.wait).until(EC.presence_of_element_located(NeedAnAccount.googleError))
+        Error = self.need_page.get_attribute(NeedAnAccount.googleError, 'innerHTML')
+        print(Error)
+        self.assertEqual(self.actual4, Error)
 
     def test_placeholders(self):
 
