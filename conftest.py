@@ -1,9 +1,30 @@
 # !/usr/bin/python
 # --*-- coding:utf-8 --*--
+
+
 from py._xmlgen import html
 from datetime import datetime
 import pytest
 import os
+
+
+# @pytest.mark.hookwrapper
+# def pytest_runtest_makereport(item):
+#     driver = None
+#     pytest_html = item.config.pluginmanager.getplugin('html')
+#     outcome = yield
+#     report = outcome.get_result()
+#     extra = getattr(report, 'extra', [])
+#
+#     if report.when == 'call' or report.when == 'setup':
+#         xfail = hasattr(report, 'wasxfail')
+#
+#
+#         if (report.skipped and xfail) or (report.failed and not xfail):
+#
+#             screenshot = driver.get_screenshot_as_base64()
+#             extra.append(pytest_html.extras.image(screenshot, ''))
+#         report.extra = extra
 
 @pytest.mark.hookwrapper
 def pytest_runtest_makereport(item, call):
@@ -13,7 +34,7 @@ def pytest_runtest_makereport(item, call):
     extra = getattr(report, 'extra', [])
 
     main_script_dir = os.path.dirname(__file__)
-    rel_path = "screenshots/screenshot_06-17_16-11-35.png"
+    rel_path = "/home/excellence/PycharmProjects/gitAutomation/screenshots"
     image = pytest_html.extras.image(os.path.join(main_script_dir, rel_path))
     extra.append(image)
     report.extra = extra
