@@ -159,8 +159,6 @@ class TesNAC(ui_test_class.UIIIClass):
         self.need_page.register_button()
         print("Registered Successfully")
         WebDriverWait(self.driver, self.wait).until(EC.presence_of_element_located(NeedAnAccount.googleError))
-
-        time.sleep(15)
         Error = self.need_page.get_attribute(NeedAnAccount.googleError, 'innerHTML')
         self.assertEqual(self.actual4, Error)
 
