@@ -1,6 +1,8 @@
 from resources.config_methods import DataClass
 from resources.locators import NeedAnAccount
 from resources.page_objects.base_page import BasePage
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 class needanaccount(BasePage):
@@ -52,4 +54,9 @@ class needanaccount(BasePage):
 
     def register_button(self):
         self.click(NeedAnAccount.register_button)
+
+    def check_element(self):
+        WebDriverWait(self.driver, self.wait).until(EC.presence_of_element_located(NeedAnAccount.googleError))
+        Error = self.get_attribute(NeedAnAccount.googleError, 'innerHTML')
+        print(Error)
 
