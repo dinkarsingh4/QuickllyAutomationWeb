@@ -30,7 +30,7 @@ class TesCART(ui_test_class.UVClass):
     actual18 = "Curbside Pickup"
     actual19 = "Delivery"
     actual20 = "eVoucher"
-    actual21 = "https://www.dev.quicklly.com/images/allstores.png"
+    actual21 = "/images/allstores.png"
     actual22 = "https://www.dev.quicklly.com/seller/upload_images/store/thumb/ff.png"
     actual23 = "https://www.dev.quicklly.com/seller/upload_images/store/thumb/1601044053-campus-market.png"
     actual24 = "(2 item)"
