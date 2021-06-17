@@ -1,29 +1,52 @@
 # !/usr/bin/python
 # --*-- coding:utf-8 --*--
 import pytest
+import webbrowser
 
+from autoit import options
+from selenium import webdriver
+
+
+@pytest.fixture(scope='session')
+def browser():
+
+    driver = webdriver.Chrome('resources//chromedriver.exe', options=options)
+    driver.get('http://www.gogle.com')
+    driver.implicitly_wait(5)
+
+    return driver
 
 @pytest.mark.hookwrapper
-def pytest_runtest_makereport(item):
-
-    """
-        Extends the PyTest Plugin to take and embed screenshot in html report, whenever test fails.
-        :param item:
-        """
+def pytest_runtest_makereport(item, call):
     pytest_html = item.config.pluginmanager.getplugin('html')
     outcome = yield
     report = outcome.get_result()
     extra = getattr(report, 'extra', [])
-    file_name = "screenshots"
-    if report.when == 'call' or report.when == "setup":
+    if report.when == 'call':
+
+        browser.save_screenshot('/home/excellence/PycharmProjects/gitAutomation/screenshot.png')
+        extra.append(pytest_html.extras.image('/home/excellence/PycharmProjects/gitAutomation/screenshot.png'))
+
+        # always add url to report
+        extra.append(pytest_html.extras.url('http://www.example.com/'))
         xfail = hasattr(report, 'wasxfail')
         if (report.skipped and xfail) or (report.failed and not xfail):
-            try:
-                file_name=item.obj.__self__.base_page.capture_screen_shot()
-            except Exception as e:
-                print(e)
-            if file_name:
-                html = '<div><img src="%s" alt="screenshot" style="width:304px;height:228px;" ' \
-                       'onclick="window.open(this.src)" align="right"/></div>' % file_name
-                extra.append(pytest_html.extras.html(html))
+            # only add additional html on failure
+            extra.append(pytest_html.extras.image('/home/excellence/PycharmProjects/gitAutomation/screenshot.png'))
+            extra.append(pytest_html.extras.html('<div>Additional HTML</div>'))
         report.extra = extra
+# @pytest.mark.hookwrapper
+# def pytest_runtest_makereport(item, call):
+#     pytest_html = item.config.pluginmanager.getplugin('html')
+#     outcome = yield
+#     report = outcome.get_result()
+#     extra = getattr(report, 'extra', [])
+#     if report.when == 'call':
+#         # always add url to report
+#         extra.append(pytest_html.extras.url('http://www.example.com/'))
+#         xfail = hasattr(report, 'wasxfail')
+#         if (report.skipped and xfail) or (report.failed and not xfail):
+#             # only add additional html on failure
+#             extra.append(pytest_html.extras.image('D:/report/screenshot.png'))
+#             extra.append(pytest_html.extras.html('<div>Additional HTML</div>'))
+#         report.extra = extra
