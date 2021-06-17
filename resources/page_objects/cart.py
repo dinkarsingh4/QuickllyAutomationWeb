@@ -189,17 +189,16 @@ class Cart(BasePage):
         self.find_element(MiniCart.reward_text).send_keys(reward)
 
     def click_NoTIp(self):
-        self.wait_for_loader(15)
-        self.scroll_to_element(MiniCart.NoTip)
-        self.click(MiniCart.NoTip)
+        element = self.driver.find_element_by_id('tipzero')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_Tip5(self):
-        self.scroll_to_element(MiniCart.Tip5)
-        self.click(MiniCart.Tip5)
+        element = self.driver.find_element_by_id('tipthree')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_Tip10(self):
-        self.scroll_to_element(MiniCart.Tip10)
-        self.click(MiniCart.Tip10)
+        element = self.driver.find_element_by_id('tipfive')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_Tip15(self):
         element = self.driver.find_element_by_id('tipseven')
