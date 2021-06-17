@@ -6,6 +6,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
+
 class TesCART(ui_test_class.UVClass):
     cart_page: Cart
     cart_page: MiniCart
@@ -236,7 +237,7 @@ class TesCART(ui_test_class.UVClass):
         self.assertEqual(self.actual23, label4)
 
     def test_priceAndCount(self):
-        # WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(MiniCart.price_label))
+        WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(MiniCart.price_label))
         time.sleep(15)
         price_label = self.cart_page.get_attribute(MiniCart.price_label, 'innerHTML')
         count_label = self.cart_page.get_attribute(MiniCart.count_label, 'innerHTML')
