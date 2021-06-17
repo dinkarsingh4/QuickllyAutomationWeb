@@ -13,7 +13,7 @@ def pytest_runtest_makereport(item, call):
     extra = getattr(report, 'extra', [])
 
     main_script_dir = os.path.dirname(__file__)
-    rel_path = "screenshots"
+    rel_path = "screenshots/screenshot_06-17_16-11-35.png"
     image = pytest_html.extras.image(os.path.join(main_script_dir, rel_path))
     extra.append(image)
     report.extra = extra
