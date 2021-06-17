@@ -3,7 +3,7 @@
 import pytest
 import webbrowser
 
-from autoit import options
+from selenium.webdriver.chrome import options
 from selenium import webdriver
 
 
