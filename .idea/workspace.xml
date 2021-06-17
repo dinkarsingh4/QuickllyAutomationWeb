@@ -133,11 +133,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python tests.Unittests for testing_MiniCart.TesCART" />
-      <item itemvalue="Python tests.Unittests for testing_continueasguest.TesCAG" />
-      <item itemvalue="Python tests.Unittests for testing_forgotpassword.TesFP" />
       <item itemvalue="Python tests.Unittests for testing_main_page.TesLogin" />
+      <item itemvalue="Python tests.Unittests for testing_continueasguest.TesCAG" />
       <item itemvalue="Python tests.Unittests for testing_needanaccount.TesNAC" />
+      <item itemvalue="Python tests.Unittests for testing_forgotpassword.TesFP" />
+      <item itemvalue="Python tests.Unittests for testing_MiniCart.TesCART" />
     </list>
     <recent_temporary>
       <list>
