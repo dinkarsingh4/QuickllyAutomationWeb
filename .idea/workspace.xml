@@ -133,11 +133,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python tests.Unittests for testing_main_page.TesLogin" />
-      <item itemvalue="Python tests.Unittests for testing_continueasguest.TesCAG" />
-      <item itemvalue="Python tests.Unittests for testing_needanaccount.TesNAC" />
-      <item itemvalue="Python tests.Unittests for testing_forgotpassword.TesFP" />
       <item itemvalue="Python tests.Unittests for testing_MiniCart.TesCART" />
+      <item itemvalue="Python tests.Unittests for testing_continueasguest.TesCAG" />
+      <item itemvalue="Python tests.Unittests for testing_forgotpassword.TesFP" />
+      <item itemvalue="Python tests.Unittests for testing_main_page.TesLogin" />
+      <item itemvalue="Python tests.Unittests for testing_needanaccount.TesNAC" />
     </list>
     <recent_temporary>
       <list>
@@ -157,13 +157,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616787846440</updated>
-    </task>
-    <task id="LOCAL-00123" summary="Merge remote-tracking branch 'github/main' into main">
-      <created>1623852249483</created>
-      <option name="number" value="00123" />
-      <option name="presentableId" value="LOCAL-00123" />
-      <option name="project" value="LOCAL" />
-      <updated>1623852249484</updated>
     </task>
     <task id="LOCAL-00124" summary="Merge remote-tracking branch 'github/main' into main">
       <created>1623852556054</created>
@@ -501,7 +494,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623930264197</updated>
     </task>
-    <option name="localTasksCounter" value="172" />
+    <task id="LOCAL-00172" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1623932563625</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1623932563625</updated>
+    </task>
+    <option name="localTasksCounter" value="173" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
