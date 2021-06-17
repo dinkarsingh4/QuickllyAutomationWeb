@@ -14,7 +14,7 @@ class TesLogin(ui_test_class.UIClass):
     mp = {}
     mp1 = {}
     actual1 = "Need an Account? Signup"
-    actual2 = "Continue as a Guet"
+    actual2 = "Continue as a Guest"
     actual3 = "Forgot Password?"
     actual4 = "Introduction"
     actual5 = "Acceptance of the Terms of Use"
@@ -98,7 +98,7 @@ class TesLogin(ui_test_class.UIClass):
     def test_login(self):
 
         """Login"""
-        self.maine_page.click_SignIn()
+        # self.maine_page.click_SignIn()
         self.maine_page.enter_email("admin@gmail.com")
         self.maine_page.enter_password("admin1234")
         self.maine_page.click_login()

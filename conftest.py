@@ -32,6 +32,6 @@ def pytest_runtest_makereport(item, call):
         if (report.skipped and xfail) or (report.failed and not xfail):
             # only add additional html on failure
 
-            extra.append(pytest_html.extras.image('screenshot_{name}.png'))
+            extra.append(pytest_html.extras.image('/home/excellence/PycharmProjects/gitAutomation/tests/screenshots/My_screenshot.png'))
             extra.append(pytest_html.extras.html('<div>Additional HTML</div>'))
         report.extra = extra
