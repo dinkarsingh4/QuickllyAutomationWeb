@@ -8,7 +8,7 @@ import pytest
 import os
 
 
-@pytest.mark.hookwrapper
+@pytest.fixture(params=(1, 2, 3))
 def pytest_runtest_makereport(item, call):
 
     timestamp = datetime.now().strftime('%H-%M-%S')
