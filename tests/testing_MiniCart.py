@@ -31,8 +31,8 @@ class TesCART(ui_test_class.UVClass):
     actual19 = "Delivery"
     actual20 = "eVoucher"
     actual21 = "/images/allstores.png"
-    actual22 = "https://www.dev.quicklly.com/seller/upload_images/store/thumb/ff.png"
-    actual23 = "https://www.dev.quicklly.com/seller/upload_images/store/thumb/1601044053-campus-market.png"
+    actual22 = "https://www.dev.quicklly.com/upload_images/product/thumb/1495539333-lemon-grass.jpg"
+    actual23 = "https://www.dev.quicklly.com/upload_images/product/thumb/1603399120-potato.jpg"
     actual24 = "(2 item)"
     actual25 = "Items in your  cart"
     actual26 = "Remove"
@@ -59,7 +59,7 @@ class TesCART(ui_test_class.UVClass):
     actual47 = "Packaging Handling"
     actual48 = "$0.99"
     actual49 = "Tip"
-    actual50 = "$0.03"
+    actual50 = "$0.04"
     actual51 = "Estimated Order Total"
     actual52 = "13.28"
     actual53 = "Delivery:"
@@ -76,15 +76,15 @@ class TesCART(ui_test_class.UVClass):
     actual64 = "Potato"
     actual65 = "$0.29"
     actual66 = "1"
-    actual67 = "$0.01"
+    actual67 = "$0.02"
     actual68 = "Hello, User"
     actual69 = "Campus Market"
     actual70 = "12345"
-    actual71 = "9.57"
-    actual72 = "9.60"
-    actual73 = "9.63"
-    actual74 = "9.66"
-    actual75 = "9.69"
+    actual71 = "12.86"
+    actual72 = "12.90"
+    actual73 = "12.95"
+    actual74 = "12.99"
+    actual75 = "13.04"
     actual76 = "Invalid Coupon.!"
 
     @classmethod
@@ -98,8 +98,8 @@ class TesCART(ui_test_class.UVClass):
 
     def AddItem(self):
         self.cart_page.click_additem()
-        time.sleep(5)
-        self.cart_page.click_AddItem1()
+        # time.sleep(5)
+        # self.cart_page.click_AddItem1()
         self.cart_page.click_item()
         self.cart_page.click_Additem2()
 
@@ -136,8 +136,112 @@ class TesCART(ui_test_class.UVClass):
         print(empty)
         self.assertEqual(self.actual1, empty)
 
+
+    def test_checkout(self):
+        check = self.cart_page.get_attribute(MiniCart.proceed_to_checkOut, 'innerHTML')
+        print(check)
+        self.assertEqual(self.actual2, check)
+
+    def test_name(self):
+        self.cart_page.click_MiniCart()
+        NameOfItem = self.cart_page.get_attribute(MiniCart.NameOfItem, 'innerHTML')
+        print(NameOfItem)
+        self.assertEqual(self.actual5, NameOfItem)
+
+    def test_quantity_price(self):
+        self.cart_page.click_MiniCart()
+        price = self.cart_page.get_attribute(MiniCart.PriceOfItem, 'innerHTML')
+        print(price)
+        self.assertEqual(self.actual55, price)
+
+    def test_image(self):
+        imageSource = self.cart_page.get_attribute(MiniCart.image, 'src')
+        print(imageSource)
+        self.assertEqual(self.actual10, imageSource)
+
+    def test_click_count(self):
+        self.cart_page.click_MiniCart()
+        ItemNumber = self.cart_page.get_attribute(MiniCart.ItemCount, 'innerHTML')
+        print(ItemNumber)
+        self.assertEqual(self.actual3, ItemNumber)
+
+    def test_quantity(self):
+        self.cart_page.click_MiniCart()
+        ItemQuantity = self.cart_page.get_attribute(MiniCart.ItemQuantity, 'innerHTML')
+        print(ItemQuantity)
+        self.assertEqual(self.actual6, ItemQuantity)
+
+    def test_minimum(self):
+        self.cart_page.click_MiniCart()
+        MinimumOrder = self.cart_page.find_element(MiniCart.min_order).get_attribute('innerHTML')
+        print(MinimumOrder)
+        self.assertEqual(self.actual4, MinimumOrder)
+
+    def test_total(self):
+        self.cart_page.click_MiniCart()
+        Total = self.cart_page.find_element(MiniCart.shop_total).get_attribute('innerHTML')
+        print(Total)
+        self.assertEqual(self.actual8, Total)
+        self.cart_page.wait_for_loader(15)
+
+    def test_two_shops(self):
+        self.cart_page.click_MiniCart()
+        ShopName = self.cart_page.get_attribute(MiniCart.shop_name, 'innerHTML')
+        print(ShopName)
+        self.assertEqual(self.actual11, ShopName)
+
+    def test_check_updated_price(self):
+        self.cart_page.click_MiniCart()
+        self.cart_page.click_plus()
+        price = self.cart_page.get_attribute(MiniCart.PriceOfItem, 'innerHTML')
+        print(price)
+        self.cart_page.click_minus()
+        self.assertEqual(self.actual9, price)
+
+    def test_bmin(self):
+        self.cart_page.click_MiniCart()
+        for i in range(19):
+            self.cart_page.click_minus()
+        ItemQuantity = self.cart_page.get_attribute(MiniCart.ItemQuantity, 'innerHTML')
+        print(ItemQuantity)
+        self.assertEqual(self.actual6, ItemQuantity)
+        self.cart_page.click_Checkout()
+        print("Item with minimum quantity is added")
+
+    def test_bmax(self):
+        time.sleep(5)
+        self.cart_page.click_MiniCart()
+        ItemQuantity = self.cart_page.get_attribute(MiniCart.ItemQuantity, 'innerHTML')
+        print(ItemQuantity)
+        self.assertEqual(self.actual12, ItemQuantity)
+        print("Item with maximum quantity is added")
+
+    def test_shopping(self):
+        label = self.cart_page.get_attribute(MiniCart.shopping_carts, 'innerHTML')
+        print(label)
+        self.assertEqual(self.actual13, label)
+
+    def test_label(self):
+        WebDriverWait(self.driver, 20).until(EC.presence_of_element_located(MiniCart.shops_name))
+        label3 = self.cart_page.get_attribute(MiniCart.shops_name, 'src')
+        label4 = self.cart_page.get_attribute(MiniCart.shops_name1, 'src')
+        print(label3)
+        print(label4)
+        self.assertEqual(self.actual22, label3)
+        self.assertEqual(self.actual23, label4)
+
+    def test_pickup(self):
+        pickup_label = self.cart_page.get_attribute(MiniCart.CurbsidePickup, 'innerHTML')
+        print(pickup_label)
+        self.assertEqual(self.actual18, pickup_label)
+
+    def test_cidelivery(self):
+        delivery_label = self.cart_page.get_attribute(MiniCart.Delivery, 'innerHTML')
+        print(delivery_label)
+        self.assertEqual(self.actual19, delivery_label)
+
     def test_arrow1(self):
-        self.AddItem()
+        self.cart_page.click_additem()
         self.cart_page.click_MiniCart()
         for i in range(19):
             self.cart_page.click_plus()
@@ -147,7 +251,6 @@ class TesCART(ui_test_class.UVClass):
         self.assertEqual(self.actual69, secondShop)
 
     def test_cjarrow2(self):
-        self.cart_page.click_MiniCart()
         self.cart_page.click_leftArrow()
         ShopName = self.cart_page.get_attribute(MiniCart.shop_name, 'innerHTML')
         print(ShopName)
@@ -160,9 +263,6 @@ class TesCART(ui_test_class.UVClass):
 
     def test_dropdown1(self):
         self.cart_page.click_dropDown1()
-        # itemsInCart = self.cart_page.get_attribute(MiniCart.ItemInCart, 'innerHTML')
-        # print(itemsInCart)
-        # self.assertEqual(self.actual25, itemsInCart)
 
     def test_dropdown2(self):
         time.sleep(10)
@@ -187,10 +287,14 @@ class TesCART(ui_test_class.UVClass):
         self.assertEqual(self.actual25, itemsInCart)
 
     def test_remove_item(self):
-        # time.sleep(15)
         self.cart_page.click_remove()
         ItemTotal = self.cart_page.get_attribute(MiniCart.groceriesItemTotal, 'innerHTML')
         print(ItemTotal)
+        self.cart_page.click_Department()
+        self.cart_page.click_ShopByGrocery()
+        self.AddItem()
+        self.cart_page.click_MiniCart()
+        self.cart_page.click_Checkout()
         self.assertEqual(self.actual61, ItemTotal)
 
     def test_eVoucher_label(self):
@@ -452,7 +556,7 @@ class TesCART(ui_test_class.UVClass):
         ItemName = self.cart_page.get_attribute(MiniCart.SecondItemName, 'innerHTML')
         print(ItemName)
         self.assertEqual(self.actual64, ItemName)
-        time.sleep(10)
+        # time.sleep(10)
 
     def test_click_secondItemPrice(self):
         self.cart_page.click_MiniCart()
@@ -470,40 +574,9 @@ class TesCART(ui_test_class.UVClass):
     def test_paymentMethod1(self):
         self.cart_page.click_payment1()
         self.cart_page.click_Pay()
-        # self.clickQuicklly()
         ThankYouLabel = self.cart_page.get_attribute(MiniCart.ThankYou, 'innerHTML')
         print(ThankYouLabel)
         self.cart_page.click_quicklly()
         self.cart_page.submit_zip()
-        # self.AddItem()
         self.cart_page.click_MiniCart()
         self.cart_page.click_Checkout()
-        # self.assertEqual(self.actual63, orderID)
-        # self.cart_page.click_quicklly()
-        # self.cart_page.submit_zip()
-        # self.AddItem()
-        # self.cart_page.click_MiniCart()
-        # self.cart_page.click_Checkout()
-
-    # def test_paymentMethod2(self):
-    #     #     self.cart_page.click_Department()
-    #     #     self.cart_page.click_ShopByGrocery()
-    #     #     self.AddItem()
-    #     #     self.cart_page.click_MiniCart()
-    #     #     self.cart_page.click_Checkout()
-    #     self.cart_page.click_payment1()
-    #     time.sleep(10)
-    #     self.cart_page.click_changeMethod()
-    #     self.cart_page.click_Addmethod()
-    #     self.cart_page.EnterCardNumber("4005519200000004")
-    #     self.cart_page.EnterExpiry("0226")
-    #     self.cart_page.EnterCVV("158")
-#
-# #
-# # if __name__ == "__main__":
-# #     ftp_host = "https://www.dev.quicklly.com"
-# #     username = "excellence delivered"
-# #     password = "1234"
-# #
-# # ftp = ftplib.FTP("https://www.dev.quicklly.com")
-# # ftp.login("testaccount@quicklly.com", "123456")
