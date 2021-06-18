@@ -21,10 +21,6 @@ class TesEVoucher(ui_test_class.UVIClass):
         super(TesEVoucher, cls).tearDownClass()
         cls.driver.quit()
 
-    # def setUp(self):
-    #     super(TesEVoucher, self).setUp()
-    #     self.base_page.driver.refresh()
-
     def test_EnterZipcode(self):
         self.eVoucher_page.EnterZipcode("60611")
         self.eVoucher_page.ClickSubmit()
@@ -40,8 +36,6 @@ class TesEVoucher(ui_test_class.UVIClass):
         self.eVoucher_page.click_login()
 
     def test_addItem(self):
-        self.eVoucher_page.click_additem()
-        self.eVoucher_page.click_AddItem1()
         self.eVoucher_page.click_MiniCart()
         self.eVoucher_page.click_Checkout()
 

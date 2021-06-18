@@ -472,7 +472,6 @@ class TesCART(ui_test_class.UVClass):
         self.assertEqual(self.actual73, OrderPrice)
 
     def test_tip15(self):
-        # time.sleep(15)
         self.cart_page.click_Tip15()
         OrderPrice = self.cart_page.get_attribute(MiniCart.EstimatedOrderPrice, 'innerHTML')
         print(OrderPrice)
