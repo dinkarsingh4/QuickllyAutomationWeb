@@ -37,8 +37,8 @@ class Cart(BasePage):
         self.click(MiniCart.submit_zip)
 
     def click_MiniCart(self):
-        self.scroll_to_element(MiniCart.click_cart)
-        self.click(MiniCart.click_cart)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/header/div[4]/a')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def Empty_cart(self):
         self.find_element(MiniCart.empty_cart).get_attribute('innerHTML')
