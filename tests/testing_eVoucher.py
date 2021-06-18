@@ -36,6 +36,7 @@ class TesEVoucher(ui_test_class.UVIClass):
         self.eVoucher_page.click_login()
 
     def test_addItem(self):
+        self.eVoucher_page.click_additem()
         self.eVoucher_page.click_MiniCart()
         self.eVoucher_page.click_Checkout()
 

@@ -62,7 +62,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for testing_MiniCart.TesCART">
+  <component name="RunManager" selected="Python tests.Unittests for testing_eVoucher.TesEVoucher">
     <configuration name="conftest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -98,7 +98,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for testing_forgotpassword.TesFP" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for testing_eVoucher.TesEVoucher" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -108,7 +108,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;testing_forgotpassword.TesFP&quot;" />
+      <option name="_new_target" value="&quot;testing_eVoucher.TesEVoucher&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -142,18 +142,18 @@
     </configuration>
     <list>
       <item itemvalue="Python tests.Unittests for testing_needanaccount.TesNAC" />
-      <item itemvalue="Python tests.Unittests for testing_forgotpassword.TesFP" />
       <item itemvalue="Python tests.Unittests for testing_MiniCart.TesCART" />
       <item itemvalue="Python.conftest" />
       <item itemvalue="Python tests.Unittests for testing_main_page.TesLogin" />
+      <item itemvalue="Python tests.Unittests for testing_eVoucher.TesEVoucher" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for testing_eVoucher.TesEVoucher" />
         <item itemvalue="Python tests.Unittests for testing_MiniCart.TesCART" />
         <item itemvalue="Python tests.Unittests for testing_main_page.TesLogin" />
         <item itemvalue="Python.conftest" />
         <item itemvalue="Python tests.Unittests for testing_needanaccount.TesNAC" />
-        <item itemvalue="Python tests.Unittests for testing_forgotpassword.TesFP" />
       </list>
     </recent_temporary>
   </component>
