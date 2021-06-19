@@ -2,6 +2,8 @@
 from resources import ui_test_class
 from resources.locators import Coupon
 from resources.page_objects.eVoucher import evoucher
+from selenium.webdriver import ActionChains as A
+from selenium.webdriver.common.keys import Keys as K
 
 
 class TesEVoucher(ui_test_class.UVIClass):
@@ -47,8 +49,22 @@ class TesEVoucher(ui_test_class.UVIClass):
         print(Invalid)
         self.assertEqual(self.actual2, Invalid)
 
+    def test_checkInputLessThanTextbox(self):
+        self.eVoucher_page.EnterEvoucher("13161833181318484460842610")
+        self.eVoucher_page.click_apply()
+        Invalid = self.eVoucher_page.get_attribute(Coupon.InvalidCoupon, 'innerHTML')
+        print(Invalid)
+        self.assertEqual(self.actual2, Invalid)
+
     def test_checkInputNumbersOnly(self):
         self.eVoucher_page.EnterEvoucher("12458")
+        self.eVoucher_page.click_apply()
+        Invalid = self.eVoucher_page.get_attribute(Coupon.InvalidCoupon, 'innerHTML')
+        print(Invalid)
+        self.assertEqual(self.actual2, Invalid)
+
+    def test_checkCopyPaste(self):
+        self.eVoucher_page.EnterEvoucher1("12458")
         self.eVoucher_page.click_apply()
         Invalid = self.eVoucher_page.get_attribute(Coupon.InvalidCoupon, 'innerHTML')
         print(Invalid)
@@ -82,9 +98,87 @@ class TesEVoucher(ui_test_class.UVIClass):
         print(Invalid)
         self.assertEqual(self.actual2, Invalid)
 
+    def test_checkInputLowerCaseAlphabets(self):
+        self.eVoucher_page.EnterEvoucher("acvfdsbsdjv")
+        self.eVoucher_page.click_apply()
+        Invalid = self.eVoucher_page.get_attribute(Coupon.InvalidCoupon, 'innerHTML')
+        print(Invalid)
+        self.assertEqual(self.actual2, Invalid)
+
     def test_checkInputMixAlphabets(self):
         self.eVoucher_page.EnterEvoucher("ABfgXJUer")
         self.eVoucher_page.click_apply()
         Invalid = self.eVoucher_page.get_attribute(Coupon.InvalidCoupon, 'innerHTML')
         print(Invalid)
+        self.assertEqual(self.actual2, Invalid)
+
+    def test_checkSpecialCharacters(self):
+        self.eVoucher_page.EnterEvoucher("!@#$%^&*()_+|}{:?><';/.,`")
+        self.eVoucher_page.click_apply()
+        Invalid = self.eVoucher_page.get_attribute(Coupon.InvalidCoupon, 'innerHTML')
+        print(Invalid)
+        self.assertEqual(self.actual2, Invalid)
+
+    def test_checkAllowSpecialCharacters(self):
+        self.eVoucher_page.EnterEvoucher("!@#$%^&*()_+|}{:?><';/.,`")
+        self.eVoucher_page.click_apply()
+        Invalid = self.eVoucher_page.get_attribute(Coupon.InvalidCoupon, 'innerHTML')
+        print(Invalid)
+        print("field allows all special characters")
+        self.assertEqual(self.actual2, Invalid)
+
+    def test_checkHTMLCharacters(self):
+        self.eVoucher_page.EnterEvoucher("<h1>My First Heading</h1>")
+        self.eVoucher_page.click_apply()
+        Invalid = self.eVoucher_page.get_attribute(Coupon.InvalidCoupon, 'innerHTML')
+        print(Invalid)
+        print("field allows all special characters")
+        self.assertEqual(self.actual2, Invalid)
+
+    def test_checkJavaScriptHTMLCharacters(self):
+        self.eVoucher_page.EnterEvoucher("var x = 5;")
+        self.eVoucher_page.click_apply()
+        Invalid = self.eVoucher_page.get_attribute(Coupon.InvalidCoupon, 'innerHTML')
+        print(Invalid)
+        print("field allows all special characters")
+        self.assertEqual(self.actual2, Invalid)
+
+    def test_checkSQLInjectionCharacters(self):
+        self.eVoucher_page.EnterEvoucher("SELECT * FROM Users WHERE UserId = 105 OR 1=1;")
+        self.eVoucher_page.click_apply()
+        Invalid = self.eVoucher_page.get_attribute(Coupon.InvalidCoupon, 'innerHTML')
+        print(Invalid)
+        print("field allows all special characters")
+        self.assertEqual(self.actual2, Invalid)
+
+    def test_checkOnlySpaces(self):
+        self.eVoucher_page.EnterEvoucher("        ")
+        self.eVoucher_page.click_apply()
+        Invalid = self.eVoucher_page.get_attribute(Coupon.InvalidCoupon, 'innerHTML')
+        print(Invalid)
+        print("field allows all special characters")
+        self.assertEqual(self.actual2, Invalid)
+
+    def test_checkBlankInput(self):
+        self.eVoucher_page.EnterEvoucher("")
+        self.eVoucher_page.click_apply()
+        Invalid = self.eVoucher_page.get_attribute(Coupon.InvalidCoupon, 'innerHTML')
+        print(Invalid)
+        print("field allows all special characters")
+        self.assertEqual(self.actual2, Invalid)
+
+    def test_checkTrailingSpaces(self):
+        self.eVoucher_page.EnterEvoucher("    15d6c")
+        self.eVoucher_page.click_apply()
+        Invalid = self.eVoucher_page.get_attribute(Coupon.InvalidCoupon, 'innerHTML')
+        print(Invalid)
+        print("field allows all special characters")
+        self.assertEqual(self.actual2, Invalid)
+
+    def test_checkLeadingSpaces(self):
+        self.eVoucher_page.EnterEvoucher("15d6c     ")
+        self.eVoucher_page.click_apply()
+        Invalid = self.eVoucher_page.get_attribute(Coupon.InvalidCoupon, 'innerHTML')
+        print(Invalid)
+        print("field allows all special characters")
         self.assertEqual(self.actual2, Invalid)

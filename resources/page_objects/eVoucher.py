@@ -1,6 +1,8 @@
 from resources.config_methods import DataClass
 from resources.locators import Coupon
 from resources.page_objects.base_page import BasePage
+from selenium.webdriver import ActionChains as A
+from selenium.webdriver.common.keys import Keys as K
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
@@ -56,7 +58,15 @@ class evoucher(BasePage):
         self.find_elements(Coupon.evoucher_text_box).clear()
         self.find_element(Coupon.evoucher_text_box).send_keys(evoucher)
 
+    def EnterEvoucher1(self, evoucher):
+        self.find_elements(Coupon.evoucher_text_box).clear()
+        self.find_element(Coupon.evoucher_text_box).send_keys(evoucher)
+        self.find_element(Coupon.evoucher_text_box).send_keys(K.CONTROL, 'a')
+        self.find_element(Coupon.evoucher_text_box).send_keys(K.CONTROL, 'x')
+        self.find_element(Coupon.evoucher_text_box).send_keys(K.CONTROL, 'v')
+
+
     def click_apply(self):
-        self.scroll_to_element(Coupon.Apply)
+        # self.scroll_to_element(Coupon.Apply)
         element = self.driver.find_element_by_xpath('//*[@id="parRadioOne"]/a')
         self.driver.execute_script("arguments[0].click();", element)
