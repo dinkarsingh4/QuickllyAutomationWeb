@@ -13,6 +13,7 @@ from resources.page_objects.needaccount import needanaccount
 from resources.page_objects.forgetpassword import forgetpass
 from resources.page_objects.cart import Cart
 from resources.page_objects.eVoucher import evoucher
+from resources.page_objects.department import Dept
 from selenium.webdriver import Remote
 
 
@@ -160,6 +161,29 @@ class UVIClass(unittest.TestCase):
         cls.driver.close()
         cls.driver.quit()
         super(UVIClass, cls).tearDownClass()
+
+
+class UVIIClass(unittest.TestCase):
+    aut_prefix = 'automation_'
+    driver: Remote = None
+    const_data = DataClass
+
+    depart_page: BasePage = None
+
+    @classmethod
+    def setUpClass(cls):
+        super(UVIIClass, cls).setUpClass()
+        cls.depart_page = BasePage(cls.driver)
+        cls.common_methods = Common(cls.driver)
+        cls.driver = cls.depart_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
+        cls.depart_page.driver = cls.driver
+        cls.depart_page = Dept(cls.driver)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        super(UVIIClass, cls).tearDownClass()
 
     @classmethod
     def login(cls):

@@ -104,7 +104,8 @@ class MiniCart:
     image = (By.XPATH, '//*[@id="product"]/div/img')
     NameOfItem = (By.XPATH, '//*[@id="minicart"]/div/div[2]/div/div/div/p[1]')
     PriceOfItem = (
-    By.CSS_SELECTOR, '#minicart > div > div.clsContent > div > div:nth-child(1) > div > p:nth-child(2) > span.price')
+        By.CSS_SELECTOR,
+        '#minicart > div > div.clsContent > div > div:nth-child(1) > div > p:nth-child(2) > span.price')
     ItemQuantity = (By.XPATH, '//*[@id="qty_cart_270"]/span')
     PlusQuantity = (By.XPATH, '//*[@id="qty_cart_270"]/a[2]')
     MinusQuantity = (By.XPATH, '//*[@id="qty_cart_270"]/a[1]')
@@ -124,7 +125,6 @@ class MiniCart:
     additem1 = (By.XPATH, '//*[@id="dvDialog-Custom"]/div/div[2]/a')
     addToCart = (By.XPATH, '//*[@id="searchhide"]/div[5]/div/section[2]/div/a[1]')
     clickGrocery = (By.XPATH, '//*[@id="searchhide"]/div[5]/div[1]/div/div/a[2]')
-
     allStores = (By.XPATH, '//*[@id="stores"]/div/div/a[1]/img')
     shops_name = (By.XPATH, '//*[@id="product"]/div[1]/img')
     shops_name1 = (By.XPATH, '//*[@id="product"]/div[2]/img')
@@ -221,7 +221,6 @@ class MiniCart:
     ThankYou = (By.XPATH, '//*[@id="innerlist-products"]/h1')
 
 
-
 class Coupon:
     zipCode = (By.XPATH, '//*[@id="zipcode"]')
     submitButton = (By.XPATH, '//*[@id="zipsubmitbtn"]')
@@ -238,6 +237,24 @@ class Coupon:
     InvalidCoupon = (By.XPATH, '//*[@id="parRadioOne"]/div')
     Apply = (By.XPATH, '//*[@id="parRadioOne"]/a')
     empty_cart = (By.ID, 'lblCartEmpty')
+
+
+class Department:
+    enter_zip = (By.ID, 'zipcode')
+    submit_zip = (By.ID, 'zipsubmitbtn')
+    yourAccount = (By.XPATH, '//*[@id="searchhide"]/header/div[3]/span')
+    SignInButton = (By.XPATH, '//*[@id="procedcheckoutBtn"]')
+    Email = (By.ID, 'user_email')
+    Pass = (By.ID, 'password')
+    LoginButton = (By.XPATH, '//*[@id="btn-login"]')
+    proceed_to_checkOut = (By.ID, 'lnkProceedToCheckout')
+    additem = (By.XPATH, '//*[@id="img_270"]')
+    Pay = (By.ID, 'pay_amount')
+    Pot = (By.XPATH, '/html/body/header/div[2]/div/div[1]/div[1]/div/div/ul/li[9]/a')
+    Department = (By.XPATH, '//*[@id="searchhide"]/header/div[2]/div/div[1]/div[1]')
+    select = (By.XPATH, '//*[@id="nationwide"]/div[2]/div[1]/a')
+    Add = (By.XPATH, '//*[@id="searchhide"]/div[3]/div[2]/div/div[1]/div[2]/div/a')
+    quicklly = (By.XPATH, '/html/body/header/a/img')
 
 
 class CommonLocators:

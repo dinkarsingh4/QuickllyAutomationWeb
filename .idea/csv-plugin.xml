@@ -31,6 +31,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/resources/page_objects/department.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/resources/page_objects/eVoucher.py">
           <value>
             <Attribute>
@@ -53,6 +60,13 @@
           </value>
         </entry>
         <entry key="/tests/testing_continueasguest.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/tests/testing_department.py">
           <value>
             <Attribute>
               <option name="separator" value=":" />
