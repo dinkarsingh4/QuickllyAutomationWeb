@@ -17,6 +17,20 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         super(TesDEPARTMENT, cls).tearDownClass()
         cls.driver.quit()
 
+    def InstantPot(self):
+        self.depart_page.submit_zip()
+        time.sleep(1)
+        self.depart_page.click_additem()
+        self.depart_page.click_Department()
+        self.depart_page.click_InstantPot()
+        self.depart_page.click_select()
+        self.depart_page.click_Add()
+        self.depart_page.click_AddToCart()
+        self.depart_page.click_MiniCart()
+        self.depart_page.click_Checkout()
+        self.depart_page.click_payment1()
+        self.depart_page.click_Pay()
+
     def test_EnterZipCode(self):
         self.depart_page.zip("60611")
         self.depart_page.submit_zip()
@@ -28,23 +42,21 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.EnterPass("123456")
         self.depart_page.click_login()
 
-    # def test_shopByGrocery(self):
-    #     self.depart_page.click_additem()
-    #     self.depart_page.click_MiniCart()
-    #     self.depart_page.click_Checkout()
-    #     self.depart_page.click_payment1()
-    #     self.depart_page.click_Pay()
+    def test_shopByGrocery(self):
+        self.depart_page.click_additem()
+        self.depart_page.click_MiniCart1()
+        self.depart_page.click_Checkout()
+        self.depart_page.click_payment1()
+        self.depart_page.click_Pay()
 
     def test_shopWithMeal(self):
-        # self.depart_page.click_quicklly()
-        # self.depart_page.submit_zip()
-        time.sleep(1)
-        self.depart_page.click_additem()
-        # self.depart_page.click_MiniCart()
-        # self.depart_page.click_Checkout()
-        self.depart_page.click_Department()
-        self.depart_page.click_InstantPot()
-        self.depart_page.click_select()
-        self.depart_page.click_Add()
+        self.depart_page.click_quicklly()
+        self.InstantPot()
 
-        self.depart_page.click_Pay()
+    def test_z(self):
+        self.depart_page.click_quicklly()
+        self.depart_page.submit_zip()
+        self.depart_page.click_MiniCart()
+        self.depart_page.click_seeti()
+        self.depart_page.click_remove()
+

@@ -250,11 +250,15 @@ class Department:
     proceed_to_checkOut = (By.ID, 'lnkProceedToCheckout')
     additem = (By.XPATH, '//*[@id="img_270"]')
     Pay = (By.ID, 'pay_amount')
-    Pot = (By.XPATH, '/html/body/header/div[2]/div/div[1]/div[1]/div/div/ul/li[9]/a')
+    Pot = (By.XPATH, '//*[@id="searchhide"]/header/div[2]/div/div[1]/div[1]/div/div/ul/li[8]/a')
     Department = (By.XPATH, '//*[@id="searchhide"]/header/div[2]/div/div[1]/div[1]')
     select = (By.XPATH, '//*[@id="nationwide"]/div[2]/div[1]/a')
-    Add = (By.XPATH, '//*[@id="searchhide"]/div[3]/div[2]/div/div[1]/div[2]/div/a')
+    Add = (By.XPATH, '//*[@id="img_76993"]')
+    AddToCart = (By.XPATH, '//*[@id="searchhide"]/div[2]/div/div[2]/div[2]/a[2]')
     quicklly = (By.XPATH, '/html/body/header/a/img')
+    right_arrow = (By.XPATH, '//*[@id="minicart"]/div/div[1]/div/i[2]')
+    Seeti = (By.XPATH, '//*[@id="minicart"]/div/div[1]/div/div/div/a[3]')
+    delete = (By.XPATH, '//*[@id="lnk_cart_[pid]"]')
 
 
 class CommonLocators:
