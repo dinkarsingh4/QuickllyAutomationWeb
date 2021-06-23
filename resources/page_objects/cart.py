@@ -56,7 +56,9 @@ class Cart(BasePage):
         button.click()
 
     def click_minus(self):
-        self.click(MiniCart.MinusQuantity)
+        element = self.driver.find_element_by_xpath('//*[@id="qty_cart_270"]/a[1]')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(MiniCart.MinusQuantity)
 
     def click_delete(self):
         self.click(MiniCart.delete_item)

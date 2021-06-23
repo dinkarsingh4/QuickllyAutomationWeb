@@ -40,7 +40,9 @@ class evoucher(BasePage):
 
     def click_additem(self):
         self.scroll_to_element(Coupon.additem)
-        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Coupon.additem)).click()
+        element = self.driver.find_element_by_xpath('//*[@id="img_270"]')
+        self.driver.execute_script("arguments[0].click();", element)
+        # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Coupon.additem)).click()
         # self.click(Coupon.additem)
 
     def click_AddItem1(self):
