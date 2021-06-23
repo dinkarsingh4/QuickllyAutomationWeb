@@ -38,12 +38,17 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
     def test_SignIN(self):
         self.depart_page.select_dropdown()
         self.depart_page.click_signin()
-        self.depart_page.EnterEmail("testaccount@quicklly.com")
+        self.depart_page.EnterEmail("quicklly1234@gmail.com")
         self.depart_page.EnterPass("123456")
         self.depart_page.click_login()
 
     def test_shopByGrocery(self):
+        time.sleep(1)
+        self.depart_page.click_fresh()
         self.depart_page.click_additem()
+        self.depart_page.click_ADDLG()
+        self.depart_page.click_addPotato()
+        self.depart_page.click_AddToCartPotato()
         self.depart_page.click_MiniCart1()
         self.depart_page.click_Checkout()
         self.depart_page.click_payment1()

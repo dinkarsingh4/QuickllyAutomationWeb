@@ -206,7 +206,7 @@ class MiniCart:
     yourAccount = (By.XPATH, '//*[@id="searchhide"]/header/div[3]/span')
     ChangePaymentMethod = (By.XPATH, '//*[@id="choose-payment-method"]')
     AddPaymentMethod = (By.XPATH, '/html/body/div[2]/div/div/div[1]/div[1]/div[2]/div[2]/span')
-    CreditCardNumber = (By.ID, 'credit-card-number')
+    CreditCardNumber = (By.XPATH, '//*[@id="credit-card-number"]')
     Expiration = (By.ID, 'expiration')
     CVV = (By.ID, 'cvv')
     Pay = (By.ID, 'pay_amount')
@@ -219,6 +219,8 @@ class MiniCart:
     accountName = (By.XPATH, '//*[@id="searchhide"]/header/div[3]/p')
     eVoucher_text_value = (By.XPATH, '//*[@id="e-vouchercode"]')
     ThankYou = (By.XPATH, '//*[@id="innerlist-products"]/h1')
+    GoFresh = (By.XPATH, '//*[@id="searchhide"]/div[7]/div[1]/div/div/a[2]/img')
+    clickCredit = (By.XPATH, '//*[@id="container"]/div[1]/div/div[2]/div/form/label')
 
 
 class Coupon:
@@ -237,6 +239,10 @@ class Coupon:
     InvalidCoupon = (By.XPATH, '//*[@id="parRadioOne"]/div')
     Apply = (By.XPATH, '//*[@id="parRadioOne"]/a')
     empty_cart = (By.ID, 'lblCartEmpty')
+    GoFresh = (By.XPATH, '//*[@id="searchhide"]/div[7]/div[1]/div/div/a[2]/img')
+    item1 = (By.XPATH, '//*[@id="load_data"]/div/div/div/div/div[1]/a')
+    addToCart = (By.XPATH, '//*[@id="searchhide"]/div[5]/div/section[2]/div/a[1]')
+
 
 
 class Department:
@@ -259,6 +265,10 @@ class Department:
     right_arrow = (By.XPATH, '//*[@id="minicart"]/div/div[1]/div/i[2]')
     Seeti = (By.XPATH, '//*[@id="minicart"]/div/div[1]/div/div/div/a[3]')
     delete = (By.XPATH, '//*[@id="lnk_cart_[pid]"]')
+    GoFresh = (By.XPATH, '//*[@id="searchhide"]/div[7]/div[1]/div/div/a[2]/img')
+    AddToCartLG = (By.XPATH, '//*[@id="searchhide"]/div[5]/div/section[2]/div/a[1]')
+    addSecondItem = (By.XPATH, '//*[@id="img_51875"]')
+    AddToCartP = (By.XPATH, '//*[@id="searchhide"]/div[5]/div/section[2]/div/a[1]')
 
 
 class CommonLocators:

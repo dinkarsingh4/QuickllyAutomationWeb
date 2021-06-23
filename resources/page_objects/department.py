@@ -98,3 +98,16 @@ class Dept(BasePage):
 
     def click_remove(self):
         self.click(Department.delete)
+
+    def click_fresh(self):
+        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.GoFresh)).click()
+        # self.click(Department.GoFresh)
+
+    def click_ADDLG(self):
+        self.click(Department.AddToCartLG)
+
+    def click_addPotato(self):
+        self.click(Department.addSecondItem)
+
+    def click_AddToCartPotato(self):
+        self.click(Department.AddToCartP)

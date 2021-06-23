@@ -1,12 +1,10 @@
 from resources.config_methods import DataClass
 from resources.locators import Coupon
 from resources.page_objects.base_page import BasePage
-from selenium.webdriver import ActionChains as A
 from selenium.webdriver.common.keys import Keys as K
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
-import time
+
 
 
 class evoucher(BasePage):
@@ -70,3 +68,14 @@ class evoucher(BasePage):
         # self.scroll_to_element(Coupon.Apply)
         element = self.driver.find_element_by_xpath('//*[@id="parRadioOne"]/a')
         self.driver.execute_script("arguments[0].click();", element)
+
+    def click_fresh(self):
+        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Coupon.GoFresh)).click()
+
+    def click_item(self):
+        self.scroll_to_element(Coupon.item1)
+        self.click(Coupon.item1)
+
+    def click_Additem2(self):
+        self.click(Coupon.addToCart)
+

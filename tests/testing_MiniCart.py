@@ -97,11 +97,22 @@ class TesCART(ui_test_class.UVClass):
         cls.driver.quit()
 
     def AddItem(self):
+        time.sleep(1)
+        self.cart_page.click_fresh()
         self.cart_page.click_additem()
         # time.sleep(5)
-        # self.cart_page.click_AddItem1()
+        self.cart_page.click_AddItem1()
         self.cart_page.click_item()
         self.cart_page.click_Additem2()
+
+    def AddItem1(self):
+        time.sleep(1)
+        self.cart_page.click_fresh()
+        self.cart_page.click_additem()
+        self.cart_page.click_item()
+        self.cart_page.click_Additem2()
+        self.cart_page.click_MiniCart()
+        self.cart_page.click_Checkout()
 
     def clickQuicklly(self):
         self.cart_page.click_quicklly()
@@ -111,8 +122,8 @@ class TesCART(ui_test_class.UVClass):
         self.cart_page.click_Checkout()
 
     def Addmethod(self):
-        self.cart_page.click_payment()
-        self.cart_page.click_changeMethod()
+        # self.cart_page.click_payment()
+        # self.cart_page.click_changeMethod()
         self.cart_page.click_Addmethod()
         self.cart_page.EnterCardNumber("4005519200000004")
         self.cart_page.EnterExpiry("0226")
@@ -121,7 +132,7 @@ class TesCART(ui_test_class.UVClass):
     def test_ZsignIN(self):
         self.cart_page.select_dropdown()
         self.cart_page.click_signin()
-        self.cart_page.EnterEmail("testaccount@quicklly.com")
+        self.cart_page.EnterEmail("quicklly1234@gmail.com")
         self.cart_page.EnterPass("123456")
         self.cart_page.click_login()
         name = self.cart_page.get_attribute(MiniCart.accountName, 'innerHTML')
@@ -241,7 +252,7 @@ class TesCART(ui_test_class.UVClass):
         self.assertEqual(self.actual19, delivery_label)
 
     def test_arrow1(self):
-        self.cart_page.click_additem()
+        self.AddItem()
         self.cart_page.click_MiniCart()
         for i in range(19):
             self.cart_page.click_plus()
@@ -292,9 +303,7 @@ class TesCART(ui_test_class.UVClass):
         print(ItemTotal)
         self.cart_page.click_Department()
         self.cart_page.click_ShopByGrocery()
-        self.AddItem()
-        self.cart_page.click_MiniCart()
-        self.cart_page.click_Checkout()
+        self.AddItem1()
         self.assertEqual(self.actual61, ItemTotal)
 
     def test_eVoucher_label(self):
@@ -536,7 +545,6 @@ class TesCART(ui_test_class.UVClass):
 
     def test_paypal(self):
         self.cart_page.click_payment1()
-        self.cart_page.capture_screen_shot()
         self.cart_page.click_paypal()
         self.cart_page.click_CrossButton()
         payment = self.cart_page.get_attribute(MiniCart.Payment, 'innerHTML')
@@ -572,10 +580,12 @@ class TesCART(ui_test_class.UVClass):
 
     def test_paymentMethod1(self):
         self.cart_page.click_payment1()
+        # self.Addmethod()
         self.cart_page.click_Pay()
         ThankYouLabel = self.cart_page.get_attribute(MiniCart.ThankYou, 'innerHTML')
         print(ThankYouLabel)
         self.cart_page.click_quicklly()
         self.cart_page.submit_zip()
+        self.AddItem()
         self.cart_page.click_MiniCart()
         self.cart_page.click_Checkout()

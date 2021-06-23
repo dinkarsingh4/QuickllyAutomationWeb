@@ -1,10 +1,9 @@
 # import time
+import time
+
 from resources import ui_test_class
 from resources.locators import Coupon
 from resources.page_objects.eVoucher import evoucher
-from selenium.webdriver import ActionChains as A
-from selenium.webdriver.common.keys import Keys as K
-
 
 class TesEVoucher(ui_test_class.UVIClass):
     eVoucher_page: evoucher
@@ -38,7 +37,10 @@ class TesEVoucher(ui_test_class.UVIClass):
         self.eVoucher_page.click_login()
 
     def test_addItem(self):
+        time.sleep(1)
+        self.eVoucher_page.click_fresh()
         self.eVoucher_page.click_additem()
+        self.eVoucher_page.click_AddItem1()
         self.eVoucher_page.click_MiniCart()
         self.eVoucher_page.click_Checkout()
 

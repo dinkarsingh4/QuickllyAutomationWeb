@@ -199,7 +199,7 @@ class Cart(BasePage):
         button.click()
 
     def select_dropdown(self):
-        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/header/div[3]/span')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/header/div[3]')
         self.driver.execute_script("arguments[0].click();", element)
         self.click(MiniCart.yourAccount)
 
@@ -212,8 +212,15 @@ class Cart(BasePage):
         self.click(MiniCart.AddPaymentMethod)
 
     def EnterCardNumber(self, credit):
+        WebDriverWait(self.driver, self.wait).until(EC.presence_of_element_located(MiniCart.CreditCardNumber))
+        # self.click(MiniCart.clickCredit)
         self.find_elements(MiniCart.CreditCardNumber).clear()
         self.find_element(MiniCart.CreditCardNumber).send_keys(credit)
+
+    def click_Credit(self):
+        time.sleep(1)
+        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(MiniCart.clickCredit)).click()
+        # self.click(MiniCart.clickCredit)
 
     def EnterExpiry(self, expiration):
         self.find_elements(MiniCart.Expiration).clear()
@@ -250,3 +257,6 @@ class Cart(BasePage):
         WebDriverWait(self.driver, self.wait).until(EC.presence_of_element_located(MiniCart.shops_name))
         label3 = self.get_attribute(MiniCart.shops_name, 'src')
         print(label3)
+
+    def click_fresh(self):
+        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(MiniCart.GoFresh)).click()
