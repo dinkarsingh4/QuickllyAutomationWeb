@@ -1,9 +1,8 @@
-# import time
 import time
-
 from resources import ui_test_class
 from resources.locators import Coupon
 from resources.page_objects.eVoucher import evoucher
+
 
 class TesEVoucher(ui_test_class.UVIClass):
     eVoucher_page: evoucher
