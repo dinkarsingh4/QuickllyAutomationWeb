@@ -70,7 +70,9 @@ class evoucher(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_fresh(self):
-        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Coupon.GoFresh)).click()
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[7]/div[1]/div/div/a[2]/img')
+        self.driver.execute_script("arguments[0].click();", element)
+        # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Coupon.GoFresh)).click()
 
     def click_item(self):
         self.scroll_to_element(Coupon.item1)
