@@ -31,7 +31,7 @@ class TesEVoucher(ui_test_class.UVIClass):
     def test_SignIn(self):
         self.eVoucher_page.select_dropdown()
         self.eVoucher_page.click_signin()
-        self.eVoucher_page.EnterEmail("testaccount@quicklly.com")
+        self.eVoucher_page.EnterEmail("quicklly1234@gmail.com")
         self.eVoucher_page.EnterPass("123456")
         self.eVoucher_page.click_login()
 
