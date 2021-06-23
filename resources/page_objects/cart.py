@@ -83,7 +83,7 @@ class Cart(BasePage):
 
     def click_item(self):
         self.scroll_to_element(MiniCart.item1)
-        element = self.driver.find_element_by_xpath('//*[@id="load_data"]/div/div/div/div/div[1]/a]')
+        element = self.driver.find_element_by_xpath('//*[@id="img_51875"]')
         self.driver.execute_script("arguments[0].click();", element)
         # self.click(MiniCart.item1)
 
