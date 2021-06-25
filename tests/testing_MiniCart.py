@@ -10,7 +10,7 @@ from selenium.webdriver.support import expected_conditions as EC
 class TesCART(ui_test_class.UVClass):
     cart_page: Cart
     cart_page: MiniCart
-    actual1 = "Your cart is empty"
+    actual1 = "Your cart is mpty"
     actual2 = "Proceed to Checkout"
     actual3 = '2 items'
     actual4 = "Fresh Farms Min. Order $30"
@@ -108,7 +108,7 @@ class TesCART(ui_test_class.UVClass):
     def AddItem1(self):
         time.sleep(1)
         self.cart_page.click_fresh()
-        self.cart_page.click_additem()
+        # self.cart_page.click_additem()
         self.cart_page.click_item()
         self.cart_page.click_Additem2()
         self.cart_page.click_MiniCart()

@@ -67,7 +67,7 @@ class BasePage:
             os.makedirs('screenshots')
 
         name = datetime.strftime(datetime.now(), '%m-%d_%H-%M-%S')
-        path = os.path.join('screenshots', 'My_screenshot.png')
+        path = os.path.join('screenshots', f'screenshot{name}.png')
         print(path)
         self.driver.save_screenshot(path)
 
