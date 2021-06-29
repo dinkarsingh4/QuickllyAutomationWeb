@@ -86,6 +86,7 @@ class TesCART(ui_test_class.UVClass):
     actual74 = "12.99"
     actual75 = "13.04"
     actual76 = "Invalid Coupon.!"
+    actual77 = "Thank you"
 
     @classmethod
     def setUpClass(cls):
@@ -584,6 +585,7 @@ class TesCART(ui_test_class.UVClass):
         self.cart_page.click_Pay()
         ThankYouLabel = self.cart_page.get_attribute(MiniCart.ThankYou, 'innerHTML')
         print(ThankYouLabel)
+        self.assertEqual(self.actual77, ThankYouLabel)
         self.cart_page.click_quicklly()
         self.cart_page.submit_zip()
         self.AddItem()

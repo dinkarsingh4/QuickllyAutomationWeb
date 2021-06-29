@@ -8,6 +8,10 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
     depart_page: Dept
     depart_page: Department
 
+    actual1 = "Thank you"
+    actual2 = "Your account"
+    actual3 = "Search for products..."
+
     @classmethod
     def setUpClass(cls):
         super(TesDEPARTMENT, cls).setUpClass()
@@ -18,7 +22,7 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         cls.driver.quit()
 
     def InstantPot(self):
-        # self.depart_page.submit_zip()
+        self.depart_page.submit_zip()
         time.sleep(2)
         self.depart_page.click_fresh()
         self.depart_page.click_additem()
@@ -31,8 +35,8 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.click_AddToCart()
         self.depart_page.click_MiniCart()
         self.depart_page.click_Checkout()
-        self.depart_page.click_payment1()
-        self.depart_page.click_Pay()
+        # self.depart_page.click_payment1()
+        # self.depart_page.click_Pay()
 
     def food(self):
         time.sleep(2)
@@ -43,9 +47,9 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.click_submitTenders()
         self.depart_page.click_MiniCart()
         self.depart_page.click_Checkout()
-        self.depart_page.click_payment1()
-        time.sleep(5)
-        self.depart_page.click_Pay()
+        # self.depart_page.click_payment1()
+        # time.sleep(5)
+        # self.depart_page.click_Pay()
 
     def Grocery(self):
         time.sleep(1)
@@ -56,9 +60,9 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.click_AddToCartPotato()
         self.depart_page.click_MiniCart1()
         self.depart_page.click_Checkout()
-        self.depart_page.click_payment1()
-        time.sleep(5)
-        self.depart_page.click_Pay()
+        # self.depart_page.click_payment1()
+        # time.sleep(5)
+        # self.depart_page.click_Pay()
 
     def BBQKIT(self):
         time.sleep(1)
@@ -67,9 +71,9 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.click_AddChickenTikkaToCart()
         self.depart_page.click_MiniCart()
         self.depart_page.click_Checkout()
-        self.depart_page.click_payment1()
-        time.sleep(5)
-        self.depart_page.click_Pay()
+        # self.depart_page.click_payment1()
+        # time.sleep(5)
+        # self.depart_page.click_Pay()
 
     def Catering(self):
         self.depart_page.click_quicklly()
@@ -88,9 +92,9 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.Submit_Beef()
         self.depart_page.click_MiniCart()
         self.depart_page.click_Checkout()
-        self.depart_page.click_payment1()
-        time.sleep(5)
-        self.depart_page.click_Pay()
+        # self.depart_page.click_payment1()
+        # time.sleep(5)
+        # self.depart_page.click_Pay()
 
     def MealBasket(self):
         self.depart_page.click_quicklly()
@@ -106,9 +110,9 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.click_MiniCart()
         self.depart_page.click_Checkout()
         time.sleep(5)
-        self.depart_page.click_payment1()
-        time.sleep(5)
-        self.depart_page.click_Pay()
+        # self.depart_page.click_payment1()
+        # time.sleep(5)
+        # self.depart_page.click_Pay()
 
     def tiffin(self):
         self.depart_page.click_quicklly()
@@ -122,9 +126,9 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.click_AddToCartVT()
         self.depart_page.click_MiniCart()
         self.depart_page.click_Checkout()
-        time.sleep(5)
-        self.depart_page.click_payment1()
-        self.depart_page.click_Pay()
+        # time.sleep(5)
+        # self.depart_page.click_payment1()
+        # self.depart_page.click_Pay()
 
     def MealKit(self):
         self.depart_page.click_quicklly()
@@ -139,9 +143,9 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.click_AddToCartPapad()
         self.depart_page.click_MiniCart()
         self.depart_page.click_Checkout()
-        self.depart_page.click_payment1()
-        time.sleep(5)
-        self.depart_page.click_Pay()
+        # self.depart_page.click_payment1()
+        # time.sleep(5)
+        # self.depart_page.click_Pay()
 
     def recipes(self):
         self.depart_page.click_quicklly()
@@ -157,13 +161,30 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.click_AddToBasket()
         self.depart_page.click_MiniCart()
         self.depart_page.click_Checkout()
-        self.depart_page.click_payment1()
-        time.sleep(5)
-        self.depart_page.click_Pay()
+        # self.depart_page.click_payment1()
+        # time.sleep(5)
+        # self.depart_page.click_Pay()
+
+    def OrganicGrocery(self):
+        self.depart_page.click_quicklly()
+        self.depart_page.submit_zip()
+        time.sleep(2)
+        self.depart_page.click_OrganicGrocery()
+        self.depart_page.click_BuildBox()
+        self.depart_page.click_AddJowar()
+        self.depart_page.click_AddToCartJowar()
+        self.depart_page.click_MiniCart()
+        self.depart_page.click_Checkout()
+        # self.depart_page.click_payment1()
+        # time.sleep(5)
+        # self.depart_page.click_Pay()
 
     def test_EnterZipCode(self):
         self.depart_page.zip("60611")
         self.depart_page.submit_zip()
+        search = self.depart_page.get_attribute(Department.SearchForProducts, 'placeholder')
+        print(search)
+        self.assertEqual(self.actual3, search)
 
     def test_SignIN(self):
         self.depart_page.select_dropdown()
@@ -171,44 +192,73 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.EnterEmail("quicklly1234@gmail.com")
         self.depart_page.EnterPass("123456")
         self.depart_page.click_login()
+        AccountLabel = self.depart_page.get_attribute(Department.Account, 'innerHTML')
+        print(AccountLabel)
+        self.assertEqual(self.actual2, AccountLabel)
 
     def test_shopWithGrocery(self):
         self.depart_page.click_quicklly()
         self.depart_page.submit_zip()
         self.Grocery()
+        ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
+        print(ThankYouLabel)
+        self.assertEqual(self.actual1, ThankYouLabel)
 
     def test_shopWithInstant(self):
-        # self.depart_page.click_quicklly()
+        self.depart_page.click_quicklly()
         self.InstantPot()
+        ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
+        print(ThankYouLabel)
+        self.assertEqual(self.actual1, ThankYouLabel)
 
     def test_shopWithFood(self):
         self.depart_page.click_quicklly()
         self.depart_page.submit_zip()
         self.food()
+        ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
+        print(ThankYouLabel)
+        self.assertEqual(self.actual1, ThankYouLabel)
 
     def test_shopWithBBQ(self):
         self.BBQKIT()
+        ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
+        print(ThankYouLabel)
+        self.assertEqual(self.actual1, ThankYouLabel)
 
     def test_shopWithCatering(self):
         self.Catering()
+        ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
+        print(ThankYouLabel)
+        self.assertEqual(self.actual1, ThankYouLabel)
 
     def test_shopWithMealBasket(self):
         self.MealBasket()
+        ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
+        print(ThankYouLabel)
+        self.assertEqual(self.actual1, ThankYouLabel)
 
     def test_shopWithTiffin(self):
         self.tiffin()
+        ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
+        print(ThankYouLabel)
+        self.assertEqual(self.actual1, ThankYouLabel)
 
     def test_shopWithMealKit(self):
         self.MealKit()
+        ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
+        print(ThankYouLabel)
+        self.assertEqual(self.actual1, ThankYouLabel)
 
     def test_shopWithTrecipes(self):
         self.recipes()
+        ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
+        print(ThankYouLabel)
+        self.assertEqual(self.actual1, ThankYouLabel)
+
+    def test_shopWithOrganicGrocery(self):
+        self.OrganicGrocery()
+        ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
+        print(ThankYouLabel)
+        self.assertEqual(self.actual1, ThankYouLabel)
 
 
-
-    # def test_z(self):
-    #     self.depart_page.click_quicklly()
-    #     self.depart_page.submit_zip()
-    #     self.depart_page.click_MiniCart()
-    #     self.depart_page.click_seeti()
-    #     self.depart_page.click_remove()

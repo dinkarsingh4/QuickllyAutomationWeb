@@ -85,9 +85,10 @@ class Dept(BasePage):
 
     def click_Add(self):
         self.scroll_to_element(Department.Add)
+        WebDriverWait(self.driver, self.wait).until(EC.visibility_of_element_located(Department.Add))
         # WebDriverWait(self.driver, self.wait).until(EC.presence_of_element_located(Department.Add))
         # self.click(Department.Add)
-        element = self.driver.find_element_by_xpath('//*[@id="img_76992"]')
+        element = self.driver.find_element_by_xpath('//*[@id="img_76996"]')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_AddToCart(self):
@@ -170,7 +171,9 @@ class Dept(BasePage):
 
     def select_mealPlan(self):
         self.scroll_to_element(Department.MealPlan)
-        self.click(Department.MealPlan)
+        element = self.driver.find_element_by_xpath('//*[@id="meal-basket"]/div[2]/div[1]/a')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(Department.MealPlan)
 
     def click_Korma(self):
         self.scroll_to_element(Department.AddKorma)
@@ -248,5 +251,20 @@ class Dept(BasePage):
 
     def click_RightArrow(self):
         self.click(Department.clickRA)
+
+    def click_OrganicGrocery(self):
+        self.click(Department.OrganicGrocery)
+
+    def click_BuildBox(self):
+        self.scroll_to_element(Department.BuildABox)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/section[1]/div/div/div[2]/div[4]/form/button')
+        self.driver.execute_script("arguments[0].click();", element)
+
+    def click_AddJowar(self):
+        self.click(Department.AddOrganicJowar)
+
+    def click_AddToCartJowar(self):
+        self.click(Department.AddToCartOrganic)
+
 
 

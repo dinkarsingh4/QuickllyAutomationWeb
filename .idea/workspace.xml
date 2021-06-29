@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/locators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/department.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/department.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/testing_MiniCart.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_MiniCart.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_department.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_department.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +64,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for testing_MiniCart.TesCART">
+  <component name="RunManager" selected="Python tests.Unittests for testing_department.TesDEPARTMENT">
     <configuration name="conftest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -148,8 +151,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests for testing_MiniCart.TesCART" />
         <item itemvalue="Python tests.Unittests for testing_department.TesDEPARTMENT" />
+        <item itemvalue="Python tests.Unittests for testing_MiniCart.TesCART" />
         <item itemvalue="Python tests.Unittests for testing_eVoucher.TesEVoucher" />
         <item itemvalue="Python tests.Unittests for testing_main_page.TesLogin" />
         <item itemvalue="Python.conftest" />
@@ -164,20 +167,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616787846440</updated>
-    </task>
-    <task id="LOCAL-00155" summary="Merge remote-tracking branch 'github/main' into main">
-      <created>1623921125900</created>
-      <option name="number" value="00155" />
-      <option name="presentableId" value="LOCAL-00155" />
-      <option name="project" value="LOCAL" />
-      <updated>1623921125900</updated>
-    </task>
-    <task id="LOCAL-00156" summary="Merge remote-tracking branch 'github/main' into main">
-      <created>1623921145082</created>
-      <option name="number" value="00156" />
-      <option name="presentableId" value="LOCAL-00156" />
-      <option name="project" value="LOCAL" />
-      <updated>1623921145082</updated>
     </task>
     <task id="LOCAL-00157" summary="Merge remote-tracking branch 'github/main' into main">
       <created>1623921441125</created>
@@ -508,7 +497,21 @@
       <option name="project" value="LOCAL" />
       <updated>1624623550705</updated>
     </task>
-    <option name="localTasksCounter" value="204" />
+    <task id="LOCAL-00204" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1624623976586</created>
+      <option name="number" value="00204" />
+      <option name="presentableId" value="LOCAL-00204" />
+      <option name="project" value="LOCAL" />
+      <updated>1624623976586</updated>
+    </task>
+    <task id="LOCAL-00205" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1624624448309</created>
+      <option name="number" value="00205" />
+      <option name="presentableId" value="LOCAL-00205" />
+      <option name="project" value="LOCAL" />
+      <updated>1624624448309</updated>
+    </task>
+    <option name="localTasksCounter" value="206" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
