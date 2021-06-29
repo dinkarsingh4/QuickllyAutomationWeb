@@ -115,7 +115,9 @@ class Dept(BasePage):
         self.click(Department.AddToCartLG)
 
     def click_addPotato(self):
-        self.click(Department.addSecondItem)
+        # self.click(Department.addSecondItem)
+        element = self.driver.find_element_by_xpath('//*[@id="img_51875"]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_AddToCartPotato(self):
         self.click(Department.AddToCartP)
@@ -265,7 +267,9 @@ class Dept(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_AddJowar(self):
-        self.click(Department.AddOrganicJowar)
+        # self.click(Department.AddOrganicJowar)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[2]/div[3]/div/div[1]/div[3]/div[1]/a')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_AddToCartJowar(self):
         self.click(Department.AddToCartOrganic)
