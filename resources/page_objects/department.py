@@ -153,7 +153,9 @@ class Dept(BasePage):
         self.click(Department.Catering)
 
     def click_Hyderabad(self):
-        self.click(Department.HyderabadHouse)
+        # self.click(Department.HyderabadHouse)
+        element = self.driver.find_element_by_xpath('//*[@id="Catering"]/div/div[1]/a')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_AddBeef(self):
         self.scroll_to_element(Department.AddBeefFry)
