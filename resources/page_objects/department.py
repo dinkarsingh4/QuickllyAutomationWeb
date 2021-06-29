@@ -124,7 +124,9 @@ class Dept(BasePage):
         WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.food)).click()
 
     def click_MakkiFood(self):
-        self.click(Department.MakkiFastFood)
+        # self.click(Department.MakkiFastFood)
+        element = self.driver.find_element_by_xpath('//*[@id="load_data"]/div[2]/a')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_addTenders(self):
         self.scroll_to_element(Department.AddTenders)
