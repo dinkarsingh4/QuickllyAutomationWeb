@@ -173,7 +173,7 @@ class Dept(BasePage):
         self.click(Department.submitBeef)
 
     def click_mealBasket(self):
-        self.click(Department.mealBasket)
+        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.mealBasket)).click()
 
     def select_mealPlan(self):
         self.scroll_to_element(Department.MealPlan)
@@ -199,7 +199,9 @@ class Dept(BasePage):
         self.click(Department.TiffinServices)
 
     def click_Chicago(self):
-        self.click(Department.ChicagoTiffin)
+        element = self.driver.find_element_by_xpath('//*[@id="tiffin-services"]/div/div[1]/a')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(Department.ChicagoTiffin)
 
     def select_VegThali(self):
         self.click(Department.VegThali)
