@@ -283,7 +283,7 @@ class Department:
     AddBeefFry = (By.XPATH, '//*[@id="searchhide"]/div[4]/div/div/div[1]/a')
     AddToCartBeef = (By.XPATH, '//*[@id="dvDialog-Custom"]/div/div[2]/a')
     submitBeef = (By.XPATH, '//*[@id="dvDialog-DateTime"]/div/div[2]/a')
-    mealBasket = (By.XPATH, '//*[@id="searchhide"]/div[4]/div/div/div/div/a[6]/img')
+    mealBasket = (By.XPATH, '//*[@id="searchhide"]/div[4]/div/div/div/div/a[6]')
     MealPlan = (By.XPATH, '//*[@id="meal-basket"]/div[2]/div[1]/a')
     AddKorma = (By.XPATH, '//*[@id="searchhide"]/div[3]/div/div[1]/div[1]/div[3]/div[3]/a')
     plusKorma = (By.XPATH, '//*[@id="searchhide"]/div[3]/div/div[1]/div[1]/p/a/span[3]')
