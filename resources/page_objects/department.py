@@ -174,7 +174,7 @@ class Dept(BasePage):
 
     def click_mealBasket(self):
         self.click(Department.mealBasket)
-        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.mealBasket)).click()
+        # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.mealBasket)).click()
 
     def select_mealPlan(self):
         self.scroll_to_element(Department.MealPlan)
