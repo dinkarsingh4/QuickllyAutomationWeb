@@ -204,7 +204,9 @@ class Dept(BasePage):
         # self.click(Department.ChicagoTiffin)
 
     def select_VegThali(self):
-        self.click(Department.VegThali)
+        element = self.driver.find_element_by_xpath('//*[@id="TiffinServices"]/div[2]/div[1]/a')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(Department.VegThali)
 
     def click_AddToCartVT(self):
         self.click(Department.AddToCartVegThali)
