@@ -101,6 +101,7 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.submit_zip()
         time.sleep(2)
         self.depart_page.click_RightArrow()
+        time.sleep(2)
         self.depart_page.click_mealBasket()
         self.depart_page.select_mealPlan()
         self.depart_page.click_Korma()
