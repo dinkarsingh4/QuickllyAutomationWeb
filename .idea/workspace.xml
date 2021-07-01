@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main" />
+    <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -139,9 +141,9 @@
     <list>
       <item itemvalue="Python.conftest" />
       <item itemvalue="Python tests.Unittests for testing_MiniCart.TesCART" />
-      <item itemvalue="Python tests.Unittests for testing_main_page.TesLogin" />
-      <item itemvalue="Python tests.Unittests for testing_eVoucher.TesEVoucher" />
       <item itemvalue="Python tests.Unittests for testing_department.TesDEPARTMENT" />
+      <item itemvalue="Python tests.Unittests for testing_eVoucher.TesEVoucher" />
+      <item itemvalue="Python tests.Unittests for testing_main_page.TesLogin" />
     </list>
     <recent_temporary>
       <list>
@@ -161,13 +163,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616787846440</updated>
-    </task>
-    <task id="LOCAL-00167" summary="Merge remote-tracking branch 'github/main' into main">
-      <created>1623928505246</created>
-      <option name="number" value="00167" />
-      <option name="presentableId" value="LOCAL-00167" />
-      <option name="project" value="LOCAL" />
-      <updated>1623928505246</updated>
     </task>
     <task id="LOCAL-00168" summary="Merge remote-tracking branch 'github/main' into main">
       <created>1623929281860</created>
@@ -505,7 +500,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625051331168</updated>
     </task>
-    <option name="localTasksCounter" value="216" />
+    <task id="LOCAL-00216" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1625052486706</created>
+      <option name="number" value="00216" />
+      <option name="presentableId" value="LOCAL-00216" />
+      <option name="project" value="LOCAL" />
+      <updated>1625052486706</updated>
+    </task>
+    <option name="localTasksCounter" value="217" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
