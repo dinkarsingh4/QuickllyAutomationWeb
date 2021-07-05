@@ -84,6 +84,6 @@ def pytest_runtest_makereport(item, call):
             # only add additional html on failure
             name = datetime.strftime(datetime.now(), '%m-%d_%H-%M-%S')
             extra.append(pytest_html.extras.image(
-                "/var/lib/jenkins/workspace/Quicklly/screenshots"+f'screenshot{name}.png'))
+                "/var/lib/jenkins/workspace/Quicklly/screenshots"))
             extra.append(pytest_html.extras.html('<div>Additional HTML</div>'))
         report.extra = extra

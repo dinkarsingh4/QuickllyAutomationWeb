@@ -143,7 +143,7 @@ class Dept(BasePage):
         self.click(Department.submitTenders)
 
     def click_BBQ(self):
-        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[4]/div/div/div/div/a[4]/img')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[4]/div/div/div/div/a[5]/img')
         self.driver.execute_script("arguments[0].click();", element)
         # self.click(Department.BBQKit)
 
@@ -278,6 +278,9 @@ class Dept(BasePage):
 
     def click_AddToCartJowar(self):
         self.click(Department.AddToCartOrganic)
+
+    def click_LeftArrow(self):
+        self.click(Department.LeftArrow)
 
 
 

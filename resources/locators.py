@@ -269,7 +269,7 @@ class Department:
     AddToCartLG = (By.XPATH, '//*[@id="searchhide"]/div[5]/div/section[2]/div/a[1]')
     addSecondItem = (By.XPATH, '//*[@id="img_51875"]')
     AddToCartP = (By.XPATH, '//*[@id="searchhide"]/div[5]/div/section[2]/div/a[1]')
-    food = (By.XPATH, '//*[@id="searchhide"]/div[4]/div/div/div/div/a[1]/img')
+    food = (By.XPATH, '//*[@id="searchhide"]/div[4]/div/div/div/div/a[11]/img')
     MakkiFastFood = (By.XPATH, '//*[@id="load_data"]/div[2]/a')
     AddTenders = (By.XPATH, '//*[@id="load_data"]/div[2]/div/div[2]/a')
     TendersAddToCart = (By.XPATH, '//*[@id="dvDialog-Custom"]/div/div[2]/a')
@@ -278,7 +278,7 @@ class Department:
     BBQKit = (By.XPATH, '//*[@id="searchhide"]/div[4]/div/div/div/div/a[3]/img')
     chickenTikkaImage = (By.XPATH, '//*[@id="img_132523"]')
     AddTikkaToCart = (By.XPATH, '//*[@id="searchhide"]/div[2]/div/div/div[2]/div[2]/div[1]/div[2]/div/a')
-    Catering = (By.XPATH, '//*[@id="searchhide"]/header/div[2]/div/div[1]/div[1]/div/div/ul/li[4]/a')
+    Catering = (By.XPATH, '//*[@id="searchhide"]/div[4]/div/div/div/div/a[10]/img')
     HyderabadHouse = (By.XPATH, '//*[@id="Catering"]/div/div[1]/a')
     AddBeefFry = (By.XPATH, '//*[@id="searchhide"]/div[4]/div/div/div[1]/a')
     AddToCartBeef = (By.XPATH, '//*[@id="dvDialog-Custom"]/div/div[2]/a')
@@ -313,7 +313,7 @@ class Department:
     ThankYou = (By.XPATH, '//*[@id="innerlist-products"]/h1')
     Account = (By.XPATH, '//*[@id="searchhide"]/header/div[3]/span')
     SearchForProducts = (By.XPATH, '//*[@id="search_box"]')
-
+    LeftArrow = (By.XPATH, '//*[@id="searchhide"]/div[4]/div/div/i[1]/img')
 
 class CommonLocators:
     learn_more_link = (By.ID, 'learn-more-link')
