@@ -99,7 +99,9 @@ class TesCART(ui_test_class.UVClass):
 
     def AddItem(self):
         time.sleep(1)
-        self.cart_page.click_fresh()
+        # self.cart_page.click_fresh()
+        self.cart_page.EnterSearch("lemon grass")
+        self.cart_page.click_Search()
         self.cart_page.click_additem()
         # time.sleep(5)
         self.cart_page.click_AddItem1()
@@ -107,8 +109,10 @@ class TesCART(ui_test_class.UVClass):
         self.cart_page.click_Additem2()
 
     def AddItem1(self):
-        time.sleep(1)
-        self.cart_page.click_fresh()
+        time.sleep(3)
+        self.cart_page.EnterSearch("lemon grass")
+        self.cart_page.click_Search()
+        # self.cart_page.click_fresh()
         self.cart_page.click_additem()
         self.cart_page.click_item()
         self.cart_page.click_Additem2()

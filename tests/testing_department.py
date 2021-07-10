@@ -24,10 +24,9 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
     def InstantPot(self):
         self.depart_page.submit_zip()
         time.sleep(2)
-        self.depart_page.click_fresh()
-        self.depart_page.click_additem()
-        # self.depart_page.click_additem()
-        self.depart_page.click_Department()
+        for i in range(3):
+            self.depart_page.click_LeftArrow()
+            time.sleep(1)
         self.depart_page.click_InstantPot()
         self.depart_page.click_select()
         time.sleep(5)
@@ -41,9 +40,11 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
     def food(self):
         time.sleep(2)
         self.depart_page.click_food()
+        time.sleep(2)
         self.depart_page.click_MakkiFood()
         self.depart_page.click_addTenders()
         self.depart_page.click_AddToCartTenders()
+        time.sleep(4)
         self.depart_page.click_submitTenders()
         self.depart_page.click_MiniCart()
         self.depart_page.click_Checkout()
@@ -68,6 +69,7 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         time.sleep(1)
         self.depart_page.click_BBQ()
         self.depart_page.click_TikkaImage()
+        time.sleep(4)
         self.depart_page.click_AddChickenTikkaToCart()
         self.depart_page.click_MiniCart()
         self.depart_page.click_Checkout()
@@ -81,6 +83,7 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         time.sleep(2)
         self.depart_page.click_LeftArrow()
         self.depart_page.click_Catering()
+        time.sleep(1)
         self.depart_page.click_Hyderabad()
         self.depart_page.click_AddBeef()
         self.depart_page.click_AddToCartBeef()
@@ -89,6 +92,7 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.click_timeOfDelivery()
         self.depart_page.Submit_Beef()
         self.depart_page.click_MiniCart()
+        time.sleep(5)
         self.depart_page.click_Checkout()
         # self.depart_page.click_payment1()
         # time.sleep(5)
@@ -133,6 +137,8 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.click_quicklly()
         self.depart_page.submit_zip()
         time.sleep(2)
+        self.depart_page.click_RightArrow()
+        time.sleep(10)
         self.depart_page.click_MealKit()
         self.depart_page.click_CuminCLub()
         self.depart_page.select_MealPlan20()
@@ -177,6 +183,17 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         # self.depart_page.click_payment1()
         # time.sleep(5)
         # self.depart_page.click_Pay()
+
+    def Rotikaa(self):
+        self.depart_page.click_quicklly()
+        self.depart_page.submit_zip()
+        time.sleep(2)
+        self.depart_page.click_rotiKit()
+        self.depart_page.click_RotiBox()
+        self.depart_page.click_AddWholeWheatRoti()
+        self.depart_page.click_AddToCartRoti()
+        self.depart_page.click_MiniCart()
+        self.depart_page.click_Checkout()
 
     def test_EnterZipCode(self):
         self.depart_page.zip("60611")
@@ -230,8 +247,8 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         # print(ThankYouLabel)
         # self.assertEqual(self.actual1, ThankYouLabel)
 
-    def test_shopWithMealBasket(self):
-        self.MealBasket()
+    # def test_shopWithMealBasket(self):
+    #     self.MealBasket()
         # ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
         # print(ThankYouLabel)
         # self.assertEqual(self.actual1, ThankYouLabel)
@@ -260,4 +277,8 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         # print(ThankYouLabel)
         # self.assertEqual(self.actual1, ThankYouLabel)
 
-
+    def test_shopWithRotikaa(self):
+        self.Rotikaa()
+        # ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
+        # print(ThankYouLabel)
+        # self.assertEqual(self.actual1, ThankYouLabel)

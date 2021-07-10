@@ -70,8 +70,8 @@ class Dept(BasePage):
         # WebDriverWait(self.driver, self.wait).until(EC.presence_of_element_located(Department.Pot))
         # element = self.driver.find_element_by_xpath('/html/body/header/div[2]/div/div[1]/div[1]/div/div/ul/li[8]/a')
         # self.driver.execute_script("arguments[0].click();", element)
-        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.Pot)).click()
-        # self.click(Department.Pot)
+        # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.Pot)).click()
+        self.click(Department.Pot)
         # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.Pot)).click()
 
     def click_Department(self):
@@ -80,7 +80,7 @@ class Dept(BasePage):
     def click_select(self):
         self.scroll_to_element(Department.select)
         WebDriverWait(self.driver, self.wait).until(EC.presence_of_element_located(Department.select))
-        element = self.driver.find_element_by_xpath('//*[@id="nationwide"]/div[2]/div[1]/a')
+        element = self.driver.find_element_by_xpath('//*[@id="nationwide"]/div[2]/div[2]/a')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_Add(self):
@@ -88,7 +88,7 @@ class Dept(BasePage):
         WebDriverWait(self.driver, self.wait).until(EC.visibility_of_element_located(Department.Add))
         # WebDriverWait(self.driver, self.wait).until(EC.presence_of_element_located(Department.Add))
         # self.click(Department.Add)
-        element = self.driver.find_element_by_xpath('//*[@id="img_76996"]')
+        element = self.driver.find_element_by_xpath('//*[@id="img_77024"]')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_AddToCart(self):
@@ -143,7 +143,7 @@ class Dept(BasePage):
         self.click(Department.submitTenders)
 
     def click_BBQ(self):
-        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[4]/div/div/div/div/a[5]/img')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[4]/div/div/div/div/a[6]/img')
         self.driver.execute_script("arguments[0].click();", element)
         # self.click(Department.BBQKit)
 
@@ -217,7 +217,11 @@ class Dept(BasePage):
         # self.click(Department.submitVT)
 
     def click_MealKit(self):
-        self.click(Department.MealKit)
+        # self.click(Department.MealKit)
+        self.driver.implicitly_wait(20)
+        element = self.driver.find_element_by_css_selector('#searchhide > div.grocerySpecialSlider.clsFoodSpl > div > div > div > div > a:nth-child(7) > img')
+        self.driver.execute_script("arguments[0].click();", element)
+        # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.MealKit)).click()
 
     def select_MealPlan20(self):
         # self.click(Department.selectMealKit)
@@ -281,6 +285,19 @@ class Dept(BasePage):
 
     def click_LeftArrow(self):
         self.click(Department.LeftArrow)
+
+    def click_rotiKit(self):
+        self.click(Department.rotiKIt)
+
+    def click_RotiBox(self):
+        self.click(Department.buildRotiBox)
+
+    def click_AddWholeWheatRoti(self):
+        self.click(Department.AddWholeWheatRoti)
+
+    def click_AddToCartRoti(self):
+        self.click(Department.AddToCartRoti)
+
 
 
 

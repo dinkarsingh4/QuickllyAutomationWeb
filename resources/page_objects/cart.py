@@ -18,6 +18,10 @@ class Cart(BasePage):
         self.find_elements(MiniCart.Email).clear()
         self.find_element(MiniCart.Email).send_keys(email)
 
+    def EnterSearch(self, search):
+        self.find_elements(MiniCart.SearchForProducts).clear()
+        self.find_element(MiniCart.SearchForProducts).send_keys(search)
+
     def EnterPass(self, password):
         self.find_elements(MiniCart.Pass).clear()
         self.find_element(MiniCart.Pass).send_keys(password)
@@ -264,3 +268,6 @@ class Cart(BasePage):
 
     def click_fresh(self):
         WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(MiniCart.GoFresh)).click()
+
+    def click_Search(self):
+        self.click(MiniCart.HitSearch)
