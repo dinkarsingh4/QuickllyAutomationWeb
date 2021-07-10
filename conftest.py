@@ -61,29 +61,46 @@ from selenium.webdriver.chrome import options
 from selenium import webdriver
 
 
-@pytest.fixture(scope='session')
-def browser():
-    driver = webdriver.Chrome('resources//chromedriver.exe', options=options)
-    driver.get('http://www.google.com')
-    driver.implicitly_wait(5)
-
-    return driver
-
-
 @pytest.mark.hookwrapper
-def pytest_runtest_makereport(item, call):
+def pytest_runtest_makereport(item):
     pytest_html = item.config.pluginmanager.getplugin('html')
     outcome = yield
     report = outcome.get_result()
     extra = getattr(report, 'extra', [])
-    if report.when == 'call':
-        # always add url to report
-        extra.append(pytest_html.extras.url('http://www.dev.quicklly.com/'))
+    driver = webdriver.Chrome('resources//chromedriver.exe', options=options)
+    name = datetime.strftime(datetime.now(), '%m-%d_%H-%M-%S')
+
+    if report.when == 'call' or report.when == 'setup':
         xfail = hasattr(report, 'wasxfail')
         if (report.skipped and xfail) or (report.failed and not xfail):
-            # only add additional html on failure
-            name = datetime.strftime(datetime.now(), '%m-%d_%H-%M-%S')
-            extra.append(pytest_html.extras.image(
-                "/var/lib/jenkins/workspace/Quicklly/screenshots"+f'screenshot{name}.png'))
-            extra.append(pytest_html.extras.html('<div>Additional HTML</div>'))
+            screenshot = driver.get_screenshot_as_base64()
+            extra.append(pytest_html.extras.image(screenshot, f'screenshot{name}.png'))
         report.extra = extra
+
+
+# @pytest.fixture(scope='session')
+# def browser():
+#     driver = webdriver.Chrome('resources//chromedriver.exe', options=options)
+#     driver.get('http://www.google.com')
+#     driver.implicitly_wait(5)
+#
+#     return driver
+#
+#
+# @pytest.mark.hookwrapper
+# def pytest_runtest_makereport(item, call):
+#     pytest_html = item.config.pluginmanager.getplugin('html')
+#     outcome = yield
+#     report = outcome.get_result()
+#     extra = getattr(report, 'extra', [])
+#     if report.when == 'call':
+#         # always add url to report
+#         extra.append(pytest_html.extras.url('http://www.dev.quicklly.com/'))
+#         xfail = hasattr(report, 'wasxfail')
+#         if (report.skipped and xfail) or (report.failed and not xfail):
+#             # only add additional html on failure
+#             name = datetime.strftime(datetime.now(), '%m-%d_%H-%M-%S')
+#             extra.append(pytest_html.extras.image(
+#                 "/var/lib/jenkins/workspace/Quicklly/screenshots"+f'screenshot{name}.png'))
+#             extra.append(pytest_html.extras.html('<div>Additional HTML</div>'))
+#         report.extra = extra
