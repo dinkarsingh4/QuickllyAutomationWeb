@@ -88,48 +88,48 @@ from selenium import webdriver
 #     return driver
 
 
-# @pytest.mark.hookwrapper
-# def pytest_runtest_makereport(item, call):
-#     pytest_html = item.config.pluginmanager.getplugin('html')
-#     outcome = yield
-#     report = outcome.get_result()
-#     extra = getattr(report, 'extra', [])
-#     if report.when == 'call':
-#         # always add url to report
-#         extra.append(pytest_html.extras.url('http://www.dev.quicklly.com/'))
-#         xfail = hasattr(report, 'wasxfail')
-#         if (report.skipped and xfail) or (report.failed and not xfail):
-#             # only add additional html on failure
-#             name = datetime.strftime(datetime.now(), '%m-%d_%H-%M-%S')
-#             extra.append(pytest_html.extras.image(
-#                 "/var/lib/jenkins/workspace/Quicklly/screenshots"+f'screenshot{name}.png'))
-#             extra.append(pytest_html.extras.html('<div>Additional HTML</div>'))
-#         report.extra = extra
-
-import pytest
-
-
 @pytest.mark.hookwrapper
-def pytest_runtest_makereport(item):
-
-    """
-        Extends the PyTest Plugin to take and embed screenshot in html report, whenever test fails.
-        :param item:
-        """
+def pytest_runtest_makereport(item, call):
     pytest_html = item.config.pluginmanager.getplugin('html')
     outcome = yield
     report = outcome.get_result()
     extra = getattr(report, 'extra', [])
-    file_name = ""
-    if report.when == 'call' or report.when == "setup":
+    if report.when == 'call':
+        # always add url to report
+        extra.append(pytest_html.extras.url('http://www.dev.quicklly.com/'))
         xfail = hasattr(report, 'wasxfail')
         if (report.skipped and xfail) or (report.failed and not xfail):
-            try:
-                file_name = item.obj.__self__.base_page.capture_screen_shot()
-            except Exception as e:
-                print(e)
-            if file_name:
-                html = '<div><img src="%s" alt="screenshot" style="width:304px;height:228px;" ' \
-                       'onclick="window.open(this.src)" align="right"/></div>' % file_name
-                extra.append(pytest_html.extras.image(file_name))
+            # only add additional html on failure
+            file_name = item.obj.__self__.base_page.capture_screen_shot()
+            # name = datetime.strftime(datetime.now(), '%m-%d_%H-%M-%S')
+            extra.append(pytest_html.extras.image(file_name))
+            extra.append(pytest_html.extras.html('<div>Additional HTML</div>'))
         report.extra = extra
+
+import pytest
+
+#
+# @pytest.mark.hookwrapper
+# def pytest_runtest_makereport(item):
+#
+#     """
+#         Extends the PyTest Plugin to take and embed screenshot in html report, whenever test fails.
+#         :param item:
+#         """
+#     pytest_html = item.config.pluginmanager.getplugin('html')
+#     outcome = yield
+#     report = outcome.get_result()
+#     extra = getattr(report, 'extra', [])
+#     file_name = ""
+#     if report.when == 'call' or report.when == "setup":
+#         xfail = hasattr(report, 'wasxfail')
+#         if (report.skipped and xfail) or (report.failed and not xfail):
+#             try:
+#                 file_name = item.obj.__self__.base_page.capture_screen_shot()
+#             except Exception as e:
+#                 print(e)
+#             if file_name:
+#                 html = '<div><img src="%s" alt="screenshot" style="width:304px;height:228px;" ' \
+#                        'onclick="window.open(this.src)" align="right"/></div>' % file_name
+#                 extra.append(pytest_html.extras.image(file_name))
+#         report.extra = extra
