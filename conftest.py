@@ -67,7 +67,7 @@ def pytest_runtest_makereport(item):
     outcome = yield
     report = outcome.get_result()
     extra = getattr(report, 'extra', [])
-    driver = webdriver.Chrome('resources//chromedriver.exe', options=options)
+    driver = webdriver.Chrome('resources//chromedriver.exe')
     name = datetime.strftime(datetime.now(), '%m-%d_%H-%M-%S')
 
     if report.when == 'call' or report.when == 'setup':

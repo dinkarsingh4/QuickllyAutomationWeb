@@ -1,4 +1,6 @@
 import pytest
+
+
 @pytest.mark.hookwrapper
 def pytest_runtest_makereport(item):
 
@@ -15,7 +17,7 @@ def pytest_runtest_makereport(item):
         xfail = hasattr(report, 'wasxfail')
         if (report.skipped and xfail) or (report.failed and not xfail):
             try:
-                file_name=item.obj.__self__.base_page.capture_screen_shot()
+                file_name = item.obj.__self__.base_page.capture_screen_shot()
             except Exception as e:
                 print(e)
             if file_name:
