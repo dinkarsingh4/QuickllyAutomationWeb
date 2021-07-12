@@ -270,8 +270,9 @@ class Dept(BasePage):
         self.click(Department.clickRA)
 
     def click_OrganicGrocery(self):
-        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.OrganicGrocery)).click()
-        # self.click(Department.OrganicGrocery)
+        self.driver.implicitly_wait(30)
+        # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.OrganicGrocery)).click()
+        self.click(Department.OrganicGrocery)
 
     def click_BuildBox(self):
         self.scroll_to_element(Department.BuildABox)

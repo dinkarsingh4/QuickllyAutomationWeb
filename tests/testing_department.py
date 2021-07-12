@@ -174,7 +174,6 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.click_quicklly()
         self.depart_page.submit_zip()
         time.sleep(10)
-        self.driver.implicitly_wait(30)
         self.depart_page.click_OrganicGrocery()
         self.depart_page.click_BuildBox()
         self.depart_page.click_AddJowar()
