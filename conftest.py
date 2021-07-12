@@ -35,7 +35,7 @@ def pytest_runtest_makereport(item):
             file_name = report.nodeid.replace("::", "_")+".png"
             _capture_screenshot(file_name)
             if file_name:
-                html = '<div><img src="file:/C:/SeleniumProject/Pytest_HTML_ScreenShot/ScreenShots/%s" alt="screenshot" style="width:600px;height:228px;" ' \
+                html = '<div><img src="/var/lib/jenkins/workspace/Quicklly/screenshots/%s" alt="screenshot" style="width:600px;height:228px;" ' \
                        'onclick="window.open(this.src)" align="right"/></div>' % file_name
                 extra.append(pytest_html.extras.html(html))
         report.extra = extra
