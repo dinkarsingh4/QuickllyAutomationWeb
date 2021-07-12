@@ -293,9 +293,9 @@ class Dept(BasePage):
         self.click(Department.rotiKIt)
 
     def click_RotiBox(self):
-        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/section[1]/div/div/div[2]/div[4]/form/butto')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/section[1]/div/div/div[2]/div[4]/form/button')
         self.driver.execute_script("arguments[0].click();", element)
-        # self.click(Department.buildRotiBox)
+        self.click(Department.buildRotiBox)
 
     def click_AddWholeWheatRoti(self):
         self.click(Department.AddWholeWheatRoti)
