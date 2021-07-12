@@ -42,11 +42,12 @@ def pytest_runtest_makereport(item):
 
 
 def _capture_screenshot(name):
-    if not os.path.exists('screenshots1'):
-        os.makedirs('screenshots1')
+    if not os.path.exists('screenshots'):
+        os.makedirs('screenshots')
 
     # name = datetime.strftime(datetime.now(), '%m-%d_%H-%M-%S')
     path = os.path.join('screenshots1', name)
+    print(path)
     # driver.get_screenshot_as_file("C:\\SeleniumProject\\Pytest_HTML_ScreenShot\\ScreenShots\\"+name)
     # driver.get_screenshot_as_file(name)
 #
