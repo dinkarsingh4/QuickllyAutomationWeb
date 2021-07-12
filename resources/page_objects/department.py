@@ -271,8 +271,10 @@ class Dept(BasePage):
 
     def click_OrganicGrocery(self):
         self.driver.implicitly_wait(30)
+        element = self.driver.find_element_by_css_selector('#searchhide > div.grocerySpecialSlider.clsFoodSpl > div > div > div > div > a:nth-child(5) > img')
+        self.driver.execute_script("arguments[0].click();", element)
         # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.OrganicGrocery)).click()
-        self.click(Department.OrganicGrocery)
+        # self.click(Department.OrganicGrocery)
 
     def click_BuildBox(self):
         self.scroll_to_element(Department.BuildABox)
