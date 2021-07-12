@@ -37,7 +37,7 @@ def pytest_runtest_makereport(item):
             if file_name:
                 html = '<div><img src="%s" alt="screenshot" style="width:600px;height:228px;" ' \
                        'onclick="window.open(this.src)" align="right"/></div>' % file_name
-                extra.append(pytest_html.extras.html(html))
+                extra.append(pytest_html.extras.image(html))
         report.extra = extra
 
 
