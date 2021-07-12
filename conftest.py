@@ -1,5 +1,6 @@
 # !/usr/bin/python
 # --*-- coding:utf-8 --*--
+import os.path
 from datetime import datetime
 
 import pytest
@@ -100,9 +101,10 @@ def pytest_runtest_makereport(item, call):
         xfail = hasattr(report, 'wasxfail')
         if (report.skipped and xfail) or (report.failed and not xfail):
             # only add additional html on failure
-            file_name = item.obj.__self__.base_page.capture_screen_shot()
-            # name = datetime.strftime(datetime.now(), '%m-%d_%H-%M-%S')
-            extra.image('/var/lib/jenkins/workspace/Quicklly/screenshots' + file_name.png)
+            # file_name = item.obj.__self__.base_page.capture_screen_shot()
+            name = datetime.strftime(datetime.now(), '%m-%d_%H-%M-%S')
+            path = os.path.join('screenshots', f'screenshot{name}.png')
+            extra.image(path)
             # extra.append(pytest_html.extras.image('/var/lib/jenkins/workspace/Quicklly/screenshots/file_name.png'))
             extra.append(pytest_html.extras.html('<div>Additional HTML</div>'))
         report.extra = extra
