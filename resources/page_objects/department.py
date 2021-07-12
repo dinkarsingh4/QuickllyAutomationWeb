@@ -299,10 +299,15 @@ class Dept(BasePage):
         # self.click(Department.buildRotiBox)
 
     def click_AddWholeWheatRoti(self):
-        self.click(Department.AddWholeWheatRoti)
+        self.scroll_to_element(Department.AddWholeWheatRoti)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[2]/div[3]/div/div[1]/div[3]/div[2]/a')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(Department.AddWholeWheatRoti)
 
     def click_AddToCartRoti(self):
-        self.click(Department.AddToCartRoti)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[3]/div/div/div[3]/button')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(Department.AddToCartRoti)
 
 
 
