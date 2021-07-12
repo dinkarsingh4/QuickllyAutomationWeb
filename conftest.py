@@ -103,7 +103,7 @@ def pytest_runtest_makereport(item, call):
             file_name = item.obj.__self__.base_page.capture_screen_shot()
             # name = datetime.strftime(datetime.now(), '%m-%d_%H-%M-%S')
             # extra.image('')
-            extra.append(pytest_html.extras.image('/var/lib/jenkins/workspace/Quicklly/screenshots.png'))
+            extra.append(pytest_html.extras.image('/var/lib/jenkins/workspace/Quicklly/screenshots'+file_name.png))
             extra.append(pytest_html.extras.html('<div>Additional HTML</div>'))
         report.extra = extra
 
