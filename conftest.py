@@ -32,12 +32,14 @@ def pytest_runtest_makereport(item):
     if report.when == 'call' or report.when == "setup":
         xfail = hasattr(report, 'wasxfail')
         if (report.skipped and xfail) or (report.failed and not xfail):
-            file_name = report.nodeid.replace("::", "_")+".png"
+            name = datetime.strftime(datetime.now(), '%m-%d_%H-%M-%S')
+            file_name = f'screenshot{name}.png'
+            # file_name = report.nodeid.replace("::", "_")+".png"
             _capture_screenshot(file_name)
             if file_name:
-                html = '<div><img src="%s" alt="screenshot" style="width:600px;height:228px;" ' \
+                html = '<div><img src="/var/lib/jenkins/workspace/Quicklly/screenshots/%s" alt="screenshot" style="width:600px;height:228px;" ' \
                        'onclick="window.open(this.src)" align="right"/></div>' % file_name
-                extra.append(pytest_html.extras.image(html))
+                extra.append(pytest_html.extras.html(html))
         report.extra = extra
 
 
