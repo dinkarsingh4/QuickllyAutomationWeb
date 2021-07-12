@@ -46,7 +46,7 @@ def _capture_screenshot(name):
         os.makedirs('screenshots')
 
     # name = datetime.strftime(datetime.now(), '%m-%d_%H-%M-%S')
-    path = os.path.join('screenshots1', name)
+    path = os.path.join('screenshots', name)
     print(path)
     # driver.get_screenshot_as_file("C:\\SeleniumProject\\Pytest_HTML_ScreenShot\\ScreenShots\\"+name)
     # driver.get_screenshot_as_file(name)
