@@ -233,7 +233,9 @@ class Dept(BasePage):
         self.click(Department.CuminClub)
 
     def click_Papad(self):
-        self.click(Department.AddPapad)
+        element = self.driver.find_element_by_xpath('/html/body/div[5]/div/div/div[1]/div[3]/div[3]/a')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(Department.AddPapad)
 
     def Plus_Papad(self):
         self.click(Department.plusPapad)
