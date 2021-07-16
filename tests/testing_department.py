@@ -57,6 +57,7 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.click_fresh()
         self.depart_page.click_additem()
         self.depart_page.click_ADDLG()
+        time.sleep(5)
         self.depart_page.click_addPotato()
         self.depart_page.click_AddToCartPotato()
         self.depart_page.click_MiniCart1()

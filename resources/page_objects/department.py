@@ -230,7 +230,9 @@ class Dept(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_CuminCLub(self):
-        self.click(Department.CuminClub)
+        element = self.driver.find_element_by_xpath('//*[@id="home"]/div/div[4]/div/a/div/img')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(Department.CuminClub)
 
     def click_Papad(self):
         element = self.driver.find_element_by_xpath('/html/body/div[5]/div/div/div[1]/div[3]/div[3]/a')
