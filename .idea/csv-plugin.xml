@@ -10,6 +10,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/selenium/webdriver/__init__.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/resources/locators.py">
           <value>
             <Attribute>

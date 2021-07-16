@@ -1,3 +1,5 @@
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from resources import ui_test_class
 from resources.page_objects.forgetpassword import ForgetPassword
 import unittest
@@ -23,6 +25,7 @@ class TesFP(ui_test_class.UIIIIClass):
 
     def compare_res_Headings(self):
 
+        WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(ForgetPassword.heading1))
         forgotpassword_heading = self.forget_page.get_attribute(ForgetPassword.heading1, 'innerHTML')
         whyregister_heading = self.forget_page.get_attribute(ForgetPassword.heading2, 'innerHTML')
 

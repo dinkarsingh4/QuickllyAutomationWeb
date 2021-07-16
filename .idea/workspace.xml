@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main">
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/locators.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/page_objects/department.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/department.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_department.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_department.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,27 +66,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Python tests.Unittests for testing_department.TesDEPARTMENT">
-    <configuration name="conftest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="gitAutomation" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/conftest.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="Unittests for testing_MiniCart.TesCART" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -126,6 +108,20 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests for testing_forgotpassword.TesFP" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="gitAutomation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;testing_forgotpassword.TesFP&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Unittests for testing_main_page.TesLogin" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -141,19 +137,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.conftest" />
       <item itemvalue="Python tests.Unittests for testing_MiniCart.TesCART" />
       <item itemvalue="Python tests.Unittests for testing_main_page.TesLogin" />
       <item itemvalue="Python tests.Unittests for testing_eVoucher.TesEVoucher" />
       <item itemvalue="Python tests.Unittests for testing_department.TesDEPARTMENT" />
+      <item itemvalue="Python tests.Unittests for testing_forgotpassword.TesFP" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Unittests for testing_department.TesDEPARTMENT" />
+        <item itemvalue="Python tests.Unittests for testing_forgotpassword.TesFP" />
         <item itemvalue="Python tests.Unittests for testing_MiniCart.TesCART" />
         <item itemvalue="Python tests.Unittests for testing_eVoucher.TesEVoucher" />
         <item itemvalue="Python tests.Unittests for testing_main_page.TesLogin" />
-        <item itemvalue="Python.conftest" />
       </list>
     </recent_temporary>
   </component>
@@ -165,13 +161,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616787846440</updated>
-    </task>
-    <task id="LOCAL-00210" summary="Merge remote-tracking branch 'github/main' into main">
-      <created>1624965754536</created>
-      <option name="number" value="00210" />
-      <option name="presentableId" value="LOCAL-00210" />
-      <option name="project" value="LOCAL" />
-      <updated>1624965754536</updated>
     </task>
     <task id="LOCAL-00211" summary="Merge remote-tracking branch 'github/main' into main">
       <created>1625050055279</created>
@@ -509,7 +498,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626100017399</updated>
     </task>
-    <option name="localTasksCounter" value="259" />
+    <task id="LOCAL-00259" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1626280341610</created>
+      <option name="number" value="00259" />
+      <option name="presentableId" value="LOCAL-00259" />
+      <option name="project" value="LOCAL" />
+      <updated>1626280341610</updated>
+    </task>
+    <option name="localTasksCounter" value="260" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
