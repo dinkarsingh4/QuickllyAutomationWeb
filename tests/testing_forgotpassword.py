@@ -25,7 +25,7 @@ class TesFP(ui_test_class.UIIIIClass):
 
     def compare_res_Headings(self):
 
-        WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(ForgetPassword.heading1))
+        # WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(ForgetPassword.heading1))
         forgotpassword_heading = self.forget_page.get_attribute(ForgetPassword.heading1, 'innerHTML')
         whyregister_heading = self.forget_page.get_attribute(ForgetPassword.heading2, 'innerHTML')
 

@@ -1,4 +1,6 @@
 #!/usr/local/bin/python
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from resources import ui_test_class
 from resources.page_objects.LogIn import LogIn
 
@@ -205,6 +207,7 @@ class TesLogin(ui_test_class.UIClass):
         self.maine_page.enter_email("123@gmail.com")
         self.maine_page.enter_password("admin1234")
         self.maine_page.click_login()
+        WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(LogIn.doesnt_match))
         error_messages = self.maine_page.get_attribute(LogIn.doesnt_match, 'innerHTML')
         print(error_messages)
         self.assertEqual(self.actual6, error_messages)
