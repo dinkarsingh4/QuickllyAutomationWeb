@@ -143,7 +143,7 @@ class Dept(BasePage):
         self.click(Department.submitTenders)
 
     def click_BBQ(self):
-        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[4]/div/div/div/div/a[6]/img')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[5]/div/div/div/div/a[6]/img')
         self.driver.execute_script("arguments[0].click();", element)
         # self.click(Department.BBQKit)
 
@@ -163,7 +163,7 @@ class Dept(BasePage):
 
     def click_AddBeef(self):
         self.scroll_to_element(Department.AddBeefFry)
-        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[4]/div/div/div[1]/a')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[5]/div/div/div[1]/a')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_AddToCartBeef(self):
@@ -235,7 +235,7 @@ class Dept(BasePage):
         # self.click(Department.CuminClub)
 
     def click_Papad(self):
-        element = self.driver.find_element_by_xpath('/html/body/div[5]/div/div/div[1]/div[3]/div[3]/a')
+        element = self.driver.find_element_by_xpath('/html/body/div[6]/div/div/div[1]/div[3]/div[3]/a')
         self.driver.execute_script("arguments[0].click();", element)
         # self.click(Department.AddPapad)
 

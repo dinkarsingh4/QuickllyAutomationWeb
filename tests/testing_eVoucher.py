@@ -42,6 +42,7 @@ class TesEVoucher(ui_test_class.UVIClass):
         self.eVoucher_page.click_AddItem1()
         self.eVoucher_page.click_MiniCart()
         self.eVoucher_page.click_Checkout()
+        self.eVoucher_page.click_Checkout2()
 
     def test_checkInputMoreThanTextbox(self):
         self.eVoucher_page.EnterEvoucher("131618331813184844608426108494546449")

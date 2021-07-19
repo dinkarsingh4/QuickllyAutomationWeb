@@ -67,13 +67,13 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         # self.depart_page.click_Pay()
 
     def BBQKIT(self):
-        time.sleep(1)
+        time.sleep(5)
         self.depart_page.click_BBQ()
         self.depart_page.click_TikkaImage()
         self.depart_page.click_AddChickenTikkaToCart()
         self.depart_page.click_MiniCart()
         self.depart_page.click_Checkout()
-        # self.depart_page.click_Checkout2()
+        self.depart_page.click_Checkout2()
         # self.depart_page.click_payment1()
         # time.sleep(5)
         # self.depart_page.click_Pay()
