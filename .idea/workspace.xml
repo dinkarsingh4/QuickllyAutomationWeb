@@ -131,10 +131,10 @@
     </configuration>
     <list>
       <item itemvalue="Python tests.Unittests for testing_MiniCart.TesCART" />
-      <item itemvalue="Python tests.Unittests for testing_department.TesDEPARTMENT" />
-      <item itemvalue="Python tests.Unittests for testing_eVoucher.TesEVoucher" />
-      <item itemvalue="Python tests.Unittests for testing_forgotpassword.TesFP" />
       <item itemvalue="Python tests.Unittests for testing_main_page.TesLogin" />
+      <item itemvalue="Python tests.Unittests for testing_eVoucher.TesEVoucher" />
+      <item itemvalue="Python tests.Unittests for testing_department.TesDEPARTMENT" />
+      <item itemvalue="Python tests.Unittests for testing_forgotpassword.TesFP" />
     </list>
     <recent_temporary>
       <list>
