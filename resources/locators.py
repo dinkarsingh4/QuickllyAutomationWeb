@@ -87,8 +87,8 @@ class ForgetPassword:
     registered_email = (By.XPATH, '//*[@id="email"]')
     submit_button = (By.XPATH, '//*[@id="form"]/div[3]/input')
     Uer_login = (By.XPATH, '//*[@id="signupformmodal"]/div/div/div[2]/div/div[1]/div/div[1]/p[3]/span')
-    heading1 = (By.XPATH, '//*[@id="searchhide"]/div[5]/div[1]/div[1]/h3')
-    heading2 = (By.XPATH, '//*[@id="searchhide"]/div[5]/div[3]/div[1]/h3')
+    heading1 = (By.XPATH, '//*[@id="searchhide"]/div[6]/div[1]/div[1]/h3')
+    heading2 = (By.XPATH, '//*[@id="searchhide"]/div[6]/div[3]/div[1]/h3')
     invalid_email = (By.XPATH, '//*[@id="form"]/div[1]')
 
 
