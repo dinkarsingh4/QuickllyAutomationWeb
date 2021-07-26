@@ -51,7 +51,9 @@ class Dept(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_Checkout(self):
-        self.click(Department.proceed_to_checkOut)
+        # self.click(Department.proceed_to_checkOut)
+        element = self.driver.find_element_by_id('lnkProceedToCheckout')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_payment1(self):
         self.scroll_to_element(Department.payment)
