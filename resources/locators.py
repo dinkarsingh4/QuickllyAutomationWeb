@@ -325,6 +325,27 @@ class Department:
     checkout2 = (By.XPATH, '//*[@id="dvFoodSuggestPopup"]/div/div/a')
 
 
+class ZipCode:
+    enter_zip = (By.ID, 'zipcode')
+    submit_zip = (By.ID, 'zipsubmitbtn')
+    quicklly = (By.XPATH, '//*[@id="searchhide"]/header/a/img')
+    grocery = (By.XPATH, '//*[@id="searchhide"]/header/div[2]/div/div[1]/div[1]/div/div/ul/li[1]/a')
+    food = (By.XPATH, '//*[@id="searchhide"]/header/div[2]/div/div[1]/div[1]/div/div/ul/li[2]/a')
+    BBQKit = (By.XPATH, '//*[@id="searchhide"]/header/div[2]/div/div[1]/div[1]/div/div/ul/li[3]/a')
+    RotiKit = (By.XPATH, '//*[@id="searchhide"]/header/div[2]/div/div[1]/div[1]/div/div/ul/li[4]/a')
+    Catering = (By.XPATH, '//*[@id="searchhide"]/header/div[2]/div/div[1]/div[1]/div/div/ul/li[5]/a')
+    organicGrocery = (By.XPATH, '//*[@id="searchhide"]/header/div[2]/div/div[1]/div[1]/div/div/ul/li[6]/a')
+    MealBasket = (By.XPATH, '//*[@id="searchhide"]/header/div[2]/div/div[1]/div[1]/div/div/ul/li[7]/a')
+    TiffinServices = (By.XPATH, '//*[@id="searchhide"]/header/div[2]/div/div[1]/div[1]/div/div/ul/li[8]/a')
+    MealKit = (By.XPATH, '//*[@id="searchhide"]/header/div[2]/div/div[1]/div[1]/div/div/ul/li[9]/a')
+    InstantPot = (By.XPATH, '//*[@id="searchhide"]/header/div[2]/div/div[1]/div[1]/div/div/ul/li[10]/a')
+    Recipes = (By.XPATH, '//*[@id="searchhide"]/header/div[2]/div/div[1]/div[1]/div/div/ul/li[8]/a')
+    department = (By.XPATH, '//*[@id="searchhide"]/header/div[2]/div/div[1]/div[1]/span')
+    cross = (By.XPATH, '//*[@id="popupoffer"]/div/div/div/div/button/img')
+    list = (By.XPATH, '//*[@id="searchhide"]/header/div[2]/div/div[1]/div[1]/div/div/ul')
+
+
+
 class CommonLocators:
     learn_more_link = (By.ID, 'learn-more-link')
     main_loader = (By.XPATH, '/html/body/header/a/img')

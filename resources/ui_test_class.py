@@ -14,6 +14,7 @@ from resources.page_objects.forgetpassword import forgetpass
 from resources.page_objects.cart import Cart
 from resources.page_objects.eVoucher import evoucher
 from resources.page_objects.department import Dept
+from resources.page_objects.Zipcodes import Zip
 from selenium.webdriver import Remote
 
 
@@ -184,6 +185,31 @@ class UVIIClass(unittest.TestCase):
     def tearDownClass(cls):
         cls.driver.close()
         super(UVIIClass, cls).tearDownClass()
+
+
+class UVIIIClass(unittest.TestCase):
+    aut_prefix = 'automation_'
+    driver: Remote = None
+    const_data = DataClass
+
+    zip_page: BasePage = None
+
+    @classmethod
+    def setUpClass(cls):
+        super(UVIIIClass, cls).setUpClass()
+        cls.zip_page = BasePage(cls.driver)
+        cls.common_methods = Common(cls.driver)
+        cls.driver = cls.zip_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
+        cls.zip_page.driver = cls.driver
+        cls.zip_page = Zip(cls.driver)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
+        super(UVIIIClass, cls).tearDownClass()
+
 
     @classmethod
     def login(cls):
