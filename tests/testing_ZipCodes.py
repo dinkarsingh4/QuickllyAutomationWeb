@@ -12,19 +12,7 @@ class TesZIPCODES(ui_test_class.UVIIIClass):
     zip_page: Zip
     zip_page: ZipCode
     depart = {}
-
     dict = {}
-    value = "Grocery"
-    value1 = "Food"
-    value2 = "BBQ Kit"
-    value3 = "Roti Kit"
-    value4 = "Catering"
-    value5 = "Organic Grocery"
-    value6 = "Meal Basket"
-    value7 = "Tiffin Services"
-    value8 = "Meal Kit"
-    value9 = "Instant Pot Kits"
-    value10 = "Recipes"
 
     @classmethod
     def setUpClass(cls):

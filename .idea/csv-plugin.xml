@@ -73,6 +73,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/tests/testing_ContactUS.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/tests/testing_MiniCart.py">
           <value>
             <Attribute>

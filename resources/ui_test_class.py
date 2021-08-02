@@ -15,6 +15,7 @@ from resources.page_objects.cart import Cart
 from resources.page_objects.eVoucher import evoucher
 from resources.page_objects.department import Dept
 from resources.page_objects.Zipcodes import Zip
+from resources.page_objects.contact_us import contactUs
 from selenium.webdriver import Remote
 
 
@@ -97,7 +98,7 @@ class UIIIIClass(unittest.TestCase):
     driver: Remote = None
     const_data = DataClass
 
-    forgot_page: BasePage = None
+    forget_page: BasePage = None
 
     @classmethod
     def setUpClass(cls):
@@ -209,6 +210,30 @@ class UVIIIClass(unittest.TestCase):
         cls.driver.close()
         cls.driver.quit()
         super(UVIIIClass, cls).tearDownClass()
+
+
+class UVIXClass(unittest.TestCase):
+    aut_prefix = 'automation_'
+    driver: Remote = None
+    const_data = DataClass
+
+    contact_page: BasePage = None
+
+    @classmethod
+    def setUpClass(cls):
+        super(UVIXClass, cls).setUpClass()
+        cls.contact_page = BasePage(cls.driver)
+        cls.common_methods = Common(cls.driver)
+        cls.driver = cls.contact_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
+        cls.contact_page.driver = cls.driver
+        cls.contact_page = contactUs(cls.driver)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
+        super(UVIXClass, cls).tearDownClass()
 
 
     @classmethod

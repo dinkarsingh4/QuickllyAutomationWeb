@@ -344,6 +344,10 @@ class ZipCode:
     cross = (By.XPATH, '//*[@id="popupoffer"]/div/div/div/div/button/img')
     list = (By.XPATH, '//*[@id="searchhide"]/header/div[2]/div/div[1]/div[1]/div/div/ul')
 
+class Contact:
+    enter_zip = (By.ID, 'zipcode')
+
+
 
 
 class CommonLocators:
