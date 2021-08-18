@@ -5,23 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main">
-      <change afterPath="$PROJECT_DIR$/Data/123.xls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/credentials.xls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/signupCredentials.xls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/page_objects/guestCheckout_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/page_objects/refer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/page_objects/signup.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testing_GuestCheckout.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testing_ReferaFriend.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testing_signUp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/contact_us.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/contact_us.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/ui_test_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ui_test_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/sample.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_ContactUS.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_ContactUS.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_ZipCodes.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_ZipCodes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +63,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for testing_signUp.TesSIGNUP">
+  <component name="RunManager" selected="Python tests.Python tests for testing_ZipCodes.TesZIPCODES">
     <configuration name="Python tests for testing_ContactUS.TesCONTACTUS" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -159,11 +143,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for testing_ZipCodes.TesZIPCODES" />
         <item itemvalue="Python tests.Python tests for testing_signUp.TesSIGNUP" />
         <item itemvalue="Python tests.Python tests for testing_ReferaFriend.TesREFERAFRIEND" />
         <item itemvalue="Python tests.Python tests for testing_GuestCheckout.TesCHECKOUTWITHGUEST" />
         <item itemvalue="Python tests.Python tests for testing_ContactUS.TesCONTACTUS" />
-        <item itemvalue="Python tests.Python tests for testing_ZipCodes.TesZIPCODES" />
       </list>
     </recent_temporary>
   </component>
@@ -175,13 +159,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616787846440</updated>
-    </task>
-    <task id="LOCAL-00224" summary="Merge remote-tracking branch 'github/main' into main">
-      <created>1625915358363</created>
-      <option name="number" value="00224" />
-      <option name="presentableId" value="LOCAL-00224" />
-      <option name="project" value="LOCAL" />
-      <updated>1625915358363</updated>
     </task>
     <task id="LOCAL-00225" summary="Merge remote-tracking branch 'github/main' into main">
       <created>1625915928227</created>
@@ -519,7 +496,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627899382372</updated>
     </task>
-    <option name="localTasksCounter" value="273" />
+    <task id="LOCAL-00273" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1629308817735</created>
+      <option name="number" value="00273" />
+      <option name="presentableId" value="LOCAL-00273" />
+      <option name="project" value="LOCAL" />
+      <updated>1629308817738</updated>
+    </task>
+    <option name="localTasksCounter" value="274" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
