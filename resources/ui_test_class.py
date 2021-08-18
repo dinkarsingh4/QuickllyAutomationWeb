@@ -16,6 +16,9 @@ from resources.page_objects.eVoucher import evoucher
 from resources.page_objects.department import Dept
 from resources.page_objects.Zipcodes import Zip
 from resources.page_objects.contact_us import contactUs
+from resources.page_objects.signup import signUp
+from resources.page_objects.refer import ReferAFriend
+from resources.page_objects.guestCheckout_page import CheckoutWithGuest
 from selenium.webdriver import Remote
 
 
@@ -235,6 +238,77 @@ class UVIXClass(unittest.TestCase):
         cls.driver.quit()
         super(UVIXClass, cls).tearDownClass()
 
+
+class UVXClass(unittest.TestCase):
+    aut_prefix = 'automation_'
+    driver: Remote = None
+    const_data = DataClass
+
+    signup_page: BasePage = None
+
+    @classmethod
+    def setUpClass(cls):
+        super(UVXClass, cls).setUpClass()
+        cls.signup_page = BasePage(cls.driver)
+        cls.common_methods = Common(cls.driver)
+        cls.driver = cls.signup_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
+        cls.signup_page.driver = cls.driver
+        cls.signup_page = signUp(cls.driver)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
+        super(UVXClass, cls).tearDownClass()
+
+
+class UVXIClass(unittest.TestCase):
+    aut_prefix = 'automation_'
+    driver: Remote = None
+    const_data = DataClass
+
+    refer_page: BasePage = None
+
+    @classmethod
+    def setUpClass(cls):
+        super(UVXIClass, cls).setUpClass()
+        cls.refer_page = BasePage(cls.driver)
+        cls.common_methods = Common(cls.driver)
+        cls.driver = cls.refer_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
+        cls.refer_page.driver = cls.driver
+        cls.refer_page = ReferAFriend(cls.driver)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
+        super(UVXIClass, cls).tearDownClass()
+
+
+class UVXIIClass(unittest.TestCase):
+    aut_prefix = 'automation_'
+    driver: Remote = None
+    const_data = DataClass
+
+    guestCheckout_page: BasePage = None
+
+    @classmethod
+    def setUpClass(cls):
+        super(UVXIIClass, cls).setUpClass()
+        cls.guestCheckout_page = BasePage(cls.driver)
+        cls.common_methods = Common(cls.driver)
+        cls.driver = cls.guestCheckout_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
+        cls.guestCheckout_page.driver = cls.driver
+        cls.guestCheckout_page = CheckoutWithGuest(cls.driver)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
+        super(UVXIIClass, cls).tearDownClass()
 
     @classmethod
     def login(cls):

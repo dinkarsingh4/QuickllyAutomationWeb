@@ -247,7 +247,6 @@ class Coupon:
     checkout2 = (By.XPATH, '//*[@id="dvFoodSuggestPopup"]/div/div/a')
 
 
-
 class Department:
     enter_zip = (By.ID, 'zipcode')
     submit_zip = (By.ID, 'zipsubmitbtn')
@@ -344,10 +343,60 @@ class ZipCode:
     cross = (By.XPATH, '//*[@id="popupoffer"]/div/div/div/div/button/img')
     list = (By.XPATH, '//*[@id="searchhide"]/header/div[2]/div/div[1]/div[1]/div/div/ul')
 
+
 class Contact:
     enter_zip = (By.ID, 'zipcode')
+    contact = (By.LINK_TEXT, 'CONTACT')
+    name = (By.ID, 'name')
+    email = (By.ID, 'email')
+    subject = (By.ID, 'mobile')
+    comment = (By.ID, 'comment')
+    send = (By.XPATH, '//*[@id="main-contact-form"]/div/fieldset/ul/div/button')
+    thanks = (By.XPATH, '//*[@id="messages_product_view"]/p')
 
 
+class SignUp:
+    enter_zip = (By.ID, 'zipcode')
+    signin = (By.XPATH, '//*[@id="procedcheckoutBtn"]')
+    needAccount = (By.XPATH, '//*[@id="signupformmodal"]/div/div/div[2]/div/div[1]/div/div[1]/p[1]/span')
+    firstName = (By.XPATH, '//*[@id="reg-form"]/div[1]/input')
+    lastName = (By.XPATH, '//*[@id="reg-form"]/div[2]/input')
+    Address = (By.XPATH, '//*[@id="autocomplete"]')
+    Phone = (By.XPATH, '//*[@id="reg-form"]/div[5]/input[2]')
+    email = (By.XPATH, '//*[@id="reg-form"]/div[6]/input')
+    password = (By.XPATH, '//*[@id="reg-form"]/div[7]/input')
+    confirmpassword = (By.XPATH, '//*[@id="reg-form"]/div[8]/input')
+    register = (By.XPATH, '//*[@id="btn-reg"]')
+    email2 = (By.XPATH, '//*[@id="user_email"]')
+    password2 = (By.XPATH, '//*[@id="password"]')
+    logIn = (By.XPATH, '//*[@id="btn-login"]')
+
+
+class Refer:
+    refer = (By.XPATH, '/html/body/header/div/div[2]/a')
+    referLink = (By.XPATH, '/html/body/header/div/div[2]/div/div/ul/li[1]/a')
+    clickFacebook = (By.XPATH, '//*[@id="referfb"]')
+    facebookLink = (By.XPATH, '//*[@id="shareonFacebookBtn"]')
+    clickTwitter = (By.XPATH, '//*[@id="refertw"]')
+    twitterLink = (By.XPATH, '//*[@id="shareonTwitterBtn"]')
+
+
+class GuestCheckout:
+    enter_zip = (By.ID, 'zipcode')
+    goFresh = (By.XPATH, '//*[@id="searchhide"]/div[8]/div[1]/div/div/a[2]/img')
+    potatoImage = (By.XPATH, '//*[@id="img_51875"]')
+    AddtoCart = (By.XPATH, '//*[@id="searchhide"]/div[6]/div/section[2]/div/a[1]')
+    Cart = (By.XPATH, '//*[@id="searchhide"]/header/div[4]/a')
+    checkout = (By.XPATH, '//*[@id="lnkProceedToCheckout"]')
+    guest = (By.XPATH, '//*[@id="gustusrlogin"]/span')
+    Fname = (By.XPATH, '//*[@id="frmGuestAddress"]/div[1]/input')
+    Lname = (By.XPATH, '//*[@id="frmGuestAddress"]/div[2]/input')
+    Address = (By.XPATH, '//*[@id="autocomplete2"]')
+    number = (By.XPATH, '//*[@id="frmGuestAddress"]/div[5]/input[2]')
+    email = (By.XPATH, '//*[@id="frmGuestAddress"]/div[6]/input')
+    submit = (By.XPATH, '//*[@id="shippingUpprdtcsubbtn"]')
+    submit_zip = (By.ID, 'zipsubmitbtn')
+    checkout2 = (By.XPATH, '//*[@id="dvFoodSuggestPopup"]/div/div/a')
 
 
 class CommonLocators:

@@ -66,6 +66,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/resources/ui_test_class.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/tests/sample.py">
           <value>
             <Attribute>
@@ -80,7 +87,21 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/tests/testing_GuestCheckout.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/tests/testing_MiniCart.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/tests/testing_ReferaFriend.py">
           <value>
             <Attribute>
               <option name="separator" value=":" />
@@ -137,6 +158,13 @@
           </value>
         </entry>
         <entry key="/tests/testing_needanaccount.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/tests/testing_signUp.py">
           <value>
             <Attribute>
               <option name="separator" value=":" />
