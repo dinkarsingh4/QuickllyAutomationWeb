@@ -26,7 +26,7 @@ class TesZIPCODES(ui_test_class.UVIIIClass):
     def Excel_Data(self):
         arr1 = []
 
-        data = pd.read_excel(r'/home/excellence/PycharmProjects/gitAutomation/Data/123.xls', dtype=str)
+        data = pd.read_excel('/home/excellence/PycharmProjects/gitAutomation/Data/123.xls', dtype=str)
         for x in range(6):
             df = pd.DataFrame(data, columns=['ZipCodes']).values[x]
             text9 = df
