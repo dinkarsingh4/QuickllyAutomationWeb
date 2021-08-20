@@ -22,7 +22,7 @@ class TesSIGNUP(ui_test_class.UVXClass):
     def Credentials(self):
         self.signup_page.click_signin()
         self.signup_page.click_needAccount()
-        data = pd.read_excel(r'/home/excellence/PycharmProjects/gitAutomation/Data/signupCredentials.xls', dtype=str)
+        data = pd.read_excel(r'/home/excellence/PycharmProjects/gitAutomation/tests/signupCredentials.xls', dtype=str)
         fname = pd.DataFrame(data, columns=['First Name']).values[0]
         lname = pd.DataFrame(data, columns=['Last Name']).values[0]
         address = pd.DataFrame(data, columns=['Address']).values[0]

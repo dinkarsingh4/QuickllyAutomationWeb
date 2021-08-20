@@ -66,6 +66,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/resources/page_objects/guestCheckout_page.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/resources/ui_test_class.py">
           <value>
             <Attribute>
