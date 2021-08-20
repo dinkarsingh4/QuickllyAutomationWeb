@@ -24,7 +24,9 @@ class CheckoutWithGuest(BasePage):
         self.click(GuestCheckout.goFresh)
 
     def click_Potato(self):
-        self.click(GuestCheckout.potatoImage)
+        # self.click(GuestCheckout.potatoImage)
+        element = self.driver.find_element_by_xpath('//*[@id="img_51875"]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_AddToCart(self):
         self.click(GuestCheckout.AddtoCart)
