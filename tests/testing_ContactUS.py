@@ -25,7 +25,7 @@ class TesCONTACTUS(ui_test_class.UVIXClass):
     def readingEmail(self):
 
 
-        data = pd.read_excel(r'/home/excellence/PycharmProjects/gitAutomation/Data/credentials.xls', dtype=str)
+        data = pd.read_excel(r'Data/credentials.xls', dtype=str)
         name = pd.DataFrame(data, columns=['Name']).values[0]
         mail = pd.DataFrame(data, columns=['email']).values[0]
         m = imaplib.IMAP4_SSL("mail.quicklly.com")
