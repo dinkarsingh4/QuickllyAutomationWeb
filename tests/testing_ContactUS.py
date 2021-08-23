@@ -65,7 +65,7 @@ class TesCONTACTUS(ui_test_class.UVIXClass):
             self.assertEqual(lis, self.expected)
 
     def readingExcelFile(self):
-        data = pd.read_excel(r'/home/excellence/credentials.xls', dtype=str)
+        data = pd.read_excel(r'Data/credentials.xls', dtype=str)
         name = pd.DataFrame(data, columns=['Name']).values[0]
         mail = pd.DataFrame(data, columns=['email']).values[0]
         subject = pd.DataFrame(data, columns=['subject']).values[0]
