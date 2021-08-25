@@ -327,7 +327,9 @@ class Dept(BasePage):
         self.click(Department.Beer)
 
     def click_classicLime(self):
-        self.click(Department.classicLime)
+        element = self.driver.find_element_by_xpath('//*[@id="img_138002"]')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(Department.classicLime)
 
     def click_AddToCartBeer(self):
         self.click(Department.AddToCartBeer)
