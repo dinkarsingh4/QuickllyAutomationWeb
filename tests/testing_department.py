@@ -203,7 +203,7 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.submit_zip()
         time.sleep(2)
         self.depart_page.click_Liquor()
-        self.depart_page.click_beer()
+        # self.depart_page.click_beer()
         self.depart_page.click_classicLime()
         self.depart_page.click_AddToCartBeer()
         self.depart_page.click_MiniCart()
