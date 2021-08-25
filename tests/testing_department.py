@@ -103,7 +103,7 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.click_quicklly()
         self.depart_page.submit_zip()
         time.sleep(2)
-        for i in range(4):
+        for i in range(5):
             self.depart_page.click_RightArrow()
             time.sleep(1)
         time.sleep(2)
@@ -191,7 +191,7 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.click_quicklly()
         self.depart_page.submit_zip()
         time.sleep(2)
-        for i in range(4):
+        for i in range(3):
             self.depart_page.click_RightArrow()
             time.sleep(1)
         time.sleep(2)
