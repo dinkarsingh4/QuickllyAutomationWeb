@@ -176,8 +176,8 @@ class Dept(BasePage):
         self.click(Department.submitBeef)
 
     def click_mealBasket(self):
-        self.click(Department.mealBasket)
-        # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.mealBasket)).click()
+        # self.click(Department.mealBasket)
+        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.mealBasket)).click()
 
     def select_mealPlan(self):
         self.scroll_to_element(Department.MealPlan)
@@ -298,7 +298,8 @@ class Dept(BasePage):
         self.click(Department.LeftArrow)
 
     def click_rotiKit(self):
-        self.click(Department.rotiKIt)
+        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.rotiKIt)).click()
+        # self.click(Department.rotiKIt)
 
     def click_RotiBox(self):
         self.scroll_to_element(Department.buildRotiBox)
