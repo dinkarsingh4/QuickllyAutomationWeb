@@ -103,7 +103,7 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.click_quicklly()
         self.depart_page.submit_zip()
         time.sleep(2)
-        for i in range(2):
+        for i in range(4):
             self.depart_page.click_RightArrow()
             time.sleep(1)
         time.sleep(2)
@@ -190,6 +190,10 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
     def Rotikaa(self):
         self.depart_page.click_quicklly()
         self.depart_page.submit_zip()
+        time.sleep(2)
+        for i in range(4):
+            self.depart_page.click_RightArrow()
+            time.sleep(1)
         time.sleep(2)
         self.depart_page.click_rotiKit()
         self.depart_page.click_RotiBox()
