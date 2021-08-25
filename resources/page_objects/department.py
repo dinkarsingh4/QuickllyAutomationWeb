@@ -125,7 +125,8 @@ class Dept(BasePage):
         self.click(Department.AddToCartP)
 
     def click_food(self):
-        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.food)).click()
+        self.click(Department.food)
+        # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.food)).click()
 
     def click_MakkiFood(self):
         # self.click(Department.MakkiFastFood)
@@ -145,7 +146,7 @@ class Dept(BasePage):
         self.click(Department.submitTenders)
 
     def click_BBQ(self):
-        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[5]/div/div/div/div/a[6]/img')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[5]/div/div/div/div/a[7]/img')
         self.driver.execute_script("arguments[0].click();", element)
         # self.click(Department.BBQKit)
 
@@ -221,7 +222,7 @@ class Dept(BasePage):
     def click_MealKit(self):
         # self.click(Department.MealKit)
         self.driver.implicitly_wait(20)
-        element = self.driver.find_element_by_css_selector('#searchhide > div.grocerySpecialSlider.clsFoodSpl > div > div > div > div > a:nth-child(7) > img')
+        element = self.driver.find_element_by_css_selector('#searchhide > div.grocerySpecialSlider.clsFoodSpl > div > div > div > div > a:nth-child(8) > img')
         self.driver.execute_script("arguments[0].click();", element)
         # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.MealKit)).click()
 
@@ -275,7 +276,7 @@ class Dept(BasePage):
 
     def click_OrganicGrocery(self):
         self.driver.implicitly_wait(30)
-        element = self.driver.find_element_by_css_selector('#searchhide > div.grocerySpecialSlider.clsFoodSpl > div > div > div > div > a:nth-child(5) > img')
+        element = self.driver.find_element_by_css_selector('#searchhide > div.grocerySpecialSlider.clsFoodSpl > div > div > div > div > a:nth-child(6) > img')
         self.driver.execute_script("arguments[0].click();", element)
         # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.OrganicGrocery)).click()
         # self.click(Department.OrganicGrocery)
@@ -318,6 +319,18 @@ class Dept(BasePage):
 
     def click_Checkout2(self):
         self.click(Department.checkout2)
+
+    def click_Liquor(self):
+        self.click(Department.liquorStore)
+
+    def click_beer(self):
+        self.click(Department.Beer)
+
+    def click_classicLime(self):
+        self.click(Department.classicLime)
+
+    def click_AddToCartBeer(self):
+        self.click(Department.AddToCartBeer)
 
 
 

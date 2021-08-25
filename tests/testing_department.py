@@ -103,7 +103,9 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.click_quicklly()
         self.depart_page.submit_zip()
         time.sleep(2)
-        self.depart_page.click_RightArrow()
+        for i in range(2):
+            self.depart_page.click_RightArrow()
+            time.sleep(1)
         time.sleep(2)
         self.depart_page.click_mealBasket()
         self.depart_page.select_mealPlan()
@@ -196,6 +198,17 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.click_MiniCart()
         self.depart_page.click_Checkout()
 
+    def Liquor(self):
+        self.depart_page.click_quicklly()
+        self.depart_page.submit_zip()
+        time.sleep(2)
+        self.depart_page.click_Liquor()
+        self.depart_page.click_beer()
+        self.depart_page.click_classicLime()
+        self.depart_page.click_AddToCartBeer()
+        self.depart_page.click_MiniCart()
+        self.depart_page.click_Checkout()
+
     def test_EnterZipCode(self):
         self.depart_page.zip("60611")
         self.depart_page.submit_zip()
@@ -248,8 +261,8 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         # print(ThankYouLabel)
         # self.assertEqual(self.actual1, ThankYouLabel)
 
-    # def test_shopWithMealBasket(self):
-    #     self.MealBasket()
+    def test_shopWithMealBasket(self):
+        self.MealBasket()
         # ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
         # print(ThankYouLabel)
         # self.assertEqual(self.actual1, ThankYouLabel)
@@ -280,6 +293,12 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
 
     def test_shopWithRotikaa(self):
         self.Rotikaa()
+        # ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
+        # print(ThankYouLabel)
+        # self.assertEqual(self.actual1, ThankYouLabel)
+
+    def test_shopWithLiquor(self):
+        self.Liquor()
         # ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
         # print(ThankYouLabel)
         # self.assertEqual(self.actual1, ThankYouLabel)
