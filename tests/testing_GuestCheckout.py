@@ -8,6 +8,9 @@ class TesCHECKOUTWITHGUEST(ui_test_class.UVXIIClass):
     guestCheckout_page: GuestCheckout
     guestCheckout_page: CheckoutWithGuest
 
+    actualLabel = "Your Shopping Carts"
+    label = ""
+
     @classmethod
     def setUpClass(cls):
         super(TesCHECKOUTWITHGUEST, cls).setUpClass()
@@ -21,7 +24,9 @@ class TesCHECKOUTWITHGUEST(ui_test_class.UVXIIClass):
         self.guestCheckout_page.enterZip("60611")
         self.guestCheckout_page.click_SubmitZip()
         time.sleep(2)
-        self.guestCheckout_page.click_Fresh()
+        self.guestCheckout_page.EnterElementForSearch("lemon grass")
+        self.guestCheckout_page.click_SearchButton()
+        time.sleep(10)
         self.guestCheckout_page.click_Potato()
         self.guestCheckout_page.click_AddToCart()
         self.guestCheckout_page.click_Cart()
@@ -34,7 +39,10 @@ class TesCHECKOUTWITHGUEST(ui_test_class.UVXIIClass):
         self.guestCheckout_page.EnterNumber("1452336548")
         self.guestCheckout_page.Enter_email("qicklly1234@gmail.com")
         self.guestCheckout_page.click_submit()
-        # time.sleep(10)
+        time.sleep(10)
+        self.label = self.guestCheckout_page.get_attribute(GuestCheckout.shoppingCarts, 'innerHTML')
+        print(self.label)
 
     def test_guestCheckout(self):
         self.Checkout()
+        self.assertEqual(self.label, self.actualLabel)

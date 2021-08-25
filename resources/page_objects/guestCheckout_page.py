@@ -25,7 +25,7 @@ class CheckoutWithGuest(BasePage):
 
     def click_Potato(self):
         # self.click(GuestCheckout.potatoImage)
-        element = self.driver.find_element_by_xpath('//*[@id="img_51875"]')
+        element = self.driver.find_element_by_xpath('//*[@id="img_270"]')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_AddToCart(self):
@@ -71,6 +71,13 @@ class CheckoutWithGuest(BasePage):
 
     def click_checkout2(self):
         self.click(GuestCheckout.checkout2)
+
+    def EnterElementForSearch(self, element):
+        self.find_element(GuestCheckout.searchBox).clear()
+        self.find_element(GuestCheckout.searchBox).send_keys(element)
+
+    def click_SearchButton(self):
+        self.click(GuestCheckout.searchButton)
 
 
 

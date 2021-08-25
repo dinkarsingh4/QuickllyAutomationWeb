@@ -397,6 +397,9 @@ class GuestCheckout:
     submit = (By.XPATH, '//*[@id="shippingUpprdtcsubbtn"]')
     submit_zip = (By.ID, 'zipsubmitbtn')
     checkout2 = (By.XPATH, '//*[@id="dvFoodSuggestPopup"]/div/div/a')
+    shoppingCarts = (By.XPATH, '//*[@id="searchhide"]/div[4]/div[1]/div[1]/h3')
+    searchBox = (By.XPATH, '//*[@id="search_box"]')
+    searchButton = (By.ID, 'searchbtn')
 
 
 class CommonLocators:

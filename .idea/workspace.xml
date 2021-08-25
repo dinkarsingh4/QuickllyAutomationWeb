@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main">
-      <change afterPath="$PROJECT_DIR$/tests/sample.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/locators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/guestCheckout_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/guestCheckout_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_GuestCheckout.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_GuestCheckout.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +59,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/tests" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="settings.editor.splitter.proportion" value="0.2487757" />
   </component>
   <component name="RecentsManager">
@@ -67,26 +70,33 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.sample">
-    <configuration name="sample" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests for testing_GuestCheckout.TesCHECKOUTWITHGUEST">
+    <configuration name="Python tests for testing_ContactUS.TesCONTACTUS" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/sample.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;testing_ContactUS.TesCONTACTUS&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for testing_ContactUS.TesCONTACTUS.test_contactUsPage" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="gitAutomation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;testing_ContactUS.TesCONTACTUS.test_contactUsPage&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests for testing_GuestCheckout.TesCHECKOUTWITHGUEST" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -103,26 +113,12 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for testing_ReferaFriend.TesREFERAFRIEND" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="gitAutomation" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;testing_ReferaFriend.TesREFERAFRIEND&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Python tests for testing_ZipCodes.TesZIPCODES" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -136,7 +132,7 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -146,19 +142,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.sample" />
-      <item itemvalue="Python tests.Python tests for testing_ReferaFriend.TesREFERAFRIEND" />
-      <item itemvalue="Python tests.Python tests for testing_GuestCheckout.TesCHECKOUTWITHGUEST" />
       <item itemvalue="Python tests.Python tests for testing_signUp.TesSIGNUP" />
       <item itemvalue="Python tests.Python tests for testing_ZipCodes.TesZIPCODES" />
+      <item itemvalue="Python tests.Python tests for testing_ContactUS.TesCONTACTUS" />
+      <item itemvalue="Python tests.Python tests for testing_ContactUS.TesCONTACTUS.test_contactUsPage" />
+      <item itemvalue="Python tests.Python tests for testing_GuestCheckout.TesCHECKOUTWITHGUEST" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.sample" />
-        <item itemvalue="Python tests.Python tests for testing_signUp.TesSIGNUP" />
-        <item itemvalue="Python tests.Python tests for testing_ZipCodes.TesZIPCODES" />
-        <item itemvalue="Python tests.Python tests for testing_ReferaFriend.TesREFERAFRIEND" />
         <item itemvalue="Python tests.Python tests for testing_GuestCheckout.TesCHECKOUTWITHGUEST" />
+        <item itemvalue="Python tests.Python tests for testing_ContactUS.TesCONTACTUS.test_contactUsPage" />
+        <item itemvalue="Python tests.Python tests for testing_ContactUS.TesCONTACTUS" />
+        <item itemvalue="Python tests.Python tests for testing_ZipCodes.TesZIPCODES" />
+        <item itemvalue="Python tests.Python tests for testing_signUp.TesSIGNUP" />
       </list>
     </recent_temporary>
   </component>
@@ -170,27 +166,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616787846440</updated>
-    </task>
-    <task id="LOCAL-00231" summary="Merge remote-tracking branch 'github/main' into main">
-      <created>1626080169860</created>
-      <option name="number" value="00231" />
-      <option name="presentableId" value="LOCAL-00231" />
-      <option name="project" value="LOCAL" />
-      <updated>1626080169860</updated>
-    </task>
-    <task id="LOCAL-00232" summary="Merge remote-tracking branch 'github/main' into main">
-      <created>1626080626413</created>
-      <option name="number" value="00232" />
-      <option name="presentableId" value="LOCAL-00232" />
-      <option name="project" value="LOCAL" />
-      <updated>1626080626413</updated>
-    </task>
-    <task id="LOCAL-00233" summary="Merge remote-tracking branch 'github/main' into main">
-      <created>1626081023379</created>
-      <option name="number" value="00233" />
-      <option name="presentableId" value="LOCAL-00233" />
-      <option name="project" value="LOCAL" />
-      <updated>1626081023379</updated>
     </task>
     <task id="LOCAL-00234" summary="Merge remote-tracking branch 'github/main' into main">
       <created>1626081935027</created>
@@ -514,7 +489,28 @@
       <option name="project" value="LOCAL" />
       <updated>1629458577848</updated>
     </task>
-    <option name="localTasksCounter" value="280" />
+    <task id="LOCAL-00280" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1629729939970</created>
+      <option name="number" value="00280" />
+      <option name="presentableId" value="LOCAL-00280" />
+      <option name="project" value="LOCAL" />
+      <updated>1629729939971</updated>
+    </task>
+    <task id="LOCAL-00281" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1629734666854</created>
+      <option name="number" value="00281" />
+      <option name="presentableId" value="LOCAL-00281" />
+      <option name="project" value="LOCAL" />
+      <updated>1629734666943</updated>
+    </task>
+    <task id="LOCAL-00282" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1629735117470</created>
+      <option name="number" value="00282" />
+      <option name="presentableId" value="LOCAL-00282" />
+      <option name="project" value="LOCAL" />
+      <updated>1629735117470</updated>
+    </task>
+    <option name="localTasksCounter" value="283" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
