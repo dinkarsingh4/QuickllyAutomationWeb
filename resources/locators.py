@@ -324,8 +324,8 @@ class Department:
     checkout2 = (By.XPATH, '//*[@id="dvFoodSuggestPopup"]/div/div/a')
     liquorStore = (By.XPATH, '//*[@id="searchhide"]/div[5]/div/div/div/div/a[2]/img')
     Beer = (By.XPATH, '//*[@id="searchhide"]/section[1]/div[2]/div/div/div[1]/a/img')
-    classicLime = (By.XPATH, '//*[@id="searchhide"]/div[2]/div[3]/div/div[6]/div/div[1]')
-    AddToCartBeer = (By.XPATH, '//*[@id="storeproductlist"]/div/div[2]/a')
+    classicLime = (By.XPATH, '//*[@id="img_138002"]')
+    AddToCartBeer = (By.XPATH, '//*[@id="storeproductlist"]/div[1]/div[2]/a')
 
 
 class ZipCode:
