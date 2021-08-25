@@ -128,7 +128,7 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.click_Chicago()
         self.depart_page.select_VegThali()
         self.depart_page.click_AddToCartVT()
-        self.depart_page.submitVT()
+        # self.depart_page.submitVT()
         # self.depart_page.click_AddToCartVT()
         self.depart_page.click_MiniCart()
         self.depart_page.click_Checkout()
