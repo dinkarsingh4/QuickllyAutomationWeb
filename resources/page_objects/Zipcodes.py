@@ -21,7 +21,9 @@ class Zip(BasePage):
         self.click(ZipCode.submit_zip)
 
     def click_quicklly(self):
-        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(ZipCode.quicklly)).click()
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/header/a/img')
+        self.driver.execute_script("arguments[0].click();", element)
+        # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(ZipCode.quicklly)).click()
 
     def click_department(self):
         # self.click(ZipCode.department)
