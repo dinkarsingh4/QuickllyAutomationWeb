@@ -66,6 +66,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/resources/page_objects/category.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/resources/page_objects/department.py">
           <value>
             <Attribute>
@@ -81,6 +88,13 @@
           </value>
         </entry>
         <entry key="/resources/page_objects/guestCheckout_page.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/resources/page_objects/invalid.py">
           <value>
             <Attribute>
               <option name="separator" value=":" />
@@ -115,6 +129,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/tests/testing_InvalidZipcodes.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/tests/testing_MiniCart.py">
           <value>
             <Attribute>
@@ -143,6 +164,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/tests/testing_categories.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/tests/testing_continueasguest.py">
           <value>
             <Attribute>
@@ -165,6 +193,13 @@
           </value>
         </entry>
         <entry key="/tests/testing_forgotpassword.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/tests/testing_links.py">
           <value>
             <Attribute>
               <option name="separator" value=":" />

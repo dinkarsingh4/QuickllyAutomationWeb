@@ -2,6 +2,7 @@ from resources.config_methods import DataClass
 from resources.locators import ForgetPassword
 from resources.page_objects.base_page import BasePage
 
+
 class forgetpass(BasePage):
     """Privacy Error Page of Invisily Admin Portal"""
 

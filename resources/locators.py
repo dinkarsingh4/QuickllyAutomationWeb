@@ -406,6 +406,39 @@ class GuestCheckout:
     searchButton = (By.ID, 'searchbtn')
 
 
+class Category:
+    enter_zip = (By.ID, 'zipcode')
+    submit_zip = (By.ID, 'zipsubmitbtn')
+    UnbeatableDeals = (By.XPATH, '//*[@id="searchhide"]/div[6]/div[1]/div/div/a[1]/img')
+    GoFresh = (By.XPATH, '//*[@id="searchhide"]/div[6]/div[1]/div/div/a[2]/img')
+    Grocery = (By.XPATH, '//*[@id="searchhide"]/div[6]/div[1]/div/div/a[3]/img')
+    Meat = (By.XPATH, '//*[@id="searchhide"]/div[6]/div[1]/div/div/a[4]/img')
+    Beverages = (By.XPATH, '//*[@id="searchhide"]/div[8]/div[1]/div/div/a[5]/span')
+    Organic = (By.XPATH, '//*[@id="searchhide"]/div[6]/div[1]/div/div/a[6]/img')
+    PersonalCare = (By.XPATH, '//*[@id="searchhide"]/div[6]/div[1]/div/div/a[7]/img')
+    Household = (By.XPATH, '//*[@id="searchhide"]/div[6]/div[1]/div/div/a[8]/img')
+    StoreLabel = (By.XPATH, '//*[@id="store-detail-name"]')
+    weeklyDeals = (By.XPATH, '//*[@id="searchhide"]/div[8]/div[2]/div/div/a[1]')
+    SearchForProducts = (By.XPATH, '//*[@id="search_box"]')
+
+class Links:
+    facebook = (By.LINK_TEXT, 'FACEBOOK')
+    twitter = (By.LINK_TEXT, 'TWITTER')
+    linkedin = (By.LINK_TEXT, 'LINKEDIN')
+    youtube = (By.LINK_TEXT, 'YOUTUBE')
+    instagram = (By.LINK_TEXT, 'INSTAGRAM')
+    pinterest = (By.LINK_TEXT, 'PINTEREST')
+    fbLabel = (By.XPATH, '//*[@id="blueBarDOMInspector"]/div/div/div/div[1]/a/i/u')
+    tweetLabel = (By.XPATH, '//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div/nav/div/div[2]/div/div[1]/a/div')
+    linkedinLabel = (By.XPATH, '/html/body/main/div/div/form[2]/h1')
+    youtubeLabel = (By.XPATH, '//*[@id="subscriber-count"]')
+    instagramSRC = (By.XPATH, '//*[@id="react-root"]/section/nav/div[2]/div/div/div[1]/a/div/div/img')
+    pinterestLabel = (By.XPATH, '//*[@id="__PWS_ROOT__"]/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div/h2/div')
+
+class Invalid:
+    enter_zip = (By.ID, 'zipcode')
+    submit_zip = (By.ID, 'zipsubmitbtn')
+
 class CommonLocators:
     learn_more_link = (By.ID, 'learn-more-link')
     main_loader = (By.XPATH, '/html/body/header/a/img')

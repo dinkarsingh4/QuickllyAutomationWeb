@@ -18,7 +18,10 @@ from resources.page_objects.Zipcodes import Zip
 from resources.page_objects.contact_us import contactUs
 from resources.page_objects.signup import signUp
 from resources.page_objects.refer import ReferAFriend
+from resources.page_objects.category import GroceryCategories
+from resources.page_objects.link import ContactUsLinks
 from resources.page_objects.guestCheckout_page import CheckoutWithGuest
+from resources.page_objects.invalid import InvalidZipcodes
 from selenium.webdriver import Remote
 
 
@@ -309,6 +312,76 @@ class UVXIIClass(unittest.TestCase):
         cls.driver.close()
         cls.driver.quit()
         super(UVXIIClass, cls).tearDownClass()
+
+
+class UVXIIIClass(unittest.TestCase):
+    aut_prefix = 'automation_'
+    driver: Remote = None
+    const_data = DataClass
+
+    category_page: BasePage = None
+
+    @classmethod
+    def setUpClass(cls):
+        super(UVXIIIClass, cls).setUpClass()
+        cls.category_page = BasePage(cls.driver)
+        cls.common_methods = Common(cls.driver)
+        cls.driver = cls.category_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
+        cls.category_page.driver = cls.driver
+        cls.category_page = GroceryCategories(cls.driver)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
+        super(UVXIIIClass, cls).tearDownClass()
+
+class UVXIVClass(unittest.TestCase):
+    aut_prefix = 'automation_'
+    driver: Remote = None
+    const_data = DataClass
+
+    link_page: BasePage = None
+
+    @classmethod
+    def setUpClass(cls):
+        super(UVXIVClass, cls).setUpClass()
+        cls.link_page = BasePage(cls.driver)
+        cls.common_methods = Common(cls.driver)
+        cls.driver = cls.link_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
+        cls.link_page.driver = cls.driver
+        cls.link_page = ContactUsLinks(cls.driver)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
+        super(UVXIVClass, cls).tearDownClass()
+
+class UVXVClass(unittest.TestCase):
+    aut_prefix = 'automation_'
+    driver: Remote = None
+    const_data = DataClass
+
+    invalid_page: BasePage = None
+
+    @classmethod
+    def setUpClass(cls):
+        super(UVXVClass, cls).setUpClass()
+        cls.invalid_page = BasePage(cls.driver)
+        cls.common_methods = Common(cls.driver)
+        cls.driver = cls.invalid_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
+        cls.invalid_page.driver = cls.driver
+        cls.invalid_page = InvalidZipcodes(cls.driver)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
+        super(UVXVClass, cls).tearDownClass()
 
     @classmethod
     def login(cls):
