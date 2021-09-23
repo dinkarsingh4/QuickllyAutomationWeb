@@ -4,33 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main">
-      <change afterPath="$PROJECT_DIR$/resources/page_objects/guestlogin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testing_guestLogin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/LogIn.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/LogIn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/Zipcodes.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/Zipcodes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/cart.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/cart.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/category.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/category.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/contact_us.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/contact_us.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/department.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/department.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/eVoucher.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/eVoucher.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/forgetpassword.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/forgetpassword.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/guestCheckout_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/guestCheckout_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/invalid.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/invalid.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/needaccount.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/needaccount.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/refer.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/refer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/signup.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/signup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/ui_test_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ui_test_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/signupCredentials.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_ContactUS.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_ContactUS.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_ReferaFriend.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_ReferaFriend.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_categories.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_categories.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_needanaccount.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_needanaccount.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_signUp.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_signUp.py" afterDir="false" />
-    </list>
+    <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -186,13 +160,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616787846440</updated>
-    </task>
-    <task id="LOCAL-00247" summary="Merge remote-tracking branch 'github/main' into main">
-      <created>1626090566681</created>
-      <option name="number" value="00247" />
-      <option name="presentableId" value="LOCAL-00247" />
-      <option name="project" value="LOCAL" />
-      <updated>1626090566681</updated>
     </task>
     <task id="LOCAL-00248" summary="Merge remote-tracking branch 'github/main' into main">
       <created>1626091292964</created>
@@ -530,7 +497,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632412660953</updated>
     </task>
-    <option name="localTasksCounter" value="296" />
+    <task id="LOCAL-00296" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1632412674409</created>
+      <option name="number" value="00296" />
+      <option name="presentableId" value="LOCAL-00296" />
+      <option name="project" value="LOCAL" />
+      <updated>1632412674409</updated>
+    </task>
+    <option name="localTasksCounter" value="297" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
