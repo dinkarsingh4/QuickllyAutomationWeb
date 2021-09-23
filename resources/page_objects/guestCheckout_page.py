@@ -1,13 +1,8 @@
 import time
-
-import gevent.select
-
 from resources.config_methods import DataClass
 from resources.locators import GuestCheckout
 from resources.page_objects.base_page import BasePage
 from selenium.webdriver.common.keys import Keys as K
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 
 
 class CheckoutWithGuest(BasePage):
@@ -24,7 +19,6 @@ class CheckoutWithGuest(BasePage):
         self.click(GuestCheckout.goFresh)
 
     def click_Potato(self):
-        # self.click(GuestCheckout.potatoImage)
         element = self.driver.find_element_by_xpath('//*[@id="img_270"]')
         self.driver.execute_script("arguments[0].click();", element)
 

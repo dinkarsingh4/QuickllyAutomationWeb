@@ -66,7 +66,6 @@ class TesCATEGORIES(ui_test_class.UVXIIIClass):
 
     def test_foodBeverages(self):
         time.sleep(2)
-        # self.driver.implicitly_wait(10)
         self.category_page.click_Beverages()
         label = self.category_page.get_attribute(Category.StoreLabel, 'textContent')
         print(label)

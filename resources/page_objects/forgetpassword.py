@@ -4,7 +4,6 @@ from resources.page_objects.base_page import BasePage
 
 
 class forgetpass(BasePage):
-    """Privacy Error Page of Invisily Admin Portal"""
 
     def __init__(self, driver):
         super().__init__(driver)

@@ -22,6 +22,7 @@ from resources.page_objects.category import GroceryCategories
 from resources.page_objects.link import ContactUsLinks
 from resources.page_objects.guestCheckout_page import CheckoutWithGuest
 from resources.page_objects.invalid import InvalidZipcodes
+from resources.page_objects.guestlogin import LoginAsGuest
 from selenium.webdriver import Remote
 
 
@@ -382,6 +383,29 @@ class UVXVClass(unittest.TestCase):
         cls.driver.close()
         cls.driver.quit()
         super(UVXVClass, cls).tearDownClass()
+
+class UVXVIClass(unittest.TestCase):
+    aut_prefix = 'automation_'
+    driver: Remote = None
+    const_data = DataClass
+
+    guestLogin_page: BasePage = None
+
+    @classmethod
+    def setUpClass(cls):
+        super(UVXVIClass, cls).setUpClass()
+        cls.guestLogin_page = BasePage(cls.driver)
+        cls.common_methods = Common(cls.driver)
+        cls.driver = cls.guestLogin_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
+        cls.guestLogin_page.driver = cls.driver
+        cls.guestLogin_page = LoginAsGuest(cls.driver)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
+        super(UVXVIClass, cls).tearDownClass()
 
     @classmethod
     def login(cls):

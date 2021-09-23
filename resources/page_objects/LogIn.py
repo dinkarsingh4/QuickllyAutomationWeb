@@ -4,7 +4,6 @@ from resources.page_objects.base_page import BasePage
 
 
 class Login(BasePage):
-    """Log In Page of Quicklly.com"""
 
     def __init__(self, driver):
         super().__init__(driver)

@@ -1,5 +1,4 @@
 import time
-
 from resources.config_methods import DataClass
 from resources.locators import MiniCart
 from resources.page_objects.base_page import BasePage
@@ -62,7 +61,6 @@ class Cart(BasePage):
     def click_minus(self):
         element = self.driver.find_element_by_xpath('//*[@id="qty_cart_270"]/a[1]')
         self.driver.execute_script("arguments[0].click();", element)
-        # self.click(MiniCart.MinusQuantity)
 
     def click_delete(self):
         self.click(MiniCart.delete_item)
@@ -221,14 +219,12 @@ class Cart(BasePage):
 
     def EnterCardNumber(self, credit):
         WebDriverWait(self.driver, self.wait).until(EC.presence_of_element_located(MiniCart.CreditCardNumber))
-        # self.click(MiniCart.clickCredit)
         self.find_elements(MiniCart.CreditCardNumber).clear()
         self.find_element(MiniCart.CreditCardNumber).send_keys(credit)
 
     def click_Credit(self):
         time.sleep(1)
         WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(MiniCart.clickCredit)).click()
-        # self.click(MiniCart.clickCredit)
 
     def EnterExpiry(self, expiration):
         self.find_elements(MiniCart.Expiration).clear()

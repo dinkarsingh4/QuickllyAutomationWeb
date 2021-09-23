@@ -1,3 +1,5 @@
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from resources.config_methods import DataClass
 from resources.locators import NeedAnAccount
 from resources.page_objects.base_page import BasePage
@@ -5,7 +7,6 @@ from resources.page_objects.base_page import BasePage
 
 
 class needanaccount(BasePage):
-    """Privacy Error Page of Invisily Admin Portal"""
 
     def __init__(self, driver):
         super().__init__(driver)
@@ -58,4 +59,3 @@ class needanaccount(BasePage):
         WebDriverWait(self.driver, self.wait).until(EC.presence_of_element_located(NeedAnAccount.googleError))
         Error = self.get_attribute(NeedAnAccount.googleError, 'innerHTML')
         print(Error)
-

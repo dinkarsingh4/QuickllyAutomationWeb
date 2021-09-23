@@ -2,9 +2,6 @@ from resources.config_methods import DataClass
 from resources.locators import Coupon
 from resources.page_objects.base_page import BasePage
 from selenium.webdriver.common.keys import Keys as K
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-
 
 
 class evoucher(BasePage):
@@ -42,8 +39,6 @@ class evoucher(BasePage):
         self.scroll_to_element(Coupon.additem)
         element = self.driver.find_element_by_xpath('//*[@id="img_270"]')
         self.driver.execute_script("arguments[0].click();", element)
-        # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Coupon.additem)).click()
-        # self.click(Coupon.additem)
 
     def click_AddItem1(self):
         self.click(Coupon.additem2)
@@ -55,27 +50,25 @@ class evoucher(BasePage):
     def click_Checkout(self):
         self.click(Coupon.proceed_to_checkOut)
 
-    def EnterEvoucher(self, evoucher):
+    def EnterEvoucher(self, eVoucher):
         self.find_elements(Coupon.evoucher_text_box).clear()
-        self.find_element(Coupon.evoucher_text_box).send_keys(evoucher)
+        self.find_element(Coupon.evoucher_text_box).send_keys(eVoucher)
 
-    def EnterEvoucher1(self, evoucher):
+    def EnterEvoucher1(self, eVoucher):
         self.find_elements(Coupon.evoucher_text_box).clear()
-        self.find_element(Coupon.evoucher_text_box).send_keys(evoucher)
+        self.find_element(Coupon.evoucher_text_box).send_keys(eVoucher)
         self.find_element(Coupon.evoucher_text_box).send_keys(K.CONTROL, 'a')
         self.find_element(Coupon.evoucher_text_box).send_keys(K.CONTROL, 'x')
         self.find_element(Coupon.evoucher_text_box).send_keys(K.CONTROL, 'v')
 
 
     def click_apply(self):
-        # self.scroll_to_element(Coupon.Apply)
         element = self.driver.find_element_by_xpath('//*[@id="parRadioOne"]/a')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_fresh(self):
         element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[8]/div[1]/div/div/a[2]/img')
         self.driver.execute_script("arguments[0].click();", element)
-        # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Coupon.GoFresh)).click()
 
     def click_item(self):
         self.scroll_to_element(Coupon.item1)
@@ -86,4 +79,3 @@ class evoucher(BasePage):
 
     def click_Checkout2(self):
         self.click(Coupon.checkout2)
-

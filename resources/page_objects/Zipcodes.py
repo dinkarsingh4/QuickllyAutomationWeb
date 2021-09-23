@@ -1,9 +1,6 @@
 from resources.config_methods import DataClass
 from resources.locators import ZipCode
 from resources.page_objects.base_page import BasePage
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-
 
 
 class Zip(BasePage):
@@ -23,10 +20,8 @@ class Zip(BasePage):
     def click_quicklly(self):
         element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/header/a/img')
         self.driver.execute_script("arguments[0].click();", element)
-        # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(ZipCode.quicklly)).click()
 
     def click_department(self):
-        # self.click(ZipCode.department)
         element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/header/div[2]/div/div[1]/div[1]/span')
         self.driver.execute_script("arguments[0].click();", element)
 

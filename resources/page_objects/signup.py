@@ -1,11 +1,8 @@
 import time
-
 from resources.config_methods import DataClass
 from resources.locators import SignUp
 from resources.page_objects.base_page import BasePage
 from selenium.webdriver.common.keys import Keys as K
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 
 
 class signUp(BasePage):

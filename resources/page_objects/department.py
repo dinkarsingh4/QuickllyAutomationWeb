@@ -1,5 +1,3 @@
-from selenium.webdriver.remote.webelement import WebElement
-
 from resources.config_methods import DataClass
 from resources.locators import Department
 from resources.page_objects.base_page import BasePage
@@ -21,11 +19,7 @@ class Dept(BasePage):
         self.click(Department.submit_zip)
 
     def select_dropdown(self):
-        # element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/header/div[3]/span')
-        # self.driver.execute_script("arguments[0].click();", element)
         WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.yourAccount)).click()
-
-        # self.click(Department.yourAccount)
 
     def click_signin(self):
         self.scroll_to_element(Department.SignInButton)
@@ -69,12 +63,7 @@ class Dept(BasePage):
         self.click(Department.Pay)
 
     def click_InstantPot(self):
-        # WebDriverWait(self.driver, self.wait).until(EC.presence_of_element_located(Department.Pot))
-        # element = self.driver.find_element_by_xpath('/html/body/header/div[2]/div/div[1]/div[1]/div/div/ul/li[8]/a')
-        # self.driver.execute_script("arguments[0].click();", element)
-        # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.Pot)).click()
         self.click(Department.Pot)
-        # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.Pot)).click()
 
     def click_Department(self):
         self.click(Department.Department)
@@ -88,8 +77,6 @@ class Dept(BasePage):
     def click_Add(self):
         self.scroll_to_element(Department.Add)
         WebDriverWait(self.driver, self.wait).until(EC.visibility_of_element_located(Department.Add))
-        # WebDriverWait(self.driver, self.wait).until(EC.presence_of_element_located(Department.Add))
-        # self.click(Department.Add)
         element = self.driver.find_element_by_xpath('//*[@id="img_77024"]')
         self.driver.execute_script("arguments[0].click();", element)
 
@@ -111,13 +98,11 @@ class Dept(BasePage):
 
     def click_fresh(self):
         WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.GoFresh)).click()
-        # self.click(Department.GoFresh)
 
     def click_ADDLG(self):
         self.click(Department.AddToCartLG)
 
     def click_addPotato(self):
-        # self.click(Department.addSecondItem)
         element = self.driver.find_element_by_xpath('//*[@id="img_51875"]')
         self.driver.execute_script("arguments[0].click();", element)
 
@@ -126,10 +111,8 @@ class Dept(BasePage):
 
     def click_food(self):
         self.click(Department.food)
-        # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.food)).click()
 
     def click_MakkiFood(self):
-        # self.click(Department.MakkiFastFood)
         element = self.driver.find_element_by_xpath('//*[@id="load_data"]/div[2]/a')
         self.driver.execute_script("arguments[0].click();", element)
 
@@ -137,7 +120,6 @@ class Dept(BasePage):
         self.scroll_to_element(Department.AddTenders)
         element = self.driver.find_element_by_xpath('//*[@id="load_data"]/div[2]/div/div[2]/a')
         self.driver.execute_script("arguments[0].click();", element)
-        # self.click(Department.AddTenders)
 
     def click_AddToCartTenders(self):
         self.click(Department.TendersAddToCart)
@@ -148,7 +130,6 @@ class Dept(BasePage):
     def click_BBQ(self):
         element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[5]/div/div/div/div/a[7]/img')
         self.driver.execute_script("arguments[0].click();", element)
-        # self.click(Department.BBQKit)
 
     def click_TikkaImage(self):
         self.click(Department.chickenTikkaImage)
@@ -160,7 +141,6 @@ class Dept(BasePage):
         self.click(Department.Catering)
 
     def click_Hyderabad(self):
-        # self.click(Department.HyderabadHouse)
         element = self.driver.find_element_by_xpath('//*[@id="Catering"]/div/div[1]/a')
         self.driver.execute_script("arguments[0].click();", element)
 
@@ -176,14 +156,12 @@ class Dept(BasePage):
         self.click(Department.submitBeef)
 
     def click_mealBasket(self):
-        # self.click(Department.mealBasket)
         WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.mealBasket)).click()
 
     def select_mealPlan(self):
         self.scroll_to_element(Department.MealPlan)
         element = self.driver.find_element_by_xpath('//*[@id="meal-basket"]/div[2]/div[1]/a')
         self.driver.execute_script("arguments[0].click();", element)
-        # self.click(Department.MealPlan)
 
     def click_Korma(self):
         self.scroll_to_element(Department.AddKorma)
@@ -191,8 +169,6 @@ class Dept(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def Plus_Korma(self):
-        # self.click(Department.plusKorma)
-        # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.plusKorma)).click()
         element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[3]/div/div[1]/div[1]/p/a/span[3]')
         self.driver.execute_script("arguments[0].click();", element)
 
@@ -205,29 +181,24 @@ class Dept(BasePage):
     def click_Chicago(self):
         element = self.driver.find_element_by_xpath('//*[@id="tiffin-services"]/div/div[1]/a')
         self.driver.execute_script("arguments[0].click();", element)
-        # self.click(Department.ChicagoTiffin)
 
     def select_VegThali(self):
         element = self.driver.find_element_by_xpath('//*[@id="TiffinServices"]/div[2]/div[1]/a')
         self.driver.execute_script("arguments[0].click();", element)
-        # self.click(Department.VegThali)
 
     def click_AddToCartVT(self):
         self.click(Department.AddToCartVegThali)
 
     def submitVT(self):
         WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.submitVT)).click()
-        # self.click(Department.submitVT)
 
     def click_MealKit(self):
         # self.click(Department.MealKit)
         self.driver.implicitly_wait(20)
         element = self.driver.find_element_by_css_selector('#searchhide > div.grocerySpecialSlider.clsFoodSpl > div > div > div > div > a:nth-child(8) > img')
         self.driver.execute_script("arguments[0].click();", element)
-        # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.MealKit)).click()
 
     def select_MealPlan20(self):
-        # self.click(Department.selectMealKit)
         self.scroll_to_element(Department.selectMealKit)
         element = self.driver.find_element_by_xpath('//*[@id="meal-kit"]/div[2]/div[1]/form/a')
         self.driver.execute_script("arguments[0].click();", element)
@@ -235,12 +206,10 @@ class Dept(BasePage):
     def click_CuminCLub(self):
         element = self.driver.find_element_by_xpath('//*[@id="home"]/div/div[4]/div/a/div/img')
         self.driver.execute_script("arguments[0].click();", element)
-        # self.click(Department.CuminClub)
 
     def click_Papad(self):
         element = self.driver.find_element_by_xpath('/html/body/div[6]/div/div/div[1]/div[3]/div[3]/a')
         self.driver.execute_script("arguments[0].click();", element)
-        # self.click(Department.AddPapad)
 
     def Plus_Papad(self):
         self.click(Department.plusPapad)
@@ -264,7 +233,6 @@ class Dept(BasePage):
 
     def click_timeOfDelivery(self):
         WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.timeDelivery)).click()
-        # self.click(Department.timeDelivery)
 
     def click_TickBox(self):
         self.scroll_to_element(Department.clickTick)
@@ -278,8 +246,6 @@ class Dept(BasePage):
         self.driver.implicitly_wait(30)
         element = self.driver.find_element_by_css_selector('#searchhide > div.grocerySpecialSlider.clsFoodSpl > div > div > div > div > a:nth-child(6) > img')
         self.driver.execute_script("arguments[0].click();", element)
-        # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.OrganicGrocery)).click()
-        # self.click(Department.OrganicGrocery)
 
     def click_BuildBox(self):
         self.scroll_to_element(Department.BuildABox)
@@ -287,7 +253,6 @@ class Dept(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_AddJowar(self):
-        # self.click(Department.AddOrganicJowar)
         element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[2]/div[3]/div/div[1]/div[3]/div[1]/a')
         self.driver.execute_script("arguments[0].click();", element)
 
@@ -299,24 +264,20 @@ class Dept(BasePage):
 
     def click_rotiKit(self):
         WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.rotiKIt)).click()
-        # self.click(Department.rotiKIt)
 
     def click_RotiBox(self):
         self.scroll_to_element(Department.buildRotiBox)
         element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/section[1]/div/div/div[2]/div[4]/form/button')
         self.driver.execute_script("arguments[0].click();", element)
-        # self.click(Department.buildRotiBox)
 
     def click_AddWholeWheatRoti(self):
         self.scroll_to_element(Department.AddWholeWheatRoti)
         element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[2]/div[3]/div/div[1]/div[3]/div[2]/a')
         self.driver.execute_script("arguments[0].click();", element)
-        # self.click(Department.AddWholeWheatRoti)
 
     def click_AddToCartRoti(self):
         element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[3]/div/div/div[3]/button')
         self.driver.execute_script("arguments[0].click();", element)
-        # self.click(Department.AddToCartRoti)
 
     def click_Checkout2(self):
         self.click(Department.checkout2)
@@ -330,11 +291,6 @@ class Dept(BasePage):
     def click_classicLime(self):
         element = self.driver.find_element_by_xpath('//*[@id="img_138002"]')
         self.driver.execute_script("arguments[0].click();", element)
-        # self.click(Department.classicLime)
 
     def click_AddToCartBeer(self):
         self.click(Department.AddToCartBeer)
-
-
-
-

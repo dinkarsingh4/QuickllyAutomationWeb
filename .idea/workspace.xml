@@ -5,19 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main">
-      <change afterPath="$PROJECT_DIR$/resources/page_objects/category.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/page_objects/invalid.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/page_objects/link.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testing_InvalidZipcodes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testing_categories.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testing_links.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/page_objects/guestlogin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testing_guestLogin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/locators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/LogIn.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/LogIn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/Zipcodes.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/Zipcodes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/cart.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/cart.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/category.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/category.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/contact_us.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/contact_us.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/department.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/department.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/eVoucher.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/eVoucher.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/page_objects/forgetpassword.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/forgetpassword.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/guestCheckout_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/guestCheckout_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/invalid.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/invalid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/needaccount.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/needaccount.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/refer.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/refer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/signup.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/signup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/ui_test_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ui_test_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/sample.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_forgotpassword.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_forgotpassword.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/signupCredentials.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_ContactUS.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_ContactUS.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_ReferaFriend.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_ReferaFriend.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_categories.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_categories.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_needanaccount.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_needanaccount.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_signUp.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_signUp.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,21 +90,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for testing_InvalidZipcodes.TesIZ">
-    <configuration name="Python tests for testing_GuestCheckout.TesCHECKOUTWITHGUEST" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="gitAutomation" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;testing_GuestCheckout.TesCHECKOUTWITHGUEST&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Python tests for testing_guestLogin.TesGUESTLOGIN">
     <configuration name="Python tests for testing_InvalidZipcodes.TesIZ" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -135,6 +133,20 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for testing_guestLogin.TesGUESTLOGIN" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="gitAutomation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;testing_guestLogin.TesGUESTLOGIN&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests for testing_links.TesLINKS" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -150,19 +162,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python tests.Python tests for testing_GuestCheckout.TesCHECKOUTWITHGUEST" />
       <item itemvalue="Python tests.Python tests for testing_department.TesDEPARTMENT" />
       <item itemvalue="Python tests.Python tests for testing_categories.TesCATEGORIES" />
       <item itemvalue="Python tests.Python tests for testing_links.TesLINKS" />
       <item itemvalue="Python tests.Python tests for testing_InvalidZipcodes.TesIZ" />
+      <item itemvalue="Python tests.Python tests for testing_guestLogin.TesGUESTLOGIN" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for testing_guestLogin.TesGUESTLOGIN" />
         <item itemvalue="Python tests.Python tests for testing_InvalidZipcodes.TesIZ" />
         <item itemvalue="Python tests.Python tests for testing_links.TesLINKS" />
         <item itemvalue="Python tests.Python tests for testing_categories.TesCATEGORIES" />
         <item itemvalue="Python tests.Python tests for testing_department.TesDEPARTMENT" />
-        <item itemvalue="Python tests.Python tests for testing_GuestCheckout.TesCHECKOUTWITHGUEST" />
       </list>
     </recent_temporary>
   </component>
@@ -174,13 +186,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616787846440</updated>
-    </task>
-    <task id="LOCAL-00245" summary="Merge remote-tracking branch 'github/main' into main">
-      <created>1626088987694</created>
-      <option name="number" value="00245" />
-      <option name="presentableId" value="LOCAL-00245" />
-      <option name="project" value="LOCAL" />
-      <updated>1626088987694</updated>
     </task>
     <task id="LOCAL-00246" summary="Merge remote-tracking branch 'github/main' into main">
       <created>1626089796917</created>
@@ -518,7 +523,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629969646276</updated>
     </task>
-    <option name="localTasksCounter" value="294" />
+    <task id="LOCAL-00294" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1630354168776</created>
+      <option name="number" value="00294" />
+      <option name="presentableId" value="LOCAL-00294" />
+      <option name="project" value="LOCAL" />
+      <updated>1630354168777</updated>
+    </task>
+    <option name="localTasksCounter" value="295" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">

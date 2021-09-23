@@ -31,5 +31,3 @@ class TesREFERAFRIEND(ui_test_class.UVXIClass):
     def test_clickTwitter(self):
         self.refer_page.click_twitter()
         self.refer_page.click_twitterLink()
-
-

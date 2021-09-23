@@ -94,6 +94,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/resources/page_objects/guestlogin.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/resources/page_objects/invalid.py">
           <value>
             <Attribute>
@@ -193,6 +200,13 @@
           </value>
         </entry>
         <entry key="/tests/testing_forgotpassword.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/tests/testing_guestLogin.py">
           <value>
             <Attribute>
               <option name="separator" value=":" />

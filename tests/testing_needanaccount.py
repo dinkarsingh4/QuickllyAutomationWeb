@@ -1,12 +1,6 @@
-import time
-# from waiting import wait
 from resources import ui_test_class
 from resources.page_objects.needaccount import NeedAnAccount
 from resources.page_objects.needaccount import needanaccount
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-
-
 
 
 class TesNAC(ui_test_class.UIIIClass):

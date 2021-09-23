@@ -1,5 +1,4 @@
 import time
-
 from resources import ui_test_class
 from resources.locators import SignUp
 from resources.page_objects.signup import signUp
@@ -43,11 +42,5 @@ class TesSIGNUP(ui_test_class.UVXClass):
 
     def test_signup(self):
         self.Credentials()
-
-        # self.signup_page.click_signin()
-        # self.signup_page.EnterEmail2(email)
-        # self.signup_page.EnterPassword2(password)
-        # self.signup_page.click_login()
-        # time.sleep(25)
 
 
