@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main" />
+    <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,7 +66,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for testing_guestLogin.TesGUESTLOGIN">
+  <component name="RunManager" selected="Python tests.Python tests for testing_categories.TesCATEGORIES">
     <configuration name="Python tests for testing_InvalidZipcodes.TesIZ" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -144,10 +146,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for testing_categories.TesCATEGORIES" />
         <item itemvalue="Python tests.Python tests for testing_guestLogin.TesGUESTLOGIN" />
         <item itemvalue="Python tests.Python tests for testing_InvalidZipcodes.TesIZ" />
         <item itemvalue="Python tests.Python tests for testing_links.TesLINKS" />
-        <item itemvalue="Python tests.Python tests for testing_categories.TesCATEGORIES" />
         <item itemvalue="Python tests.Python tests for testing_department.TesDEPARTMENT" />
       </list>
     </recent_temporary>
@@ -160,13 +162,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616787846440</updated>
-    </task>
-    <task id="LOCAL-00248" summary="Merge remote-tracking branch 'github/main' into main">
-      <created>1626091292964</created>
-      <option name="number" value="00248" />
-      <option name="presentableId" value="LOCAL-00248" />
-      <option name="project" value="LOCAL" />
-      <updated>1626091292964</updated>
     </task>
     <task id="LOCAL-00249" summary="Merge remote-tracking branch 'github/main' into main">
       <created>1626093148348</created>
@@ -504,7 +499,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632412674409</updated>
     </task>
-    <option name="localTasksCounter" value="297" />
+    <task id="LOCAL-00297" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1632413089519</created>
+      <option name="number" value="00297" />
+      <option name="presentableId" value="LOCAL-00297" />
+      <option name="project" value="LOCAL" />
+      <updated>1632413089519</updated>
+    </task>
+    <option name="localTasksCounter" value="298" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
