@@ -48,4 +48,6 @@ class GroceryCategories(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_Weekly(self):
-        self.click(Category.weeklyDeals)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[8]/div[2]/div/div/a[1]')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(Category.weeklyDeals)
