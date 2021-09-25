@@ -27,7 +27,7 @@ class TesLINKS(ui_test_class.UVXIVClass):
     def test_facebookLink(self):
         self.link_page.click_Facebook()
         self.driver.get("https://www.facebook.com/quickllyfoodandgroceries/")
-        label = self.link_page.get_attribute(Links.fbLabel, 'innerHTML')
+        # label = self.link_page.get_attribute(Links.fbLabel, 'innerHTML')
         self.driver.get("https://www.uat.quicklly.com/")
         self.assertEqual(label, self.expected)
 
