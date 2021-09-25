@@ -79,7 +79,7 @@ class TesCATEGORIES(ui_test_class.UVXIIIClass):
         self.assertEqual(label, self.expected6)
 
     def test_personalCare(self):
-        time.sleep(2)
+        time.sleep(10)
         self.category_page.click_personalCare()
         label = self.category_page.get_attribute(Category.StoreLabel, 'innerHTML')
         print(label)

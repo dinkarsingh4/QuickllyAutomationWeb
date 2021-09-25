@@ -39,9 +39,9 @@ class GroceryCategories(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_personalCare(self):
-        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[6]/div[1]/div/div/a[7]/img')
+        element = self.driver.find_element_by_css_selector('#searchhide > div.grocerySpecialSlider.clsGroceryCats > div.clsSliderCats.slick-initialized.slick-slider > div > div > a:nth-child(7) > img')
         self.driver.execute_script("arguments[0].click();", element)
-        self.click(Category.PersonalCare)
+        # self.click(Category.PersonalCare)
 
     def click_Household(self):
         element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[6]/div[1]/div/div/a[8]/img')
