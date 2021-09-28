@@ -128,7 +128,7 @@ class Dept(BasePage):
         self.click(Department.submitTenders)
 
     def click_BBQ(self):
-        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[5]/div/div/div/div/a[7]/img')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[5]/div/div/div/div/a[9]/img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_TikkaImage(self):
@@ -195,12 +195,12 @@ class Dept(BasePage):
     def click_MealKit(self):
         # self.click(Department.MealKit)
         self.driver.implicitly_wait(20)
-        element = self.driver.find_element_by_css_selector('#searchhide > div.grocerySpecialSlider.clsFoodSpl > div > div > div > div > a:nth-child(8) > img')
+        element = self.driver.find_element_by_css_selector('#searchhide > div.grocerySpecialSlider.clsFoodSpl > div > div > div > div > a:nth-child(9) > img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def select_MealPlan20(self):
         self.scroll_to_element(Department.selectMealKit)
-        element = self.driver.find_element_by_xpath('//*[@id="meal-kit"]/div[2]/div[1]/form/a')
+        element = self.driver.find_element_by_css_selector('#meal-kit > div.clsSlider > div:nth-child(1) > form > a')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_CuminCLub(self):
@@ -244,7 +244,7 @@ class Dept(BasePage):
 
     def click_OrganicGrocery(self):
         self.driver.implicitly_wait(30)
-        element = self.driver.find_element_by_css_selector('#searchhide > div.grocerySpecialSlider.clsFoodSpl > div > div > div > div > a:nth-child(6) > img')
+        element = self.driver.find_element_by_css_selector('#searchhide > div.grocerySpecialSlider.clsFoodSpl > div > div > div > div > a:nth-child(8) > img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_BuildBox(self):

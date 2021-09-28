@@ -17,6 +17,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/config.yaml">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/conftest.py">
           <value>
             <Attribute>
@@ -228,6 +235,13 @@
           </value>
         </entry>
         <entry key="/tests/testing_needanaccount.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/tests/testing_payment.py">
           <value>
             <Attribute>
               <option name="separator" value=":" />

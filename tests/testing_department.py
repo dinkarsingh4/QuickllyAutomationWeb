@@ -68,6 +68,8 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
 
     def BBQKIT(self):
         time.sleep(5)
+        self.depart_page.click_RightArrow()
+        time.sleep(2)
         self.depart_page.click_BBQ()
         self.depart_page.click_TikkaImage()
         self.depart_page.click_AddChickenTikkaToCart()
@@ -229,6 +231,7 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         AccountLabel = self.depart_page.get_attribute(Department.Account, 'innerHTML')
         print(AccountLabel)
         self.assertEqual(self.actual2, AccountLabel)
+        time.sleep(100000)
 
     def test_shopWithGrocery(self):
         self.depart_page.click_quicklly()
