@@ -289,7 +289,7 @@ class Department:
     AddKorma = (By.XPATH, '//*[@id="searchhide"]/div[3]/div/div[1]/div[1]/div[3]/div[3]/a')
     plusKorma = (By.XPATH, '//*[@id="searchhide"]/div[3]/div/div[1]/div[1]/p/a/span[3]')
     AddToCartCK = (By.XPATH, '//*[@id="searchhide"]/div[2]/p/span[2]/a')
-    TiffinServices = (By.XPATH, '/html/body/div[1]/div[5]/div/div/div/div/a[6]/img')
+    TiffinServices = (By.CSS_SELECTOR, '#searchhide > div.grocerySpecialSlider.clsFoodSpl > div > div > div > div > a:nth-child(6) > img')
     ChicagoTiffin = (By.XPATH, '//*[@id="tiffin-services"]/div/div[1]/a')
     VegThali = (By.XPATH, '//*[@id="TiffinServices"]/div[2]/div[1]/a')
     AddToCartVegThali = (By.XPATH, '//*[@id="dvDialog-Custom"]/div/div[2]/a')
