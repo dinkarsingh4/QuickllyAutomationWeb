@@ -66,7 +66,10 @@ class Dept(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_Pay(self):
-        self.click(Department.Pay)
+        element = self.driver.find_element_by_id('pay_amount')
+        self.driver.execute_script("arguments[0].click();", element)
+        # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.Pay)).click()
+        # self.click(Department.Pay)
 
     def click_InstantPot(self):
         self.click(Department.Pot)
