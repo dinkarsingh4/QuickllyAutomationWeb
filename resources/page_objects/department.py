@@ -353,10 +353,16 @@ class Dept(BasePage):
         # self.click(Department.AddMisalPav)
 
     def click_PlusMixVegetable(self):
-        self.click(Department.PlusMixVegetable)
+        element = self.driver.find_element_by_xpath(
+            '/html/body/div[5]/section[3]/div/div/div[1]/div[1]/div[3]/p/a/span[3]')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(Department.PlusMixVegetable)
 
     def click_AddToCartNW(self):
-        self.click(Department.AddToCartNW)
+        element = self.driver.find_element_by_xpath(
+            '/html/body/div[5]/section[3]/div/div/div[2]/button')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(Department.AddToCartNW)
 
     def click_Methai(self):
         self.click(Department.MethaiPaneer)

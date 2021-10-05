@@ -69,6 +69,12 @@ class TesPAYMENT(ui_test_class.UVXVIIClass):
         self.payment_page.click_Checkout()
         self.payment_page.click_Checkout2()
 
+    def switchFrames(self):
+        self.driver.switch_to_default_content()
+        WebDriverWait(self.driver, 10).until(
+            EC.frame_to_be_available_and_switch_to_it(
+                self.driver.find_element_by_css_selector('#braintree-dropin-modal-frame')))
+
     def test_EnterZipCode(self):
         self.payment_page.zip("60611")
         self.payment_page.submit_zip()
@@ -101,11 +107,7 @@ class TesPAYMENT(ui_test_class.UVXVIIClass):
 
     def test_paymentMethod(self):
         self.payment_page.click_paymentMethod()
-        self.driver.switch_to_default_content()
-        WebDriverWait(self.driver, 10).until(
-            EC.frame_to_be_available_and_switch_to_it(
-                self.driver.find_element_by_css_selector('#braintree-dropin-modal-frame')))
-        # self.payment_page.label()
+        self.switchFrames()
         AddPaymentLabel = self.payment_page.get_attribute(Payment.AddMethod, 'innerHTML')
         print(AddPaymentLabel)
         self.assertEqual(self.actual4, AddPaymentLabel)
