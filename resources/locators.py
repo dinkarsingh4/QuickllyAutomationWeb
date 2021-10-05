@@ -328,7 +328,7 @@ class Department:
     ChaiAndCoffee = (By.XPATH, '/html/body/div[1]/div[5]/div/div/div/div/a[4]/img')
     ChaiBox = (By.XPATH, '/html/body/div[4]/section[1]/div/div/div[2]/div[4]/form/button')
     AddKimbala = (By.XPATH, '/html/body/div[6]/div[3]/div/div/div[1]/div[3]/div/a')
-    NationWideShop = (By.XPATH, '/html/body/div[1]/div[5]/div/div/div/div/a[5]/img')
+    NationWideShop = (By.XPATH, '//*[@id="searchhide"]/div[5]/div/div/div/div/a[5]/img')
     IndianMealKit = (By.XPATH, '/html/body/div[1]/div[7]/div[2]/div/div/div[1]/div/div[1]/div/a/div/img')
     SelectProducts = (By.XPATH, '/html/body/div[4]/section[1]/div/div/div[1]/div/div[5]/form/button')
     AddMixVegetable = (By.XPATH, '/html/body/div[5]/section[3]/div/div/div[1]/div[1]/div[3]/a')
