@@ -134,7 +134,9 @@ class Dept(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_TikkaImage(self):
-        self.click(Department.chickenTikkaImage)
+        element = self.driver.find_element_by_xpath('//*[@id="img_132523"]')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(Department.chickenTikkaImage)
 
     def click_AddChickenTikkaToCart(self):
         self.click(Department.AddTikkaToCart)
