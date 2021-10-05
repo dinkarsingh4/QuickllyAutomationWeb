@@ -370,7 +370,10 @@ class Dept(BasePage):
         # self.click(Department.AddToCartNW)
 
     def click_Methai(self):
-        self.click(Department.MethaiPaneer)
+        element = self.driver.find_element_by_xpath(
+            '/html/body/div[5]/section[3]/div/div/div[1]/div[3]/div[3]/a')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(Department.MethaiPaneer)
 
     def click_DalTadka(self):
         element = self.driver.find_element_by_xpath(
