@@ -67,6 +67,7 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.click_AddToCartPotato()
         self.depart_page.click_MiniCart1()
         self.depart_page.click_Checkout()
+        self.depart_page.click_Checkout2()
         self.depart_page.click_payment1()
         time.sleep(5)
         self.depart_page.click_Pay()
