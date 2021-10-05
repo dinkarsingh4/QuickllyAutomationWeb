@@ -109,6 +109,7 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.click_MiniCart()
         time.sleep(5)
         self.depart_page.click_Checkout()
+
         self.depart_page.click_payment1()
         time.sleep(5)
         self.depart_page.click_Pay()
@@ -130,6 +131,8 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.click_AddToCartCK()
         self.depart_page.click_MiniCart()
         self.depart_page.click_Checkout()
+        self.depart_page.click_Checkout2()
+
         time.sleep(5)
         self.depart_page.click_payment1()
         time.sleep(5)
@@ -148,6 +151,8 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         # self.depart_page.click_AddToCartVT()
         self.depart_page.click_MiniCart()
         self.depart_page.click_Checkout()
+        self.depart_page.click_Checkout2()
+
         time.sleep(5)
         self.depart_page.click_payment1()
         self.depart_page.click_Pay()
@@ -167,6 +172,8 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.click_AddToCartNW()
         self.depart_page.click_MiniCart()
         self.depart_page.click_Checkout()
+        self.depart_page.click_Checkout2()
+
         # self.depart_page.click_quicklly()
         # self.depart_page.submit_zip()
         # time.sleep(2)
@@ -202,6 +209,8 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.click_AddToBasket()
         self.depart_page.click_MiniCart()
         self.depart_page.click_Checkout()
+        self.depart_page.click_Checkout2()
+
         self.depart_page.click_payment1()
         time.sleep(5)
         self.depart_page.click_Pay()
@@ -219,6 +228,7 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.click_AddToCartJowar()
         self.depart_page.click_MiniCart()
         self.depart_page.click_Checkout()
+        self.depart_page.click_Checkout2()
         self.depart_page.click_payment1()
         time.sleep(5)
         self.depart_page.click_Pay()
@@ -297,6 +307,7 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         time.sleep(2)
         self.depart_page.click_MiniCart()
         self.depart_page.click_Checkout()
+        self.depart_page.click_Checkout2()
         self.depart_page.click_payment1()
         time.sleep(5)
         self.depart_page.click_Pay()

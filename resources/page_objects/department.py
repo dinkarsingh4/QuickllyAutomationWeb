@@ -292,7 +292,9 @@ class Dept(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_Checkout2(self):
-        self.click(Department.checkout2)
+        element = self.driver.find_element_by_xpath('//*[@id="dvFoodSuggestPopup"]/div/div/a')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(Department.checkout2)
 
     def click_Liquor(self):
         self.click(Department.liquorStore)
