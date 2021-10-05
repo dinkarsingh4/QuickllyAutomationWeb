@@ -210,11 +210,10 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.click_MiniCart()
         self.depart_page.click_Checkout()
         self.depart_page.click_Checkout2()
-
         self.depart_page.click_payment1()
         time.sleep(5)
         self.depart_page.click_Pay()
-        time.sleep(10)
+        time.sleep(20)
 
     def OrganicGrocery(self):
         self.depart_page.click_quicklly()
@@ -248,6 +247,7 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.click_AddToCartRoti()
         self.depart_page.click_MiniCart()
         self.depart_page.click_Checkout()
+        self.depart_page.click_Checkout2()
         self.depart_page.click_payment1()
         time.sleep(5)
         self.depart_page.click_Pay()

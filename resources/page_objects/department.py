@@ -169,7 +169,9 @@ class Dept(BasePage):
         self.click(Department.submitBeef)
 
     def click_mealBasket(self):
-        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.mealBasket)).click()
+        element = self.driver.find_element_by_xpath('/html/body/div[1]/div[5]/div/div/div/div/a[11]/img')
+        self.driver.execute_script("arguments[0].click();", element)
+        # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.mealBasket)).click()
 
     def select_mealPlan(self):
         self.scroll_to_element(Department.MealPlan)
