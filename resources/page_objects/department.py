@@ -84,7 +84,9 @@ class Dept(BasePage):
         self.click(Department.AddToCart)
 
     def click_quicklly(self):
-        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.quicklly)).click()
+        element = self.driver.find_element_by_xpath('/html/body/header/a/img')
+        self.driver.execute_script("arguments[0].click();", element)
+        # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.quicklly)).click()
         # self.click(Department.quicklly)
 
     def click_seeti(self):
@@ -128,7 +130,7 @@ class Dept(BasePage):
         self.click(Department.submitTenders)
 
     def click_BBQ(self):
-        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[5]/div/div/div/div/a[9]/img')
+        element = self.driver.find_element_by_xpath('/html/body/div[1]/div[5]/div/div/div/div/a[9]')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_TikkaImage(self):
@@ -195,7 +197,7 @@ class Dept(BasePage):
     def click_MealKit(self):
         # self.click(Department.MealKit)
         self.driver.implicitly_wait(20)
-        element = self.driver.find_element_by_css_selector('#searchhide > div.grocerySpecialSlider.clsFoodSpl > div > div > div > div > a:nth-child(9) > img')
+        element = self.driver.find_element_by_xpath('/html/body/div[1]/div[5]/div/div/div/div/a[10]/img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def select_MealPlan20(self):
@@ -240,11 +242,13 @@ class Dept(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_RightArrow(self):
-        self.click(Department.clickRA)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[5]/div/div/i[2]/img')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(Department.clickRA)
 
     def click_OrganicGrocery(self):
         self.driver.implicitly_wait(30)
-        element = self.driver.find_element_by_css_selector('#searchhide > div.grocerySpecialSlider.clsFoodSpl > div > div > div > div > a:nth-child(8) > img')
+        element = self.driver.find_element_by_xpath('/html/body/div[1]/div[5]/div/div/div/div/a[8]/img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_BuildBox(self):
@@ -294,3 +298,53 @@ class Dept(BasePage):
 
     def click_AddToCartBeer(self):
         self.click(Department.AddToCartBeer)
+
+    def click_ChaiAndCoffee(self):
+        element = self.driver.find_element_by_xpath('/html/body/div[1]/div[5]/div/div/div/div/a[4]/img')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(Department.ChaiAndCoffee)
+
+    def click_ChaiBox(self):
+        self.click(Department.ChaiBox)
+
+    def AddKimbala(self):
+        self.click(Department.AddKimbala)
+
+    def click_NationWideShop(self):
+        self.click(Department.NationWideShop)
+
+    def click_IndianMealKit(self):
+        self.click(Department.IndianMealKit)
+
+    def click_SelectProducts(self):
+        element = self.driver.find_element_by_xpath('/html/body/div[4]/section[1]/div/div/div[1]/div/div[5]/form/button')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(Department.SelectProducts)
+
+    def click_AddMixVegetable(self):
+        self.click(Department.AddMixVegetable)
+
+    def click_AddMisalPav(self):
+        self.click(Department.AddMisalPav)
+
+    def click_PlusMixVegetable(self):
+        self.click(Department.PlusMixVegetable)
+
+    def click_AddToCartNW(self):
+        self.click(Department.AddToCartNW)
+
+    def click_Methai(self):
+        self.click(Department.MethaiPaneer)
+
+    def click_DalTadka(self):
+        element = self.driver.find_element_by_xpath(
+            '/html/body/div[5]/section[3]/div/div/div[1]/div[4]/div[3]/a')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(Department.DalTadka)
+
+    def click_plusDalTadka(self):
+        element = self.driver.find_element_by_xpath(
+            '/html/body/div[5]/section[3]/div/div/div[1]/div[4]/div[3]/p/a/span[3]')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(Department.PlusDalTadka)
+

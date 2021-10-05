@@ -54,9 +54,10 @@ class Cart(BasePage):
         self.click(MiniCart.Add1)
 
     def click_plus(self):
-        button = WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.CSS_SELECTOR, '#qty_cart_270 > '
-                                                                                                   'a:nth-child(3)')))
-        button.click()
+        element = self.driver.find_element_by_xpath('//*[@id="qty_cart_270"]/a[2]')
+        self.driver.execute_script("arguments[0].click();", element)
+        # button = WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.CSS_SELECTOR, '#qty_cart_270 > ''a:nth-child(3)')))
+        # button.click()
 
     def click_minus(self):
         element = self.driver.find_element_by_xpath('//*[@id="qty_cart_270"]/a[1]')
@@ -75,7 +76,8 @@ class Cart(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_AddItem1(self):
-        self.click(MiniCart.additem2)
+        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(MiniCart.additem2)).click()
+        # self.click(MiniCart.additem2)
 
     def click_order(self):
         self.click(MiniCart.orderFood)
@@ -93,7 +95,10 @@ class Cart(BasePage):
         self.click(MiniCart.additem1)
 
     def click_Additem2(self):
-        self.click(MiniCart.addToCart)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[6]/div/section[2]/div/a[1]')
+        self.driver.execute_script("arguments[0].click();", element)
+        # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(MiniCart.addToCart)).click()
+        # self.click(MiniCart.addToCart)
 
     def click_rightArrow(self):
         self.click(MiniCart.right_arrow)
@@ -267,3 +272,6 @@ class Cart(BasePage):
 
     def click_Search(self):
         self.click(MiniCart.HitSearch)
+
+    def click_Checkout2(self):
+        self.click(MiniCart.checkout2)
