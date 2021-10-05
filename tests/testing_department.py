@@ -142,7 +142,7 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
     def tiffin(self):
         self.depart_page.click_quicklly()
         self.depart_page.submit_zip()
-        time.sleep(2)
+        time.sleep(5)
         self.depart_page.click_Tiffin()
         self.depart_page.click_Chicago()
         self.depart_page.select_VegThali()

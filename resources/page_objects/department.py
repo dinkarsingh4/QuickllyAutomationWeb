@@ -191,7 +191,9 @@ class Dept(BasePage):
         self.click(Department.AddToCartCK)
 
     def click_Tiffin(self):
-        self.click(Department.TiffinServices)
+        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.TiffinServices)).click()
+
+        # self.click(Department.TiffinServices)
 
     def click_Chicago(self):
         element = self.driver.find_element_by_xpath('//*[@id="tiffin-services"]/div/div[1]/a')
