@@ -330,7 +330,9 @@ class Dept(BasePage):
         # self.click(Department.AddKimbala)
 
     def click_NationWideShop(self):
-        self.click(Department.NationWideShop)
+        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.NationWideShop)).click()
+
+        # self.click(Department.NationWideShop)
 
     def click_IndianMealKit(self):
         element = self.driver.find_element_by_xpath(
