@@ -333,7 +333,10 @@ class Dept(BasePage):
         self.click(Department.NationWideShop)
 
     def click_IndianMealKit(self):
-        self.click(Department.IndianMealKit)
+        element = self.driver.find_element_by_xpath(
+            '/html/body/div[1]/div[7]/div[2]/div/div/div[1]/div/div[1]/div/a/div/img')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(Department.IndianMealKit)
 
     def click_SelectProducts(self):
         element = self.driver.find_element_by_xpath('/html/body/div[4]/section[1]/div/div/div[1]/div/div[5]/form/button')
