@@ -16,6 +16,9 @@ class TesPAYMENT(ui_test_class.UVXVIIClass):
     expected_res = "Card Number"
     expected_res1 = "Expiration Date"
     expected_res2 = "CVV"
+    actual6 = "158"
+    actual7 = "Proceed to Payment"
+    actual8 = "Pay"
     mp = {}
 
     @classmethod
@@ -53,6 +56,16 @@ class TesPAYMENT(ui_test_class.UVXVIIClass):
 
         print(self.mp)
 
+    def addItem(self):
+        time.sleep(2)
+        self.payment_page.click_fresh()
+        self.payment_page.click_additem()
+        self.payment_page.click_ADDLG()
+        time.sleep(5)
+        self.payment_page.click_MiniCart1()
+        self.payment_page.click_Checkout()
+        self.payment_page.click_Checkout2()
+
     def test_EnterZipCode(self):
         self.payment_page.zip("60611")
         self.payment_page.submit_zip()
@@ -71,17 +84,17 @@ class TesPAYMENT(ui_test_class.UVXVIIClass):
         self.assertEqual(self.actual2, AccountLabel)
 
     def test_additem(self):
-        time.sleep(2)
-        self.payment_page.click_fresh()
-        self.payment_page.click_additem()
-        self.payment_page.click_ADDLG()
+        self.addItem()
         time.sleep(5)
-        self.payment_page.click_MiniCart1()
-        self.payment_page.click_Checkout()
-        self.payment_page.click_Checkout2()
+        paymentLabel = self.payment_page.get_attribute(Payment.payment, 'innerHtml')
+        print(paymentLabel)
+        self.assertEqual(self.actual7, paymentLabel)
 
     def test_clickPayment(self):
         self.payment_page.click_payment1()
+        payLabel = self.payment_page.get_attribute(Payment.Pay, 'value')
+        print(payLabel)
+        self.assertEqual(self.actual8, payLabel)
 
     def test_paymentMethod(self):
         self.payment_page.click_paymentMethod()
@@ -104,12 +117,19 @@ class TesPAYMENT(ui_test_class.UVXVIIClass):
         self.payment_page.EnterCardNumber("5555444433331111")
         self.payment_page.EnterExpiry("0225")
         self.payment_page.EnterCVV("158")
+        value = self.payment_page.get_attribute(Payment.CVV, 'value')
+        print(value)
+        self.assertEqual(self.actual6, value)
         time.sleep(10)
 
     def test_paymentMethodDetails(self):
         self.compare_placeholders()
+        self.assertTrue(all(self.mp.values()), self.mp)
 
     def test_paymentMethodPay(self):
         self.payment_page.click_AddMethod()
         self.payment_page.click_Pay()
         time.sleep(15)
+        ThankYouLabel = self.payment_page.get_attribute(Payment.ThankYou, 'innerHTML')
+        print(ThankYouLabel)
+        self.assertEqual(self.actual1, ThankYouLabel)

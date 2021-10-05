@@ -341,7 +341,10 @@ class Dept(BasePage):
         # self.click(Department.SelectProducts)
 
     def click_AddMixVegetable(self):
-        self.click(Department.AddMixVegetable)
+        element = self.driver.find_element_by_xpath(
+            '/html/body/div[5]/section[3]/div/div/div[1]/div[1]/div[3]/a')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(Department.AddMixVegetable)
 
     def click_AddMisalPav(self):
         self.click(Department.AddMisalPav)

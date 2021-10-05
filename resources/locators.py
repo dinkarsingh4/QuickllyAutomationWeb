@@ -512,6 +512,7 @@ class Payment:
     CVV = (By.XPATH, '//*[@id="cvv"]')
     savePaymentMethod = (By.XPATH, '/html/body/div[2]/div/div/div[1]/div[2]/div[3]/div[1]/button')
     AddMethod2 = (By.XPATH, '/html/body/div[2]/div/div/div[1]/div[2]/div[3]/button')
+    ThankYou = (By.XPATH, '//*[@id="innerlist-products"]/h1')
 
 class CommonLocators:
     learn_more_link = (By.ID, 'learn-more-link')
