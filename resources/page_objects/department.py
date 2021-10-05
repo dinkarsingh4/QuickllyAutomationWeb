@@ -24,8 +24,10 @@ class Dept(BasePage):
         # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.yourAccount)).click()
 
     def click_signin(self):
-        self.scroll_to_element(Department.SignInButton)
-        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.SignInButton)).click()
+        element = self.driver.find_element_by_xpath('//*[@id="procedcheckoutBtn"]')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.scroll_to_element(Department.SignInButton)
+        # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.SignInButton)).click()
 
         # self.click(Department.SignInButton)
 
