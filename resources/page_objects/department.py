@@ -307,7 +307,9 @@ class Dept(BasePage):
         # self.click(Department.ChaiAndCoffee)
 
     def click_ChaiBox(self):
-        self.click(Department.ChaiBox)
+        element = self.driver.find_element_by_xpath('/html/body/div[4]/section[1]/div/div/div[2]/div[4]/form/button')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(Department.ChaiBox)
 
     def AddKimbala(self):
         self.click(Department.AddKimbala)

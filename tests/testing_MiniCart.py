@@ -563,6 +563,7 @@ class TesCART(ui_test_class.UVClass):
     def test_click_secondShopName(self):
         self.cart_page.click_MiniCart()
         secondShop = self.cart_page.get_text(MiniCart.secondShop)
+        secondShop = secondShop.replace(' ', '')
         print(secondShop)
         self.assertEqual(self.actual69, secondShop)
 

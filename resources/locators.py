@@ -198,7 +198,7 @@ class MiniCart:
     paypal = (By.XPATH, '//*[@id="paymentbox"]/div/div/div[2]/div/a/img')
     signIn = (By.ID, 'procedcheckoutBtn')
     shopNow = (By.XPATH, '//*[@id="subscribe"]/div/div/div[2]/form/button')
-    secondShop = (By.XPATH, '/html/body/div[1]/div[1]/div/div[2]/div[1]/div[2]/div[1]/div/div[1]/div/p[1](text)')
+    secondShop = (By.XPATH, '/html/body/div[1]/div[1]/div/div[2]/div[1]/div[2]/div[1]/div/div[1]/div/p[1]')
     SecondItemName = (By.XPATH, '/html/body/div[1]/div[1]/div/div[2]/div[1]/div[2]/div[2]/div/div/div[1]/p[1]')
     SecondItemPrice = (By.XPATH, '/html/body/div[1]/div[1]/div/div[2]/div[1]/div[2]/div[2]/div/div/div[1]/p[2]/span')
     SecondItemQuanitity = (By.XPATH, '//*[@id="qty_cart_51875"]/span')
