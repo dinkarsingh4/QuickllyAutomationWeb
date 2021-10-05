@@ -324,7 +324,7 @@ class Department:
     liquorStore = (By.XPATH, '/html/body/div[1]/div[5]/div/div/div/div/a[2]/img')
     Beer = (By.XPATH, '//*[@id="searchhide"]/section[1]/div[2]/div/div/div[1]/a/img')
     classicLime = (By.XPATH, '//*[@id="img_138002"]')
-    AddToCartBeer = (By.XPATH, '//*[@id="storeproductlist"]/div[1]/div[2]/a')
+    AddToCartBeer = (By.XPATH, '/html/body/div[5]/div[2]/div[2]/div[2]/div[2]/div[2]/a')
     ChaiAndCoffee = (By.XPATH, '/html/body/div[1]/div[5]/div/div/div/div/a[4]/img')
     ChaiBox = (By.XPATH, '/html/body/div[4]/section[1]/div/div/div[2]/div[4]/form/button')
     AddKimbala = (By.XPATH, '/html/body/div[6]/div[3]/div/div/div[1]/div[3]/div/a')
@@ -338,7 +338,9 @@ class Department:
     MethaiPaneer = (By.XPATH, '/html/body/div[5]/section[3]/div/div/div[1]/div[3]/div[3]/a')
     DalTadka = (By.XPATH, '/html/body/div[5]/section[3]/div/div/div[1]/div[4]/div[3]/a')
     PlusDalTadka = (By.XPATH, '/html/body/div[5]/section[3]/div/div/div[1]/div[4]/div[3]/p/a/span[3]')
-
+    legalCheckBox = (By.XPATH, '/html/body/div[6]/div/div[1]/p[1]/label/input')
+    elderCheckBox = (By.XPATH, '/html/body/div[6]/div/div[1]/p[2]/label/input')
+    submitALcohol = (By.XPATH, '/html/body/div[6]/div/div[2]/a')
 
 class ZipCode:
     enter_zip = (By.ID, 'zipcode')

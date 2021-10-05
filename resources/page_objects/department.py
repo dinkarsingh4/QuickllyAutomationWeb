@@ -306,7 +306,7 @@ class Dept(BasePage):
         self.click(Department.Beer)
 
     def click_classicLime(self):
-        element = self.driver.find_element_by_xpath('//*[@id="img_138002"]')
+        element = self.driver.find_element_by_xpath('/html/body/div[4]/section[2]/div/div/div/div[3]/div[2]/a')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_AddToCartBeer(self):
@@ -364,4 +364,13 @@ class Dept(BasePage):
             '/html/body/div[5]/section[3]/div/div/div[1]/div[4]/div[3]/p/a/span[3]')
         self.driver.execute_script("arguments[0].click();", element)
         # self.click(Department.PlusDalTadka)
+
+    def click_legalCheckBox(self):
+        self.click(Department.legalCheckBox)
+
+    def click_elderCheckBox(self):
+        self.click(Department.elderCheckBox)
+
+    def click_submitAlcohol(self):
+        self.click(Department.submitALcohol)
 
