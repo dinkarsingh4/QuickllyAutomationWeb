@@ -25,7 +25,9 @@ class Dept(BasePage):
 
     def click_signin(self):
         self.scroll_to_element(Department.SignInButton)
-        self.click(Department.SignInButton)
+        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.SignInButton)).click()
+
+        # self.click(Department.SignInButton)
 
     def EnterEmail(self, email):
         self.find_elements(Department.Email).clear()
