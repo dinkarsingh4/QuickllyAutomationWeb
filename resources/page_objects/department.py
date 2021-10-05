@@ -57,7 +57,7 @@ class Dept(BasePage):
 
     def click_payment1(self):
         # self.scroll_to_element(Department.payment)
-        element = self.driver.find_element_by_id('proceedtopayment')
+        element = self.driver.find_element_by_xpath('//*[@id="proceedtopayment"]')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_additem(self):

@@ -264,7 +264,7 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.AddKimbala()
         self.depart_page.click_MiniCart()
         self.depart_page.click_Checkout()
-        time.sleep(2)
+        time.sleep(5)
         self.depart_page.click_payment1()
         time.sleep(5)
         self.depart_page.click_Pay()
