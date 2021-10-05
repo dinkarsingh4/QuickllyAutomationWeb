@@ -143,6 +143,8 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         # self.depart_page.click_quicklly()
         # self.depart_page.submit_zip()
         time.sleep(5)
+        for i in range(2):
+            self.depart_page.click_RightArrow()
         self.depart_page.click_Tiffin()
         self.depart_page.click_Chicago()
         self.depart_page.select_VegThali()
