@@ -19,7 +19,9 @@ class Dept(BasePage):
         self.click(Department.submit_zip)
 
     def select_dropdown(self):
-        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.yourAccount)).click()
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/header/div[3]/span')
+        self.driver.execute_script("arguments[0].click();", element)
+        # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.yourAccount)).click()
 
     def click_signin(self):
         self.scroll_to_element(Department.SignInButton)
