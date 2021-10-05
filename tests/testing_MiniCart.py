@@ -99,11 +99,9 @@ class TesCART(ui_test_class.UVClass):
 
     def AddItem(self):
         time.sleep(2)
-        # self.cart_page.click_fresh()
         self.cart_page.EnterSearch("lemon grass")
         self.cart_page.click_Search()
         self.cart_page.click_additem()
-        # time.sleep(5)
         self.cart_page.click_AddItem1()
         self.cart_page.click_item()
         self.cart_page.click_Additem2()
@@ -112,7 +110,6 @@ class TesCART(ui_test_class.UVClass):
         time.sleep(3)
         self.cart_page.EnterSearch("lemon grass")
         self.cart_page.click_Search()
-        # self.cart_page.click_fresh()
         self.cart_page.click_additem()
         self.cart_page.click_item()
         self.cart_page.click_Additem2()
@@ -127,8 +124,6 @@ class TesCART(ui_test_class.UVClass):
         self.cart_page.click_Checkout()
 
     def Addmethod(self):
-        # self.cart_page.click_payment()
-        # self.cart_page.click_changeMethod()
         self.cart_page.click_Addmethod()
         self.cart_page.EnterCardNumber("4005519200000004")
         self.cart_page.EnterExpiry("0226")
@@ -175,12 +170,6 @@ class TesCART(ui_test_class.UVClass):
         print(imageSource)
         self.assertEqual(self.actual10, imageSource)
 
-    # def test_click_count(self):
-    #     self.cart_page.click_MiniCart()
-    #     ItemNumber = self.cart_page.get_attribute(MiniCart.ItemCount, 'innerHTML')
-    #     print(ItemNumber)
-    #     self.assertEqual(self.actual3, ItemNumber)
-
     def test_quantity(self):
         self.cart_page.click_MiniCart()
         ItemQuantity = self.cart_page.get_attribute(MiniCart.ItemQuantity, 'innerHTML')
@@ -193,12 +182,6 @@ class TesCART(ui_test_class.UVClass):
         print(MinimumOrder)
         self.assertEqual(self.actual4, MinimumOrder)
 
-    # def test_total(self):
-    #     self.cart_page.click_MiniCart()
-    #     Total = self.cart_page.find_element(MiniCart.shop_total).get_attribute('innerHTML')
-    #     print(Total)
-    #     self.assertEqual(self.actual8, Total)
-    #     self.cart_page.wait_for_loader(15)
 
     def test_two_shops(self):
         self.cart_page.click_MiniCart()
@@ -265,16 +248,6 @@ class TesCART(ui_test_class.UVClass):
         ItemQuantity = self.cart_page.get_attribute(MiniCart.ItemQuantity, 'innerHTML')
         print(ItemQuantity)
         self.assertEqual(self.actual12, ItemQuantity)
-        # self.cart_page.click_rightArrow()
-        # secondShop = self.cart_page.get_attribute(MiniCart.secondShop, 'textContent')
-        # print(secondShop)
-        # self.assertEqual(self.actual69, secondShop)
-
-    # def test_cjarrow2(self):
-    #     self.cart_page.click_leftArrow()
-    #     ShopName = self.cart_page.get_attribute(MiniCart.shop_name, 'innerHTML')
-    #     print(ShopName)
-    #     self.assertEqual(self.actual11, ShopName)
 
     def test_items(self):
         itemsInCart = self.cart_page.get_attribute(MiniCart.ItemInCart, 'innerHTML')
@@ -552,28 +525,12 @@ class TesCART(ui_test_class.UVClass):
         print(Invalid)
         self.assertEqual(self.actual76, Invalid)
 
-    # def test_paypal(self):
-    #     self.cart_page.click_payment1()
-    #     self.cart_page.click_paypal()
-    #     self.cart_page.click_CrossButton()
-    #     payment = self.cart_page.get_attribute(MiniCart.Payment, 'innerHTML')
-    #     print(payment)
-    #     self.assertEqual(self.actual60, payment)
-
-    def test_click_secondShopName(self):
-        self.cart_page.click_MiniCart()
-        secondShop = self.cart_page.get_text(MiniCart.secondShop)
-        secondShop = secondShop.replace(' ', '')
-        print(secondShop)
-        self.assertEqual(self.actual69, secondShop)
 
     def test_click_secondItemName(self):
         self.cart_page.click_MiniCart()
-        # self.cart_page.click_SecondShop()
         ItemName = self.cart_page.get_attribute(MiniCart.SecondItemName, 'innerHTML')
         print(ItemName)
         self.assertEqual(self.actual64, ItemName)
-        # time.sleep(10)
 
     def test_click_secondItemPrice(self):
         self.cart_page.click_MiniCart()
@@ -583,14 +540,12 @@ class TesCART(ui_test_class.UVClass):
 
     def test_click_secondItemQuantity(self):
         self.cart_page.click_MiniCart()
-        # self.cart_page.click_SecondShop()
         quantity = self.cart_page.get_attribute(MiniCart.SecondItemQuanitity, 'innerHTML')
         print(quantity)
         self.assertEqual(self.actual66, quantity)
 
     def test_paymentMethod1(self):
         self.cart_page.click_payment1()
-        # self.Addmethod()
         self.cart_page.click_Pay()
         ThankYouLabel = self.cart_page.get_attribute(MiniCart.ThankYou, 'innerHTML')
         print(ThankYouLabel)
