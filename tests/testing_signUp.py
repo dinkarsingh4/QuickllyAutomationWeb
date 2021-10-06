@@ -9,6 +9,8 @@ class TesSIGNUP(ui_test_class.UVXClass):
     signup_page: SignUp
     signup_page: signUp
 
+    actual = "Free Same - Day Delivery From Top Rated Stores"
+
     @classmethod
     def setUpClass(cls):
         super(TesSIGNUP, cls).setUpClass()
@@ -42,5 +44,8 @@ class TesSIGNUP(ui_test_class.UVXClass):
 
     def test_signup(self):
         self.Credentials()
+        headingLabel = self.signup_page.get_attribute(SignUp.heading, 'innerHTML')
+        print(headingLabel)
+        self.assertEqual(self.actual, headingLabel)
 
 

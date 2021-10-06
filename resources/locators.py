@@ -391,7 +391,7 @@ class SignUp:
     email2 = (By.XPATH, '//*[@id="user_email"]')
     password2 = (By.XPATH, '//*[@id="password"]')
     logIn = (By.XPATH, '//*[@id="btn-login"]')
-
+    heading = (By.XPATH, '/html/body/div[2]/h2')
 
 class Refer:
     refer = (By.XPATH, '/html/body/header/div/div[2]/a')
