@@ -394,7 +394,7 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         print(ThankYouLabel)
         self.assertEqual(self.actual1, ThankYouLabel)
 
-    def test_shopWithTrecipes(self):
+    def test_shopWithRecipes(self):
         self.recipes()
         self.driver.implicitly_wait(10)
         WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(Department.ThankYou))
