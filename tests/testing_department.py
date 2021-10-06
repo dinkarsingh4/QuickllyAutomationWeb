@@ -396,10 +396,13 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
 
     def test_shopWithTrecipes(self):
         self.recipes()
+        self.driver.implicitly_wait(10)
+        WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(Department.ThankYou))
         ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
         print(ThankYouLabel)
         self.assertEqual(self.actual1, ThankYouLabel)
-        self.depart_page.click_quicklly()
+        # time.sleep(10)
+        # self.depart_page.click_quicklly()
 
     def test_shopWithOrganicGrocery(self):
         self.OrganicGrocery()
