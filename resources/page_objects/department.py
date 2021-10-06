@@ -257,7 +257,7 @@ class Dept(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_RightArrow(self):
-        element = self.driver.find_element_by_xpath('/html/body/div[5]/div[1]/div/div/i[2]/img')
+        element = self.driver.find_element_by_css_selector('#searchhide > div.grocerySpecialSlider.clsFoodSpl > div > div > i.right.slick-arrow > img')
         self.driver.execute_script("arguments[0].click();", element)
         # self.click(Department.clickRA)
 
