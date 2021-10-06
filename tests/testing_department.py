@@ -396,7 +396,6 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
 
     def test_shopWithTrecipes(self):
         self.recipes()
-        time.sleep(10)
         ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
         print(ThankYouLabel)
         self.assertEqual(self.actual1, ThankYouLabel)
