@@ -204,7 +204,9 @@ class Dept(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_AddToCartVT(self):
-        self.click(Department.AddToCartVegThali)
+        element = self.driver.find_element_by_xpath('//*[@id="dvDialog-Custom"]/div/div[2]/a')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(Department.AddToCartVegThali)
 
     def submitVT(self):
         WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.submitVT)).click()
