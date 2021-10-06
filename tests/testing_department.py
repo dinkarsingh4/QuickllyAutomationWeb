@@ -140,8 +140,8 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         time.sleep(10)
 
     def tiffin(self):
-        # self.depart_page.click_quicklly()
-        # self.depart_page.submit_zip()
+        self.depart_page.click_quicklly()
+        self.depart_page.submit_zip()
         time.sleep(5)
         for i in range(4):
             self.depart_page.click_RightArrow()
