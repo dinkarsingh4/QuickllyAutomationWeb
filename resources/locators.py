@@ -341,6 +341,9 @@ class Department:
     legalCheckBox = (By.XPATH, '/html/body/div[6]/div/div[1]/p[1]/label/input')
     elderCheckBox = (By.XPATH, '/html/body/div[6]/div/div[1]/p[2]/label/input')
     submitALcohol = (By.XPATH, '/html/body/div[6]/div/div[2]/a')
+    searchBox = (By.XPATH, '//*[@id="search_box"]')
+    searchButton = (By.ID, 'searchbtn')
+
 
 class ZipCode:
     enter_zip = (By.ID, 'zipcode')

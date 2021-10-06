@@ -60,8 +60,10 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         time.sleep(10)
 
     def Grocery(self):
-        time.sleep(1)
-        self.depart_page.click_fresh()
+        time.sleep(2)
+        # self.depart_page.click_fresh()
+        self.depart_page.EnterElementForSearch("lemon grass")
+        self.depart_page.click_SearchButton()
         self.depart_page.click_additem()
         self.depart_page.click_ADDLG()
         time.sleep(5)

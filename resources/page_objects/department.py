@@ -400,3 +400,10 @@ class Dept(BasePage):
     def click_submitAlcohol(self):
         self.click(Department.submitALcohol)
 
+    def EnterElementForSearch(self, element):
+        self.find_element(Department.searchBox).clear()
+        self.find_element(Department.searchBox).send_keys(element)
+
+    def click_SearchButton(self):
+        self.click(Department.searchButton)
+
