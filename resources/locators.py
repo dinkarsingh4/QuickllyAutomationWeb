@@ -300,7 +300,7 @@ class Department:
     AddPapad = (By.XPATH, '/html/body/div[5]/div/div/div[1]/div[3]/div[3]/a')
     plusPapad = (By.XPATH, '/html/body/div[6]/div/div/div[1]/p/a/span[3]')
     AddToCartPapad = (By.XPATH, '//*[@id="searchhide"]/div[2]/p/span[3]/a')
-    Recipes = (By.XPATH, '/html/body/div[1]/header/div[2]/div/div[1]/div[1]/div/div/ul/li[9]/a')
+    Recipes = (By.XPATH, '//*[@id="searchhide"]/header/div[2]/div/div[1]/div[1]/div/div/ul/li[8]/a')
     PalakPaneer = (By.XPATH, '//*[@id="45"]/img')
     AddToBasket = (By.XPATH, '//*[@id="addchekListprodct"]')
     delivery = (By.XPATH, '//*[@id="ddlDeliveryTime"]')
