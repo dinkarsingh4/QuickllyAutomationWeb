@@ -211,6 +211,23 @@ class SUC(BasePage):
             '/html/body/div[5]/section[3]/div/div/div[2]/button')
         self.driver.execute_script("arguments[0].click();", element)
 
+    def EnterCardNumber(self, card):
+        WebDriverWait(self.driver, 10).until(
+            EC.frame_to_be_available_and_switch_to_it(
+                self.driver.find_element_by_css_selector('#braintree-dropin-frame')))
+        self.find_element(SignUpCheckout.cardNumber).send_keys(card)
+
+    def EnterExpirationDate(self, expiry):
+        self.find_element(SignUpCheckout.expirationDate).send_keys(expiry)
+
+    def EnterCVV(self, cvv):
+        self.find_element(SignUpCheckout.CVV).send_keys(cvv)
+
+    def click_Pay1(self):
+        self.driver.switch_to_default_content()
+        element = self.driver.find_element_by_id('pay_amount')
+        self.driver.execute_script("arguments[0].click();", element)
+
 
 
 

@@ -625,6 +625,9 @@ class SignUpCheckout:
     password = (By.XPATH, '//*[@id="reg-form"]/div[7]/input')
     confirmpassword = (By.XPATH, '//*[@id="reg-form"]/div[8]/input')
     register = (By.XPATH, '//*[@id="btn-reg"]')
+    cardNumber = (By.XPATH, '//*[@id="container"]/div[1]/div/div[2]/div/form/label')
+    expirationDate = (By.XPATH, '//*[@id="container"]/div[1]/div/div[2]/div/form/div/div[1]/label')
+    CVV = (By.XPATH, '//*[@id="cvv"]')
 
 class CommonLocators:
     learn_more_link = (By.ID, 'learn-more-link')

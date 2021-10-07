@@ -235,7 +235,9 @@ class Dept(BasePage):
         self.click(Department.delivery)
 
     def click_timeOfDelivery(self):
-        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.timeDelivery)).click()
+        element = self.driver.find_element_by_css_selector('#ddlDeliveryTime > option:nth-child(3)')
+        self.driver.execute_script("arguments[0].click();", element)
+        # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Department.timeDelivery)).click()
 
     def click_TickBox(self):
         self.scroll_to_element(Department.clickTick)
