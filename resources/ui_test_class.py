@@ -24,6 +24,7 @@ from resources.page_objects.guestCheckout_page import CheckoutWithGuest
 from resources.page_objects.invalid import InvalidZipcodes
 from resources.page_objects.guestlogin import LoginAsGuest
 from resources.page_objects.payment import Pay
+from resources.page_objects.SignUpCheckout_page import SUC
 from selenium.webdriver import Remote
 
 
@@ -430,6 +431,29 @@ class UVXVIIClass(unittest.TestCase):
         cls.driver.close()
         cls.driver.quit()
         super(UVXVIIClass, cls).tearDownClass()
+
+class UVXVIIIClass(unittest.TestCase):
+    aut_prefix = 'automation_'
+    driver: Remote = None
+    const_data = DataClass
+
+    signupcheckout_page: BasePage = None
+
+    @classmethod
+    def setUpClass(cls):
+        super(UVXVIIIClass, cls).setUpClass()
+        cls.signupcheckout_page = BasePage(cls.driver)
+        cls.common_methods = Common(cls.driver)
+        cls.driver = cls.signupcheckout_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
+        cls.signupcheckout_page.driver = cls.driver
+        cls.signupcheckout_page = SUC(cls.driver)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
+        super(UVXVIIIClass, cls).tearDownClass()
 
     @classmethod
     def login(cls):

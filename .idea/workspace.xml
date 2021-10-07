@@ -6,10 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main">
       <change afterPath="$PROJECT_DIR$/Data/.~lock.signupCredentials.xls#" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/page_objects/SignUpCheckout_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testing_signUpCheckout.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/signupCredentials.xls" beforeDir="false" afterPath="$PROJECT_DIR$/Data/signupCredentials.xls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_signUp.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_signUp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/department.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/department.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ui_test_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ui_test_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_department.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_department.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +74,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for testing_signUp.TesSIGNUP">
+  <component name="RunManager" selected="Python tests.Python tests for testing_signUpCheckout.TesDEPARTMENT">
     <configuration name="Python tests for testing_MiniCart.TesCART" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -99,20 +103,6 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for testing_links.TesLINKS" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="gitAutomation" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;testing_links.TesLINKS&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Python tests for testing_payment.TesPAYMENT" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -124,6 +114,20 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;testing_payment.TesPAYMENT&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for testing_signUpCheckout.TesDEPARTMENT" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="gitAutomation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;testing_signUpCheckout.TesDEPARTMENT&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -143,18 +147,18 @@
     </configuration>
     <list>
       <item itemvalue="Python tests.Python tests for testing_department.TesDEPARTMENT" />
-      <item itemvalue="Python tests.Python tests for testing_links.TesLINKS" />
       <item itemvalue="Python tests.Python tests for testing_payment.TesPAYMENT" />
       <item itemvalue="Python tests.Python tests for testing_MiniCart.TesCART" />
       <item itemvalue="Python tests.Python tests for testing_signUp.TesSIGNUP" />
+      <item itemvalue="Python tests.Python tests for testing_signUpCheckout.TesDEPARTMENT" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for testing_signUpCheckout.TesDEPARTMENT" />
         <item itemvalue="Python tests.Python tests for testing_signUp.TesSIGNUP" />
         <item itemvalue="Python tests.Python tests for testing_department.TesDEPARTMENT" />
         <item itemvalue="Python tests.Python tests for testing_payment.TesPAYMENT" />
         <item itemvalue="Python tests.Python tests for testing_MiniCart.TesCART" />
-        <item itemvalue="Python tests.Python tests for testing_links.TesLINKS" />
       </list>
     </recent_temporary>
   </component>
@@ -166,20 +170,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616787846440</updated>
-    </task>
-    <task id="LOCAL-00306" summary="Merge remote-tracking branch 'github/main' into main">
-      <created>1632846731406</created>
-      <option name="number" value="00306" />
-      <option name="presentableId" value="LOCAL-00306" />
-      <option name="project" value="LOCAL" />
-      <updated>1632846731407</updated>
-    </task>
-    <task id="LOCAL-00307" summary="Merge remote-tracking branch 'github/main' into main">
-      <created>1633428901959</created>
-      <option name="number" value="00307" />
-      <option name="presentableId" value="LOCAL-00307" />
-      <option name="project" value="LOCAL" />
-      <updated>1633428901960</updated>
     </task>
     <task id="LOCAL-00308" summary="Merge remote-tracking branch 'github/main' into main">
       <created>1633429305411</created>
@@ -510,7 +500,21 @@
       <option name="project" value="LOCAL" />
       <updated>1633523326731</updated>
     </task>
-    <option name="localTasksCounter" value="355" />
+    <task id="LOCAL-00355" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1633523618506</created>
+      <option name="number" value="00355" />
+      <option name="presentableId" value="LOCAL-00355" />
+      <option name="project" value="LOCAL" />
+      <updated>1633523618506</updated>
+    </task>
+    <task id="LOCAL-00356" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1633546481170</created>
+      <option name="number" value="00356" />
+      <option name="presentableId" value="LOCAL-00356" />
+      <option name="project" value="LOCAL" />
+      <updated>1633546481170</updated>
+    </task>
+    <option name="localTasksCounter" value="357" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
