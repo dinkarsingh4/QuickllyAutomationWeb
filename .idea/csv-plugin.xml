@@ -80,6 +80,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/resources/page_objects/chaiDepartment.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/resources/page_objects/department.py">
           <value>
             <Attribute>
@@ -150,6 +157,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/tests/testing_MealKit.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/tests/testing_MiniCart.py">
           <value>
             <Attribute>
@@ -185,6 +199,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/tests/testing_chaiDepartment.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/tests/testing_continueasguest.py">
           <value>
             <Attribute>
@@ -214,6 +235,13 @@
           </value>
         </entry>
         <entry key="/tests/testing_guestLogin.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/tests/testing_indianSeasoningKit.py">
           <value>
             <Attribute>
               <option name="separator" value=":" />

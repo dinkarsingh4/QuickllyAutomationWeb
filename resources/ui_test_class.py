@@ -25,6 +25,9 @@ from resources.page_objects.invalid import InvalidZipcodes
 from resources.page_objects.guestlogin import LoginAsGuest
 from resources.page_objects.payment import Pay
 from resources.page_objects.SignUpCheckout_page import SUC
+from resources.page_objects.chaiDepartment import CACD
+from resources.page_objects.mealkit import Meal
+from resources.page_objects.indianseasoningkit import Indian
 from selenium.webdriver import Remote
 
 
@@ -454,6 +457,75 @@ class UVXVIIIClass(unittest.TestCase):
         cls.driver.close()
         cls.driver.quit()
         super(UVXVIIIClass, cls).tearDownClass()
+
+class UVXVIXClass(unittest.TestCase):
+    aut_prefix = 'automation_'
+    driver: Remote = None
+    const_data = DataClass
+
+    chai_page: BasePage = None
+
+    @classmethod
+    def setUpClass(cls):
+        super(UVXVIXClass, cls).setUpClass()
+        cls.chai_page = BasePage(cls.driver)
+        cls.common_methods = Common(cls.driver)
+        cls.driver = cls.chai_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
+        cls.chai_page.driver = cls.driver
+        cls.chai_page = CACD(cls.driver)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
+        super(UVXVIXClass, cls).tearDownClass()
+
+class UVXVXClass(unittest.TestCase):
+    aut_prefix = 'automation_'
+    driver: Remote = None
+    const_data = DataClass
+
+    meal_page: BasePage = None
+
+    @classmethod
+    def setUpClass(cls):
+        super(UVXVXClass, cls).setUpClass()
+        cls.meal_page = BasePage(cls.driver)
+        cls.common_methods = Common(cls.driver)
+        cls.driver = cls.meal_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
+        cls.meal_page.driver = cls.driver
+        cls.meal_page = Meal(cls.driver)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
+        super(UVXVXClass, cls).tearDownClass()
+
+class UVXVXIClass(unittest.TestCase):
+    aut_prefix = 'automation_'
+    driver: Remote = None
+    const_data = DataClass
+
+    indian_page: BasePage = None
+
+    @classmethod
+    def setUpClass(cls):
+        super(UVXVXIClass, cls).setUpClass()
+        cls.indian_page = BasePage(cls.driver)
+        cls.common_methods = Common(cls.driver)
+        cls.driver = cls.indian_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
+        cls.indian_page.driver = cls.driver
+        cls.indian_page = Indian(cls.driver)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
+        super(UVXVXIClass, cls).tearDownClass()
 
     @classmethod
     def login(cls):

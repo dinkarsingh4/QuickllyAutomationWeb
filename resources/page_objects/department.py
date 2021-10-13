@@ -228,7 +228,7 @@ class Dept(BasePage):
 
     def click_AddToBasket(self):
         self.scroll_to_element(Department.AddToBasket)
-        element = self.driver.find_element_by_xpath('//*[@id="addchekListprodct"]')
+        element = self.driver.find_element_by_xpath('//*[@id="prd_118"]')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_Delivery(self):
