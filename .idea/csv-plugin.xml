@@ -66,6 +66,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/resources/page_objects/bbq.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/resources/page_objects/cart.py">
           <value>
             <Attribute>
@@ -115,7 +122,21 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/resources/page_objects/indiangrocerybox.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/resources/page_objects/invalid.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/resources/page_objects/rotikit.py">
           <value>
             <Attribute>
               <option name="separator" value=":" />
@@ -136,6 +157,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/tests/testing_BBQ.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/tests/testing_ContactUS.py">
           <value>
             <Attribute>
@@ -147,6 +175,20 @@
           <value>
             <Attribute>
               <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/tests/testing_IndianMealKit.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/tests/testing_IndianSauces.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
@@ -241,6 +283,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/tests/testing_indianGroceryBox.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/tests/testing_indianSeasoningKit.py">
           <value>
             <Attribute>
@@ -273,6 +322,13 @@
           <value>
             <Attribute>
               <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/tests/testing_rotiKit.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>

@@ -20,7 +20,7 @@ class TesPAYMENT(ui_test_class.UVXVIIClass):
     expected_res1 = "Expiration Date"
     expected_res2 = "CVV"
     actual6 = "158"
-    actual7 = "Proceed to Payment"
+    actual7 = "Log In"
     actual8 = "Pay"
     mp = {}
 
@@ -59,6 +59,11 @@ class TesPAYMENT(ui_test_class.UVXVIIClass):
 
         print(self.mp)
 
+    def Signin(self):
+        self.payment_page.EnterEmail("testaccount@quicklly.com")
+        self.payment_page.EnterPass("123456")
+        self.payment_page.click_login()
+
     def addItem(self):
         time.sleep(2)
         self.payment_page.click_fresh()
@@ -82,24 +87,25 @@ class TesPAYMENT(ui_test_class.UVXVIIClass):
         print(search)
         self.assertEqual(self.actual3, search)
 
-    def test_SignIN(self):
-        self.payment_page.select_dropdown()
-        self.payment_page.click_signin()
-        self.payment_page.EnterEmail("testaccount@quicklly.com")
-        self.payment_page.EnterPass("123456")
-        self.payment_page.click_login()
-        AccountLabel = self.payment_page.get_attribute(Payment.Account, 'innerHTML')
-        print(AccountLabel)
-        self.assertEqual(self.actual2, AccountLabel)
+    # def test_SignIN(self):
+    #     self.payment_page.select_dropdown()
+    #     self.payment_page.click_signin()
+    #     self.payment_page.EnterEmail("testaccount@quicklly.com")
+    #     self.payment_page.EnterPass("123456")
+    #     self.payment_page.click_login()
+    #     AccountLabel = self.payment_page.get_attribute(Payment.Account, 'innerHTML')
+    #     print(AccountLabel)
+    #     self.assertEqual(self.actual2, AccountLabel)
 
     def test_additem(self):
         self.addItem()
         time.sleep(5)
-        paymentLabel = self.payment_page.get_attribute(Payment.payment, 'innerHTML')
+        paymentLabel = self.payment_page.get_attribute(Payment.loginLabel, 'innerHTML')
         print(paymentLabel)
         self.assertEqual(self.actual7, paymentLabel)
 
     def test_clickPayment(self):
+        self.Signin()
         self.payment_page.click_payment1()
         payLabel = self.payment_page.get_attribute(Payment.Pay, 'value')
         print(payLabel)

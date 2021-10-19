@@ -1,8 +1,6 @@
 from resources.config_methods import DataClass
 from resources.locators import IndianSeasoningKit
 from resources.page_objects.base_page import BasePage
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 
 
 class Indian(BasePage):

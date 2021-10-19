@@ -28,6 +28,11 @@ from resources.page_objects.SignUpCheckout_page import SUC
 from resources.page_objects.chaiDepartment import CACD
 from resources.page_objects.mealkit import Meal
 from resources.page_objects.indianseasoningkit import Indian
+from resources.page_objects.indiangrocerybox import IndianGrocery
+from resources.page_objects.rotikit import RotiBox
+from resources.page_objects.indianmeal import IndianMeal
+from resources.page_objects.IndianSauces import Sauces
+from resources.page_objects.bbq import BBQKIT
 from selenium.webdriver import Remote
 
 
@@ -526,6 +531,121 @@ class UVXVXIClass(unittest.TestCase):
         cls.driver.close()
         cls.driver.quit()
         super(UVXVXIClass, cls).tearDownClass()
+
+class UVXVXIIClass(unittest.TestCase):
+    aut_prefix = 'automation_'
+    driver: Remote = None
+    const_data = DataClass
+
+    grocerybox_page: BasePage = None
+
+    @classmethod
+    def setUpClass(cls):
+        super(UVXVXIIClass, cls).setUpClass()
+        cls.grocerybox_page = BasePage(cls.driver)
+        cls.common_methods = Common(cls.driver)
+        cls.driver = cls.grocerybox_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
+        cls.grocerybox_page.driver = cls.driver
+        cls.grocerybox_page = IndianGrocery(cls.driver)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
+        super(UVXVXIIClass, cls).tearDownClass()
+
+class UVXVXIIIClass(unittest.TestCase):
+    aut_prefix = 'automation_'
+    driver: Remote = None
+    const_data = DataClass
+
+    roti_page: BasePage = None
+
+    @classmethod
+    def setUpClass(cls):
+        super(UVXVXIIIClass, cls).setUpClass()
+        cls.roti_page = BasePage(cls.driver)
+        cls.common_methods = Common(cls.driver)
+        cls.driver = cls.roti_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
+        cls.roti_page.driver = cls.driver
+        cls.roti_page = RotiBox(cls.driver)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
+        super(UVXVXIIIClass, cls).tearDownClass()
+
+class UVXVXIVClass(unittest.TestCase):
+    aut_prefix = 'automation_'
+    driver: Remote = None
+    const_data = DataClass
+
+    mealkit_page: BasePage = None
+
+    @classmethod
+    def setUpClass(cls):
+        super(UVXVXIVClass, cls).setUpClass()
+        cls.mealkit_page = BasePage(cls.driver)
+        cls.common_methods = Common(cls.driver)
+        cls.driver = cls.mealkit_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
+        cls.mealkit_page.driver = cls.driver
+        cls.mealkit_page = IndianMeal(cls.driver)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
+        super(UVXVXIVClass, cls).tearDownClass()
+
+class UVXVXVClass(unittest.TestCase):
+    aut_prefix = 'automation_'
+    driver: Remote = None
+    const_data = DataClass
+
+    sauces_page: BasePage = None
+
+    @classmethod
+    def setUpClass(cls):
+        super(UVXVXVClass, cls).setUpClass()
+        cls.sauces_page = BasePage(cls.driver)
+        cls.common_methods = Common(cls.driver)
+        cls.driver = cls.sauces_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
+        cls.sauces_page.driver = cls.driver
+        cls.sauces_page = Sauces(cls.driver)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
+        super(UVXVXVClass, cls).tearDownClass()
+
+class UVXVXVIClass(unittest.TestCase):
+    aut_prefix = 'automation_'
+    driver: Remote = None
+    const_data = DataClass
+
+    bbq_page: BasePage = None
+
+    @classmethod
+    def setUpClass(cls):
+        super(UVXVXVIClass, cls).setUpClass()
+        cls.bbq_page = BasePage(cls.driver)
+        cls.common_methods = Common(cls.driver)
+        cls.driver = cls.bbq_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
+        cls.bbq_page.driver = cls.driver
+        cls.bbq_page = BBQKIT(cls.driver)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
+        super(UVXVXVIClass, cls).tearDownClass()
 
     @classmethod
     def login(cls):

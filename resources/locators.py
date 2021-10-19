@@ -132,7 +132,8 @@ class MiniCart:
     price1 = (By.XPATH, '#stores > div > div > a:nth-child(2) > span.price')
     price2 = (By.XPATH, '#stores > div > div > a:nth-child(3) > span.price')
     CurbsidePickup = (By.XPATH, '//*[@id="searchhide"]/div[4]/div[1]/div[2]/div[1]/a[2]')
-    Delivery = (By.CSS_SELECTOR, '#searchhide > div.clsCartBox > div.clsCartStoresItems > div.clsCartItems > div.clsCartSection > a.active')
+    Delivery = (By.CSS_SELECTOR,
+                '#searchhide > div.clsCartBox > div.clsCartStoresItems > div.clsCartItems > div.clsCartSection > a.active')
     right_arrow = (By.XPATH, '//*[@id="minicart"]/div/div[1]/div/i[2]')
     left_arrow = (By.XPATH, '//*[@id="minicart"]/div/div[1]/div/i[1]')
     ItemInCart = (By.ID, 'lblCartStoreName')
@@ -289,7 +290,9 @@ class Department:
     AddKorma = (By.XPATH, '//*[@id="searchhide"]/div[3]/div/div[1]/div[1]/div[3]/div[3]/a')
     plusKorma = (By.XPATH, '//*[@id="searchhide"]/div[3]/div/div[1]/div[1]/p/a/span[3]')
     AddToCartCK = (By.XPATH, '//*[@id="searchhide"]/div[2]/p/span[2]/a')
-    TiffinServices = (By.CSS_SELECTOR, '#searchhide > div.grocerySpecialSlider.clsFoodSpl > div > div > div > div > a:nth-child(6) > img')
+    TiffinServices = (
+        By.CSS_SELECTOR,
+        '#searchhide > div.grocerySpecialSlider.clsFoodSpl > div > div > div > div > a:nth-child(6) > img')
     ChicagoTiffin = (By.XPATH, '//*[@id="tiffin-services"]/div/div[1]/a')
     VegThali = (By.XPATH, '//*[@id="TiffinServices"]/div[2]/div[1]/a')
     AddToCartVegThali = (By.XPATH, '//*[@id="dvDialog-Custom"]/div/div[2]/a')
@@ -393,6 +396,7 @@ class SignUp:
     logIn = (By.XPATH, '//*[@id="btn-login"]')
     heading = (By.XPATH, '/html/body/div[2]/h2')
 
+
 class Refer:
     refer = (By.XPATH, '/html/body/header/div/div[2]/a')
     referLink = (By.XPATH, '/html/body/header/div/div[2]/div/div/ul/li[1]/a')
@@ -438,6 +442,7 @@ class Category:
     weeklyDeals = (By.XPATH, '//*[@id="searchhide"]/div[8]/div[2]/div/div/a[1]')
     SearchForProducts = (By.XPATH, '//*[@id="search_box"]')
 
+
 class Links:
     facebook = (By.LINK_TEXT, 'FACEBOOK')
     twitter = (By.LINK_TEXT, 'TWITTER')
@@ -446,15 +451,18 @@ class Links:
     instagram = (By.LINK_TEXT, 'INSTAGRAM')
     pinterest = (By.LINK_TEXT, 'PINTEREST')
     fbLabel = (By.XPATH, '//*[@id="blueBarDOMInspector"]/div/div/div/div[1]/a/i/u')
-    tweetLabel = (By.XPATH, '//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div/nav/div/div[2]/div/div[1]/a/div')
+    tweetLabel = (By.XPATH,
+                  '//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div/nav/div/div[2]/div/div[1]/a/div')
     linkedinLabel = (By.XPATH, '/html/body/main/div/div/form[2]/h1')
     youtubeLabel = (By.XPATH, '//*[@id="subscriber-count"]')
     instagramSRC = (By.XPATH, '//*[@id="react-root"]/section/nav/div[2]/div/div/div[1]/a/div/div/img')
     pinterestLabel = (By.XPATH, '//*[@id="__PWS_ROOT__"]/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div/h2/div')
 
+
 class Invalid:
     enter_zip = (By.ID, 'zipcode')
     submit_zip = (By.ID, 'zipsubmitbtn')
+
 
 class GuestLogin:
     enter_zip = (By.ID, 'zipcode')
@@ -491,6 +499,7 @@ class GuestLogin:
     AddToCartVegThali = (By.XPATH, '//*[@id="dvDialog-Custom"]/div/div[2]/a')
     submitVT = (By.XPATH, '//*[@id="dvDialog-DateTime"]/div/div[2]/a')
 
+
 class Payment:
     enter_zip = (By.ID, 'zipcode')
     submit_zip = (By.ID, 'zipsubmitbtn')
@@ -509,13 +518,16 @@ class Payment:
     Pay = (By.ID, 'pay_amount')
     checkout2 = (By.XPATH, '//*[@id="dvFoodSuggestPopup"]/div/div/a')
     choosePayment = (By.ID, 'choose-payment-method')
-    AddMethod = (By.CSS_SELECTOR, 'body > div.modal-wrap > div > div > div.modal-container > div.list-payment-methods-view.modal-frame-view.render-in-assemble > div.modal-body-content > div.add-payment-method-item > span')
+    AddMethod = (By.CSS_SELECTOR,
+                 'body > div.modal-wrap > div > div > div.modal-container > div.list-payment-methods-view.modal-frame-view.render-in-assemble > div.modal-body-content > div.add-payment-method-item > span')
     cardNumber = (By.XPATH, '//*[@id="credit-card-number"]')
     expiry = (By.XPATH, '//*[@id="expiration"]')
     CVV = (By.XPATH, '//*[@id="cvv"]')
     savePaymentMethod = (By.XPATH, '/html/body/div[2]/div/div/div[1]/div[2]/div[3]/div[1]/button')
     AddMethod2 = (By.XPATH, '/html/body/div[2]/div/div/div[1]/div[2]/div[3]/button')
     ThankYou = (By.XPATH, '//*[@id="innerlist-products"]/h1')
+    loginLabel = (By.XPATH, '//*[@id="apiformprodct"]/div[1]/span')
+
 
 class SignUpCheckout:
     enter_zip = (By.ID, 'zipcode')
@@ -561,7 +573,8 @@ class SignUpCheckout:
     plusKorma = (By.XPATH, '//*[@id="searchhide"]/div[3]/div/div[1]/div[1]/p/a/span[3]')
     AddToCartCK = (By.XPATH, '//*[@id="searchhide"]/div[2]/p/span[2]/a')
     TiffinServices = (
-    By.CSS_SELECTOR, '#searchhide > div.grocerySpecialSlider.clsFoodSpl > div > div > div > div > a:nth-child(6) > img')
+        By.CSS_SELECTOR,
+        '#searchhide > div.grocerySpecialSlider.clsFoodSpl > div > div > div > div > a:nth-child(6) > img')
     ChicagoTiffin = (By.XPATH, '//*[@id="tiffin-services"]/div/div[1]/a')
     VegThali = (By.XPATH, '//*[@id="TiffinServices"]/div[2]/div[1]/a')
     AddToCartVegThali = (By.XPATH, '//*[@id="dvDialog-Custom"]/div/div[2]/a')
@@ -629,6 +642,7 @@ class SignUpCheckout:
     expirationDate = (By.XPATH, '//*[@id="container"]/div[1]/div/div[2]/div/form/div/div[1]/label')
     CVV = (By.XPATH, '//*[@id="cvv"]')
 
+
 class ChaiAndCoffee:
     enter_zip = (By.ID, 'zipcode')
     submit_zip = (By.ID, 'zipsubmitbtn')
@@ -656,6 +670,7 @@ class ChaiAndCoffee:
     readyCoffee = (By.XPATH, '//*[@id="searchhide"]/section[4]/div/div[2]/div/h2')
     aboutKimbala = (By.XPATH, '//*[@id="searchhide"]/section[6]/div/div[2]/div/h2')
 
+
 class MealKit:
     enter_zip = (By.ID, 'zipcode')
     submit_zip = (By.ID, 'zipsubmitbtn')
@@ -667,8 +682,10 @@ class MealKit:
     new = (By.XPATH, '//*[@id="home-tab"]')
     IndianSeasoningLabel = (By.XPATH, '//*[@id="home"]/div/div[3]/div/a/div/div/h3')
     whyChooseLabel = (By.XPATH, '//*[@id="myTabContent"]/div[3]/div/h2')
-    AuthenticLabel = (By.XPATH, '#myTabContent > div.card-container.row.why-choose-us-box.slick-initialized.slick-slider > div > div > div.meal-kit-box.col-sm-4.slick-slide.slick-current.slick-active.slick-center > div > div > div > h3')
-    subscribeAndSave = (By.CSS_SELECTOR, '#myTabContent > div.card-container.row.why-choose-us-box.slick-initialized.slick-slider > div > div > div.meal-kit-box.col-sm-4.slick-slide.slick-current.slick-active.slick-center > div > div > div > h3')
+    AuthenticLabel = (By.XPATH,
+                      '#myTabContent > div.card-container.row.why-choose-us-box.slick-initialized.slick-slider > div > div > div.meal-kit-box.col-sm-4.slick-slide.slick-current.slick-active.slick-center > div > div > div > h3')
+    subscribeAndSave = (By.CSS_SELECTOR,
+                        '#myTabContent > div.card-container.row.why-choose-us-box.slick-initialized.slick-slider > div > div > div.meal-kit-box.col-sm-4.slick-slide.slick-current.slick-active.slick-center > div > div > div > h3')
     FreeShipping = (By.XPATH, '//*[@id="myTabContent"]/div[4]/div/div/div[5]/div/div/img')
     CantGetEnough = (By.XPATH, '//*[@id="myTabContent"]/div[5]/div/h4')
     groceries = (By.XPATH, '//*[@id="myTabContent"]/div[6]/div[1]/a/div/div[2]/img')
@@ -694,6 +711,7 @@ class MealKit:
     chaiLabel = (By.XPATH, '//*[@id="searchhide"]/div/div/ul/li[2]/h1')
     indianMeal = (By.XPATH, '//*[@id="searchhide"]/div/div/ul/li[2]/h1')
     home = (By.XPATH, '//*[@id="store-lising-main-bread-crumb"]/ul/li[1]/a')
+
 
 class IndianSeasoningKit:
     enter_zip = (By.ID, 'zipcode')
@@ -726,6 +744,176 @@ class IndianSeasoningKit:
     OrderSeasoningKit = (By.XPATH, '/html/body/div[4]/ul/li[3]/h1')
     clickIndian = (By.XPATH, '/html/body/div[4]/ul/li[2]/a')
     labelEasy = (By.XPATH, '/html/body/div[4]/ul/li[3]/h1')
+
+
+class IndianGroceryBox:
+    enter_zip = (By.ID, 'zipcode')
+    submit_zip = (By.ID, 'zipsubmitbtn')
+    SearchForProducts = (By.XPATH, '//*[@id="search_box"]')
+    indianGrocery = (By.XPATH, '//*[@id="home"]/div/div[4]/div/a/div/img')
+    indianGroceryLabel = (By.XPATH, '//*[@id="searchhide"]/div/div/ul/li[2]/h1')
+    subscription = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/div/div[2]/div[1]/h2')
+    shipping = (By.XPATH, '//*[@id="weekly"]/div[1]/p[1]')
+    minimum = (By.XPATH, '//*[@id="weekly"]/div[2]/p[1]')
+    free = (By.XPATH, '//*[@id="weekly"]/div[1]/p[2]')
+    cost = (By.XPATH, '//*[@id="weekly"]/div[2]/p[2]')
+    whatwedeliver = (By.XPATH, '//*[@id="searchhide"]/section[2]/div[1]/h3')
+    Authentic = (By.XPATH, '//*[@id="searchhide"]/section[2]/div[2]/div[1]/div/div[1]/h4')
+    Unbeatable = (By.XPATH, '//*[@id="searchhide"]/section[2]/div[2]/div[1]/div/div[2]/h4')
+    customized = (By.XPATH, '//*[@id="searchhide"]/section[2]/div[2]/div[1]/div/div[3]/h4')
+    HowItWorks = (By.XPATH, '//*[@id="searchhide"]/section[3]/div[1]/h3')
+    build = (By.XPATH, '//*[@id="searchhide"]/section[3]/div[2]/div[2]/h4')
+    selectProducts = (By.XPATH, '//*[@id="searchhide"]/section[3]/div[3]/div[2]/h4')
+    frequency = (By.XPATH, '//*[@id="searchhide"]/section[3]/div[4]/div[2]/h4')
+    order = (By.XPATH, '//*[@id="searchhide"]/section[4]/div/div[1]/div/h2')
+    weekly = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/div/div[2]/div[2]/ul/li[1]')
+    BiWeekly = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/div/div[2]/div[2]/ul/li[2]')
+    Monthly = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/div/div[2]/div[2]/ul/li[3]')
+    Once = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/div/div[2]/div[2]/ul/li[4]')
+    buildABox = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/div/div[2]/div[4]/form/button')
+    organicProducts = (By.XPATH, '//*[@id="searchhide"]/div[1]/div/ul/li[3]/h1')
+    OIG = (By.XPATH, '//*[@id="searchhide"]/div[1]/div/ul/li[2]/a')
+
+
+class RotiKit:
+    enter_zip = (By.ID, 'zipcode')
+    submit_zip = (By.ID, 'zipsubmitbtn')
+    SearchForProducts = (By.XPATH, '//*[@id="search_box"]')
+    IndianRotiKit = (By.XPATH, '//*[@id="home"]/div/div[6]/div/a/div/img')
+    RotiLabel = (By.XPATH, '//*[@id="searchhide"]/div/div/ul/li[2]/h1')
+    categories = (By.XPATH, '//*[@id="searchhide"]/section[2]/div[1]/h3')
+    WholeWheat = (By.XPATH, '//*[@id="searchhide"]/section[2]/div[2]/div/div[1]/a/img')
+    wholewheatlabel = (By.XPATH, '//*[@id="searchhide"]/section[2]/div[2]/div/div[1]/div/a/h3')
+    FreshTawa = (By.XPATH, '//*[@id="searchhide"]/section[2]/div[2]/div/div[2]/a/img')
+    FreshTawaLabel = (By.XPATH, '//*[@id="searchhide"]/section[2]/div[2]/div/div[2]/div/a/h3')
+    Roti = (By.XPATH, '//*[@id="searchhide"]/section[2]/div[2]/div/div[2]/a/img')
+    rotiLabel = (By.XPATH, '//*[@id="searchhide"]/section[2]/div[2]/div/div[2]/div/a/h3')
+    MultiGrain = (By.XPATH, '//*[@id="searchhide"]/section[2]/div[2]/div/div[3]/a/img')
+    MultiGrainLabel = (By.XPATH, '//*[@id="searchhide"]/section[2]/div[2]/div/div[3]/div/a/h3')
+    Rotla = (By.XPATH, '//*[@id="searchhide"]/section[2]/div[2]/div/div[4]/a/img')
+    RotlaLabel = (By.XPATH, '//*[@id="searchhide"]/section[2]/div[2]/div/div[4]/div/a/h3')
+    Paratha = (By.XPATH, '//*[@id="searchhide"]/section[2]/div[2]/div/div[5]/a/img')
+    ParathaLabel = (By.XPATH, '//*[@id="searchhide"]/section[2]/div[2]/div/div[5]/div/a/h3')
+    Thepla = (By.XPATH, '//*[@id="searchhide"]/section[2]/div[2]/div/div[7]/a/img')
+    TheplaLabel = (By.XPATH, '//*[@id="searchhide"]/section[2]/div[2]/div/div[7]/div/a/h3')
+    SpecialRoti = (By.XPATH, '//*[@id="searchhide"]/section[2]/div[2]/div/div[6]/a/img')
+    SpecialRotiLabel = (By.XPATH, '//*[@id="searchhide"]/section[2]/div[2]/div/div[6]/div/a/h3')
+    Bakhri = (By.XPATH, '//*[@id="searchhide"]/section[2]/div[2]/div/div[7]/a/img')
+    BakhriLabel = (By.XPATH, '//*[@id="searchhide"]/section[2]/div[2]/div/div[7]/div/a/h3')
+    GLutenFree = (By.XPATH, '//*[@id="searchhide"]/section[2]/div[2]/div/div[10]/a/img')
+    GLutenFreeLabel = (By.XPATH, '//*[@id="searchhide"]/section[2]/div[2]/div/div[10]/div/a/h3')
+    whatweDeliver = (By.XPATH, '//*[@id="searchhide"]/section[4]/div[1]/h3')
+    WhatareRotis = (By.XPATH, '//*[@id="searchhide"]/section[5]/div/div[2]/div/h2')
+    FreshHomeMade = (By.XPATH, '//*[@id="searchhide"]/section[4]/div[2]/div[1]/div/div[1]/h4')
+    Premium = (By.XPATH, '//*[@id="searchhide"]/section[4]/div[2]/div[1]/div/div[2]/h4')
+    FreeDeivery = (By.XPATH, '//*[@id="searchhide"]/section[4]/div[2]/div[1]/div/div[3]/h4')
+    weekly = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/div/div[2]/div[2]/ul/li[2]')
+    BiWeekly = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/div/div[2]/div[2]/ul/li[3]')
+    Monthly = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/div/div[2]/div[2]/ul/li[4]')
+    Once = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/div/div[2]/div[2]/ul/li[1]')
+    FreeDeiveryOnMinimumOrder = (By.XPATH, '//*[@id="one-time"]/div[2]/p[1]')
+    IndianBread = (By.XPATH, '//*[@id="searchhide"]/div[1]/div/ul/li[3]/h1')
+    OrderRotiKit = (By.XPATH, '//*[@id="searchhide"]/div[1]/div/ul/li[2]/a')
+    buildABox = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/div/div[2]/div[4]/form/button')
+
+
+class IndianMealKit:
+    enter_zip = (By.ID, 'zipcode')
+    submit_zip = (By.ID, 'zipsubmitbtn')
+    SearchForProducts = (By.XPATH, '//*[@id="search_box"]')
+    indianmealKit = (By.XPATH, '//*[@id="home"]/div/div[2]/div/a/div/img')
+    indianSubscription = (By.XPATH, '//*[@id="searchhide"]/div/div/ul/li[2]/h1')
+    chooseMEal = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/h2')
+    readyToEat = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/div/div[1]/div/div[1]/h2')
+    shipping = (By.XPATH, '//*[@id="one-time"]/div[1]/p[1]')
+    free = (By.XPATH, '//*[@id="one-time"]/div[1]/p[2]')
+    price = (By.XPATH, '//*[@id="one-time"]/div[2]/p[1]')
+    dryPacked = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/div/div[2]/div/div[1]/h2')
+    howItWorks = (By.XPATH, '//*[@id="searchhide"]/section[2]/div/div[1]/h3')
+    selectMeal = (By.XPATH, '//*[@id="searchhide"]/section[2]/div/div[2]/div/div[1]/div/a/h3')
+    cookAndDeliver = (By.XPATH, '//*[@id="searchhide"]/section[2]/div/div[2]/div/div[2]/div/a/h3')
+    eatAndEnjoy = (By.XPATH, '//*[@id="searchhide"]/section[2]/div/div[2]/div/div[3]/div/a/h3')
+    OurProducts = (By.XPATH, '//*[@id="searchhide"]/section[3]/h2')
+    enjoyTheComfort = (By.XPATH, '//*[@id="searchhide"]/section[5]/div/div[2]/div/h2')
+    weekly = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/div/div[1]/div/div[2]/ul/li[2]')
+    BiWeekly = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/div/div[1]/div/div[2]/ul/li[3]')
+    Monthly = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/div/div[1]/div/div[2]/ul/li[4]')
+    Once = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/div/div[1]/div/div[2]/ul/li[1]')
+    weekly2 = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/div/div[2]/div/div[2]/ul/li[2]')
+    BiWeekly2 = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/div/div[2]/div/div[2]/ul/li[3]')
+    monthly2 = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/div/div[2]/div/div[2]/ul/li[4]')
+    once2 = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/div/div[2]/div/div[2]/ul/li[1]')
+    selectProducts = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/div/div[1]/div/div[5]/form/button')
+    selectProducts2 = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/div/div[2]/div/div[5]/form/button')
+    SubscriptionBox = (By.XPATH, '//*[@id="searchhide"]/div[1]/ul/li[3]/h1')
+    IMKS = (By.XPATH, '//*[@id="searchhide"]/div[1]/ul/li[2]/a')
+
+
+class IndianMealKitAndSauces:
+    enter_zip = (By.ID, 'zipcode')
+    submit_zip = (By.ID, 'zipsubmitbtn')
+    SearchForProducts = (By.XPATH, '//*[@id="search_box"]')
+    Sauces = (By.XPATH, '//*[@id="home"]/div/div[8]/div/a/div/img')
+    instantPot = (By.XPATH, '//*[@id="searchhide"]/div[2]/ul/li[2]/h1')
+    explore = (By.XPATH, '//*[@id="searchhide"]/div[3]/h2')
+    sauces = (By.XPATH, '//*[@id="nationwide"]/div[2]/div[1]/h3')
+    mealKit = (By.XPATH, '//*[@id="nationwide"]/div[2]/div[2]/h3')
+    effortless = (By.XPATH, '//*[@id="searchhide"]/div[3]/div/div[3]/h2[1]')
+    step1 = (By.XPATH, '//*[@id="searchhide"]/div[3]/div/div[3]/div[1]/div[1]/p')
+    step2 = (By.XPATH, '//*[@id="searchhide"]/div[3]/div/div[3]/div[1]/div[2]/p')
+    step3 = (By.XPATH, '//*[@id="searchhide"]/div[3]/div/div[3]/div[1]/div[3]/p')
+    step4 = (By.XPATH, '//*[@id="searchhide"]/div[3]/div/div[3]/div[1]/div[4]/p')
+    fromFridge = (By.XPATH, '//*[@id="searchhide"]/div[3]/div/div[3]/div[1]/div[1]/span')
+    setPan = (By.XPATH, '//*[@id="searchhide"]/div[3]/div/div[3]/div[1]/div[2]/span')
+    relax = (By.XPATH, '//*[@id="searchhide"]/div[3]/div/div[3]/div[1]/div[3]/span')
+    enjoy = (By.XPATH, '//*[@id="searchhide"]/div[3]/div/div[3]/div[1]/div[4]/span')
+    OurFoodPhilosophy = (By.XPATH, '//*[@id="searchhide"]/div[3]/div/div[3]/h2[2]')
+    delivery = (By.XPATH, '//*[@id="nationwide"]/div[1]')
+    nationwide = (By.XPATH, '//*[@id="searchhide"]/div[3]/ul/li[1]/a')
+    BayArea = (By.XPATH, '//*[@id="searchhide"]/div[3]/ul/li[2]/a')
+    select = (By.XPATH, '//*[@id="nationwide"]/div[2]/div[1]/a')
+    select1 = (By.XPATH, '//*[@id="nationwide"]/div[2]/div[2]/a')
+    saucesLabel = (By.XPATH, '//*[@id="searchhide"]/div[1]/div[1]/ul/li[4]/h1')
+    backToPage = (By.XPATH, '//*[@id="searchhide"]/div[1]/div[1]/ul/li[3]/a')
+    mealKitLabel = (By.XPATH, '//*[@id="searchhide"]/div[1]/div[1]/ul/li[4]/h1')
+    Eat = (By.XPATH, '//*[@id="bay-shop"]/div[2]/div[1]/h3')
+    vegetarian = (By.XPATH, '//*[@id="bay-shop"]/div[2]/div[2]/h3')
+    vegan = (By.XPATH, '//*[@id="bay-shop"]/div[2]/div[3]/h3')
+    NutFree = (By.XPATH, '//*[@id="bay-shop"]/div[2]/div[4]/h3')
+    s = (By.XPATH, '//*[@id="bay-shop"]/div[2]/div[5]/h3')
+    clickEat = (By.XPATH, '//*[@id="bay-shop"]/div[2]/div[1]/a')
+    clickVegetarian = (By.XPATH, '//*[@id="bay-shop"]/div[2]/div[2]/a')
+    clickVegan = (By.XPATH, '//*[@id="bay-shop"]/div[2]/div[3]/a')
+    clickNutfree = (By.XPATH, '//*[@id="bay-shop"]/div[2]/div[4]/a')
+    clickBay = (By.XPATH, '//*[@id="searchhide"]/div[1]/div[1]/ul/li[3]/a')
+
+
+class BBQ:
+    enter_zip = (By.ID, 'zipcode')
+    submit_zip = (By.ID, 'zipsubmitbtn')
+    SearchForProducts = (By.XPATH, '//*[@id="search_box"]')
+    bbqKit = (By.XPATH, '//*[@id="home"]/div/div[9]/div/a/div/img')
+    bbqLabel = (By.XPATH, '//*[@id="searchhide"]/div[1]/div/ul/li[2]/h1')
+    chilling = (By.XPATH, '//*[@id="searchhide"]/div[2]/div[1]/h2')
+    menu = (By.XPATH, '//*[@id="searchhide"]/div[2]/div[2]/h3')
+    AllGrills = (By.XPATH, '//*[@id="searchhide"]/div[2]/div[3]/ul/li[1]/a')
+    VegGrills = (By.XPATH, '//*[@id="searchhide"]/div[2]/div[3]/ul/li[2]/a')
+    NonVeg = (By.XPATH, '//*[@id="searchhide"]/div[2]/div[3]/ul/li[3]/a')
+    Tandoori = (By.XPATH, '//*[@id="searchhide"]/div[2]/div[4]/div/div[1]/div[1]/a/h3')
+    ChickenTikka = (By.XPATH, '//*[@id="searchhide"]/div[2]/div[4]/div/div[2]/div[1]/a/h3')
+    reshmi = (By.XPATH, '//*[@id="searchhide"]/div[2]/div[4]/div/div[3]/div[1]/a/h3')
+    Aloo = (By.XPATH, '//*[@id="searchhide"]/div[2]/div[4]/div/div[4]/div[1]/a/h3')
+    hariyaliChicken = (By.XPATH, '//*[@id="searchhide"]/div[2]/div[4]/div/div[5]/div[1]/a/h3')
+    hariyaliPaneer = (By.XPATH, '//*[@id="searchhide"]/div[2]/div[4]/div/div[6]/div[1]/a/h3')
+    PaneerTikka = (By.XPATH, '//*[@id="searchhide"]/div[2]/div[4]/div/div[7]/div[1]/a/h3')
+    TandooriChicken = (By.XPATH, '//*[@id="searchhide"]/div[2]/div[4]/div/div[8]/div[1]/a/h3')
+    Lamb = (By.XPATH, '//*[@id="searchhide"]/div[2]/div[4]/div/div[9]/div[1]/a/h3')
+    BotiKabaab = (By.XPATH, '//*[@id="searchhide"]/div[2]/div[4]/div/div[10]/div[1]/a/h3')
+    OurFood = (By.XPATH, '//*[@id="searchhide"]/div[6]/div/div[2]/h2')
+    MinimumOrder = (By.XPATH, '//*[@id="cartStoreProd"]/div[1]/div/div/div/p[2]')
+    clickFive = (By.XPATH, '//*[@id="searchhide"]/div[2]/div[4]/div/div[1]/div[2]/ul/li[2]/label/input')
+    clickEight = (By.XPATH, '//*[@id="searchhide"]/div[2]/div[4]/div/div[1]/div[2]/ul/li[1]/label/input')
+    Price = (By.XPATH, '//*[@id="searchhide"]/div[2]/div[4]/div/div[1]/div[1]/span')
 
 class CommonLocators:
     learn_more_link = (By.ID, 'learn-more-link')
