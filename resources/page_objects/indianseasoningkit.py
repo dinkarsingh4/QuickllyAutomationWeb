@@ -23,11 +23,12 @@ class Indian(BasePage):
 
     def click_MealKit(self):
         self.driver.implicitly_wait(20)
-        element = self.driver.find_element_by_xpath('/html/body/div[1]/div[5]/div/div/div/div/a[10]/img')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[6]/div/div/div/div/a[10]/img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_indianSeasoning(self):
-        self.click(IndianSeasoningKit.indianSeasoning)
+        element = self.driver.find_element_by_xpath('//*[@id="home"]/div/div[4]/div/a/div/img')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_weekly(self):
         self.click(IndianSeasoningKit.weekly)

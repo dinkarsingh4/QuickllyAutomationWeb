@@ -67,7 +67,7 @@ class evoucher(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_fresh(self):
-        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[8]/div[1]/div/div/a[2]/img')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[9]/div[1]/div/div/a[2]/img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_item(self):

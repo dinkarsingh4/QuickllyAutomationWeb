@@ -16,7 +16,7 @@ class TesFP(ui_test_class.UIIIIClass):
     fp = {}
     fp1 = {}
 
-    actual1 = "Email ID does not exist, please try again with a valid ID<br>"
+    actual1 = "Password reset link has been sent on email!"
 
     @classmethod
     def setUpClass(cls):
@@ -29,7 +29,6 @@ class TesFP(ui_test_class.UIIIIClass):
 
     def compare_res_Headings(self):
 
-        # WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(ForgetPassword.heading1))
         forgotpassword_heading = self.forget_page.get_attribute(ForgetPassword.heading1, 'innerHTML')
         whyregister_heading = self.forget_page.get_attribute(ForgetPassword.heading2, 'innerHTML')
 
@@ -66,9 +65,9 @@ class TesFP(ui_test_class.UIIIIClass):
 
         self.forget_page.click_SIbutton()
         self.forget_page.click_forgetpassword()
-        self.forget_page.registred_email("saadadil3@gmail.com")
+        self.forget_page.registred_email("testaccount@quicklly.com")
         self.forget_page.click_submit()
-        invalid_email = self.forget_page.get_attribute(ForgetPassword.invalid_email, 'innerHTML')
+        invalid_email = self.forget_page.get_attribute(ForgetPassword.invalid_email, 'textContent')
         print(invalid_email)
         self.assertEqual(self.actual1, invalid_email)
 

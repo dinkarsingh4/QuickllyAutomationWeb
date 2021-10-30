@@ -8,6 +8,8 @@ class TesGUESTLOGIN(ui_test_class.UVXVIClass):
     guestLogin_page: LoginAsGuest
     guestLogin_page: GuestLogin
 
+    actual1 = "Thank you"
+
     @classmethod
     def setUpClass(cls):
         super(TesGUESTLOGIN, cls).setUpClass()
@@ -47,13 +49,13 @@ class TesGUESTLOGIN(ui_test_class.UVXVIClass):
         time.sleep(5)
         self.guestLogin_page.click_Checkout()
         self.guestLogin_page.click_guestLogin()
-        self.guestLogin_page.Enter_Name("quicklly")
+        self.guestLogin_page.Enter_Name("automation")
         self.guestLogin_page.Enter_Name2("test")
         self.guestLogin_page.EnterAddress("East Chicago Avenue, Chicago, IL 60611, USA")
         self.guestLogin_page.EnterNumber("1452336548")
-        self.guestLogin_page.Enter_email("qicklly1234@gmail.com")
+        self.guestLogin_page.Enter_email("qicklly1235@gmail.com")
         self.guestLogin_page.click_submit()
-        time.sleep(5)
+        time.sleep(2)
         self.guestLogin_page.click_payment1()
         time.sleep(5)
         self.guestLogin_page.click_Pay()
@@ -89,9 +91,18 @@ class TesGUESTLOGIN(ui_test_class.UVXVIClass):
 
     def test_food(self):
         self.food()
+        ThankYouLabel = self.guestLogin_page.get_attribute(GuestLogin.ThankYou, 'innerHTML')
+        print(ThankYouLabel)
+        self.assertEqual(self.actual1, ThankYouLabel)
 
     def test_catering(self):
         self.Catering()
+        ThankYouLabel = self.guestLogin_page.get_attribute(GuestLogin.ThankYou, 'innerHTML')
+        print(ThankYouLabel)
+        self.assertEqual(self.actual1, ThankYouLabel)
 
     def test_tiffin(self):
         self.tiffin()
+        ThankYouLabel = self.guestLogin_page.get_attribute(GuestLogin.ThankYou, 'innerHTML')
+        print(ThankYouLabel)
+        self.assertEqual(self.actual1, ThankYouLabel)

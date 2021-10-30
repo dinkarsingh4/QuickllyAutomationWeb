@@ -77,7 +77,9 @@ class SUC(BasePage):
         self.click(SignUpCheckout.register)
 
     def click_payment1(self):
-        element = self.driver.find_element_by_xpath('//*[@id="proceedtopayment"]')
+        self.scroll_to_element(SignUpCheckout.payment)
+        # self.click(SignUpCheckout.payment)
+        element = self.driver.find_element_by_id('proceedtopayment')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_Pay(self):
@@ -184,11 +186,11 @@ class SUC(BasePage):
 
     def click_IndianMealKit(self):
         element = self.driver.find_element_by_xpath(
-            '/html/body/div[1]/div[7]/div[2]/div/div/div[1]/div/div[1]/div/a/div/img')
+            '//*[@id="home"]/div/div[7]/div/a/div/img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_SelectProducts(self):
-        element = self.driver.find_element_by_xpath('/html/body/div[4]/section[1]/div/div/div[1]/div/div[5]/form/button')
+        element = self.driver.find_element_by_xpath('//*[@id="meal-kit"]/div[2]/div[1]/form/a')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_AddMixVegetable(self):

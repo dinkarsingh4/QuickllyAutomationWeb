@@ -20,13 +20,15 @@ class GroceryCategories(BasePage):
         self.click(Category.UnbeatableDeals)
 
     def click_GoFresh(self):
-        self.click(Category.GoFresh)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[7]/div[1]/div/div/a[2]/img')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(Category.GoFresh)
 
     def click_Grocery(self):
         self.click(Category.Grocery)
 
     def click_Meat(self):
-        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[6]/div[1]/div/div/a[4]/img')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[7]/div[1]/div/div/a[4]/img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_Beverages(self):
@@ -35,7 +37,7 @@ class GroceryCategories(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_Organic(self):
-        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[6]/div[1]/div/div/a[6]/img')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[7]/div[1]/div/div/a[6]/img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_personalCare(self):
@@ -44,10 +46,10 @@ class GroceryCategories(BasePage):
         # self.click(Category.PersonalCare)
 
     def click_Household(self):
-        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[6]/div[1]/div/div/a[8]/img')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[7]/div[1]/div/div/a[8]/img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_Weekly(self):
-        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[8]/div[2]/div/div/a[1]')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[7]/div[2]/div/div/a')
         self.driver.execute_script("arguments[0].click();", element)
         # self.click(Category.weeklyDeals)

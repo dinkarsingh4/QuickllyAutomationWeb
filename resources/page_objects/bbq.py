@@ -23,7 +23,7 @@ class BBQKIT(BasePage):
 
     def click_MealKit(self):
         self.driver.implicitly_wait(20)
-        element = self.driver.find_element_by_xpath('/html/body/div[1]/div[5]/div/div/div/div/a[10]/img')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[6]/div/div/div/div/a[10]/img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_bbqKit(self):
@@ -43,7 +43,7 @@ class BBQKIT(BasePage):
         self.click(BBQ.NonVeg)
 
     def AddToCartVeggie(self):
-        element = self.driver.find_element_by_xpath('/html/body/div[5]/div[2]/div[4]/div/div[1]/div[3]/div[2]/a')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[2]/div[4]/div/div[1]/div[3]/div[2]/a')
         self.driver.execute_script("arguments[0].click();", element)
 
     def AddToCartTikka(self):

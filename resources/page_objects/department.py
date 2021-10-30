@@ -128,7 +128,7 @@ class Dept(BasePage):
         self.click(Department.submitTenders)
 
     def click_BBQ(self):
-        element = self.driver.find_element_by_xpath('/html/body/div[1]/div[5]/div/div/div/div/a[9]')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[6]/div/div/div/div/a[9]/img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_TikkaImage(self):
@@ -157,7 +157,7 @@ class Dept(BasePage):
         self.click(Department.submitBeef)
 
     def click_mealBasket(self):
-        element = self.driver.find_element_by_xpath('/html/body/div[1]/div[5]/div/div/div/div/a[11]/img')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[6]/div/div/div/div/a[11]/img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def select_mealPlan(self):
@@ -197,7 +197,7 @@ class Dept(BasePage):
 
     def click_MealKit(self):
         self.driver.implicitly_wait(20)
-        element = self.driver.find_element_by_xpath('/html/body/div[1]/div[5]/div/div/div/div/a[10]/img')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[6]/div/div/div/div/a[10]/img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def select_MealPlan20(self):
@@ -250,7 +250,7 @@ class Dept(BasePage):
 
     def click_OrganicGrocery(self):
         self.driver.implicitly_wait(30)
-        element = self.driver.find_element_by_xpath('/html/body/div[1]/div[5]/div/div/div/div/a[8]/img')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[6]/div/div/div/div/a[8]/img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_BuildBox(self):
@@ -303,15 +303,15 @@ class Dept(BasePage):
         self.click(Department.AddToCartBeer)
 
     def click_ChaiAndCoffee(self):
-        element = self.driver.find_element_by_xpath('/html/body/div[1]/div[5]/div/div/div/div/a[4]/img')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[6]/div/div/div/div/a[4]/img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_ChaiBox(self):
-        element = self.driver.find_element_by_xpath('/html/body/div[4]/section[1]/div/div/div[2]/div[4]/form/button')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/section[1]/div/div/div[2]/div[4]/form/button')
         self.driver.execute_script("arguments[0].click();", element)
 
     def AddKimbala(self):
-        element = self.driver.find_element_by_xpath('/html/body/div[6]/div[3]/div/div/div[1]/div[3]/div/a')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[3]/div/div/div[1]/div[3]/div/a')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_NationWideShop(self):

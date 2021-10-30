@@ -183,16 +183,14 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         time.sleep(10)
 
     def recipes(self):
-        # self.depart_page.click_quicklly()
-        # self.depart_page.submit_zip()
+        self.depart_page.click_quicklly()
+        self.depart_page.submit_zip()
         time.sleep(5)
         self.depart_page.click_fresh()
         self.depart_page.click_additem()
         self.depart_page.click_Department()
         self.depart_page.click_Recipes()
         self.depart_page.click_PalakPaneer()
-        # time.sleep(5)
-        # self.depart_page.click_TickBox()
         self.depart_page.click_AddToBasket()
         self.depart_page.click_MiniCart()
         self.depart_page.click_Checkout()
@@ -245,7 +243,7 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.submit_zip()
         time.sleep(2)
         self.depart_page.click_Liquor()
-        # self.depart_page.click_beer()
+        self.depart_page.click_beer()
         self.depart_page.click_classicLime()
         self.depart_page.click_AddToCartBeer()
         self.depart_page.click_legalCheckBox()
@@ -320,94 +318,92 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         AccountLabel = self.depart_page.get_attribute(Department.Account, 'innerHTML')
         print(AccountLabel)
         self.assertEqual(self.actual2, AccountLabel)
-    #
-    # def test_shopWithGrocery(self):
-    #     self.depart_page.click_quicklly()
-    #     self.depart_page.submit_zip()
-    #     self.Grocery()
-    #     ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
-    #     print(ThankYouLabel)
-    #     self.assertEqual(self.actual1, ThankYouLabel)
-    #
-    # def test_shopWithInstant(self):
-    #     self.depart_page.click_quicklly()
-    #     self.InstantPot()
-    #     ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
-    #     print(ThankYouLabel)
-    #     self.assertEqual(self.actual1, ThankYouLabel)
-    #
-    # def test_shopWithFood(self):
-    #     self.depart_page.click_quicklly()
-    #     self.depart_page.submit_zip()
-    #     self.food()
-    #     ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
-    #     print(ThankYouLabel)
-    #     self.assertEqual(self.actual1, ThankYouLabel)
-    #
-    # def test_shopWithBBQ(self):
-    #     self.BBQKIT()
-    #     ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
-    #     print(ThankYouLabel)
-    #     self.assertEqual(self.actual1, ThankYouLabel)
-    #
-    # def test_shopWithCatering(self):
-    #     self.Catering()
-    #     ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
-    #     print(ThankYouLabel)
-    #     self.assertEqual(self.actual1, ThankYouLabel)
-    #
-    # def test_shopWithMealBasket(self):
-    #     self.MealBasket()
-    #     ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
-    #     print(ThankYouLabel)
-    #     self.assertEqual(self.actual1, ThankYouLabel)
-    #
-    # def test_shopWithTiffin(self):
-    #     self.tiffin()
-    #     ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
-    #     print(ThankYouLabel)
-    #     self.assertEqual(self.actual1, ThankYouLabel)
-    #
-    # def test_shopWithMealKit(self):
-    #     self.MealKit()
-    #     ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
-    #     print(ThankYouLabel)
-    #     self.assertEqual(self.actual1, ThankYouLabel)
 
-    def test_shopWithRecipes(self):
-        self.recipes()
-        # self.driver.implicitly_wait(10)
-        # WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(Department.ThankYou))
+    def test_shopWithGrocery(self):
+        self.depart_page.click_quicklly()
+        self.depart_page.submit_zip()
+        self.Grocery()
         ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
         print(ThankYouLabel)
         self.assertEqual(self.actual1, ThankYouLabel)
-    #
-    # def test_shopWithOrganicGrocery(self):
-    #     self.OrganicGrocery()
-    #     ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
-    #     print(ThankYouLabel)
-    #     self.assertEqual(self.actual1, ThankYouLabel)
-    #
-    # def test_shopWithRotikaa(self):
-    #     self.Rotikaa()
-    #     ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
-    #     print(ThankYouLabel)
-    #     self.assertEqual(self.actual1, ThankYouLabel)
-    #
-    # def test_shopWithLiquor(self):
-    #     self.Liquor()
-    #     ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
-    #     print(ThankYouLabel)
-    #     self.assertEqual(self.actual1, ThankYouLabel)
-    #
-    # def test_shopWithChaiAndCoffee(self):
-    #     self.ChaiAndCoffee()
-    #     ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
-    #     print(ThankYouLabel)
-    #     self.assertEqual(self.actual1, ThankYouLabel)
-    #
-    # def test_shopWithNationWideShop(self):
-    #     self.NationWideShop()
-    #     ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
-    #     print(ThankYouLabel)
-    #     self.assertEqual(self.actual1, ThankYouLabel)
+
+    def test_shopWithInstant(self):
+        self.depart_page.click_quicklly()
+        self.InstantPot()
+        ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
+        print(ThankYouLabel)
+        self.assertEqual(self.actual1, ThankYouLabel)
+
+    def test_shopWithFood(self):
+        self.depart_page.click_quicklly()
+        self.depart_page.submit_zip()
+        self.food()
+        ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
+        print(ThankYouLabel)
+        self.assertEqual(self.actual1, ThankYouLabel)
+
+    def test_shopWithBBQ(self):
+        self.BBQKIT()
+        ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
+        print(ThankYouLabel)
+        self.assertEqual(self.actual1, ThankYouLabel)
+
+    def test_shopWithCatering(self):
+        self.Catering()
+        ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
+        print(ThankYouLabel)
+        self.assertEqual(self.actual1, ThankYouLabel)
+
+    def test_shopWithMealBasket(self):
+        self.MealBasket()
+        ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
+        print(ThankYouLabel)
+        self.assertEqual(self.actual1, ThankYouLabel)
+
+    def test_shopWithTiffin(self):
+        self.tiffin()
+        ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
+        print(ThankYouLabel)
+        self.assertEqual(self.actual1, ThankYouLabel)
+
+    def test_shopWithMealKit(self):
+        self.MealKit()
+        ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
+        print(ThankYouLabel)
+        self.assertEqual(self.actual1, ThankYouLabel)
+
+    def test_shopWithRecipes(self):
+        self.recipes()
+        ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
+        print(ThankYouLabel)
+        self.assertEqual(self.actual1, ThankYouLabel)
+
+    def test_shopWithOrganicGrocery(self):
+        self.OrganicGrocery()
+        ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
+        print(ThankYouLabel)
+        self.assertEqual(self.actual1, ThankYouLabel)
+
+    def test_shopWithRotikaa(self):
+        self.Rotikaa()
+        ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
+        print(ThankYouLabel)
+        self.assertEqual(self.actual1, ThankYouLabel)
+
+    def test_shopWithLiquor(self):
+        self.Liquor()
+        ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
+        print(ThankYouLabel)
+        self.assertEqual(self.actual1, ThankYouLabel)
+
+    def test_shopWithChaiAndCoffee(self):
+        self.ChaiAndCoffee()
+        ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
+        print(ThankYouLabel)
+        self.assertEqual(self.actual1, ThankYouLabel)
+
+    def test_shopWithNationWideShop(self):
+        self.NationWideShop()
+        ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
+        print(ThankYouLabel)
+        self.assertEqual(self.actual1, ThankYouLabel)

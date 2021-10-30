@@ -8,7 +8,7 @@ class TesCHECKOUTWITHGUEST(ui_test_class.UVXIIClass):
     guestCheckout_page: GuestCheckout
     guestCheckout_page: CheckoutWithGuest
 
-    actualLabel = "Your Shopping Carts"
+    actualLabel = "HERE'S EXTRA 10% OFF!"
     label = ""
 
     @classmethod
@@ -26,7 +26,7 @@ class TesCHECKOUTWITHGUEST(ui_test_class.UVXIIClass):
         time.sleep(2)
         self.guestCheckout_page.EnterElementForSearch("lemon grass")
         self.guestCheckout_page.click_SearchButton()
-        time.sleep(10)
+        time.sleep(2)
         self.guestCheckout_page.click_Potato()
         self.guestCheckout_page.click_AddToCart()
         self.guestCheckout_page.click_Cart()
@@ -37,7 +37,7 @@ class TesCHECKOUTWITHGUEST(ui_test_class.UVXIIClass):
         self.guestCheckout_page.Enter_Name2("test")
         self.guestCheckout_page.EnterAddress("East Chicago Avenue, Chicago, IL 60611, USA")
         self.guestCheckout_page.EnterNumber("1452336548")
-        self.guestCheckout_page.Enter_email("qicklly1234@gmail.com")
+        self.guestCheckout_page.Enter_email("qicklly1245@gmail.com")
         self.guestCheckout_page.click_submit()
         time.sleep(10)
         self.label = self.guestCheckout_page.get_attribute(GuestCheckout.shoppingCarts, 'innerHTML')

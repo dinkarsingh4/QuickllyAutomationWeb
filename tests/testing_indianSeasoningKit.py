@@ -3,9 +3,6 @@ from resources import ui_test_class
 from resources.page_objects.indianseasoningkit import Indian
 from resources.page_objects.indianseasoningkit import IndianSeasoningKit
 from selenium.webdriver.support.color import Color
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException, NoSuchElementException
 
 
 class TesINDIANSEASONING(ui_test_class.UVXVXIClass):

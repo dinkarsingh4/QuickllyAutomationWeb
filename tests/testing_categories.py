@@ -30,13 +30,11 @@ class TesCATEGORIES(ui_test_class.UVXIIIClass):
     def test_EnterZipcode(self):
         self.category_page.EnterZip("60611")
         self.category_page.submit_zip()
-        time.sleep(2)
-        self.category_page.click_Weekly()
         search = self.category_page.get_attribute(Category.SearchForProducts, 'placeholder')
         self.assertEqual(search, self.actual3)
 
 
-    def test_deals(self):
+    def test_udeals(self):
         time.sleep(2)
         self.category_page.click_unbeatable()
         label = self.category_page.get_attribute(Category.StoreLabel, 'innerHTML')

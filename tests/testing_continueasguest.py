@@ -1,5 +1,4 @@
 from resources import ui_test_class
-# import unittest
 from resources.page_objects.guest import ContinueAsGuest
 from resources.page_objects.guest import guest
 

@@ -23,13 +23,13 @@ class IndianGrocery(BasePage):
 
     def click_MealKit(self):
         self.driver.implicitly_wait(20)
-        element = self.driver.find_element_by_xpath('/html/body/div[1]/div[5]/div/div/div/div/a[10]/img')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[6]/div/div/div/div/a[10]/img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_indianGrocery(self):
         self.driver.implicitly_wait(20)
         self.scroll_to_element(IndianGroceryBox.indianGrocery)
-        element = self.driver.find_element_by_xpath('//*[@id="home"]/div/div[5]/div/a/div/img')
+        element = self.driver.find_element_by_css_selector('#home > div > div:nth-child(5) > div > a > div > img')
         self.driver.execute_script("arguments[0].click();", element)
         # self.click(IndianGroceryBox.indianGrocery)
 
@@ -46,7 +46,8 @@ class IndianGrocery(BasePage):
         self.click(IndianGroceryBox.Once)
 
     def click_buildABox(self):
-        self.click(IndianGroceryBox.buildABox)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/section[1]/div/div/div[2]/div[4]/form/button')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_OIG(self):
         self.click(IndianGroceryBox.OIG)
