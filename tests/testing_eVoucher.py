@@ -21,19 +21,19 @@ class TesEVoucher(ui_test_class.UVIClass):
         super(TesEVoucher, cls).tearDownClass()
         cls.driver.quit()
 
+    def Signin(self):
+        self.eVoucher_page.click_signin()
+        self.eVoucher_page.EnterEmail("testaccount@quicklly.com")
+        self.eVoucher_page.EnterPass("123456")
+        self.eVoucher_page.click_login()
+
     def test_EnterZipcode(self):
+        self.Signin()
         self.eVoucher_page.EnterZipcode("60611")
         self.eVoucher_page.ClickSubmit()
         empty = self.eVoucher_page.get_attribute(Coupon.empty_cart, 'innerHTML')
         print(empty)
         self.assertEqual(self.actual1, empty)
-
-    def test_SignIn(self):
-        self.eVoucher_page.select_dropdown()
-        self.eVoucher_page.click_signin()
-        self.eVoucher_page.EnterEmail("testaccount@quicklly.com")
-        self.eVoucher_page.EnterPass("123456")
-        self.eVoucher_page.click_login()
 
     def test_addItem(self):
         time.sleep(1)
