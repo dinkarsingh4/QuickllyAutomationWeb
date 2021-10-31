@@ -13,7 +13,7 @@ class evoucher(BasePage):
         self.driver.get(DataClass.BASE_URL)
 
     def EnterZipcode(self, zip):
-        self.find_elements(Coupon.zipCode).clear()
+        self.find_element(Coupon.zipCode).clear()
         self.find_element(Coupon.zipCode).send_keys(zip)
 
     def ClickSubmit(self):

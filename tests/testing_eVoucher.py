@@ -2,7 +2,9 @@ import time
 from resources import ui_test_class
 from resources.locators import Coupon
 from resources.page_objects.eVoucher import evoucher
-
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
 
 class TesEVoucher(ui_test_class.UVIClass):
     eVoucher_page: evoucher
@@ -32,6 +34,14 @@ class TesEVoucher(ui_test_class.UVIClass):
         self.Signin()
         self.eVoucher_page.EnterZipcode("60611")
         self.eVoucher_page.ClickSubmit()
+        try:
+            WebDriverWait(self.driver, 5).until(EC.alert_is_present())
+            alert = self.driver.switch_to.alert
+            alert.accept()
+            print("alert Exists in page")
+        except TimeoutException:
+            print("alert does not Exist in page")
+        time.sleep(2)
         empty = self.eVoucher_page.get_attribute(Coupon.empty_cart, 'innerHTML')
         print(empty)
         self.assertEqual(self.actual1, empty)
