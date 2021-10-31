@@ -87,16 +87,6 @@ class TesINDIANBBQKIT(ui_test_class.UVXVXVIClass):
         print(label)
         self.assertEqual(self.actual7, label)
 
-    def test_labelTandooriVeg(self):
-        label = self.bbq_page.get_attribute(BBQ.Tandoori, 'textContent')
-        print(label)
-        self.assertEqual(self.actual8, label)
-
-    def test_labelTikka(self):
-        label = self.bbq_page.get_attribute(BBQ.ChickenTikka, 'textContent')
-        print(label)
-        self.assertEqual(self.actual9, label)
-
     def test_labelReshmi(self):
         label = self.bbq_page.get_attribute(BBQ.reshmi, 'textContent')
         print(label)
@@ -106,26 +96,6 @@ class TesINDIANBBQKIT(ui_test_class.UVXVXVIClass):
         label = self.bbq_page.get_attribute(BBQ.Aloo, 'textContent')
         print(label)
         self.assertEqual(self.actual11, label)
-
-    def test_labelHariyaliChicken(self):
-        label = self.bbq_page.get_attribute(BBQ.hariyaliPaneer, 'textContent')
-        print(label)
-        self.assertEqual(self.actual12, label)
-
-    def test_labelHariyaliPaneer(self):
-        label = self.bbq_page.get_attribute(BBQ.hariyaliChicken, 'textContent')
-        print(label)
-        self.assertEqual(self.actual13, label)
-
-    def test_labelPaneerTikka(self):
-        label = self.bbq_page.get_attribute(BBQ.TandooriChicken, 'textContent')
-        print(label)
-        self.assertEqual(self.actual14, label)
-
-    def test_labelTandooriChicken(self):
-        label = self.bbq_page.get_attribute(BBQ.PaneerTikka, 'textContent')
-        print(label)
-        self.assertEqual(self.actual15, label)
 
     def test_labelLamb(self):
         label = self.bbq_page.get_attribute(BBQ.Lamb, 'textContent')
