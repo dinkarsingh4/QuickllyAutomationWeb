@@ -18,7 +18,8 @@ class evoucher(BasePage):
         self.click(Coupon.submitButton)
 
     def select_dropdown(self):
-        self.click(Coupon.yourAccount)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/header/div[3]/span')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_signin(self):
         self.scroll_to_element(Coupon.SignInButton)

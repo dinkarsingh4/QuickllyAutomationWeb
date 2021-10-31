@@ -14,7 +14,8 @@ class IndianMeal(BasePage):
         self.find_element(IndianMealKit.enter_zip).send_keys(zipcode)
 
     def submit_zip(self):
-        self.click(IndianMealKit.submit_zip)
+        element = self.driver.find_element_by_id('zipsubmitbtn')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_RightArrow(self):
         element = self.driver.find_element_by_css_selector(

@@ -23,7 +23,8 @@ class CheckoutWithGuest(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_AddToCart(self):
-        self.click(GuestCheckout.AddtoCart)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[7]/div/section[2]/div/a[1]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_Cart(self):
         self.click(GuestCheckout.Cart)

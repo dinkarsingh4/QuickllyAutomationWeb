@@ -6,16 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/bbq.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/bbq.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/category.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/category.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/chaiDepartment.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/chaiDepartment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/indiangrocerybox.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/indiangrocerybox.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/indianmeal.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/indianmeal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/indianseasoningkit.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/indianseasoningkit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/mealkit.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/mealkit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_MealKit.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_MealKit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_rotiKit.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_rotiKit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/eVoucher.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/eVoucher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/guestCheckout_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/guestCheckout_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_BBQ.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_BBQ.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,13 +165,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616787846440</updated>
-    </task>
-    <task id="LOCAL-00314" summary="Merge remote-tracking branch 'github/main' into main">
-      <created>1633431245508</created>
-      <option name="number" value="00314" />
-      <option name="presentableId" value="LOCAL-00314" />
-      <option name="project" value="LOCAL" />
-      <updated>1633431245508</updated>
     </task>
     <task id="LOCAL-00315" summary="Merge remote-tracking branch 'github/main' into main">
       <created>1633431977420</created>
@@ -516,7 +502,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635590980813</updated>
     </task>
-    <option name="localTasksCounter" value="363" />
+    <task id="LOCAL-00363" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1635666168335</created>
+      <option name="number" value="00363" />
+      <option name="presentableId" value="LOCAL-00363" />
+      <option name="project" value="LOCAL" />
+      <updated>1635666168336</updated>
+    </task>
+    <option name="localTasksCounter" value="364" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
