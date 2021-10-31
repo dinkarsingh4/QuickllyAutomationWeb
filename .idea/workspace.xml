@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/eVoucher.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/eVoucher.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/guestCheckout_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/guestCheckout_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/testing_BBQ.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_BBQ.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -165,13 +163,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616787846440</updated>
-    </task>
-    <task id="LOCAL-00315" summary="Merge remote-tracking branch 'github/main' into main">
-      <created>1633431977420</created>
-      <option name="number" value="00315" />
-      <option name="presentableId" value="LOCAL-00315" />
-      <option name="project" value="LOCAL" />
-      <updated>1633431977420</updated>
     </task>
     <task id="LOCAL-00316" summary="Merge remote-tracking branch 'github/main' into main">
       <created>1633432748060</created>
@@ -509,7 +500,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635666168336</updated>
     </task>
-    <option name="localTasksCounter" value="364" />
+    <task id="LOCAL-00364" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1635667773062</created>
+      <option name="number" value="00364" />
+      <option name="presentableId" value="LOCAL-00364" />
+      <option name="project" value="LOCAL" />
+      <updated>1635667773062</updated>
+    </task>
+    <option name="localTasksCounter" value="365" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">

@@ -1,3 +1,5 @@
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from resources.config_methods import DataClass
 from resources.locators import Coupon
 from resources.page_objects.base_page import BasePage
@@ -23,7 +25,7 @@ class evoucher(BasePage):
 
     def click_signin(self):
         self.scroll_to_element(Coupon.SignInButton)
-        self.click(Coupon.SignInButton)
+        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(Coupon.SignInButton)).click()
 
     def EnterEmail(self, email):
         self.find_elements(Coupon.Email).clear()
