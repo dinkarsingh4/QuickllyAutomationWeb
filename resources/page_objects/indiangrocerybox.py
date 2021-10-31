@@ -31,23 +31,27 @@ class IndianGrocery(BasePage):
         self.scroll_to_element(IndianGroceryBox.indianGrocery)
         element = self.driver.find_element_by_css_selector('#home > div > div:nth-child(5) > div > a > div > img')
         self.driver.execute_script("arguments[0].click();", element)
-        # self.click(IndianGroceryBox.indianGrocery)
 
     def click_weekly(self):
-        self.click(IndianGroceryBox.weekly)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/section[1]/div/div/div[2]/div[2]/ul/li[1]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_Biweekly(self):
-        self.click(IndianGroceryBox.BiWeekly)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/section[1]/div/div/div[2]/div[2]/ul/li[2]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_Monthly(self):
-        self.click(IndianGroceryBox.Monthly)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/section[1]/div/div/div[2]/div[2]/ul/li[3]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_Once(self):
-        self.click(IndianGroceryBox.Once)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/section[1]/div/div/div[2]/div[2]/ul/li[4]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_buildABox(self):
         element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/section[1]/div/div/div[2]/div[4]/form/button')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_OIG(self):
-        self.click(IndianGroceryBox.OIG)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[1]/div/ul/li[2]/a')
+        self.driver.execute_script("arguments[0].click();", element)

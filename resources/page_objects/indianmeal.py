@@ -30,39 +30,54 @@ class IndianMeal(BasePage):
         self.click(IndianMealKit.indianmealKit)
 
     def click_weekly(self):
-        self.click(IndianMealKit.weekly)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/section[1]/div/div/div[1]/div/div[2]/ul/li[2]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_Biweekly(self):
-        self.click(IndianMealKit.BiWeekly)
+        element = self.driver.find_element_by_xpath(
+            '//*[@id="searchhide"]/section[1]/div/div/div[1]/div/div[2]/ul/li[3]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_Monthly(self):
-        self.click(IndianMealKit.Monthly)
+        element = self.driver.find_element_by_xpath(
+            '//*[@id="searchhide"]/section[1]/div/div/div[1]/div/div[2]/ul/li[4]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_Once(self):
-        self.click(IndianMealKit.Once)
+        element = self.driver.find_element_by_xpath(
+            '//*[@id="searchhide"]/section[1]/div/div/div[1]/div/div[2]/ul/li[1]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_weekly2(self):
-        self.click(IndianMealKit.weekly2)
+        element = self.driver.find_element_by_xpath(
+            '//*[@id="searchhide"]/section[1]/div/div/div[2]/div/div[2]/ul/li[2]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_Biweekly2(self):
-        self.click(IndianMealKit.BiWeekly2)
+        element = self.driver.find_element_by_xpath(
+            '//*[@id="searchhide"]/section[1]/div/div/div[2]/div/div[2]/ul/li[3]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_Monthly2(self):
-        self.click(IndianMealKit.monthly2)
+        element = self.driver.find_element_by_xpath(
+            '//*[@id="searchhide"]/section[1]/div/div/div[2]/div/div[2]/ul/li[4]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_Once2(self):
-        self.click(IndianMealKit.once2)
+        element = self.driver.find_element_by_xpath(
+            '//*[@id="searchhide"]/section[1]/div/div/div[2]/div/div[2]/ul/li[1]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_selectProduct(self):
         element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/section[1]/div/div/div[1]/div/div[5]/form/button')
         self.driver.execute_script("arguments[0].click();", element)
-        # self.click(IndianMealKit.selectProducts)
 
     def click_selectProduct2(self):
         element = self.driver.find_element_by_xpath(
             '//*[@id="searchhide"]/section[1]/div/div/div[2]/div/div[5]/form/button')
         self.driver.execute_script("arguments[0].click();", element)
-        # self.click(IndianMealKit.selectProducts2)
 
     def click_IMKS(self):
-        self.click(IndianMealKit.IMKS)
+        element = self.driver.find_element_by_xpath(
+            '//*[@id="searchhide"]/div[1]/ul/li[2]/a')
+        self.driver.execute_script("arguments[0].click();", element)

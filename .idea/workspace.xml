@@ -5,28 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main">
-      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/IndianSauces.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/IndianSauces.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/SignUpCheckout_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/SignUpCheckout_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/page_objects/bbq.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/bbq.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/page_objects/category.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/category.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/page_objects/chaiDepartment.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/chaiDepartment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/department.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/department.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/eVoucher.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/eVoucher.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/page_objects/indiangrocerybox.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/indiangrocerybox.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/page_objects/indianmeal.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/indianmeal.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/page_objects/indianseasoningkit.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/indianseasoningkit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_GuestCheckout.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_GuestCheckout.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_categories.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_categories.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_chaiDepartment.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_chaiDepartment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_continueasguest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_continueasguest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_department.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_department.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_forgotpassword.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_forgotpassword.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_guestLogin.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_guestLogin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_indianSeasoningKit.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_indianSeasoningKit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_signUpCheckout.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_signUpCheckout.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/mealkit.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/mealkit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_MealKit.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_MealKit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_rotiKit.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_rotiKit.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,8 +76,8 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for testing_indianSeasoningKit.TesINDIANSEASONING">
-    <configuration name="Python tests for testing_IndianMealKit.TesROTIKIT" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests for testing_signUp.TesSIGNUP">
+    <configuration name="Python tests for testing_MealKit.TesMEALKIT" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -98,11 +87,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;testing_IndianMealKit.TesROTIKIT&quot;" />
+      <option name="_new_target" value="&quot;testing_MealKit.TesMEALKIT&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for testing_IndianSauces.TesINDIANSAUCES" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for testing_ReferaFriend.TesREFERAFRIEND" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -112,11 +101,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;testing_IndianSauces.TesINDIANSAUCES&quot;" />
+      <option name="_new_target" value="&quot;testing_ReferaFriend.TesREFERAFRIEND&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for testing_guestLogin.TesGUESTLOGIN" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for testing_needanaccount.TesNAC" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -126,11 +115,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;testing_guestLogin.TesGUESTLOGIN&quot;" />
+      <option name="_new_target" value="&quot;testing_needanaccount.TesNAC&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for testing_indianGroceryBox.TesINDIANGROCERY" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for testing_payment.TesPAYMENT" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -140,11 +129,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;testing_indianGroceryBox.TesINDIANGROCERY&quot;" />
+      <option name="_new_target" value="&quot;testing_payment.TesPAYMENT&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for testing_indianSeasoningKit.TesINDIANSEASONING" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for testing_signUp.TesSIGNUP" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -154,24 +143,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;testing_indianSeasoningKit.TesINDIANSEASONING&quot;" />
+      <option name="_new_target" value="&quot;testing_signUp.TesSIGNUP&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python tests.Python tests for testing_guestLogin.TesGUESTLOGIN" />
-      <item itemvalue="Python tests.Python tests for testing_indianGroceryBox.TesINDIANGROCERY" />
-      <item itemvalue="Python tests.Python tests for testing_IndianMealKit.TesROTIKIT" />
-      <item itemvalue="Python tests.Python tests for testing_IndianSauces.TesINDIANSAUCES" />
-      <item itemvalue="Python tests.Python tests for testing_indianSeasoningKit.TesINDIANSEASONING" />
+      <item itemvalue="Python tests.Python tests for testing_MealKit.TesMEALKIT" />
+      <item itemvalue="Python tests.Python tests for testing_needanaccount.TesNAC" />
+      <item itemvalue="Python tests.Python tests for testing_payment.TesPAYMENT" />
+      <item itemvalue="Python tests.Python tests for testing_ReferaFriend.TesREFERAFRIEND" />
+      <item itemvalue="Python tests.Python tests for testing_signUp.TesSIGNUP" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for testing_indianSeasoningKit.TesINDIANSEASONING" />
-        <item itemvalue="Python tests.Python tests for testing_IndianSauces.TesINDIANSAUCES" />
-        <item itemvalue="Python tests.Python tests for testing_IndianMealKit.TesROTIKIT" />
-        <item itemvalue="Python tests.Python tests for testing_indianGroceryBox.TesINDIANGROCERY" />
-        <item itemvalue="Python tests.Python tests for testing_guestLogin.TesGUESTLOGIN" />
+        <item itemvalue="Python tests.Python tests for testing_signUp.TesSIGNUP" />
+        <item itemvalue="Python tests.Python tests for testing_ReferaFriend.TesREFERAFRIEND" />
+        <item itemvalue="Python tests.Python tests for testing_payment.TesPAYMENT" />
+        <item itemvalue="Python tests.Python tests for testing_needanaccount.TesNAC" />
+        <item itemvalue="Python tests.Python tests for testing_MealKit.TesMEALKIT" />
       </list>
     </recent_temporary>
   </component>
@@ -183,13 +172,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616787846440</updated>
-    </task>
-    <task id="LOCAL-00313" summary="Merge remote-tracking branch 'github/main' into main">
-      <created>1633431042448</created>
-      <option name="number" value="00313" />
-      <option name="presentableId" value="LOCAL-00313" />
-      <option name="project" value="LOCAL" />
-      <updated>1633431042448</updated>
     </task>
     <task id="LOCAL-00314" summary="Merge remote-tracking branch 'github/main' into main">
       <created>1633431245508</created>
@@ -527,7 +509,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634647431736</updated>
     </task>
-    <option name="localTasksCounter" value="362" />
+    <task id="LOCAL-00362" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1635590980812</created>
+      <option name="number" value="00362" />
+      <option name="presentableId" value="LOCAL-00362" />
+      <option name="project" value="LOCAL" />
+      <updated>1635590980813</updated>
+    </task>
+    <option name="localTasksCounter" value="363" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">

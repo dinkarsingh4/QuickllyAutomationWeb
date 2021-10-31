@@ -23,21 +23,26 @@ class CACD(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_weekly(self):
-        self.click(ChaiAndCoffee.weekly)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/section[1]/div/div/div[2]/div[2]/ul/li[2]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_BiWeekly(self):
-        self.click(ChaiAndCoffee.BiWeekly)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/section[1]/div/div/div[2]/div[2]/ul/li[3]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_Monthly(self):
-        self.click(ChaiAndCoffee.monthly)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/section[1]/div/div/div[2]/div[2]/ul/li[4]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_once(self):
-        self.click(ChaiAndCoffee.Once)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/section[1]/div/div/div[2]/div[2]/ul/li[1]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_buildABox(self):
         element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/section[1]/div/div/div[2]/div[4]/form/button')
         self.driver.execute_script("arguments[0].click();", element)
-        # self.click(ChaiAndCoffee.buildABox)
 
     def click_backToPage(self):
-        self.click(ChaiAndCoffee.backToChaiCoffee)
+        element = self.driver.find_element_by_xpath(
+            '/html/body/div[5]/ul/li[2]/a')
+        self.driver.execute_script("arguments[0].click();", element)

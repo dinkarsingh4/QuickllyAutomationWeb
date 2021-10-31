@@ -17,15 +17,16 @@ class GroceryCategories(BasePage):
         self.click(Category.submit_zip)
 
     def click_unbeatable(self):
-        self.click(Category.UnbeatableDeals)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[7]/div[1]/div/div/a[1]/img')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_GoFresh(self):
         element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[7]/div[1]/div/div/a[2]/img')
         self.driver.execute_script("arguments[0].click();", element)
-        # self.click(Category.GoFresh)
 
     def click_Grocery(self):
-        self.click(Category.Grocery)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[7]/div[1]/div/div/a[3]/img')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_Meat(self):
         element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[7]/div[1]/div/div/a[4]/img')

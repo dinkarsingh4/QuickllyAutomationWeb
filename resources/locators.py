@@ -512,9 +512,9 @@ class Payment:
     LoginButton = (By.XPATH, '//*[@id="btn-login"]')
     proceed_to_checkOut = (By.ID, 'lnkProceedToCheckout')
     Account = (By.XPATH, '//*[@id="searchhide"]/header/div[3]/span')
-    GoFresh = (By.XPATH, '//*[@id="searchhide"]/div[8]/div[1]/div/div/a[2]/img')
+    GoFresh = (By.XPATH, '//*[@id="searchhide"]/div[9]/div[1]/div/div/a[2]/img')
     additem = (By.XPATH, '//*[@id="img_270"]')
-    AddToCartLG = (By.XPATH, '//*[@id="searchhide"]/div[6]/div/section[2]/div/a[1]')
+    AddToCartLG = (By.XPATH, '//*[@id="searchhide"]/div[7]/div/section[2]/div/a[1]')
     payment = (By.XPATH, '//*[@id="proceedtopayment"]')
     Pay = (By.ID, 'pay_amount')
     checkout2 = (By.XPATH, '//*[@id="dvFoodSuggestPopup"]/div/div/a')
@@ -744,7 +744,7 @@ class IndianSeasoningKit:
     selectProducts2 = (By.XPATH, '//*[@id="easyindebowl"]/a')
     OrderSeasoningKit = (By.XPATH, '/html/body/div[5]/ul/li[3]/h1')
     clickIndian = (By.XPATH, '/html/body/div[5]/ul/li[2]/a')
-    labelEasy = (By.XPATH, '/html/body/div[4]/ul/li[3]/h1')
+    labelEasy = (By.XPATH, '/html/body/div[5]/ul/li[3]/h1')
 
 
 class IndianGroceryBox:

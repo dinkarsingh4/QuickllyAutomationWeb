@@ -37,10 +37,10 @@ class BBQKIT(BasePage):
     def click_VegGrills(self):
         element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[2]/div[3]/ul/li[2]/a')
         self.driver.execute_script("arguments[0].click();", element)
-        # self.click(BBQ.VegGrills)
 
     def click_NonVeg(self):
-        self.click(BBQ.NonVeg)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[2]/div[3]/ul/li[3]/a')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def AddToCartVeggie(self):
         element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[2]/div[4]/div/div[1]/div[3]/div[2]/a')

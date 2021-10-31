@@ -3,8 +3,6 @@ from resources import ui_test_class
 from resources.page_objects.mealkit import MealKit
 from resources.page_objects.mealkit import Meal
 from selenium.webdriver.support.color import Color
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 
 

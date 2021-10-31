@@ -31,34 +31,45 @@ class Indian(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_weekly(self):
-        self.click(IndianSeasoningKit.weekly)
+        element = self.driver.find_element_by_xpath('//*[@id="seasn1"]/div[1]/center/ul/li[2]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_Biweekly(self):
-        self.click(IndianSeasoningKit.BiWeekly)
+        element = self.driver.find_element_by_xpath('//*[@id="seasn1"]/div[1]/center/ul/li[3]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_Monthly(self):
-        self.click(IndianSeasoningKit.Monthly)
+        element = self.driver.find_element_by_xpath('//*[@id="seasn1"]/div[1]/center/ul/li[4]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_Once(self):
-        self.click(IndianSeasoningKit.Once)
+        element = self.driver.find_element_by_xpath('//*[@id="seasn1"]/div[1]/center/ul/li[1]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_weekly2(self):
-        self.click(IndianSeasoningKit.weekly2)
+        element = self.driver.find_element_by_xpath('//*[@id="seasn1"]/div[2]/center/ul/li[2]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_Biweekly2(self):
-        self.click(IndianSeasoningKit.BiWeekly2)
+        element = self.driver.find_element_by_xpath('//*[@id="seasn1"]/div[2]/center/ul/li[3]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_Monthly2(self):
-        self.click(IndianSeasoningKit.monthly2)
+        element = self.driver.find_element_by_xpath('//*[@id="seasn1"]/div[2]/center/ul/li[4]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_Once2(self):
-        self.click(IndianSeasoningKit.once2)
+        element = self.driver.find_element_by_xpath('//*[@id="seasn1"]/div[2]/center/ul/li[1]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_selectProduct(self):
-        self.click(IndianSeasoningKit.selectProducts)
+        element = self.driver.find_element_by_xpath('//*[@id="seasonings-kit"]/a')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_selectProduct2(self):
-        self.click(IndianSeasoningKit.selectProducts2)
+        element = self.driver.find_element_by_xpath('//*[@id="easyindebowl"]/a')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_ISK(self):
-        self.click(IndianSeasoningKit.clickIndian)
+        element = self.driver.find_element_by_xpath('/html/body/div[5]/ul/li[2]/a')
+        self.driver.execute_script("arguments[0].click();", element)

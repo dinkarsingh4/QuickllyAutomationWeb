@@ -67,11 +67,6 @@ class TesROTIKIT(ui_test_class.UVXVXIIIClass):
         print(label)
         self.assertEqual(self.actual4, label)
 
-    # def test_labelFreshTawa(self):
-    #     label = self.roti_page.get_attribute(RotiKit.FreshTawaLabel, 'innerHTML')
-    #     print(label)
-    #     self.assertEqual(self.actual5, label)
-
     def test_labelRoti(self):
         label = self.roti_page.get_attribute(RotiKit.rotiLabel, 'innerHTML')
         print(label)
@@ -107,11 +102,6 @@ class TesROTIKIT(ui_test_class.UVXVXIIIClass):
         label = self.roti_page.get_attribute(RotiKit.BakhriLabel, 'innerHTML')
         print(label)
         self.assertEqual(self.actual12, label)
-
-    # def test_labelGlutenFree(self):
-    #     label = self.roti_page.get_attribute(RotiKit.GLutenFreeLabel, 'innerHTML')
-    #     print(label)
-    #     self.assertEqual(self.actual13, label)
 
     def test_labelWhatWeDeliver(self):
         label = self.roti_page.get_attribute(RotiKit.whatweDeliver, 'innerHTML')
