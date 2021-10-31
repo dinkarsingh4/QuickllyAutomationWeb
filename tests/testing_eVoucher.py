@@ -39,10 +39,11 @@ class TesEVoucher(ui_test_class.UVIClass):
             alert = self.driver.switch_to.alert
             alert.accept()
             print("alert Exists in page")
+            self.eVoucher_page.ClickSubmit()
         except TimeoutException:
             print("alert does not Exist in page")
         time.sleep(2)
-        self.eVoucher_page.ClickSubmit()
+
         empty = self.eVoucher_page.get_attribute(Coupon.empty_cart, 'innerHTML')
         print(empty)
         self.assertEqual(self.actual1, empty)
