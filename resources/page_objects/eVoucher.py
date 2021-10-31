@@ -17,7 +17,8 @@ class evoucher(BasePage):
         self.find_element(Coupon.zipCode).send_keys(zip)
 
     def ClickSubmit(self):
-        self.click(Coupon.submitButton)
+        element = self.driver.find_element_by_xpath('//*[@id="zipsubmitbtn"]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def select_dropdown(self):
         element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/header/div[3]')
