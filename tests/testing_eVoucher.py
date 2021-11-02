@@ -32,6 +32,7 @@ class TesEVoucher(ui_test_class.UVIClass):
 
     def test_EnterZipcode(self):
         self.Signin()
+        time.sleep(2)
         self.eVoucher_page.EnterZipcode("60611")
         self.eVoucher_page.ClickSubmit()
         try:
