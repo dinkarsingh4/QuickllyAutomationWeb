@@ -209,7 +209,7 @@ class Cart(BasePage):
     def select_dropdown(self):
         element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/header/div[3]')
         self.driver.execute_script("arguments[0].click();", element)
-        self.click(MiniCart.yourAccount)
+        # self.click(MiniCart.yourAccount)
 
     def click_changeMethod(self):
         time.sleep(15)
