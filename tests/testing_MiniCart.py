@@ -73,7 +73,7 @@ class TesCART(ui_test_class.UVClass):
     actual61 = "(1 item)"
     actual62 = "$0.88"
     actual63 = "QD1100306"
-    actual64 = "	Potato "
+    actual64 = "Potato"
     actual65 = "$0.29"
     actual66 = "1"
     actual67 = "$0.02"
@@ -527,13 +527,11 @@ class TesCART(ui_test_class.UVClass):
 
 
     def test_click_secondItemName(self):
-        self.cart_page.click_MiniCart()
         ItemName = self.cart_page.get_attribute(MiniCart.SecondItemName, 'innerHTML')
         print(ItemName)
         self.assertEqual(self.actual64, ItemName)
 
     def test_click_secondItemPrice(self):
-        self.cart_page.click_MiniCart()
         ItemPrice = self.cart_page.get_attribute(MiniCart.SecondItemPrice, 'innerHTML')
         print(ItemPrice)
         self.assertEqual(self.actual65, ItemPrice)

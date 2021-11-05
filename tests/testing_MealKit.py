@@ -156,13 +156,13 @@ class TesMEALKIT(ui_test_class.UVXVXClass):
         print(label)
         self.assertEqual(self.actual13, label)
 
-    def test_clickmealbasket(self):
-        self.meal_page.click_home3()
-        self.home()
-        self.meal_page.click_mealBasket()
-        label = self.meal_page.get_attribute(MealKit.tiffinWala, 'innerHTML')
-        print(label)
-        self.assertEqual(self.actual14, label)
+    # def test_clickmealbasket(self):
+    #     self.meal_page.click_home3()
+    #     self.home()
+    #     self.meal_page.click_mealBasket()
+    #     label = self.meal_page.get_attribute(MealKit.tiffinWala, 'innerHTML')
+    #     print(label)
+    #     self.assertEqual(self.actual14, label)
 
     def test_clicktiffin(self):
         self.meal_page.click_home4()

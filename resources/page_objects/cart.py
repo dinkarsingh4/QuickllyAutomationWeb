@@ -89,16 +89,13 @@ class Cart(BasePage):
         self.scroll_to_element(MiniCart.item1)
         element = self.driver.find_element_by_xpath('//*[@id="img_51875"]')
         self.driver.execute_script("arguments[0].click();", element)
-        # self.click(MiniCart.item1)
 
     def click_additem1(self):
         self.click(MiniCart.additem1)
 
     def click_Additem2(self):
-        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[6]/div/section[2]/div/a[1]')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[7]/div/section[2]/div/a[1]')
         self.driver.execute_script("arguments[0].click();", element)
-        # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(MiniCart.addToCart)).click()
-        # self.click(MiniCart.addToCart)
 
     def click_rightArrow(self):
         self.click(MiniCart.right_arrow)

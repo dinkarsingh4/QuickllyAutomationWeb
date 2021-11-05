@@ -52,7 +52,7 @@ class Meal(BasePage):
         # self.click(MealKit.catering)
 
     def click_mealBasket(self):
-        element = self.driver.find_element_by_xpath('//*[@id="myTabContent"]/div[6]/div[4]/a/div/div[2]/img')
+        element = self.driver.find_element_by_xpath('//*[@id="myTabContent"]/div[6]/div[4]/a/div/div[2]')
         self.driver.execute_script("arguments[0].click();", element)
         # self.click(MealKit.mealbasket)
 
