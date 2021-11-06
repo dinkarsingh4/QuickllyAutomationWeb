@@ -41,7 +41,7 @@ class TesLINKS(ui_test_class.UVXIVClass):
     def test_linkedinLink(self):
         self.link_page.click_linkedin()
         self.driver.get("https://www.linkedin.com/company/myvalue365-e-commerce-pvt-ltd-/?originalSubdomain=in")
-        label2 = self.link_page.get_attribute(Links.linkedinLabel, 'innerHTML')
+        label2 = self.link_page.get_attribute(Links.linkedinLabel, 'src')
         label2.strip()
         print(label2)
         self.driver.get("https://www.uat.quicklly.com/")
@@ -50,7 +50,7 @@ class TesLINKS(ui_test_class.UVXIVClass):
     def test_youtubeLink(self):
         self.link_page.click_youtubeLink()
         self.driver.get("https://www.youtube.com/channel/UCNHYZ9SGLVejqPwHG8j6EKw")
-        label3 = self.link_page.get_attribute(Links.youtubeLabel, 'placeholder')
+        label3 = self.link_page.get_attribute(Links.youtubeLabel, 'src')
         print(label3)
         self.driver.get("https://www.uat.quicklly.com/")
         self.assertEqual(label3, self.expected4)

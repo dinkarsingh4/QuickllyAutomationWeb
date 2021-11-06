@@ -453,8 +453,8 @@ class Links:
     fbLabel = (By.XPATH, '//*[@id="blueBarDOMInspector"]/div/div/div/div[1]/a/i/u')
     tweetLabel = (By.XPATH,
                   '//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div/nav/div/div[2]/div/div[1]/a/div')
-    linkedinLabel = (By.XPATH, '//*[@id="main-content"]/section[1]/section/div/div[2]/div[1]/h4')
-    youtubeLabel = (By.XPATH, '//*[@id="text"]')
+    linkedinLabel = (By.XPATH, '//*[@id="main-content"]/section[1]/section/figure/div/div/img')
+    youtubeLabel = (By.XPATH, '//*[@id="img"]')
     instagramSRC = (By.XPATH, '//*[@id="react-root"]/section/nav/div[2]/div/div/div[1]/a/div/div/img')
     pinterestLabel = (By.CSS_SELECTOR, '#mweb-unauth-container > div > div.Jea.fZz.jzS.snW.wsz.zI7.iyn.Hsu > div > div > div:nth-child(1) > div.Pj7.sLG.XiG.OVX.m1e > div > img')
 

@@ -30,7 +30,8 @@ class Cart(BasePage):
 
     def click_signin(self):
         self.scroll_to_element(MiniCart.SignInButton)
-        self.click(MiniCart.SignInButton)
+        WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(MiniCart.SignInButton)).click()
+        # self.click(MiniCart.SignInButton)
 
     def zip(self, zipcode):
         self.find_elements(MiniCart.enter_zip).clear()
@@ -268,7 +269,9 @@ class Cart(BasePage):
         WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(MiniCart.GoFresh)).click()
 
     def click_Search(self):
-        self.click(MiniCart.HitSearch)
+        element = self.driver.find_element_by_xpath('//*[@id="searchbtn"]')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(MiniCart.HitSearch)
 
     def click_Checkout2(self):
         self.click(MiniCart.checkout2)
