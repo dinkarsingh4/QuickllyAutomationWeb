@@ -26,7 +26,9 @@ class Cart(BasePage):
         self.find_element(MiniCart.Pass).send_keys(password)
 
     def click_login(self):
-        self.click(MiniCart.LoginButton)
+        element = self.driver.find_element_by_xpath('//*[@id="btn-login"]')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(MiniCart.LoginButton)
 
     def click_signin(self):
         element = self.driver.find_element_by_css_selector('#procedcheckoutBtn')
