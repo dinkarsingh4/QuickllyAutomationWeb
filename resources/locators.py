@@ -450,7 +450,7 @@ class Links:
     youtube = (By.LINK_TEXT, 'YOUTUBE')
     instagram = (By.LINK_TEXT, 'INSTAGRAM')
     pinterest = (By.LINK_TEXT, 'PINTEREST')
-    fbLabel = (By.XPATH, '//*[@id="blueBarDOMInspector"]/div/div/div/div[1]/a/i/u')
+    fbLabel = (By.CSS_SELECTOR, '#blueBarDOMInspector > div > div > div > div.lfloat._ohe > a > i > u')
     tweetLabel = (By.XPATH,
                   '//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div/nav/div/div[2]/div/div[1]/a/div')
     linkedinLabel = (By.CSS_SELECTOR, 'body > div > main > div > form > h1')
