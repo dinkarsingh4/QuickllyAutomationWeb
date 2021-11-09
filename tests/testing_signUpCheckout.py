@@ -75,7 +75,7 @@ class TesDEPARTMENT(ui_test_class.UVXVIIIClass):
         self.signupcheckout_page.lastName("test")
         self.signupcheckout_page.Address("Chicago Riverwalk, Chicago, IL 60611, USA")
         self.signupcheckout_page.Phone("2233561248")
-        self.signupcheckout_page.emailAddress("quicklly2039@gmail.com")
+        self.signupcheckout_page.emailAddress("quicklly2040@gmail.com")
         self.signupcheckout_page.Password("123456")
         self.signupcheckout_page.ConfirmPassword("123456")
         self.signupcheckout_page.click_Register()
