@@ -10,7 +10,7 @@ class TesLINKS(ui_test_class.UVXIVClass):
 
     expected = "Facebook"
     expected1 = "https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
-    expected2 = "              Quicklly in Worldwide"
+    expected2 = "Join LinkedIn"
     expected3 = "Tweets"
     expected4 = "None"
     expected5 = "https://i.pinimg.com/originals/98/96/4b/98964b8ab629eb3c8f3773c2d3d59291.jpg"
@@ -41,19 +41,11 @@ class TesLINKS(ui_test_class.UVXIVClass):
     def test_linkedinLink(self):
         self.link_page.click_linkedin()
         self.driver.get("https://www.linkedin.com/company/myvalue365-e-commerce-pvt-ltd-/?originalSubdomain=in")
-        label2 = self.link_page.get_attribute(Links.linkedinLabel, 'src')
+        label2 = self.link_page.get_attribute(Links.linkedinLabel, 'innerHTML')
         label2.strip()
         print(label2)
         self.driver.get("https://www.uat.quicklly.com/")
         self.assertEqual(label2, self.expected2)
-
-    def test_youtubeLink(self):
-        self.link_page.click_youtubeLink()
-        self.driver.get("https://www.youtube.com/channel/UCNHYZ9SGLVejqPwHG8j6EKw")
-        label3 = self.link_page.get_attribute(Links.youtubeLabel, 'src')
-        print(label3)
-        self.driver.get("https://www.uat.quicklly.com/")
-        self.assertEqual(label3, self.expected4)
 
     def test_instagramLink(self):
         self.link_page.click_instagramLink()
