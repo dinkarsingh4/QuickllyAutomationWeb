@@ -143,6 +143,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/resources/page_objects/mealkit.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/resources/page_objects/rotikit.py">
           <value>
             <Attribute>

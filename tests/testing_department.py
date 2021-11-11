@@ -171,8 +171,9 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.click_SelectProducts()
         self.depart_page.click_AddMixVegetable()
         self.depart_page.click_AddMisalPav()
-        for i in range(10):
+        for i in range(4):
             self.depart_page.click_PlusMixVegetable()
+            time.sleep(2)
         self.depart_page.click_AddToCartNW()
         self.depart_page.click_MiniCart()
         self.depart_page.click_Checkout()
@@ -280,18 +281,12 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.click_MealKit()
         self.depart_page.click_IndianMealKit()
         self.depart_page.click_SelectProducts()
-        self.depart_page.click_Methai()
-        self.depart_page.click_DalTadka()
-        for i in range(10):
-            self.depart_page.click_plusDalTadka()
+        self.depart_page.click_AddMixVegetable()
+        self.depart_page.click_AddMisalPav()
+        for i in range(4):
+            self.depart_page.click_PlusMixVegetable()
+            time.sleep(2)
         self.depart_page.click_AddToCartNW()
-        try:
-            WebDriverWait(self.driver, 5).until(EC.alert_is_present())
-            alert = self.driver.switch_to.alert
-            alert.accept()
-            print("alert Exists in page")
-        except TimeoutException:
-            print("alert does not Exist in page")
         time.sleep(2)
         self.depart_page.click_MiniCart()
         self.depart_page.click_Checkout()
@@ -372,11 +367,11 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         print(ThankYouLabel)
         self.assertEqual(self.actual1, ThankYouLabel)
 
-    def test_shopWithRecipes(self):
-        self.recipes()
-        ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
-        print(ThankYouLabel)
-        self.assertEqual(self.actual1, ThankYouLabel)
+    # def test_shopWithRecipes(self):
+    #     self.recipes()
+    #     ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
+    #     print(ThankYouLabel)
+    #     self.assertEqual(self.actual1, ThankYouLabel)
 
     def test_shopWithOrganicGrocery(self):
         self.OrganicGrocery()

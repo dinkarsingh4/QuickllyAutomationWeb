@@ -46,7 +46,6 @@ class TesMEALKIT(ui_test_class.UVXVXClass):
         cls.driver.quit()
 
     def home(self):
-        # self.meal_page.click_home()
         self.meal_page.submit_zip()
         for i in range(3):
             time.sleep(1)
@@ -156,14 +155,6 @@ class TesMEALKIT(ui_test_class.UVXVXClass):
         print(label)
         self.assertEqual(self.actual13, label)
 
-    # def test_clickmealbasket(self):
-    #     self.meal_page.click_home3()
-    #     self.home()
-    #     self.meal_page.click_mealBasket()
-    #     label = self.meal_page.get_attribute(MealKit.tiffinWala, 'innerHTML')
-    #     print(label)
-    #     self.assertEqual(self.actual14, label)
-
     def test_clicktiffin(self):
         self.meal_page.click_home4()
         self.home()
@@ -197,8 +188,6 @@ class TesMEALKIT(ui_test_class.UVXVXClass):
         self.assertEqual(self.actual18, label)
 
     def test_clickorganic(self):
-        self.meal_page.click_home()
-        self.home()
         self.meal_page.click_organic()
         label = self.meal_page.get_attribute(MealKit.organicLabel, 'innerHTML')
         print(label)

@@ -22,7 +22,8 @@ class LoginAsGuest(BasePage):
         self.click(GuestLogin.submit_zip)
 
     def click_food(self):
-        self.click(GuestLogin.food)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[6]/div/div/div/div/a[3]/img')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_MakkiFood(self):
         element = self.driver.find_element_by_xpath('//*[@id="load_data"]/div[2]/a')
@@ -100,10 +101,12 @@ class LoginAsGuest(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_LeftArrow(self):
-        self.click(GuestLogin.LeftArrow)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[6]/div/div/i[1]/img')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_Catering(self):
-        self.click(GuestLogin.Catering)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[6]/div/div/div/div/a[14]/img')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_Hyderabad(self):
         element = self.driver.find_element_by_xpath('//*[@id="Catering"]/div/div[1]/a')
@@ -111,7 +114,6 @@ class LoginAsGuest(BasePage):
 
     def click_AddBeef(self):
         self.scroll_to_element(GuestLogin.AddBeefFry)
-
         element = self.driver.find_element_by_css_selector('#searchhide > div.clsFoodStore > div > div > div:nth-child(1) > a')
         self.driver.execute_script("arguments[0].click();", element)
 

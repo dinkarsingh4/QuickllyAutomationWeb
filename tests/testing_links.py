@@ -1,4 +1,6 @@
 # import time
+from selenium.webdriver.support.wait import WebDriverWait
+
 from resources import ui_test_class
 from resources.page_objects.link import Links
 from resources.page_objects.link import ContactUsLinks
@@ -27,6 +29,7 @@ class TesLINKS(ui_test_class.UVXIVClass):
     def test_facebookLink(self):
         self.link_page.click_Facebook()
         self.driver.get("https://www.facebook.com/quickllyfoodandgroceries/")
+        WebDriverWait(self.driver, self.wait).until(EC.presence_of_element_located(by_locator))
         label = self.link_page.get_attribute(Links.fbLabel, 'innerHTML')
         self.driver.get("https://www.uat.quicklly.com/")
         self.assertEqual(label, self.expected)

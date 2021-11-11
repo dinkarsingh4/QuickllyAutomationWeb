@@ -53,7 +53,7 @@ class TesGUESTLOGIN(ui_test_class.UVXVIClass):
         self.guestLogin_page.Enter_Name2("test")
         self.guestLogin_page.EnterAddress("East Chicago Avenue, Chicago, IL 60611, USA")
         self.guestLogin_page.EnterNumber("1452336548")
-        self.guestLogin_page.Enter_email("qicklly1235@gmail.com")
+        self.guestLogin_page.Enter_email("qicklly1234@gmail.com")
         self.guestLogin_page.click_submit()
         time.sleep(2)
         self.guestLogin_page.click_payment1()

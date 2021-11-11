@@ -296,11 +296,13 @@ class Dept(BasePage):
         self.click(Department.Beer)
 
     def click_classicLime(self):
-        element = self.driver.find_element_by_xpath('/html/body/div[4]/section[2]/div/div/div/div[3]/div[2]/a')
+        element = self.driver.find_element_by_xpath('//*[@id="img_137848"]')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_AddToCartBeer(self):
-        self.click(Department.AddToCartBeer)
+        element = self.driver.find_element_by_xpath('//*[@id="storeproductlist"]/div/div[2]/a')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(Department.AddToCartBeer)
 
     def click_ChaiAndCoffee(self):
         element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[6]/div/div/div/div/a[4]/img')
@@ -319,31 +321,31 @@ class Dept(BasePage):
 
     def click_IndianMealKit(self):
         element = self.driver.find_element_by_xpath(
-            '/html/body/div[1]/div[7]/div[2]/div/div/div[1]/div/div[1]/div/a/div/img')
+            '//*[@id="home"]/div/div[2]/div/a/div/img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_SelectProducts(self):
-        element = self.driver.find_element_by_xpath('/html/body/div[4]/section[1]/div/div/div[1]/div/div[5]/form/button')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/section[1]/div/div/div[1]/div/div[5]/form/button')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_AddMixVegetable(self):
         element = self.driver.find_element_by_xpath(
-            '/html/body/div[5]/section[3]/div/div/div[1]/div[1]/div[3]/a')
+            '//*[@id="searchhide"]/section[3]/div/div/div[1]/div[1]/div[3]/a')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_AddMisalPav(self):
         element = self.driver.find_element_by_xpath(
-            '/html/body/div[5]/section[3]/div/div/div[1]/div[2]/div[3]/a')
+            '//*[@id="searchhide"]/section[3]/div/div/div[1]/div[1]/div[3]/p/a/span[3]')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_PlusMixVegetable(self):
-        element = self.driver.find_element_by_xpath(
-            '/html/body/div[5]/section[3]/div/div/div[1]/div[1]/div[3]/p/a/span[3]')
+        element = self.driver.find_element_by_css_selector(
+            '#searchhide > section.productsection.selbox > div > div > div.clsContent.selboxinner > div.selboxinner-item.clsFoodStoreCard.include-calculation.productcatBox.prodcust138527.catdetail4741.active > div:nth-child(4) > p > a > span.plusQty.plusQty138527')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_AddToCartNW(self):
         element = self.driver.find_element_by_xpath(
-            '/html/body/div[5]/section[3]/div/div/div[2]/button')
+            '//*[@id="searchhide"]/div[3]/button')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_Methai(self):
@@ -362,13 +364,22 @@ class Dept(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_legalCheckBox(self):
-        self.click(Department.legalCheckBox)
+        element = self.driver.find_element_by_xpath(
+            '//*[@id="dvDialog-DateTime"]/div/div[1]/p[1]/label/input')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(Department.legalCheckBox)
 
     def click_elderCheckBox(self):
-        self.click(Department.elderCheckBox)
+        element = self.driver.find_element_by_xpath(
+            '//*[@id="dvDialog-DateTime"]/div/div[1]/p[2]/label/input')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(Department.elderCheckBox)
 
     def click_submitAlcohol(self):
-        self.click(Department.submitALcohol)
+        element = self.driver.find_element_by_xpath(
+            '//*[@id="dvDialog-DateTime"]/div/div[2]/a')
+        self.driver.execute_script("arguments[0].click();", element)
+        # self.click(Department.submitALcohol)
 
     def EnterElementForSearch(self, element):
         self.find_element(Department.searchBox).clear()
