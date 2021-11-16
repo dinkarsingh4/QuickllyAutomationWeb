@@ -12,8 +12,8 @@ class TesINDIANSAUCES(ui_test_class.UVXVXVClass):
     actual1 = "EXPLORE OUR MENUS"
     actual2 = "Instant Pot Chicago IL"
     actual3 = "Search for products..."
-    actual4 = "Sauces"
-    actual5 = "Meal Kit"
+    actual4 = "Meal Kit"
+    actual5 = "Sauces"
     actual6 = "EFFORTLESS COOKING: HOW IT WORKS?"
     actual7 = "Step 1."
     actual8 = "Step 2."
@@ -28,12 +28,12 @@ class TesINDIANSAUCES(ui_test_class.UVXVXVClass):
     actual17 = "Nationwide"
     actual18 = "Bay Area"
     actual19 = "#000000"
-    actual20 = "Sauces"
-    actual21 = "Meal Kit"
+    actual20 = "Meal Kit"
+    actual21 = "Sauces"
     actual22 = "Eat Everything"
-    actual23 = "Vegetarian Meal Kit"
+    actual23 = "Nut Free Meal Kit"
     actual24 = "Vegan Meal Kit"
-    actual25 = "Nut Free Meal Kit"
+    actual25 = "Vegan Meal Kit"
     actual26 = "Bay Area"
 
     @classmethod
@@ -187,11 +187,6 @@ class TesINDIANSAUCES(ui_test_class.UVXVXVClass):
         label = self.sauces_page.get_attribute(IndianMealKitAndSauces.vegetarian, 'innerHTML')
         print(label)
         self.assertEqual(self.actual23, label)
-
-    def test_labelVegan(self):
-        label = self.sauces_page.get_attribute(IndianMealKitAndSauces.vegan, 'innerHTML')
-        print(label)
-        self.assertEqual(self.actual24, label)
 
     def test_labelNutFree(self):
         self.sauces_page.click_BayArea()
