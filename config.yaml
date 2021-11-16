@@ -7,7 +7,7 @@ webdriver:
 
 portal_ui:
 
-  base_url: https://www.uat.quicklly.com
+  base_url: https://www.uat.goquicklly.com
   admin_user: Excellence Delivered
   admin_password: 1234
 
