@@ -28,7 +28,9 @@ class IndianMeal(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_indianMealKit(self):
-        self.click(IndianMealKit.indianmealKit)
+        element = self.driver.find_element_by_xpath(
+            '//*[@id="home"]/div/div[2]/div/a/div/img')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_weekly(self):
         element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/section[1]/div/div/div[1]/div/div[2]/ul/li[2]')
