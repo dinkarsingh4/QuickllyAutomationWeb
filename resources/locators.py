@@ -172,7 +172,7 @@ class MiniCart:
            '#searchhide > div.clsCartBox > div.clsCartOptions > div.cartright-box.cartright-box-two > p.cartboxitemtip > span.cartboxitemName')
     TipPrice = (By.XPATH, '//*[@id="tip"]')
     EstimatedOrder = (By.CSS_SELECTOR,
-                      '#searchhide > div.clsCartBox > div.clsCartOptions > div.cartright-box.cartright-box-two > p:nth-child(10) > span.cartboxitemName.cartboxitemNameBold')
+                      '#shippingfee > span.cartboxitemName')
     EstimatedOrderPrice = (By.XPATH, '//*[@id="tipadd"]')
     DeliveryLabel = (By.CSS_SELECTOR,
                      '#searchhide > div.clsCartBox > div.clsCartOptions > div.cartright-box.cartright-box-three > p.addrslbl > span')
