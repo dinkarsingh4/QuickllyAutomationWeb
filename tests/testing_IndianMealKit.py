@@ -44,7 +44,7 @@ class TesROTIKIT(ui_test_class.UVXVXIVClass):
         self.assertEqual(self.actual3, search)
 
     def test_clickIndian(self):
-        for i in range(3):
+        for i in range(4):
             time.sleep(1)
             self.mealkit_page.click_RightArrow()
         self.mealkit_page.click_MealKit()

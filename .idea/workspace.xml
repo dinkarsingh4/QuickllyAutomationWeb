@@ -6,7 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_MiniCart.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_MiniCart.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/IndianSauces.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/IndianSauces.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/chaiDepartment.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/chaiDepartment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/indiangrocerybox.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/indiangrocerybox.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/indianmeal.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/indianmeal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/indianseasoningkit.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/indianseasoningkit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/rotikit.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/rotikit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_IndianMealKit.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_IndianMealKit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_IndianSauces.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_IndianSauces.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_indianGroceryBox.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_indianGroceryBox.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_indianSeasoningKit.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_indianSeasoningKit.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +76,21 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for testing_MiniCart.TesCART">
+  <component name="RunManager" selected="Python tests.Python tests for testing_BBQ.TesINDIANBBQKIT">
+    <configuration name="Python tests for testing_BBQ.TesINDIANBBQKIT" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="gitAutomation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;testing_BBQ.TesINDIANBBQKIT&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests for testing_IndianMealKit.TesROTIKIT" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -79,34 +102,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;testing_IndianMealKit.TesROTIKIT&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for testing_IndianSauces.TesINDIANSAUCES" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="gitAutomation" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;testing_IndianSauces.TesINDIANSAUCES&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for testing_MiniCart.TesCART" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="gitAutomation" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;testing_MiniCart.TesCART&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -124,7 +119,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for testing_indianSeasoningKit.TesINDIANSEASONING" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for testing_indianGroceryBox.TesINDIANGROCERY" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -134,24 +129,38 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;testing_indianSeasoningKit.TesINDIANSEASONING&quot;" />
+      <option name="_new_target" value="&quot;testing_indianGroceryBox.TesINDIANGROCERY&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for testing_rotiKit.TesROTIKIT" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="gitAutomation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;testing_rotiKit.TesROTIKIT&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python tests.Python tests for testing_rotiKit.TesROTIKIT" />
       <item itemvalue="Python tests.Python tests for testing_chaiDepartment.TesCHAIDEPARTMENT" />
+      <item itemvalue="Python tests.Python tests for testing_indianGroceryBox.TesINDIANGROCERY" />
       <item itemvalue="Python tests.Python tests for testing_IndianMealKit.TesROTIKIT" />
-      <item itemvalue="Python tests.Python tests for testing_IndianSauces.TesINDIANSAUCES" />
-      <item itemvalue="Python tests.Python tests for testing_indianSeasoningKit.TesINDIANSEASONING" />
-      <item itemvalue="Python tests.Python tests for testing_MiniCart.TesCART" />
+      <item itemvalue="Python tests.Python tests for testing_BBQ.TesINDIANBBQKIT" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for testing_MiniCart.TesCART" />
-        <item itemvalue="Python tests.Python tests for testing_indianSeasoningKit.TesINDIANSEASONING" />
-        <item itemvalue="Python tests.Python tests for testing_IndianSauces.TesINDIANSAUCES" />
+        <item itemvalue="Python tests.Python tests for testing_BBQ.TesINDIANBBQKIT" />
         <item itemvalue="Python tests.Python tests for testing_IndianMealKit.TesROTIKIT" />
+        <item itemvalue="Python tests.Python tests for testing_indianGroceryBox.TesINDIANGROCERY" />
         <item itemvalue="Python tests.Python tests for testing_chaiDepartment.TesCHAIDEPARTMENT" />
+        <item itemvalue="Python tests.Python tests for testing_rotiKit.TesROTIKIT" />
       </list>
     </recent_temporary>
   </component>
@@ -163,13 +172,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616787846440</updated>
-    </task>
-    <task id="LOCAL-00351" summary="Merge remote-tracking branch 'github/main' into main">
-      <created>1633520161035</created>
-      <option name="number" value="00351" />
-      <option name="presentableId" value="LOCAL-00351" />
-      <option name="project" value="LOCAL" />
-      <updated>1633520161035</updated>
     </task>
     <task id="LOCAL-00352" summary="Merge remote-tracking branch 'github/main' into main">
       <created>1633520171104</created>
@@ -507,7 +509,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637075370319</updated>
     </task>
-    <option name="localTasksCounter" value="400" />
+    <task id="LOCAL-00400" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1637083701125</created>
+      <option name="number" value="00400" />
+      <option name="presentableId" value="LOCAL-00400" />
+      <option name="project" value="LOCAL" />
+      <updated>1637083701125</updated>
+    </task>
+    <option name="localTasksCounter" value="401" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">

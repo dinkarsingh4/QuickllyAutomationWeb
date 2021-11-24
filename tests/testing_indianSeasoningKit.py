@@ -44,7 +44,7 @@ class TesINDIANSEASONING(ui_test_class.UVXVXIClass):
         self.assertEqual(self.actual3, search)
 
     def test_clickIndian(self):
-        for i in range(3):
+        for i in range(4):
             time.sleep(1)
             self.indian_page.click_RightArrow()
         self.indian_page.click_MealKit()

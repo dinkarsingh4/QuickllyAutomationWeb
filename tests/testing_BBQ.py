@@ -53,7 +53,7 @@ class TesINDIANBBQKIT(ui_test_class.UVXVXVIClass):
         self.assertEqual(self.actual3, search)
 
     def test_clickIndian(self):
-        for i in range(3):
+        for i in range(4):
             time.sleep(1)
             self.bbq_page.click_RightArrow()
         self.bbq_page.click_MealKit()

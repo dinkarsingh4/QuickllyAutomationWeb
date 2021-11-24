@@ -24,7 +24,8 @@ class IndianMeal(BasePage):
 
     def click_MealKit(self):
         self.driver.implicitly_wait(20)
-        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[6]/div/div/div/div/a[10]/img')
+        element = self.driver.find_element_by_css_selector(
+            '#searchhide > div.grocerySpecialSlider.clsFoodSpl > div > div > div > div > a.slick-slide.slick-current.slick-active > img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_indianMealKit(self):

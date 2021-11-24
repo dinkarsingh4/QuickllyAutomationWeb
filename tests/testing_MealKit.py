@@ -60,7 +60,7 @@ class TesMEALKIT(ui_test_class.UVXVXClass):
         self.assertEqual(self.actual3, search)
 
     def test_clickMealKit(self):
-        for i in range(3):
+        for i in range(4):
             time.sleep(1)
             self.meal_page.click_RightArrow()
         self.meal_page.click_MealKit()

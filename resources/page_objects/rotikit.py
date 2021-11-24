@@ -72,7 +72,7 @@ class RotiBox(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_Bakhri(self):
-        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/section[2]/div[2]/div/div[7]/a/img')
+        element = self.driver.find_element_by_css_selector('#searchhide > section.clsFoodStores.organicproductsection.rotikalandingpage.clsPgWidth > div.tabcontents > div > div:nth-child(7) > a > img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_OrderRotiKit(self):

@@ -1,8 +1,6 @@
 from resources.config_methods import DataClass
 from resources.locators import ChaiAndCoffee
 from resources.page_objects.base_page import BasePage
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 
 
 class CACD(BasePage):
@@ -19,7 +17,7 @@ class CACD(BasePage):
         self.click(ChaiAndCoffee.submit_zip)
 
     def click_ChaiAndCoffee(self):
-        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[6]/div/div/div/div/a[4]/img')
+        element = self.driver.find_element_by_css_selector('#searchhide > div.grocerySpecialSlider.clsFoodSpl > div > div > div > div > a:nth-child(5) > img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_weekly(self):
