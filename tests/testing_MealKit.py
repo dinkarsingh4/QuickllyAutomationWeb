@@ -47,7 +47,7 @@ class TesMEALKIT(ui_test_class.UVXVXClass):
 
     def home(self):
         self.meal_page.submit_zip()
-        for i in range(3):
+        for i in range(4):
             time.sleep(1)
             self.meal_page.click_RightArrow()
         self.meal_page.click_MealKit()
