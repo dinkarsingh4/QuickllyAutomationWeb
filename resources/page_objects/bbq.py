@@ -1,8 +1,9 @@
 from resources.config_methods import DataClass
 from resources.locators import BBQ
 from resources.page_objects.base_page import BasePage
+import allure
 
-
+@allure.severity(allure.severity_level.NORMAL)
 class BBQKIT(BasePage):
 
     def __init__(self, driver):
@@ -30,7 +31,6 @@ class BBQKIT(BasePage):
     def click_bbqKit(self):
         element = self.driver.find_element_by_xpath('//*[@id="home"]/div/div[9]/div/a/div/img')
         self.driver.execute_script("arguments[0].click();", element)
-        # self.click(BBQ.bbqKit)
 
     def click_AllGrills(self):
         self.click(BBQ.AllGrills)
@@ -90,10 +90,8 @@ class BBQKIT(BasePage):
     def click_five(self):
         element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[2]/div[4]/div/div[1]/div[2]/ul/li[2]/label/input')
         self.driver.execute_script("arguments[0].click();", element)
-        # self.click(BBQ.clickFive)
 
     def click_eight(self):
         element = self.driver.find_element_by_xpath(
             '//*[@id="searchhide"]/div[2]/div[4]/div/div[1]/div[2]/ul/li[1]/label/input')
         self.driver.execute_script("arguments[0].click();", element)
-        # self.click(BBQ.clickEight)

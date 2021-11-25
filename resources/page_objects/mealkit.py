@@ -1,8 +1,6 @@
 from resources.config_methods import DataClass
 from resources.locators import MealKit
 from resources.page_objects.base_page import BasePage
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 
 class Meal(BasePage):
 
@@ -103,6 +101,3 @@ class Meal(BasePage):
         element = self.driver.find_element_by_xpath(
             '//*[@id="nav-tabContent"]/div[1]/ul/li[1]/a')
         self.driver.execute_script("arguments[0].click();", element)
-
-
-

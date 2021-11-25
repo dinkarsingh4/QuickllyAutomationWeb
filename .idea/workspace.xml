@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main" />
+    <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/bbq.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/bbq.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/mealkit.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/mealkit.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +57,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/tests" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2487757" />
   </component>
   <component name="RecentsManager">
@@ -160,13 +164,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616787846440</updated>
-    </task>
-    <task id="LOCAL-00353" summary="Merge remote-tracking branch 'github/main' into main">
-      <created>1633522537233</created>
-      <option name="number" value="00353" />
-      <option name="presentableId" value="LOCAL-00353" />
-      <option name="project" value="LOCAL" />
-      <updated>1633522537233</updated>
     </task>
     <task id="LOCAL-00354" summary="Merge remote-tracking branch 'github/main' into main">
       <created>1633523326731</created>
@@ -504,7 +501,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637784692942</updated>
     </task>
-    <option name="localTasksCounter" value="402" />
+    <task id="LOCAL-00402" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1637785914225</created>
+      <option name="number" value="00402" />
+      <option name="presentableId" value="LOCAL-00402" />
+      <option name="project" value="LOCAL" />
+      <updated>1637785914225</updated>
+    </task>
+    <option name="localTasksCounter" value="403" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
