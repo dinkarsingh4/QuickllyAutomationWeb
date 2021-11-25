@@ -1,9 +1,7 @@
 from resources.config_methods import DataClass
 from resources.locators import BBQ
 from resources.page_objects.base_page import BasePage
-import allure
 
-@allure.severity(allure.severity_level.NORMAL)
 class BBQKIT(BasePage):
 
     def __init__(self, driver):

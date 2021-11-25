@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/bbq.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/bbq.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/mealkit.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/mealkit.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,13 +162,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616787846440</updated>
-    </task>
-    <task id="LOCAL-00354" summary="Merge remote-tracking branch 'github/main' into main">
-      <created>1633523326731</created>
-      <option name="number" value="00354" />
-      <option name="presentableId" value="LOCAL-00354" />
-      <option name="project" value="LOCAL" />
-      <updated>1633523326731</updated>
     </task>
     <task id="LOCAL-00355" summary="Merge remote-tracking branch 'github/main' into main">
       <created>1633523618506</created>
@@ -508,7 +499,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637785914225</updated>
     </task>
-    <option name="localTasksCounter" value="403" />
+    <task id="LOCAL-00403" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1637802685016</created>
+      <option name="number" value="00403" />
+      <option name="presentableId" value="LOCAL-00403" />
+      <option name="project" value="LOCAL" />
+      <updated>1637802685016</updated>
+    </task>
+    <option name="localTasksCounter" value="404" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
