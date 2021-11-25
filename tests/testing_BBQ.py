@@ -1,4 +1,7 @@
 import time
+
+from allure_commons.types import AttachmentType
+
 from resources import ui_test_class
 from resources.page_objects.bbq import BBQ
 from resources.page_objects.bbq import BBQKIT
@@ -53,6 +56,7 @@ class TesINDIANBBQKIT(ui_test_class.UVXVXVIClass):
         print(search)
         self.assertEqual(self.actual3, search)
 
+    @allure.severity(allure.severity_level.NORMAL)
     def test_clickIndian(self):
         for i in range(4):
             time.sleep(1)
@@ -62,6 +66,7 @@ class TesINDIANBBQKIT(ui_test_class.UVXVXVIClass):
         label = self.bbq_page.get_attribute(BBQ.bbqLabel, 'innerHTML')
         print(label)
         self.assertEqual(self.actual2, label)
+        allure.attach(self.driver.get_screenshot_as_png(), name="hff", attachment_type=AttachmentType.PNG)
 
     def test_labelChilling(self):
         label = self.bbq_page.get_attribute(BBQ.chilling, 'innerHTML')
