@@ -1,14 +1,12 @@
 import time
-
 from allure_commons.types import AttachmentType
-
 from resources import ui_test_class
 from resources.page_objects.bbq import BBQ
 from resources.page_objects.bbq import BBQKIT
 from selenium.webdriver.support.color import Color
 import allure
 
-@allure.severity(allure.severity_level.NORMAL)
+@allure.severity(allure.severity_level.CRITICAL)
 class TesINDIANBBQKIT(ui_test_class.UVXVXVIClass):
     bbq_page: BBQ
     bbq_page: BBQKIT
