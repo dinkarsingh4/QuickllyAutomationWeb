@@ -3,7 +3,7 @@ from resources import ui_test_class
 from resources.page_objects.mealkit import MealKit
 from resources.page_objects.mealkit import Meal
 from selenium.webdriver.support.color import Color
-from selenium.common.exceptions import TimeoutException, NoSuchElementException
+from selenium.common.exceptions import NoSuchElementException
 
 
 class TesMEALKIT(ui_test_class.UVXVXClass):
@@ -208,5 +208,3 @@ class TesMEALKIT(ui_test_class.UVXVXClass):
         label = self.meal_page.get_attribute(MealKit.indianMeal, 'textContent')
         print(label)
         self.assertEqual(self.actual21, label)
-
-
