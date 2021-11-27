@@ -5,37 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main">
-      <change afterPath="$PROJECT_DIR$/tests/reports/036f4856-3d03-4468-93ac-453f3cc12cf6-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/071a0a20-ab30-46e6-936d-07ad0d91f30f-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/09c17e88-3986-4635-bb8a-455c41694c24-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/10f78d1c-4d91-44a9-a1d1-7ca1cf2f1b76-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/1e771eed-d2f5-47e4-8e7d-309176ad8e87-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/20236ecb-8952-4bf1-af4c-cbce66271e91-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/259fb2d6-87f1-4326-835a-62eb1039c422-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/3663c48c-2725-430b-8292-2a9f3398f0be-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/3da2394c-01db-4602-b83b-12b27c3b2dc9-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/44a4f649-2a82-40a2-934e-0aadd154ba52-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/483d9d45-01c8-44d0-a46f-d3005c7022c8-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/50a9a7a0-c8be-4bb1-9dbf-935349429888-attachment.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/5a656d89-34d8-4675-8143-96c24f1fe684-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/5c299a33-fdef-4a1f-b662-60df191cd1b2-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/85a45a28-66af-4606-be8b-01c1d56e43b6-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/8ed1eeaf-dc7b-4ca1-95bb-261ea281c8b5-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/94534ff5-43c8-41d6-af9f-8d5ea20c2516-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/9a25d5c0-ee96-4110-8894-f2565bbf8b7d-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/a6832e5a-7d58-4c2b-9966-5420a48a83e5-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/b8ea39b3-9fe6-4ab2-b0e9-997cd6cdab53-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/c6eb0e84-d10d-493c-bfc5-c428145b21fa-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/cb75154d-26b7-4fbf-9de4-0c83b450175f-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/d04e122b-c9f8-4e7b-ba9d-ca7b4525600d-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/e3c48052-f3b7-40de-82cc-f5a611135a42-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/f7d69468-0d28-4a6a-87d0-45072a4cfc57-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/f93bc7c1-e250-485c-833c-38179a53c6d8-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/fd0afe4b-6d41-4a8c-b297-31d83888fd4f-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/ffb2e96d-ea46-493f-a779-de3e3707372a-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/0a5e570a-1062-45b5-82bb-a149930ae805-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/0a8619cd-e419-4787-98a3-e729e9f40dea-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/10f369d8-ea34-40a8-94cc-2e3c6053fbcf-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/1b51590c-b4c8-4b08-8c61-cf5701ca36e5-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/341855ff-5a62-45da-a62f-f10242666230-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/34f4abf1-5bbd-46ac-8c34-1d121a37eb7a-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/3a06955c-e8af-40d4-a60f-5255f9297ea9-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/42e54960-0d0a-41f9-9cd8-4bb2990781cd-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/56994fe3-fd26-4708-ab16-936d28df9310-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/648da7c8-840a-49b2-88be-4a8ee55de3a4-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/6c306156-93a7-438d-9d50-1fd0f800e78f-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/6f01e8e1-8368-4f84-8d69-5ecbdb726af7-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/714a28a6-6815-45d5-b278-e9ea48fd4f98-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/7cbd1879-fd41-4bf0-a4c8-efc07c6d1f11-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/830ca531-300e-4047-9b3c-77876e041fe0-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/8bcee911-80a2-4705-90a1-753e37af0049-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/9807f651-4023-447d-816b-05c1488c94ac-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/ae982320-1dcc-4ec6-abae-85786d9c3b05-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/c2d52bb4-f7c7-4d14-9571-0aeddaf2b799-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/c3ca0555-de40-4dce-b31c-ff90e51466fc-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/c8d6c09a-92a5-4301-841d-4f67feffb3b0-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/c91564bd-0655-4301-a127-50c43f91fab5-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/ce9e1477-3c88-47dd-b592-cd41afcb675d-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/d92fbca1-45a1-4aaf-8cb3-711407dd9038-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/dffd4ed6-638d-4b86-b042-4cc9c6a14634-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/e32e0807-f6c7-4abe-a1a6-0523bd5a9410-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/e4a1ab31-8192-42fa-92cf-f7ce1ce084f1-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/ee609bc9-68fd-4cbb-a0f0-dbe3b782e58d-attachment.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/bbq.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/bbq.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_BBQ.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_BBQ.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/IndianSauces.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/IndianSauces.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/indiangrocerybox.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/indiangrocerybox.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/indianmeal.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/indianmeal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/indianseasoningkit.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/indianseasoningkit.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +98,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for testing_BBQ.TesINDIANBBQKIT">
+  <component name="RunManager" selected="Python tests.Python tests for testing_indianGroceryBox.TesINDIANGROCERY">
     <configuration name="Python tests for testing_BBQ.TesINDIANBBQKIT" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -176,10 +178,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for testing_indianGroceryBox.TesINDIANGROCERY" />
         <item itemvalue="Python tests.Python tests for testing_BBQ.TesINDIANBBQKIT" />
         <item itemvalue="Python tests.Python tests for testing_MealKit.TesMEALKIT" />
         <item itemvalue="Python tests.Python tests for testing_IndianMealKit.TesROTIKIT" />
-        <item itemvalue="Python tests.Python tests for testing_indianGroceryBox.TesINDIANGROCERY" />
         <item itemvalue="Python tests.Python tests for testing_chaiDepartment.TesCHAIDEPARTMENT" />
       </list>
     </recent_temporary>
@@ -192,13 +194,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616787846440</updated>
-    </task>
-    <task id="LOCAL-00357" summary="Merge remote-tracking branch 'github/main' into main">
-      <created>1633600822341</created>
-      <option name="number" value="00357" />
-      <option name="presentableId" value="LOCAL-00357" />
-      <option name="project" value="LOCAL" />
-      <updated>1633600822341</updated>
     </task>
     <task id="LOCAL-00358" summary="Merge remote-tracking branch 'github/main' into main">
       <created>1633602031991</created>
@@ -536,7 +531,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637803660643</updated>
     </task>
-    <option name="localTasksCounter" value="406" />
+    <task id="LOCAL-00406" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1637861175184</created>
+      <option name="number" value="00406" />
+      <option name="presentableId" value="LOCAL-00406" />
+      <option name="project" value="LOCAL" />
+      <updated>1637861175184</updated>
+    </task>
+    <option name="localTasksCounter" value="407" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">

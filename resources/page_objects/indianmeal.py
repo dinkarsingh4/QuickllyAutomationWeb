@@ -30,7 +30,7 @@ class IndianMeal(BasePage):
 
     def click_indianMealKit(self):
         element = self.driver.find_element_by_xpath(
-            '//*[@id="home"]/div/div[2]/div/a/div/img')
+            '//*[@id="home"]/div/div[3]/div/a/div/img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_weekly(self):

@@ -28,9 +28,8 @@ class Sauces(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_sauces(self):
-        element = self.driver.find_element_by_xpath('//*[@id="home"]/div/div[8]/div/a/div/img')
+        element = self.driver.find_element_by_xpath('//*[@id="home"]/div/div[9]/div/a/div/img')
         self.driver.execute_script("arguments[0].click();", element)
-        # self.click(IndianMealKitAndSauces.Sauces)
 
     def click_BayArea(self):
         self.click(IndianMealKitAndSauces.BayArea)
