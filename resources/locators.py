@@ -681,7 +681,7 @@ class MealKit:
     popular = (By.XPATH, '//*[@id="profile-tab"]')
     IBK = (By.XPATH, '//*[@id="profile"]/div/div[7]/div/a/div/div/p')
     new = (By.XPATH, '//*[@id="home-tab"]')
-    IndianSeasoningLabel = (By.XPATH, '//*[@id="home"]/div/div[4]/div/a/div/div/h3')
+    IndianSeasoningLabel = (By.XPATH, '//*[@id="home"]/div/div[5]/div/a/div/div/h3')
     whyChooseLabel = (By.XPATH, '//*[@id="myTabContent"]/div[3]/div/h2')
     AuthenticLabel = (By.XPATH,
                       '#myTabContent > div.card-container.row.why-choose-us-box.slick-initialized.slick-slider > div > div > div.meal-kit-box.col-sm-4.slick-slide.slick-current.slick-active.slick-center > div > div > div > h3')

@@ -4,41 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main">
-      <change afterPath="$PROJECT_DIR$/tests/reports/0a5e570a-1062-45b5-82bb-a149930ae805-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/0a8619cd-e419-4787-98a3-e729e9f40dea-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/10f369d8-ea34-40a8-94cc-2e3c6053fbcf-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/1b51590c-b4c8-4b08-8c61-cf5701ca36e5-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/341855ff-5a62-45da-a62f-f10242666230-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/34f4abf1-5bbd-46ac-8c34-1d121a37eb7a-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/3a06955c-e8af-40d4-a60f-5255f9297ea9-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/42e54960-0d0a-41f9-9cd8-4bb2990781cd-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/56994fe3-fd26-4708-ab16-936d28df9310-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/648da7c8-840a-49b2-88be-4a8ee55de3a4-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/6c306156-93a7-438d-9d50-1fd0f800e78f-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/6f01e8e1-8368-4f84-8d69-5ecbdb726af7-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/714a28a6-6815-45d5-b278-e9ea48fd4f98-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/7cbd1879-fd41-4bf0-a4c8-efc07c6d1f11-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/830ca531-300e-4047-9b3c-77876e041fe0-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/8bcee911-80a2-4705-90a1-753e37af0049-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/9807f651-4023-447d-816b-05c1488c94ac-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/ae982320-1dcc-4ec6-abae-85786d9c3b05-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/c2d52bb4-f7c7-4d14-9571-0aeddaf2b799-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/c3ca0555-de40-4dce-b31c-ff90e51466fc-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/c8d6c09a-92a5-4301-841d-4f67feffb3b0-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/c91564bd-0655-4301-a127-50c43f91fab5-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/ce9e1477-3c88-47dd-b592-cd41afcb675d-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/d92fbca1-45a1-4aaf-8cb3-711407dd9038-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/dffd4ed6-638d-4b86-b042-4cc9c6a14634-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/e32e0807-f6c7-4abe-a1a6-0523bd5a9410-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/e4a1ab31-8192-42fa-92cf-f7ce1ce084f1-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/reports/ee609bc9-68fd-4cbb-a0f0-dbe3b782e58d-attachment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/IndianSauces.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/IndianSauces.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/indiangrocerybox.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/indiangrocerybox.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/indianmeal.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/indianmeal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/indianseasoningkit.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/indianseasoningkit.py" afterDir="false" />
-    </list>
+    <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -194,13 +160,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616787846440</updated>
-    </task>
-    <task id="LOCAL-00358" summary="Merge remote-tracking branch 'github/main' into main">
-      <created>1633602031991</created>
-      <option name="number" value="00358" />
-      <option name="presentableId" value="LOCAL-00358" />
-      <option name="project" value="LOCAL" />
-      <updated>1633602031991</updated>
     </task>
     <task id="LOCAL-00359" summary="Merge remote-tracking branch 'github/main' into main">
       <created>1633602760412</created>
@@ -538,7 +497,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637861175184</updated>
     </task>
-    <option name="localTasksCounter" value="407" />
+    <task id="LOCAL-00407" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1638029308666</created>
+      <option name="number" value="00407" />
+      <option name="presentableId" value="LOCAL-00407" />
+      <option name="project" value="LOCAL" />
+      <updated>1638029308666</updated>
+    </task>
+    <option name="localTasksCounter" value="408" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
