@@ -916,6 +916,23 @@ class BBQ:
     clickEight = (By.XPATH, '//*[@id="searchhide"]/div[2]/div[4]/div/div[1]/div[2]/ul/li[1]/label/input')
     Price = (By.XPATH, '//*[@id="searchhide"]/div[2]/div[4]/div/div[1]/div[1]/span')
 
+class OneTime:
+    enter_zip = (By.ID, 'zipcode')
+    submit_zip = (By.ID, 'zipsubmitbtn')
+    SearchForProducts = (By.XPATH, '//*[@id="search_box"]')
+    NationWideShop = (By.XPATH, '//*[@id="searchhide"]/div[6]/div/div/div/div/a[6]/img')
+    indianSweet = (By.XPATH, '//*[@id="home"]/div/div[2]/div/a/div/img')
+    buildAbox = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/div/div[2]/div[5]/form/button')
+    addMasalaMathai = (By.XPATH, '//*[@id="load_data"]/div[1]/div[4]/a')
+    plusMasalaMathai = (By.XPATH, '//*[@id="load_data"]/div[1]/div[4]/p/a/span[3]')
+    AddToCart = (By.XPATH, '//*[@id="v-bar-fixed"]/div[2]/button[2]')
+    Cart = (By.XPATH, '/html/body/header/div[4]/a')
+    checkout = (By.XPATH, '//*[@id="lnkProceedToCheckout"]')
+    Pay = (By.ID, 'pay_amount')
+    Email = (By.ID, 'user_email')
+    Pass = (By.ID, 'password')
+    ThankYou = (By.XPATH, '//*[@id="innerlist-products"]/h1')
+
 class CommonLocators:
     learn_more_link = (By.ID, 'learn-more-link')
     main_loader = (By.XPATH, '/html/body/header/a/img')

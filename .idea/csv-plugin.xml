@@ -52,6 +52,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/resources/config_methods.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/resources/locators.py">
           <value>
             <Attribute>
@@ -326,6 +333,13 @@
           </value>
         </entry>
         <entry key="/tests/testing_needanaccount.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/tests/testing_onetimeorder.py">
           <value>
             <Attribute>
               <option name="separator" value=":" />

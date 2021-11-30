@@ -4,7 +4,96 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main" />
+    <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main">
+      <change afterPath="$PROJECT_DIR$/resources/page_objects/onetime_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/00de87b0-9d43-4e33-bece-ea0b348836db-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/03459261-98cb-4b7d-a29f-5e2b136387a5-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/09c14040-848b-4c33-80a3-db13022170ba-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/0dd0aeff-555f-4e15-ac87-ae9197ade055-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/15c33741-c599-49bd-b74e-e46fde8580f1-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/19d2ca94-aa68-45e8-a00a-249d93896452-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/19f75fb6-8fde-4f06-8936-5929a436e3c3-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/1b5d6e79-9491-47a3-aaea-ce7daf5d300a-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/1bac109d-3381-486a-a7e7-e3e24d464988-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/21b147fc-1bb4-4f5f-b101-e0c4f4470ca7-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/22f542cb-f8ac-46a3-bb6e-a3e445005b90-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/2383ae52-6564-4c93-9d2e-4983cec212ab-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/290336e7-bd33-4db4-9bf8-1cead88d7461-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/2bd0a6f7-81aa-42d9-b568-cba69f08d6c9-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/2f537b0f-1669-4407-9021-e0cd2a5aecab-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/314ca894-02b9-4eb5-b502-0ca666ad4750-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/3422a3c3-73f8-4935-b0d0-6c5057c8ebf5-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/345658bc-06e0-43b5-aa36-22c077ba4fbd-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/3f64eff3-5c91-49fe-a6d9-4c32342aca95-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/433ec3c1-9290-4dc9-ad5f-bbc67074c359-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/44e0d230-2839-41a0-8be7-c60e764a3942-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/47c44c2d-8948-4f52-9cc3-331ca8ea9540-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/48d439cb-74c6-4d98-b1ec-646e2c708ab9-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/4f7d8432-b0fb-4384-9314-d16e2499c227-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/4fd7d9e0-2fcc-44ae-9f73-dd3d8f84c15d-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/52999e53-060b-4c9b-8ca8-b10049568b37-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/5463832c-fc90-4737-8d3c-ddc010143585-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/54cd3a35-e3b4-4dff-a7d9-e347c1c263af-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/5718ce53-b97f-4ead-9529-b912d96a94d7-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/621649b8-ef42-4bc9-a0b2-ba02fdc99898-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/6cdf2c24-0ff3-4af6-9dc7-92f79a445a9b-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/73fd354a-4a11-4ca4-90f7-b2c19ab736ed-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/742f475e-d939-404c-88d7-6b248196cc00-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/74d29858-cbee-4711-8498-1a21049bb4ae-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/75ed38bb-64ed-429f-8c02-78ad6e0a4abe-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/7709274d-3056-4f31-b1b8-5bfa4f497abd-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/77c99b1d-6f9a-4071-bcd6-9b602e439a5b-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/81234044-1540-4d78-853b-732ed098e826-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/82fbd1c3-d3e4-439e-9694-70a4bbfe3dd7-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/83bd4ead-bd8f-4e1a-ae76-f0b8460c9a20-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/84d5ba48-86d2-445a-8ff6-ae9783880b0f-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/852e54f2-e2bc-4011-915c-850bcb5cbff8-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/8b3101ba-ba50-4d34-a38e-249581e92e46-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/8ce7fb96-64c0-4571-82eb-891e4891cce4-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/9820ae9a-3ceb-4910-8e2b-2235b2d9290b-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/9fe1cc0b-7714-4935-8e8e-3977ad465bbe-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/a18f9519-a59f-4e9d-8671-5b70783a5561-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/a2040229-68e3-48f1-b519-7a6a5fba77d1-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/a29288f2-e66f-4a0c-bd11-cb00bdb55d49-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/a324915c-bcff-44b4-a445-4cfcd76418a4-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/a6b6a727-0091-4248-a3a3-b22942b8dc15-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/ab567c03-dfce-4172-978b-dd743c970a17-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/ab9c1fb4-4a4c-4b71-a2cf-90131a2177d4-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/adcaabb1-fd23-40d3-9b13-8919d5107373-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/b128ffab-8dfa-4e32-ba27-547ff7302d8e-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/b33a369d-ad08-4f9c-b910-c8e74c6d8773-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/b36afd3c-d122-484d-a5c1-6c3548825d8b-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/b44c2d9e-94e4-47ff-b692-63597f03aee8-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/b603fb89-fc48-45dd-8288-84d278fb81da-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/b8862e57-d974-41fe-95e6-2b28c947d0ca-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/bc52b347-d489-435a-8910-a75f84793ee2-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/bc7651eb-3fa0-439a-ba20-68b633a6a7d1-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/c346c1c0-3f41-4877-83aa-fcde3cb3cdf4-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/c3d1f61e-8e54-41a9-9b03-a070a474d161-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/c594c068-a2f6-492e-8c90-7831cc689721-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/c7d163bb-63e6-43d9-8395-84dd1225ed0f-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/c98368fb-00cf-4616-9339-60b6e09e9cff-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/ccc228ca-65a7-4c43-8822-9df214b6ac11-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/cdcf1795-e247-44a8-912a-e87e33b35b6d-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/d3f44282-5ebd-4270-aae1-6554ee20a38b-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/d471c11d-14cc-4ffd-8f00-a88a4e923d1d-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/d6fc00e0-bc61-480d-9a76-e6bfe266b2bd-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/e07d10e7-e592-40dd-96b5-c2a948302ceb-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/e44826a3-865e-46a6-b993-7933496f6edc-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/e65713a1-fe0e-4e23-b16b-36fe0be03308-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/ea833015-e6c7-4eff-a104-ab853432e8c2-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/ead1174a-b63e-4d69-bf48-e8bc37206d43-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/ee08def4-70a5-47fb-b089-d23d091777b1-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/f4bcbb47-8ef0-4aaf-b555-6b8c38395067-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/fef941c1-d77b-4321-a0b9-3aa40cf4c23e-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/ffe930be-7f05-4237-bdea-bfa0f8bf9537-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testing_onetimeorder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/locators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/cart.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/cart.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ui_test_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ui_test_class.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +142,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/tests" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.other" />
     <property name="settings.editor.splitter.proportion" value="0.2487757" />
   </component>
   <component name="RecentsManager">
@@ -64,7 +153,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for testing_indianGroceryBox.TesINDIANGROCERY">
+  <component name="RunManager" selected="Python tests.Python tests for testing_BBQ.TesINDIANBBQKIT">
     <configuration name="Python tests for testing_BBQ.TesINDIANBBQKIT" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -107,20 +196,6 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for testing_chaiDepartment.TesCHAIDEPARTMENT" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="gitAutomation" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;testing_chaiDepartment.TesCHAIDEPARTMENT&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Python tests for testing_indianGroceryBox.TesINDIANGROCERY" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -135,20 +210,34 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for testing_onetimeorder.TesONETIMEORDER" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="gitAutomation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;testing_onetimeorder.TesONETIMEORDER&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python tests.Python tests for testing_chaiDepartment.TesCHAIDEPARTMENT" />
       <item itemvalue="Python tests.Python tests for testing_indianGroceryBox.TesINDIANGROCERY" />
       <item itemvalue="Python tests.Python tests for testing_IndianMealKit.TesROTIKIT" />
       <item itemvalue="Python tests.Python tests for testing_BBQ.TesINDIANBBQKIT" />
       <item itemvalue="Python tests.Python tests for testing_MealKit.TesMEALKIT" />
+      <item itemvalue="Python tests.Python tests for testing_onetimeorder.TesONETIMEORDER" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for testing_indianGroceryBox.TesINDIANGROCERY" />
         <item itemvalue="Python tests.Python tests for testing_BBQ.TesINDIANBBQKIT" />
+        <item itemvalue="Python tests.Python tests for testing_onetimeorder.TesONETIMEORDER" />
+        <item itemvalue="Python tests.Python tests for testing_indianGroceryBox.TesINDIANGROCERY" />
         <item itemvalue="Python tests.Python tests for testing_MealKit.TesMEALKIT" />
         <item itemvalue="Python tests.Python tests for testing_IndianMealKit.TesROTIKIT" />
-        <item itemvalue="Python tests.Python tests for testing_chaiDepartment.TesCHAIDEPARTMENT" />
       </list>
     </recent_temporary>
   </component>
@@ -160,13 +249,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616787846440</updated>
-    </task>
-    <task id="LOCAL-00360" summary="Merge remote-tracking branch 'github/main' into main">
-      <created>1634132866012</created>
-      <option name="number" value="00360" />
-      <option name="presentableId" value="LOCAL-00360" />
-      <option name="project" value="LOCAL" />
-      <updated>1634132866013</updated>
     </task>
     <task id="LOCAL-00361" summary="Merge remote-tracking branch 'github/main' into main">
       <created>1634647431736</created>
@@ -504,7 +586,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638029822537</updated>
     </task>
-    <option name="localTasksCounter" value="409" />
+    <task id="LOCAL-00409" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1638052299136</created>
+      <option name="number" value="00409" />
+      <option name="presentableId" value="LOCAL-00409" />
+      <option name="project" value="LOCAL" />
+      <updated>1638052299136</updated>
+    </task>
+    <option name="localTasksCounter" value="410" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">

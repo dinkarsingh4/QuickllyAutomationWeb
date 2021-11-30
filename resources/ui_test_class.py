@@ -33,6 +33,7 @@ from resources.page_objects.rotikit import RotiBox
 from resources.page_objects.indianmeal import IndianMeal
 from resources.page_objects.IndianSauces import Sauces
 from resources.page_objects.bbq import BBQKIT
+from resources.page_objects.onetime_page import ONETIME
 from selenium.webdriver import Remote
 
 
@@ -646,6 +647,29 @@ class UVXVXVIClass(unittest.TestCase):
         cls.driver.close()
         cls.driver.quit()
         super(UVXVXVIClass, cls).tearDownClass()
+
+class UVXVXVIIClass(unittest.TestCase):
+    aut_prefix = 'automation_'
+    driver: Remote = None
+    const_data = DataClass
+
+    one_page: BasePage = None
+
+    @classmethod
+    def setUpClass(cls):
+        super(UVXVXVIIClass, cls).setUpClass()
+        cls.one_page = BasePage(cls.driver)
+        cls.common_methods = Common(cls.driver)
+        cls.driver = cls.one_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
+        cls.one_page.driver = cls.driver
+        cls.one_page = ONETIME(cls.driver)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
+        super(UVXVXVIIClass, cls).tearDownClass()
 
     @classmethod
     def login(cls):

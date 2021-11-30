@@ -28,14 +28,10 @@ class Cart(BasePage):
     def click_login(self):
         element = self.driver.find_element_by_xpath('//*[@id="btn-login"]')
         self.driver.execute_script("arguments[0].click();", element)
-        # self.click(MiniCart.LoginButton)
 
     def click_signin(self):
         element = self.driver.find_element_by_css_selector('#procedcheckoutBtn')
         self.driver.execute_script("arguments[0].click();", element)
-        # self.scroll_to_element(MiniCart.SignInButton)
-        # WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(MiniCart.SignInButton)).click()
-        # self.click(MiniCart.SignInButton)
 
     def zip(self, zipcode):
         self.find_elements(MiniCart.enter_zip).clear()
