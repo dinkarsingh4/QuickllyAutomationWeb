@@ -12,7 +12,7 @@ class TesINDIANBBQKIT(ui_test_class.UVXVXVIClass):
     bbq_page: BBQKIT
 
     actual1 = "Chilling And Grilling"
-    actual2 = "Indian BBQ Kit"
+    actual2 = "Indian BBQ Kt"
     actual3 = "Search for products..."
     actual4 = "Grills menu"
     actual5 = "All Grills"
