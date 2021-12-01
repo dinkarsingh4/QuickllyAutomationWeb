@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_BBQ.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_BBQ.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_chaiDepartment.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_chaiDepartment.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +38,12 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/tests/testing_continueasguest.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/resources/page_objects/cart.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/resources/locators.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/resources/page_objects/guest.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/resources/page_objects/cart.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="1qJBWpE1NDRntLosQzMdXNJP9ft" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -56,7 +59,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/tests" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.other" />
+    <property name="settings.editor.selected.configurable" value="dayNightConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2487757" />
   </component>
   <component name="RecentsManager">
@@ -163,13 +166,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616787846440</updated>
-    </task>
-    <task id="LOCAL-00365" summary="Merge remote-tracking branch 'github/main' into main">
-      <created>1635669534172</created>
-      <option name="number" value="00365" />
-      <option name="presentableId" value="LOCAL-00365" />
-      <option name="project" value="LOCAL" />
-      <updated>1635669534172</updated>
     </task>
     <task id="LOCAL-00366" summary="Merge remote-tracking branch 'github/main' into main">
       <created>1635670366036</created>
@@ -507,7 +503,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638321752034</updated>
     </task>
-    <option name="localTasksCounter" value="414" />
+    <task id="LOCAL-00414" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1638330196801</created>
+      <option name="number" value="00414" />
+      <option name="presentableId" value="LOCAL-00414" />
+      <option name="project" value="LOCAL" />
+      <updated>1638330196801</updated>
+    </task>
+    <option name="localTasksCounter" value="415" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -525,7 +528,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

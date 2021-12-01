@@ -57,15 +57,6 @@ class TesCHAIDEPARTMENT(ui_test_class.UVXVIXClass):
         print(hex)
         self.assertEqual(self.actual4, hex)
 
-    # def test_clickbiweekly(self):
-    #     self.chai_page.click_BiWeekly()
-    #     colorLabel = self.driver.find_element_by_css_selector(
-    #         '#searchhide > section.productsection > div > div > div.organicproductcontent > div.divcustomtabpanels > ul > li.bi-weekly.tablinks').value_of_css_property(
-    #         'background-color')
-    #     hex = Color.from_string(colorLabel).hex
-    #     print(hex)
-    #     self.assertEqual(self.actual4, hex)
-
     def test_monthly(self):
         self.chai_page.click_Monthly()
         colorLabel = self.driver.find_element_by_css_selector(
