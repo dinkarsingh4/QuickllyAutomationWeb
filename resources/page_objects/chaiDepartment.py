@@ -17,7 +17,7 @@ class CACD(BasePage):
         self.click(ChaiAndCoffee.submit_zip)
 
     def click_ChaiAndCoffee(self):
-        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[6]/div/div/div/div/a[4]/img')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[9]/div/div/div/div/a[5]/img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_weekly(self):
@@ -42,5 +42,5 @@ class CACD(BasePage):
 
     def click_backToPage(self):
         element = self.driver.find_element_by_xpath(
-            '/html/body/div[5]/ul/li[2]/a')
+            '/html/body/div[8]/ul/li[2]/a')
         self.driver.execute_script("arguments[0].click();", element)

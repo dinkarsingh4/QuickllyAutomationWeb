@@ -78,7 +78,6 @@ class Cart(BasePage):
 
     def click_AddItem1(self):
         WebDriverWait(self.driver, self.wait).until(EC.element_to_be_clickable(MiniCart.additem2)).click()
-        # self.click(MiniCart.additem2)
 
     def click_order(self):
         self.click(MiniCart.orderFood)
@@ -95,7 +94,7 @@ class Cart(BasePage):
         self.click(MiniCart.additem1)
 
     def click_Additem2(self):
-        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[7]/div/section[2]/div/a[1]')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[10]/div/section[2]/div/a[1]')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_rightArrow(self):

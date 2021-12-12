@@ -190,6 +190,8 @@ class TesCART(ui_test_class.UVClass):
         self.assertEqual(self.actual11, ShopName)
 
     def test_check_updated_price(self):
+        self.cart_page.click_Checkout()
+        self.cart_page.click_Checkout2()
         self.cart_page.click_MiniCart()
         self.cart_page.click_plus()
         price = self.cart_page.get_attribute(MiniCart.PriceOfItem, 'innerHTML')
@@ -203,10 +205,10 @@ class TesCART(ui_test_class.UVClass):
             self.cart_page.click_minus()
         ItemQuantity = self.cart_page.get_attribute(MiniCart.ItemQuantity, 'innerHTML')
         print(ItemQuantity)
-        self.assertEqual(self.actual6, ItemQuantity)
-        self.cart_page.click_Checkout()
-        self.cart_page.click_Checkout2()
         print("Item with minimum quantity is added")
+        self.assertEqual(self.actual6, ItemQuantity)
+
+
 
     def test_bmax(self):
         time.sleep(5)

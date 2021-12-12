@@ -34,6 +34,9 @@ from resources.page_objects.indianmeal import IndianMeal
 from resources.page_objects.IndianSauces import Sauces
 from resources.page_objects.bbq import BBQKIT
 from resources.page_objects.onetime_page import ONETIME
+from resources.page_objects.weekly_page import WEEKLY
+from resources.page_objects.biweekly_page import BIWEEKLY
+from resources.page_objects.monthly_page import MONTHLY
 from selenium.webdriver import Remote
 
 
@@ -653,23 +656,92 @@ class UVXVXVIIClass(unittest.TestCase):
     driver: Remote = None
     const_data = DataClass
 
-    one_page: BasePage = None
+    biweekly_page: BasePage = None
 
     @classmethod
     def setUpClass(cls):
         super(UVXVXVIIClass, cls).setUpClass()
-        cls.one_page = BasePage(cls.driver)
+        cls.biweekly_page = BasePage(cls.driver)
         cls.common_methods = Common(cls.driver)
-        cls.driver = cls.one_page.get_browser_instance()
+        cls.driver = cls.biweekly_page.get_browser_instance()
         cls.base_page = BasePage(cls.driver)
-        cls.one_page.driver = cls.driver
-        cls.one_page = ONETIME(cls.driver)
+        cls.biweekly_page.driver = cls.driver
+        cls.biweekly_page = ONETIME(cls.driver)
 
     @classmethod
     def tearDownClass(cls):
         cls.driver.close()
         cls.driver.quit()
         super(UVXVXVIIClass, cls).tearDownClass()
+
+class UVXVXVIIIClass(unittest.TestCase):
+    aut_prefix = 'automation_'
+    driver: Remote = None
+    const_data = DataClass
+
+    weekly_page: BasePage = None
+
+    @classmethod
+    def setUpClass(cls):
+        super(UVXVXVIIIClass, cls).setUpClass()
+        cls.weekly_page = BasePage(cls.driver)
+        cls.common_methods = Common(cls.driver)
+        cls.driver = cls.weekly_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
+        cls.weekly_page.driver = cls.driver
+        cls.weekly_page = WEEKLY(cls.driver)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
+        super(UVXVXVIIIClass, cls).tearDownClass()
+
+class UVXVXVIVClass(unittest.TestCase):
+    aut_prefix = 'automation_'
+    driver: Remote = None
+    const_data = DataClass
+
+    biweekly_page: BasePage = None
+
+    @classmethod
+    def setUpClass(cls):
+        super(UVXVXVIVClass, cls).setUpClass()
+        cls.biweekly_page = BasePage(cls.driver)
+        cls.common_methods = Common(cls.driver)
+        cls.driver = cls.biweekly_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
+        cls.biweekly_page.driver = cls.driver
+        cls.biweekly_page = BIWEEKLY(cls.driver)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
+        super(UVXVXVIVClass, cls).tearDownClass()
+
+class UVXVXVVClass(unittest.TestCase):
+    aut_prefix = 'automation_'
+    driver: Remote = None
+    const_data = DataClass
+
+    monthly_page: BasePage = None
+
+    @classmethod
+    def setUpClass(cls):
+        super(UVXVXVVClass, cls).setUpClass()
+        cls.monthly_page = BasePage(cls.driver)
+        cls.common_methods = Common(cls.driver)
+        cls.driver = cls.monthly_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
+        cls.monthly_page.driver = cls.driver
+        cls.monthly_page = MONTHLY(cls.driver)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
+        super(UVXVXVVClass, cls).tearDownClass()
 
     @classmethod
     def login(cls):

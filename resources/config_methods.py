@@ -17,9 +17,9 @@ class DataClass:
 
     if sys.platform == 'win32':
         platform = 'windows'
-        CHROME_DRIVER_PATH=os.path.dirname(__file__)+'\\..\\drivers\\'+CHROME_DRIVER_PATH_WINDOWS
+        CHROME_DRIVER_PATH = os.path.dirname(__file__)+'\\..\\drivers\\'+CHROME_DRIVER_PATH_WINDOWS
     else:
         platform = 'linux'
-        CHROME_DRIVER_PATH=os.path.dirname(__file__)+'/../drivers/'+CHROME_DRIVER_PATH_UBUNTU
+        CHROME_DRIVER_PATH = os.path.dirname(__file__)+'/../drivers/'+CHROME_DRIVER_PATH_UBUNTU
 
 

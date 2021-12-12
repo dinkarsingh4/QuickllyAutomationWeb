@@ -1,9 +1,6 @@
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from resources import ui_test_class
 from resources.page_objects.forgetpassword import ForgetPassword
 from resources.page_objects.forgetpassword import forgetpass
-import unittest
 
 
 class TesFP(ui_test_class.UIIIIClass):

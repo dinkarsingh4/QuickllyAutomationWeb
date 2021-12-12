@@ -25,7 +25,7 @@ class IndianMeal(BasePage):
     def click_MealKit(self):
         self.driver.implicitly_wait(20)
         element = self.driver.find_element_by_css_selector(
-            '#searchhide > div.grocerySpecialSlider.clsFoodSpl > div > div > div > div > a:nth-child(10) > img')
+            '#searchhide > div.grocerySpecialSlider.clsFoodSpl > div > div > div > div > a:nth-child(11) > img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_indianMealKit(self):

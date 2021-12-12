@@ -54,7 +54,6 @@ class Pay(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_Checkout(self):
-        # self.click(Department.proceed_to_checkOut)
         element = self.driver.find_element_by_id('lnkProceedToCheckout')
         self.driver.execute_script("arguments[0].click();", element)
 
@@ -83,7 +82,8 @@ class Pay(BasePage):
         WebDriverWait(self.driver, 10).until(
             EC.frame_to_be_available_and_switch_to_it(
                 self.driver.find_element_by_css_selector('#braintree-dropin-modal-frame')))
-        self.click(Payment.AddMethod)
+        element = self.driver.find_element_by_css_selector('body > div.modal-wrap > div > div > div.modal-container > div.list-payment-methods-view.modal-frame-view.render-in-assemble > div.modal-body-content > div.add-payment-method-item > span')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def EnterCardNumber(self, card):
         self.find_element(Payment.cardNumber).send_keys(card)
@@ -100,5 +100,6 @@ class Pay(BasePage):
                 self.driver.find_element_by_css_selector('#braintree-dropin-modal-frame')))
 
     def click_AddMethod(self):
-        self.click(Payment.AddMethod2)
+        element = self.driver.find_element_by_xpath('/html/body/div[2]/div/div/div[1]/div[2]/div[3]/button')
+        self.driver.execute_script("arguments[0].click();", element)
 

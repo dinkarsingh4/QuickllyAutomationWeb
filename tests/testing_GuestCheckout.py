@@ -8,7 +8,7 @@ class TesCHECKOUTWITHGUEST(ui_test_class.UVXIIClass):
     guestCheckout_page: GuestCheckout
     guestCheckout_page: CheckoutWithGuest
 
-    actualLabel = "HERE'S EXTRA 10% OFF!"
+    actualLabel = "Items in your  cart"
     label = ""
 
     @classmethod

@@ -32,7 +32,7 @@ class BasePage:
     base_url = env.get_config_value('portal_ui', 'base_url')
     # curr_user = env.get_config_value('portal_ui', 'curr_user')
 
-    page_load_timeout = 20
+    page_load_timeout = 200
     wait = 20
     driver: Remote = None
 
@@ -57,9 +57,9 @@ class BasePage:
         caps.update(env.get_config_value('webdriver', 'desired_capabilities'))
         driver = selenium.webdriver.Chrome(options=chrome_options, desired_capabilities=caps)
         driver.maximize_window()
-        # driver.implicitly_wait(20)
-        # driver.set_page_load_timeout(cls.page_load_timeout)
-        # driver.set_script_timeout(cls.page_load_timeout)
+        driver.implicitly_wait(20)
+        driver.set_page_load_timeout(cls.page_load_timeout)
+        driver.set_script_timeout(cls.page_load_timeout)
         return driver
 
     def capture_screen_shot(self):

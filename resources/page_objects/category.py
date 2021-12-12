@@ -17,19 +17,19 @@ class GroceryCategories(BasePage):
         self.click(Category.submit_zip)
 
     def click_unbeatable(self):
-        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[7]/div[1]/div/div/a[1]/img')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[10]/div[1]/div/div/a[1]/img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_GoFresh(self):
-        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[7]/div[1]/div/div/a[2]/img')
+        element = self.driver.find_element_by_css_selector('#searchhide > div.grocerySpecialSlider.clsGroceryCats > div.clsSliderCats.slick-initialized.slick-slider > div > div > a:nth-child(2)')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_Grocery(self):
-        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[7]/div[1]/div/div/a[3]/img')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[10]/div[1]/div/div/a[3]')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_Meat(self):
-        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[7]/div[1]/div/div/a[4]/img')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[10]/div[1]/div/div/a[4]/img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_Beverages(self):
@@ -38,19 +38,17 @@ class GroceryCategories(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_Organic(self):
-        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[7]/div[1]/div/div/a[6]/img')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[10]/div[1]/div/div/a[6]/img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_personalCare(self):
         element = self.driver.find_element_by_css_selector('#searchhide > div.grocerySpecialSlider.clsGroceryCats > div.clsSliderCats.slick-initialized.slick-slider > div > div > a:nth-child(7) > img')
         self.driver.execute_script("arguments[0].click();", element)
-        # self.click(Category.PersonalCare)
 
     def click_Household(self):
-        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[7]/div[1]/div/div/a[8]/img')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[10]/div[1]/div/div/a[8]/img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_Weekly(self):
-        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[7]/div[2]/div/div/a')
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[10]/div[2]/div/div/a[1]')
         self.driver.execute_script("arguments[0].click();", element)
-        # self.click(Category.weeklyDeals)

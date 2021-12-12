@@ -157,6 +157,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/resources/page_objects/monthly_page.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/resources/page_objects/rotikit.py">
           <value>
             <Attribute>
@@ -182,6 +189,13 @@
           <value>
             <Attribute>
               <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/tests/testing_BiweeklyOrder.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
@@ -332,6 +346,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/tests/testing_monthlyOrder.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/tests/testing_needanaccount.py">
           <value>
             <Attribute>
@@ -371,6 +392,13 @@
           <value>
             <Attribute>
               <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/tests/testing_weeklyOrder.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>

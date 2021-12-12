@@ -42,7 +42,7 @@ class TesCATEGORIES(ui_test_class.UVXIIIClass):
         self.assertEqual(label, self.expected)
 
     def test_fresh(self):
-        time.sleep(2)
+        time.sleep(5)
         self.category_page.click_GoFresh()
         label = self.category_page.get_attribute(Category.StoreLabel, 'innerHTML')
         print(label)

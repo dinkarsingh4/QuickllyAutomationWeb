@@ -87,16 +87,6 @@ class TesPAYMENT(ui_test_class.UVXVIIClass):
         print(search)
         self.assertEqual(self.actual3, search)
 
-    # def test_SignIN(self):
-    #     self.payment_page.select_dropdown()
-    #     self.payment_page.click_signin()
-    #     self.payment_page.EnterEmail("testaccount@quicklly.com")
-    #     self.payment_page.EnterPass("123456")
-    #     self.payment_page.click_login()
-    #     AccountLabel = self.payment_page.get_attribute(Payment.Account, 'innerHTML')
-    #     print(AccountLabel)
-    #     self.assertEqual(self.actual2, AccountLabel)
-
     def test_additem(self):
         self.addItem()
         time.sleep(5)
