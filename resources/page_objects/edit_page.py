@@ -27,22 +27,33 @@ class EDITITEM(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_indianSweet(self):
-        self.click(Edit.indianSweet)
+        element = self.driver.find_element_by_xpath('//*[@id="home"]/div/div[2]/div/a/div/img')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_buildABox(self):
-        self.click(Edit.buildAbox)
+        element = self.driver.find_element_by_xpath(
+            '//*[@id="searchhide"]/section[1]/div/div/div[2]/div[5]/form/button')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_addMasalaMathai(self):
-        self.click(Edit.addMasalaMathai)
+        element = self.driver.find_element_by_xpath(
+            '//*[@id="load_data"]/div[1]/div[4]/a')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_plusMasalaMathai(self):
-        self.click(Edit.plusMasalaMathai)
+        element = self.driver.find_element_by_xpath(
+            '//*[@id="load_data"]/div[1]/div[4]/p/a/span[3]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_addToCartMasala(self):
-        self.click(Edit.AddToCart)
+        element = self.driver.find_element_by_xpath(
+            '//*[@id="v-bar-fixed"]/div[2]/button[2]')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_Cart(self):
-        self.click(Edit.Cart)
+        element = self.driver.find_element_by_xpath(
+            '/html/body/header/div[4]/a')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_Checkout(self):
         self.click(Edit.checkout)
