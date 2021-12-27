@@ -22,7 +22,7 @@ class WEEKLY(BasePage):
 
     def click_NationWideShop(self):
         element = self.driver.find_element_by_css_selector(
-            '#searchhide > div.grocerySpecialSlider.clsFoodSpl > div > div > div > div > a:nth-child(5) > img')
+            '#searchhide > div.grocerySpecialSlider.clsFoodSpl > div > div > div > div > a:nth-child(4) > img')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_indianSweet(self):

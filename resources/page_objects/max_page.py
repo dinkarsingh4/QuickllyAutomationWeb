@@ -1,20 +1,20 @@
 from resources.config_methods import DataClass
-from resources.locators import BiWeekly
+from resources.locators import Maximum
 from resources.page_objects.base_page import BasePage
 
 
-class BIWEEKLY(BasePage):
+class MAXIMUM(BasePage):
 
     def __init__(self, driver):
         super().__init__(driver)
         self.driver.get(DataClass.BASE_URL)
-
+        
     def zip(self, zipcode):
-        self.find_elements(BiWeekly.enter_zip).clear()
-        self.find_element(BiWeekly.enter_zip).send_keys(zipcode)
+        self.find_elements(Maximum.enter_zip).clear()
+        self.find_element(Maximum.enter_zip).send_keys(zipcode)
 
     def submit_zip(self):
-        self.click(BiWeekly.submit_zip)
+        self.click(Maximum.submit_zip)
 
     def click_RightArrow(self):
         element = self.driver.find_element_by_css_selector(
@@ -27,32 +27,32 @@ class BIWEEKLY(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_indianSweet(self):
-        self.click(BiWeekly.indianSweet)
+        self.click(Maximum.indianSweet)
 
     def click_buildABox(self):
-        self.click(BiWeekly.buildAbox)
+        self.click(Maximum.buildAbox)
 
     def click_addMasalaMathai(self):
-        self.click(BiWeekly.addMasalaMathai)
+        self.click(Maximum.addMasalaMathai)
 
     def click_plusMasalaMathai(self):
-        self.click(BiWeekly.plusMasalaMathai)
+        self.click(Maximum.plusMasalaMathai)
 
     def click_addToCartMasala(self):
-        self.click(BiWeekly.AddToCart)
+        self.click(Maximum.AddToCart)
 
     def click_Cart(self):
-        self.click(BiWeekly.Cart)
+        self.click(Maximum.Cart)
 
     def click_Checkout(self):
-        self.click(BiWeekly.checkout)
+        self.click(Maximum.checkout)
 
     def click_payment1(self):
         element = self.driver.find_element_by_id('proceedtopayment')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_Pay(self):
-        self.click(BiWeekly.Pay)
+        self.click(Maximum.Pay)
 
     def select_dropdown(self):
         element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/header/div[3]/span')
@@ -63,12 +63,12 @@ class BIWEEKLY(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def EnterEmail(self, email):
-        self.find_elements(BiWeekly.Email).clear()
-        self.find_element(BiWeekly.Email).send_keys(email)
+        self.find_elements(Maximum.Email).clear()
+        self.find_element(Maximum.Email).send_keys(email)
 
     def EnterPass(self, password):
-        self.find_elements(BiWeekly.Pass).clear()
-        self.find_element(BiWeekly.Pass).send_keys(password)
+        self.find_elements(Maximum.Pass).clear()
+        self.find_element(Maximum.Pass).send_keys(password)
 
     def click_login(self):
         element = self.driver.find_element_by_xpath('//*[@id="btn-login"]')
@@ -78,5 +78,5 @@ class BIWEEKLY(BasePage):
         element = self.driver.find_element_by_xpath('//*[@id="dvFoodSuggestPopup"]/div/div/a')
         self.driver.execute_script("arguments[0].click();", element)
 
-    def click_biweekly(self):
-        self.click(BiWeekly.BiWeekly)
+    def click_monthly(self):
+        self.click(Maximum.Monthly)

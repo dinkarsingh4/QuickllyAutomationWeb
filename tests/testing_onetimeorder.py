@@ -4,8 +4,8 @@ from resources.page_objects.onetime_page import ONETIME
 from resources.page_objects.onetime_page import OneTime
 
 class TesONETIMEORDER(ui_test_class.UVXVXVIIClass):
-    biweekly_page: ONETIME
-    biweekly_page: OneTime
+    one_page: ONETIME
+    one_page: OneTime
 
     actual1 = "Thank you"
     actual3 = "Search for products..."

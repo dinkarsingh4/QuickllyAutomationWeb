@@ -40,7 +40,7 @@ class TesMONTHLYORDER(ui_test_class.UVXVXVVClass):
         print(logoutLabel)
         self.assertEqual(self.actual2, logoutLabel)
 
-    def test_biWeeklyOrder(self):
+    def test_monthlyOrder(self):
         time.sleep(2)
         self.monthly_page.click_NationWideShop()
         self.monthly_page.click_indianSweet()
@@ -53,7 +53,7 @@ class TesMONTHLYORDER(ui_test_class.UVXVXVVClass):
         print(quantityLabel)
         self.assertEqual(self.actual4, quantityLabel)
 
-    def test_biWeeklyOrderCheckout(self):
+    def test_monthlyOrderCheckout(self):
         self.monthly_page.click_addToCartMasala()
         time.sleep(2)
         self.monthly_page.click_Cart()

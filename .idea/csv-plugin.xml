@@ -122,6 +122,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/resources/page_objects/edit_page.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/resources/page_objects/guestCheckout_page.py">
           <value>
             <Attribute>
@@ -144,6 +151,13 @@
           </value>
         </entry>
         <entry key="/resources/page_objects/invalid.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/resources/page_objects/max_page.py">
           <value>
             <Attribute>
               <option name="separator" value=":" />
@@ -304,6 +318,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/tests/testing_editItem.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/tests/testing_forgotpassword.py">
           <value>
             <Attribute>
@@ -343,6 +364,13 @@
           <value>
             <Attribute>
               <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/tests/testing_maximumItem.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>

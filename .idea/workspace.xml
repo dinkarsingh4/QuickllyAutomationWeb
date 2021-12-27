@@ -5,38 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main">
-      <change afterPath="$PROJECT_DIR$/resources/page_objects/biweekly_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/page_objects/monthly_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/page_objects/weekly_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/geckodriver.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testing_BiweeklyOrder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testing_monthlyOrder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testing_weeklyOrder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/page_objects/edit_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/page_objects/max_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testing_editItem.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testing_maximumItem.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/config_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/config_methods.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/locators.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/page_objects/IndianSauces.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/IndianSauces.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/base_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/page_objects/bbq.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/bbq.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/cart.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/cart.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/category.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/category.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/biweekly_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/biweekly_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/page_objects/chaiDepartment.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/chaiDepartment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/eVoucher.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/eVoucher.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/guestCheckout_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/guestCheckout_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/page_objects/indiangrocerybox.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/indiangrocerybox.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/page_objects/indianmeal.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/indianmeal.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/page_objects/indianseasoningkit.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/indianseasoningkit.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/page_objects/mealkit.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/mealkit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/monthly_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/monthly_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/page_objects/onetime_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/onetime_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/payment.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/payment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/weekly_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/weekly_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/ui_test_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ui_test_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_GuestCheckout.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_GuestCheckout.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_MiniCart.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_MiniCart.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_categories.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_categories.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_forgotpassword.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_forgotpassword.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_chaiDepartment.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_chaiDepartment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_monthlyOrder.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_monthlyOrder.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/testing_onetimeorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_onetimeorder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testing_payment.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_payment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_weeklyOrder.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testing_weeklyOrder.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,8 +91,8 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for testing_categories.TesCATEGORIES">
-    <configuration name="Python tests for testing_MealKit.TesMEALKIT" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests for testing_BiweeklyOrder.TesBIWEEKLYORDER">
+    <configuration name="Python tests for testing_BiweeklyOrder.TesBIWEEKLYORDER" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -111,11 +102,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;testing_MealKit.TesMEALKIT&quot;" />
+      <option name="_new_target" value="&quot;testing_BiweeklyOrder.TesBIWEEKLYORDER&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for testing_MiniCart.TesCART" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for testing_editItem.TesEDITITEM" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -125,11 +116,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;testing_MiniCart.TesCART&quot;" />
+      <option name="_new_target" value="&quot;testing_editItem.TesEDITITEM&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for testing_categories.TesCATEGORIES" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for testing_monthlyOrder.TesMONTHLYORDER" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -139,11 +130,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;testing_categories.TesCATEGORIES&quot;" />
+      <option name="_new_target" value="&quot;testing_monthlyOrder.TesMONTHLYORDER&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for testing_indianSeasoningKit.TesINDIANSEASONING" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for testing_onetimeorder.TesONETIMEORDER" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -153,11 +144,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;testing_indianSeasoningKit.TesINDIANSEASONING&quot;" />
+      <option name="_new_target" value="&quot;testing_onetimeorder.TesONETIMEORDER&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for testing_payment.TesPAYMENT" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for testing_weeklyOrder.TesWEEKLYORDER" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -167,24 +158,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;testing_payment.TesPAYMENT&quot;" />
+      <option name="_new_target" value="&quot;testing_weeklyOrder.TesWEEKLYORDER&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python tests.Python tests for testing_indianSeasoningKit.TesINDIANSEASONING" />
-      <item itemvalue="Python tests.Python tests for testing_payment.TesPAYMENT" />
-      <item itemvalue="Python tests.Python tests for testing_MealKit.TesMEALKIT" />
-      <item itemvalue="Python tests.Python tests for testing_MiniCart.TesCART" />
-      <item itemvalue="Python tests.Python tests for testing_categories.TesCATEGORIES" />
+      <item itemvalue="Python tests.Python tests for testing_editItem.TesEDITITEM" />
+      <item itemvalue="Python tests.Python tests for testing_onetimeorder.TesONETIMEORDER" />
+      <item itemvalue="Python tests.Python tests for testing_monthlyOrder.TesMONTHLYORDER" />
+      <item itemvalue="Python tests.Python tests for testing_weeklyOrder.TesWEEKLYORDER" />
+      <item itemvalue="Python tests.Python tests for testing_BiweeklyOrder.TesBIWEEKLYORDER" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for testing_categories.TesCATEGORIES" />
-        <item itemvalue="Python tests.Python tests for testing_MiniCart.TesCART" />
-        <item itemvalue="Python tests.Python tests for testing_MealKit.TesMEALKIT" />
-        <item itemvalue="Python tests.Python tests for testing_payment.TesPAYMENT" />
-        <item itemvalue="Python tests.Python tests for testing_indianSeasoningKit.TesINDIANSEASONING" />
+        <item itemvalue="Python tests.Python tests for testing_BiweeklyOrder.TesBIWEEKLYORDER" />
+        <item itemvalue="Python tests.Python tests for testing_weeklyOrder.TesWEEKLYORDER" />
+        <item itemvalue="Python tests.Python tests for testing_monthlyOrder.TesMONTHLYORDER" />
+        <item itemvalue="Python tests.Python tests for testing_onetimeorder.TesONETIMEORDER" />
+        <item itemvalue="Python tests.Python tests for testing_editItem.TesEDITITEM" />
       </list>
     </recent_temporary>
   </component>
@@ -196,13 +187,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616787846440</updated>
-    </task>
-    <task id="LOCAL-00369" summary="Merge remote-tracking branch 'github/main' into main">
-      <created>1635680146980</created>
-      <option name="number" value="00369" />
-      <option name="presentableId" value="LOCAL-00369" />
-      <option name="project" value="LOCAL" />
-      <updated>1635680146980</updated>
     </task>
     <task id="LOCAL-00370" summary="Merge remote-tracking branch 'github/main' into main">
       <created>1635680438783</created>
@@ -540,7 +524,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638376059998</updated>
     </task>
-    <option name="localTasksCounter" value="418" />
+    <task id="LOCAL-00418" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1639283891686</created>
+      <option name="number" value="00418" />
+      <option name="presentableId" value="LOCAL-00418" />
+      <option name="project" value="LOCAL" />
+      <updated>1639283891687</updated>
+    </task>
+    <option name="localTasksCounter" value="419" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">

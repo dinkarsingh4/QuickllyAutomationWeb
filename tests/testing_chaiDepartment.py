@@ -43,6 +43,9 @@ class TesCHAIDEPARTMENT(ui_test_class.UVXVIXClass):
 
     def test_clickChaiDepartment(self):
         time.sleep(2)
+        for i in range(11):
+            time.sleep(1)
+            self.chai_page.click_RightArrow()
         self.chai_page.click_ChaiAndCoffee()
         headingLabel = self.chai_page.get_attribute(ChaiAndCoffee.heading1, 'textContent')
         print(headingLabel)

@@ -47,6 +47,7 @@ class TesBIWEEKLYORDER(ui_test_class.UVXVXVIVClass):
         self.biweekly_page.click_buildABox()
         self.biweekly_page.click_addMasalaMathai()
         for i in range(4):
+            time.sleep(2)
             self.biweekly_page.click_plusMasalaMathai()
         quantityLabel = self.biweekly_page.get_attribute(BiWeekly.quantity, 'innerHTML')
         print(quantityLabel)

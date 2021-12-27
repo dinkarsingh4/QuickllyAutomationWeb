@@ -37,6 +37,8 @@ from resources.page_objects.onetime_page import ONETIME
 from resources.page_objects.weekly_page import WEEKLY
 from resources.page_objects.biweekly_page import BIWEEKLY
 from resources.page_objects.monthly_page import MONTHLY
+from resources.page_objects.max_page import MAXIMUM
+from resources.page_objects.edit_page import EDITITEM
 from selenium.webdriver import Remote
 
 
@@ -656,17 +658,17 @@ class UVXVXVIIClass(unittest.TestCase):
     driver: Remote = None
     const_data = DataClass
 
-    biweekly_page: BasePage = None
+    one_page: BasePage = None
 
     @classmethod
     def setUpClass(cls):
         super(UVXVXVIIClass, cls).setUpClass()
-        cls.biweekly_page = BasePage(cls.driver)
+        cls.one_page = BasePage(cls.driver)
         cls.common_methods = Common(cls.driver)
-        cls.driver = cls.biweekly_page.get_browser_instance()
+        cls.driver = cls.one_page.get_browser_instance()
         cls.base_page = BasePage(cls.driver)
-        cls.biweekly_page.driver = cls.driver
-        cls.biweekly_page = ONETIME(cls.driver)
+        cls.one_page.driver = cls.driver
+        cls.one_page = ONETIME(cls.driver)
 
     @classmethod
     def tearDownClass(cls):
@@ -742,6 +744,52 @@ class UVXVXVVClass(unittest.TestCase):
         cls.driver.close()
         cls.driver.quit()
         super(UVXVXVVClass, cls).tearDownClass()
+
+class UVXVXVVIClass(unittest.TestCase):
+    aut_prefix = 'automation_'
+    driver: Remote = None
+    const_data = DataClass
+
+    max_page: BasePage = None
+
+    @classmethod
+    def setUpClass(cls):
+        super(UVXVXVVIClass, cls).setUpClass()
+        cls.max_page = BasePage(cls.driver)
+        cls.common_methods = Common(cls.driver)
+        cls.driver = cls.max_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
+        cls.max_page.driver = cls.driver
+        cls.max_page = MAXIMUM(cls.driver)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
+        super(UVXVXVVIClass, cls).tearDownClass()
+
+class UVXVXVVIIClass(unittest.TestCase):
+    aut_prefix = 'automation_'
+    driver: Remote = None
+    const_data = DataClass
+
+    edit_page: BasePage = None
+
+    @classmethod
+    def setUpClass(cls):
+        super(UVXVXVVIIClass, cls).setUpClass()
+        cls.edit_page = BasePage(cls.driver)
+        cls.common_methods = Common(cls.driver)
+        cls.driver = cls.edit_page.get_browser_instance()
+        cls.base_page = BasePage(cls.driver)
+        cls.edit_page.driver = cls.driver
+        cls.edit_page = EDITITEM(cls.driver)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
+        super(UVXVXVVIIClass, cls).tearDownClass()
 
     @classmethod
     def login(cls):
