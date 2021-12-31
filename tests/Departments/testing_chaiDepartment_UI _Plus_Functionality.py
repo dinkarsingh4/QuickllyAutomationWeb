@@ -24,6 +24,7 @@ class TesCHAIDEPARTMENT(ui_test_class.UVXVIXClass):
     actual13 = "Ready-to-Drink Chai"
     actual14 = "Ready-to-Drink Coffee"
     actual15 = "About Kimbala"
+    actual16 = "Thank you"
 
     @classmethod
     def setUpClass(cls):
@@ -34,9 +35,37 @@ class TesCHAIDEPARTMENT(ui_test_class.UVXVIXClass):
         super(TesCHAIDEPARTMENT, cls).tearDownClass()
         cls.driver.quit()
 
+    def BactToPage(self):
+        self.chai_page.click_quicklly()
+        self.chai_page.zip("60611")
+        self.chai_page.submit_zip()
+        time.sleep(2)
+        for i in range(11):
+            time.sleep(1)
+            self.chai_page.click_RightArrow()
+        self.chai_page.click_ChaiAndCoffee()
+
+    def Payment(self):
+        self.chai_page.click_buildABox()
+        self.chai_page.click_AddKimbala()
+        self.chai_page.click_MiniCart()
+        self.chai_page.click_Checkout()
+        self.chai_page.click_Checkout2()
+        self.chai_page.click_payment1()
+        time.sleep(5)
+        self.chai_page.click_Pay()
+
+    def Signin(self):
+        self.chai_page.select_dropdown()
+        self.chai_page.click_signin()
+        self.chai_page.EnterEmail("testaccount@quicklly.com")
+        self.chai_page.EnterPass("123456")
+        self.chai_page.click_login()
+
     def test_EnterZipCode(self):
         self.chai_page.zip("60611")
         self.chai_page.submit_zip()
+        self.Signin()
         search = self.chai_page.get_attribute(ChaiAndCoffee.SearchForProducts, 'placeholder')
         print(search)
         self.assertEqual(self.actual3, search)
@@ -53,30 +82,25 @@ class TesCHAIDEPARTMENT(ui_test_class.UVXVIXClass):
 
     def test_weekly(self):
         self.chai_page.click_weekly()
-        colorLabel = self.driver.find_element_by_css_selector(
-            '#searchhide > section.productsection > div > div > div.organicproductcontent > div.divcustomtabpanels > ul > li.weekly.tablinks').value_of_css_property(
-            'background-color')
-        hex = Color.from_string(colorLabel).hex
-        print(hex)
-        self.assertEqual(self.actual4, hex)
+        self.Payment()
+        thankYou = self.chai_page.get_attribute(ChaiAndCoffee.ThankYou, 'innerHTML')
+        print(thankYou)
+        self.assertEqual(self.actual16, thankYou)
 
     def test_monthly(self):
         self.chai_page.click_Monthly()
-        colorLabel = self.driver.find_element_by_css_selector(
-            '#searchhide > section.productsection > div > div > div.organicproductcontent > div.divcustomtabpanels > ul > li.monthly.tablinks').value_of_css_property(
-            'background-color')
-        hex = Color.from_string(colorLabel).hex
-        print(hex)
-        self.assertEqual(self.actual4, hex)
+        self.Payment()
+        thankYou = self.chai_page.get_attribute(ChaiAndCoffee.ThankYou, 'innerHTML')
+        print(thankYou)
+        self.assertEqual(self.actual16, thankYou)
 
     def test_once(self):
+        self.BactToPage()
         self.chai_page.click_once()
-        onceColorLabel = self.driver.find_element_by_css_selector(
-            '#searchhide > section.productsection > div > div > div.organicproductcontent > div.divcustomtabpanels > ul > li.one-time.tablinks.active').value_of_css_property(
-            'background-color')
-        hex = Color.from_string(onceColorLabel).hex
-        print(hex)
-        self.assertEqual(self.actual4, hex)
+        self.Payment()
+        thankYou = self.chai_page.get_attribute(ChaiAndCoffee.ThankYou, 'innerHTML')
+        print(thankYou)
+        self.assertEqual(self.actual16, thankYou)
 
     def test_clickbuildABox(self):
         self.chai_page.click_buildABox()
@@ -90,6 +114,7 @@ class TesCHAIDEPARTMENT(ui_test_class.UVXVIXClass):
         self.assertEqual(self.actual6, Slabel)
 
     def test_ourCollection(self):
+        self.BactToPage()
         Label = self.chai_page.get_attribute(ChaiAndCoffee.collection, 'innerHTML')
         print(Label)
         self.assertEqual(self.actual7, Label)

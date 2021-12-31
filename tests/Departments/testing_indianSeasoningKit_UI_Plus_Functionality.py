@@ -26,6 +26,7 @@ class TesINDIANSEASONING(ui_test_class.UVXVXIClass):
     actual15 = "Easy Indie Bowl Kit"
     actual16 = " Order Seasoning Kit"
     actual17 = " Easy Indie Bowl"
+    actual18 = "Thank you"
 
     @classmethod
     def setUpClass(cls):
@@ -36,9 +37,39 @@ class TesINDIANSEASONING(ui_test_class.UVXVXIClass):
         super(TesINDIANSEASONING, cls).tearDownClass()
         cls.driver.quit()
 
+    def BactToPage(self):
+        self.indian_page.click_quicklly()
+        self.indian_page.zip("60611")
+        self.indian_page.submit_zip()
+        time.sleep(2)
+        for i in range(4):
+            time.sleep(1)
+            self.indian_page.click_RightArrow()
+        self.indian_page.click_MealKit()
+        self.indian_page.click_indianSeasoning()
+
+    def Payment(self):
+        self.indian_page.click_selectProduct()
+        self.indian_page.click_redHotChilli()
+        time.sleep(2)
+        self.indian_page.click_MiniCart()
+        self.indian_page.click_Checkout()
+        self.indian_page.click_Checkout2()
+        self.indian_page.click_payment1()
+        time.sleep(5)
+        self.indian_page.click_Pay()
+
+    def Signin(self):
+        self.indian_page.select_dropdown()
+        self.indian_page.click_signin()
+        self.indian_page.EnterEmail("testaccount@quicklly.com")
+        self.indian_page.EnterPass("123456")
+        self.indian_page.click_login()
+
     def test_EnterZipCode(self):
         self.indian_page.zip("60611")
         self.indian_page.submit_zip()
+        self.Signin()
         search = self.indian_page.get_attribute(IndianSeasoningKit.SearchForProducts, 'placeholder')
         print(search)
         self.assertEqual(self.actual3, search)
@@ -114,27 +145,24 @@ class TesINDIANSEASONING(ui_test_class.UVXVXIClass):
 
     def test_clickbiweekly(self):
         self.indian_page.click_Biweekly()
-        colorLabel = self.driver.find_element_by_css_selector(
-            '#seasn1 > div:nth-child(1) > center > ul > li:nth-child(3)').value_of_css_property('background-color')
-        hex = Color.from_string(colorLabel).hex
-        print(hex)
-        self.assertEqual(self.actual13, hex)
+        self.Payment()
+        thankYou = self.indian_page.get_attribute(IndianSeasoningKit.ThankYou, 'innerHTML')
+        print(thankYou)
+        self.assertEqual(self.actual18, thankYou)
 
     def test_clickmonthly(self):
         self.indian_page.click_Monthly()
-        colorLabel = self.driver.find_element_by_css_selector(
-            '#seasn1 > div:nth-child(1) > center > ul > li:nth-child(4)').value_of_css_property('background-color')
-        hex = Color.from_string(colorLabel).hex
-        print(hex)
-        self.assertEqual(self.actual13, hex)
+        self.Payment()
+        thankYou = self.indian_page.get_attribute(IndianSeasoningKit.ThankYou, 'innerHTML')
+        print(thankYou)
+        self.assertEqual(self.actual18, thankYou)
 
     def test_clickonce(self):
         self.indian_page.click_Once()
-        colorLabel = self.driver.find_element_by_css_selector(
-            '#seasn1 > div:nth-child(1) > center > ul > li.active').value_of_css_property('background-color')
-        hex = Color.from_string(colorLabel).hex
-        print(hex)
-        self.assertEqual(self.actual13, hex)
+        self.Payment()
+        thankYou = self.indian_page.get_attribute(IndianSeasoningKit.ThankYou, 'innerHTML')
+        print(thankYou)
+        self.assertEqual(self.actual18, thankYou)
 
     def test_clickweekly1(self):
         self.indian_page.click_weekly2()
@@ -145,6 +173,7 @@ class TesINDIANSEASONING(ui_test_class.UVXVXIClass):
         self.assertEqual(self.actual13, hex)
 
     def test_clickbiweekly2(self):
+        self.BactToPage()
         self.indian_page.click_Biweekly2()
         colorLabel = self.driver.find_element_by_css_selector(
             '#seasn1 > div:nth-child(2) > center > ul > li:nth-child(3)').value_of_css_property('background-color')
@@ -153,6 +182,7 @@ class TesINDIANSEASONING(ui_test_class.UVXVXIClass):
         self.assertEqual(self.actual13, hex)
 
     def test_clickmonthly2(self):
+        self.BactToPage()
         self.indian_page.click_Monthly2()
         colorLabel = self.driver.find_element_by_css_selector(
             '#seasn1 > div:nth-child(2) > center > ul > li.active').value_of_css_property('background-color')
@@ -161,6 +191,7 @@ class TesINDIANSEASONING(ui_test_class.UVXVXIClass):
         self.assertEqual(self.actual13, hex)
 
     def test_clickonce2(self):
+        self.BactToPage()
         self.indian_page.click_Once2()
         colorLabel = self.driver.find_element_by_css_selector(
             '#seasn1 > div:nth-child(2) > center > ul > li:nth-child(1)').value_of_css_property('background-color')

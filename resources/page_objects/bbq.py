@@ -92,3 +92,37 @@ class BBQKIT(BasePage):
         element = self.driver.find_element_by_xpath(
             '//*[@id="searchhide"]/div[2]/div[4]/div/div[1]/div[2]/ul/li[1]/label/input')
         self.driver.execute_script("arguments[0].click();", element)
+
+    def click_Checkout(self):
+        self.click(BBQ.checkout)
+
+    def click_payment1(self):
+        element = self.driver.find_element_by_id('proceedtopayment')
+        self.driver.execute_script("arguments[0].click();", element)
+
+    def click_Pay(self):
+        self.click(BBQ.Pay)
+
+    def click_Checkout2(self):
+        element = self.driver.find_element_by_xpath('//*[@id="dvFoodSuggestPopup"]/div/div/a')
+        self.driver.execute_script("arguments[0].click();", element)
+
+    def select_dropdown(self):
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/header/div[3]/span')
+        self.driver.execute_script("arguments[0].click();", element)
+
+    def click_signin(self):
+        element = self.driver.find_element_by_css_selector('#procedcheckoutBtn')
+        self.driver.execute_script("arguments[0].click();", element)
+
+    def EnterEmail(self, email):
+        self.find_elements(BBQ.Email).clear()
+        self.find_element(BBQ.Email).send_keys(email)
+
+    def EnterPass(self, password):
+        self.find_elements(BBQ.Pass).clear()
+        self.find_element(BBQ.Pass).send_keys(password)
+
+    def click_login(self):
+        element = self.driver.find_element_by_xpath('//*[@id="btn-login"]')
+        self.driver.execute_script("arguments[0].click();", element)

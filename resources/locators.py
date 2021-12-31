@@ -670,6 +670,13 @@ class ChaiAndCoffee:
     readyChai = (By.XPATH, '//*[@id="searchhide"]/section[3]/div/div[2]/div/h2')
     readyCoffee = (By.XPATH, '//*[@id="searchhide"]/section[4]/div/div[2]/div/h2')
     aboutKimbala = (By.XPATH, '//*[@id="searchhide"]/section[6]/div/div[2]/div/h2')
+    Pay = (By.ID, 'pay_amount')
+    Payment = (By.XPATH, '//*[@id="proceedtopayment"]')
+    checkout = (By.XPATH, '//*[@id="lnkProceedToCheckout"]')
+    ThankYou = (By.XPATH, '//*[@id="innerlist-products"]/h1')
+    Email = (By.ID, 'user_email')
+    Pass = (By.ID, 'password')
+    quicklly = (By.XPATH, '/html/body/header/a/img')
 
 
 class MealKit:
@@ -745,6 +752,13 @@ class IndianSeasoningKit:
     OrderSeasoningKit = (By.XPATH, '/html/body/div[8]/ul/li[3]/h1')
     clickIndian = (By.XPATH, '/html/body/div[5]/ul/li[2]/a')
     labelEasy = (By.XPATH, '/html/body/div[8]/ul/li[3]/h1')
+    Pay = (By.ID, 'pay_amount')
+    Payment = (By.XPATH, '//*[@id="proceedtopayment"]')
+    checkout = (By.XPATH, '//*[@id="lnkProceedToCheckout"]')
+    ThankYou = (By.XPATH, '//*[@id="innerlist-products"]/h1')
+    Email = (By.ID, 'user_email')
+    Pass = (By.ID, 'password')
+    quicklly = (By.XPATH, '/html/body/header/a/img')
 
 
 class IndianGroceryBox:
@@ -774,7 +788,15 @@ class IndianGroceryBox:
     buildABox = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/div/div[2]/div[4]/form/button')
     organicProducts = (By.XPATH, '//*[@id="searchhide"]/div[1]/div/ul/li[3]/h1')
     OIG = (By.XPATH, '//*[@id="searchhide"]/div[1]/div/ul/li[2]/a')
-
+    turmericPowder = (By.XPATH, '//*[@id="searchhide"]/div[2]/div[3]/div/div[1]/div[3]/div[1]/a')
+    Pay = (By.ID, 'pay_amount')
+    Payment = (By.XPATH, '//*[@id="proceedtopayment"]')
+    checkout = (By.XPATH, '//*[@id="lnkProceedToCheckout"]')
+    ThankYou = (By.XPATH, '//*[@id="innerlist-products"]/h1')
+    Email = (By.ID, 'user_email')
+    Pass = (By.ID, 'password')
+    quicklly = (By.XPATH, '/html/body/header/a/img')
+    AddToCart = (By.XPATH, '//*[@id="searchhide"]/div[3]/div/div/div[3]/button')
 
 class RotiKit:
     enter_zip = (By.ID, 'zipcode')
@@ -813,10 +835,16 @@ class RotiKit:
     Monthly = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/div/div[2]/div[2]/ul/li[4]')
     Once = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/div/div[2]/div[2]/ul/li[1]')
     FreeDeiveryOnMinimumOrder = (By.XPATH, '//*[@id="one-time"]/div[2]/p[1]')
-    IndianBread = (By.XPATH, '//*[@id="searchhide"]/div[1]/div/ul/li[3]/h1')
+    IndianBread = (By.XPATH, '//*[@id="searchhide"]/div[1]/ul/li[3]/h1')
     OrderRotiKit = (By.XPATH, '//*[@id="searchhide"]/div[1]/div/ul/li[2]/a')
     buildABox = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/div/div[2]/div[4]/form/button')
-
+    Pay = (By.ID, 'pay_amount')
+    Payment = (By.XPATH, '//*[@id="proceedtopayment"]')
+    checkout = (By.XPATH, '//*[@id="lnkProceedToCheckout"]')
+    ThankYou = (By.XPATH, '//*[@id="innerlist-products"]/h1')
+    Email = (By.ID, 'user_email')
+    Pass = (By.ID, 'password')
+    quicklly = (By.XPATH, '/html/body/header/a/img')
 
 class IndianMealKit:
     enter_zip = (By.ID, 'zipcode')
@@ -848,7 +876,18 @@ class IndianMealKit:
     selectProducts2 = (By.XPATH, '//*[@id="searchhide"]/section[1]/div/div/div[2]/div/div[5]/form/button')
     SubscriptionBox = (By.XPATH, '//*[@id="searchhide"]/div[1]/ul/li[3]/h1')
     IMKS = (By.XPATH, '//*[@id="searchhide"]/div[1]/ul/li[2]/a')
-
+    Pay = (By.ID, 'pay_amount')
+    Payment = (By.XPATH, '//*[@id="proceedtopayment"]')
+    checkout = (By.XPATH, '//*[@id="lnkProceedToCheckout"]')
+    ThankYou = (By.XPATH, '//*[@id="innerlist-products"]/h1')
+    Email = (By.ID, 'user_email')
+    Pass = (By.ID, 'password')
+    quicklly = (By.XPATH, '/html/body/header/a/img')
+    BhindiMasala = (By.XPATH, '//*[@id="searchhide"]/section[3]/div/div/div[1]/div[1]/div[3]/a')
+    selectStore = (By.ID, 'selctProductStore')
+    curryBox = (By.XPATH, '//*[@id="selctProductStore"]/option[2]')
+    selectDate = (By.XPATH, '//*[@id="ddlDeliveryDateChange"]')
+    chooseDate = (By.XPATH, '//*[@id="ddlDeliveryDateChange"]/option[2]')
 
 class IndianMealKitAndSauces:
     enter_zip = (By.ID, 'zipcode')
@@ -887,7 +926,14 @@ class IndianMealKitAndSauces:
     clickVegan = (By.XPATH, '//*[@id="bay-shop"]/div[2]/div[3]/a')
     clickNutfree = (By.XPATH, '//*[@id="bay-shop"]/div[2]/div[4]/a')
     clickBay = (By.XPATH, '//*[@id="searchhide"]/div[1]/div[1]/ul/li[3]/a')
-
+    Shahi = (By.XPATH, '//*[@id="searchhide"]/div[3]/div[2]/div/div[1]/div[2]/div/a')
+    Pay = (By.ID, 'pay_amount')
+    Payment = (By.XPATH, '//*[@id="proceedtopayment"]')
+    checkout = (By.XPATH, '//*[@id="lnkProceedToCheckout"]')
+    ThankYou = (By.XPATH, '//*[@id="innerlist-products"]/h1')
+    Email = (By.ID, 'user_email')
+    Pass = (By.ID, 'password')
+    quicklly = (By.XPATH, '/html/body/header/a/img')
 
 class BBQ:
     enter_zip = (By.ID, 'zipcode')
@@ -915,6 +961,12 @@ class BBQ:
     clickFive = (By.XPATH, '//*[@id="searchhide"]/div[2]/div[4]/div/div[1]/div[2]/ul/li[2]/label/input')
     clickEight = (By.XPATH, '//*[@id="searchhide"]/div[2]/div[4]/div/div[1]/div[2]/ul/li[1]/label/input')
     Price = (By.XPATH, '//*[@id="searchhide"]/div[2]/div[4]/div/div[1]/div[1]/span')
+    Pay = (By.ID, 'pay_amount')
+    Payment = (By.XPATH, '//*[@id="proceedtopayment"]')
+    checkout = (By.XPATH, '//*[@id="lnkProceedToCheckout"]')
+    ThankYou = (By.XPATH, '//*[@id="innerlist-products"]/h1')
+    Email = (By.ID, 'user_email')
+    Pass = (By.ID, 'password')
 
 class OneTime:
     enter_zip = (By.ID, 'zipcode')

@@ -35,6 +35,7 @@ class TesINDIANSAUCES(ui_test_class.UVXVXVClass):
     actual24 = "Vegan Meal Kit"
     actual25 = "Vegan Meal Kit"
     actual26 = "Bay Area"
+    actual27 = "Thank you"
 
     @classmethod
     def setUpClass(cls):
@@ -45,9 +46,39 @@ class TesINDIANSAUCES(ui_test_class.UVXVXVClass):
         super(TesINDIANSAUCES, cls).tearDownClass()
         cls.driver.quit()
 
+    def BactToPage(self):
+        self.sauces_page.click_quicklly()
+        self.sauces_page.zip("60611")
+        self.sauces_page.submit_zip()
+        time.sleep(2)
+        for i in range(4):
+            time.sleep(1)
+            self.sauces_page.click_RightArrow()
+        self.sauces_page.click_MealKit()
+        self.sauces_page.click_sauces()
+
+    def Payment(self):
+        self.sauces_page.click_Shahi()
+        self.sauces_page.click_AddToCartShai()
+        time.sleep(2)
+        self.sauces_page.click_MiniCart()
+        self.sauces_page.click_Checkout()
+        self.sauces_page.click_Checkout2()
+        self.sauces_page.click_payment1()
+        time.sleep(5)
+        self.sauces_page.click_Pay()
+
+    def Signin(self):
+        self.sauces_page.select_dropdown()
+        self.sauces_page.click_signin()
+        self.sauces_page.EnterEmail("testaccount@quicklly.com")
+        self.sauces_page.EnterPass("123456")
+        self.sauces_page.click_login()
+
     def test_EnterZipCode(self):
         self.sauces_page.zip("60611")
         self.sauces_page.submit_zip()
+        self.Signin()
         search = self.sauces_page.get_attribute(IndianMealKitAndSauces.SearchForProducts, 'placeholder')
         print(search)
         self.assertEqual(self.actual3, search)
@@ -166,16 +197,18 @@ class TesINDIANSAUCES(ui_test_class.UVXVXVClass):
     def test_clickselect(self):
         self.sauces_page.click_backToPage()
         self.sauces_page.click_select()
-        label = self.sauces_page.get_attribute(IndianMealKitAndSauces.saucesLabel, 'innerHTML')
+        label = self.sauces_page.get_attribute(IndianMealKitAndSauces.mealKitLabel, 'innerHTML')
         print(label)
         self.assertEqual(self.actual20, label)
 
     def test_clickselect1(self):
         self.sauces_page.click_backToPage()
         self.sauces_page.click_select1()
-        label = self.sauces_page.get_attribute(IndianMealKitAndSauces.mealKitLabel, 'innerHTML')
-        print(label)
-        self.assertEqual(self.actual21, label)
+        self.Payment()
+        thankYou = self.sauces_page.get_attribute(IndianMealKitAndSauces.ThankYou, 'innerHTML')
+        print(thankYou)
+        self.assertEqual(self.actual27, thankYou)
+
 
     def test_labelEatEverything(self):
         self.sauces_page.click_BayArea()
@@ -209,7 +242,7 @@ class TesINDIANSAUCES(ui_test_class.UVXVXVClass):
         self.assertEqual(self.actual26, label)
 
     def test_clickvegan(self):
-        self.sauces_page.click_Bay()
+        self.BactToPage()
         self.sauces_page.click_BayArea()
         self.sauces_page.click_Vegan()
         label = self.sauces_page.get_attribute(IndianMealKitAndSauces.clickBay, 'innerHTML')

@@ -5,11 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ca8cd73-1667-46ab-8163-befcd48b16ca" name="Default Changelist" comment="Merge remote-tracking branch 'github/main' into main">
+      <change afterPath="$PROJECT_DIR$/tests/Departments/IndianSweetAndSnacks/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Departments/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/biweekly_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/biweekly_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/monthly_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/monthly_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/onetime_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/onetime_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/page_objects/weekly_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/weekly_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/locators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/IndianSauces.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/IndianSauces.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/bbq.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/bbq.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/chaiDepartment.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/chaiDepartment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/indiangrocerybox.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/indiangrocerybox.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/indianmeal.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/indianmeal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/indianseasoningkit.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/indianseasoningkit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page_objects/rotikit.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/page_objects/rotikit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_BBQ.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Departments/testing_BBQ_UI_Plus_Functionality.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_BiweeklyOrder.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Departments/IndianSweetAndSnacks/testing_BiweeklyOrder_Functionality.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_IndianMealKit.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Departments/testing_IndianMealKit_UI_Plus_functionality.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_IndianSauces.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Departments/testing_IndianSauces_UI_Plus_Functionality.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_MealKit.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Departments/testing_MealKit_UI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_chaiDepartment.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Departments/testing_chaiDepartment_UI _Plus_Functionality.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_editItem.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Departments/IndianSweetAndSnacks/testing_editItem_Functionality.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_indianGroceryBox.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Departments/testing_indianGroceryBox_UI_Plus_Functionality.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_indianSeasoningKit.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Departments/testing_indianSeasoningKit_UI_Plus_Functionality.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_maximumItem.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Departments/IndianSweetAndSnacks/testing_maximumItem_Functionality.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_monthlyOrder.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Departments/IndianSweetAndSnacks/testing_monthlyOrder_Functionality.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_onetimeorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Departments/IndianSweetAndSnacks/testing_onetimeorder_Functionality.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_rotiKit.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Departments/testing_rotiKit_UI_Plus_Functionality.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testing_weeklyOrder.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Departments/IndianSweetAndSnacks/testingWeeklyorder_Functionality.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,94 +91,124 @@
       <recent name="$PROJECT_DIR$/tests" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests/Departments/IndianSweetAndSnacks" />
+      <recent name="$PROJECT_DIR$/tests/Departments" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for testing_BiweeklyOrder.TesBIWEEKLYORDER">
-    <configuration name="Python tests for testing_BiweeklyOrder.TesBIWEEKLYORDER" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests for tests.Departments.testing_rotiKit_UI_Plus_Functionality.TesROTIKIT">
+    <configuration name="Python tests for testing_IndianSauces_UI + Functionality.TesINDIANSAUCES" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/Departments" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;testing_BiweeklyOrder.TesBIWEEKLYORDER&quot;" />
+      <option name="_new_target" value="&quot;testing_IndianSauces_UI_Functionality.TesINDIANSAUCES&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for testing_editItem.TesEDITITEM" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for testing_IndianSauces_UI_Functionality.TesINDIANSAUCES" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/Departments" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;testing_editItem.TesEDITITEM&quot;" />
+      <option name="_new_target" value="&quot;testing_IndianSauces_UI_Functionality.TesINDIANSAUCES&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for testing_monthlyOrder.TesMONTHLYORDER" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for testing_IndianSauces_UI_Functionality.TesINDIANSAUCES" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/Departments" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;testing_monthlyOrder.TesMONTHLYORDER&quot;" />
+      <option name="_new_target" value="&quot;testing_IndianSauces_UI_Functionality.TesINDIANSAUCES&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for testing_onetimeorder.TesONETIMEORDER" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for testing_IndianSauces_UI_Plus_Functionality.TesINDIANSAUCES" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/Departments" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;testing_onetimeorder.TesONETIMEORDER&quot;" />
+      <option name="_new_target" value="&quot;testing_IndianSauces_UI_Plus_Functionality.TesINDIANSAUCES&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for testing_weeklyOrder.TesWEEKLYORDER" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for tests.Departments.testing_IndianMealKit_UI_Plus_functionality.TesROTIKIT" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="gitAutomation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/Departments" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;testing_weeklyOrder.TesWEEKLYORDER&quot;" />
+      <option name="_new_target" value="&quot;tests.Departments.testing_IndianMealKit_UI_Plus_functionality.TesROTIKIT&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.Departments.testing_indianSeasoningKit_UI_Plus_Functionality.TesINDIANSEASONING" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="gitAutomation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/Departments" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.Departments.testing_indianSeasoningKit_UI_Plus_Functionality.TesINDIANSEASONING&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.Departments.testing_rotiKit_UI_Plus_Functionality.TesROTIKIT" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="gitAutomation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/Departments" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.Departments.testing_rotiKit_UI_Plus_Functionality.TesROTIKIT&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python tests.Python tests for testing_editItem.TesEDITITEM" />
-      <item itemvalue="Python tests.Python tests for testing_onetimeorder.TesONETIMEORDER" />
-      <item itemvalue="Python tests.Python tests for testing_monthlyOrder.TesMONTHLYORDER" />
-      <item itemvalue="Python tests.Python tests for testing_weeklyOrder.TesWEEKLYORDER" />
-      <item itemvalue="Python tests.Python tests for testing_BiweeklyOrder.TesBIWEEKLYORDER" />
+      <item itemvalue="Python tests.Python tests for testing_IndianSauces_UI_Functionality.TesINDIANSAUCES" />
+      <item itemvalue="Python tests.Python tests for testing_IndianSauces_UI_Plus_Functionality.TesINDIANSAUCES" />
+      <item itemvalue="Python tests.Python tests for tests.Departments.testing_indianSeasoningKit_UI_Plus_Functionality.TesINDIANSEASONING" />
+      <item itemvalue="Python tests.Python tests for tests.Departments.testing_IndianMealKit_UI_Plus_functionality.TesROTIKIT" />
+      <item itemvalue="Python tests.Python tests for tests.Departments.testing_rotiKit_UI_Plus_Functionality.TesROTIKIT" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for testing_BiweeklyOrder.TesBIWEEKLYORDER" />
-        <item itemvalue="Python tests.Python tests for testing_weeklyOrder.TesWEEKLYORDER" />
-        <item itemvalue="Python tests.Python tests for testing_monthlyOrder.TesMONTHLYORDER" />
-        <item itemvalue="Python tests.Python tests for testing_onetimeorder.TesONETIMEORDER" />
-        <item itemvalue="Python tests.Python tests for testing_editItem.TesEDITITEM" />
+        <item itemvalue="Python tests.Python tests for tests.Departments.testing_rotiKit_UI_Plus_Functionality.TesROTIKIT" />
+        <item itemvalue="Python tests.Python tests for tests.Departments.testing_IndianMealKit_UI_Plus_functionality.TesROTIKIT" />
+        <item itemvalue="Python tests.Python tests for tests.Departments.testing_indianSeasoningKit_UI_Plus_Functionality.TesINDIANSEASONING" />
+        <item itemvalue="Python tests.Python tests for testing_IndianSauces_UI_Plus_Functionality.TesINDIANSAUCES" />
+        <item itemvalue="Python tests.Python tests for testing_IndianSauces_UI_Functionality.TesINDIANSAUCES" />
       </list>
     </recent_temporary>
   </component>
@@ -169,13 +220,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616787846440</updated>
-    </task>
-    <task id="LOCAL-00371" summary="Merge remote-tracking branch 'github/main' into main">
-      <created>1635681704293</created>
-      <option name="number" value="00371" />
-      <option name="presentableId" value="LOCAL-00371" />
-      <option name="project" value="LOCAL" />
-      <updated>1635681704293</updated>
     </task>
     <task id="LOCAL-00372" summary="Merge remote-tracking branch 'github/main' into main">
       <created>1635682192551</created>
@@ -513,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640623032755</updated>
     </task>
-    <option name="localTasksCounter" value="420" />
+    <task id="LOCAL-00420" summary="Merge remote-tracking branch 'github/main' into main">
+      <created>1640624088785</created>
+      <option name="number" value="00420" />
+      <option name="presentableId" value="LOCAL-00420" />
+      <option name="project" value="LOCAL" />
+      <updated>1640624088785</updated>
+    </task>
+    <option name="localTasksCounter" value="421" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">

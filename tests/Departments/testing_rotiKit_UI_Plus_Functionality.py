@@ -12,12 +12,12 @@ class TesROTIKIT(ui_test_class.UVXVXIIIClass):
     actual1 = "Our Roti Categories"
     actual2 = " Order Roti Kit"
     actual3 = "Search for products..."
-    actual4 = "Whole Wheat Roti"
+    actual4 = "Roti"
     actual5 = "Fresh Tawa Roti"
-    actual6 = "Roti"
+    actual6 = "Whole Wheat Roti"
     actual7 = "Multigrain Roti"
-    actual8 = "Rotla"
-    actual9 = "Paratha"
+    actual8 = "Paratha"
+    actual9 = "Rotla"
     actual10 = "Thepla"
     actual11 = "Specialty Roti"
     actual12 = "Bhakhri"
@@ -28,8 +28,9 @@ class TesROTIKIT(ui_test_class.UVXVXIIIClass):
     actual17 = "Free Delivery"
     actual18 = "What are Rotis?"
     actual19 = "#446084"
-    actual20 = "Free Delivery on Minimum Order"
-    actual21 = "Indian Bread Roti Kit"
+    actual20 = "Expedite Delivery (Deliver in 1-2 business days)"
+    actual21 = " Indian Bread Roti Kit"
+    actual22 = "Thank you"
 
     @classmethod
     def setUpClass(cls):
@@ -40,17 +41,53 @@ class TesROTIKIT(ui_test_class.UVXVXIIIClass):
         super(TesROTIKIT, cls).tearDownClass()
         cls.driver.quit()
 
+    def BactToPage(self):
+        self.roti_page.click_quicklly()
+        self.roti_page.zip("60611")
+        self.roti_page.submit_zip()
+        time.sleep(2)
+        for i in range(4):
+            time.sleep(1)
+            self.roti_page.click_RightArrow()
+        self.roti_page.click_MealKit()
+        self.roti_page.click_rotiKit()
+
+    def Payment(self):
+        self.roti_page.click_buildABox()
+        self.roti_page.click_AddRoti()
+        for i in range(4):
+            time.sleep(1)
+            self.roti_page.click_plusRoti()
+        time.sleep(2)
+        self.roti_page.click_AddToCartRoti()
+        self.roti_page.click_MiniCart()
+        self.roti_page.click_Checkout()
+        self.roti_page.click_Checkout2()
+        self.roti_page.click_payment1()
+        time.sleep(5)
+        self.roti_page.click_Pay()
+
+    def Signin(self):
+        self.roti_page.select_dropdown()
+        self.roti_page.click_signin()
+        self.roti_page.EnterEmail("testaccount@quicklly.com")
+        self.roti_page.EnterPass("123456")
+        self.roti_page.click_login()
+
     def test_EnterZipCode(self):
         self.roti_page.zip("60611")
         self.roti_page.submit_zip()
+        self.Signin()
         search = self.roti_page.get_attribute(RotiKit.SearchForProducts, 'placeholder')
         print(search)
         self.assertEqual(self.actual3, search)
 
     def test_clickIndian(self):
-        for i in range(3):
+        time.sleep(2)
+        for i in range(4):
             time.sleep(1)
             self.roti_page.click_RightArrow()
+            time.sleep(1)
         self.roti_page.click_MealKit()
         self.roti_page.click_rotiKit()
         label = self.roti_page.get_attribute(RotiKit.RotiLabel, 'innerHTML')
@@ -86,11 +123,6 @@ class TesROTIKIT(ui_test_class.UVXVXIIIClass):
         label = self.roti_page.get_attribute(RotiKit.ParathaLabel, 'innerHTML')
         print(label)
         self.assertEqual(self.actual9, label)
-
-    # def test_labelThepla(self):
-    #     label = self.roti_page.get_attribute(RotiKit.TheplaLabel, 'innerHTML')
-    #     print(label)
-    #     self.assertEqual(self.actual10, label)
 
     def test_labelSpecialRoti(self):
         label = self.roti_page.get_attribute(RotiKit.SpecialRotiLabel, 'innerHTML')
@@ -129,97 +161,42 @@ class TesROTIKIT(ui_test_class.UVXVXIIIClass):
         self.assertEqual(self.actual18, label)
 
     def test_weekly(self):
+        self.BactToPage()
         self.roti_page.click_weekly()
-        colorLabel = self.driver.find_element_by_css_selector(
-            '#searchhide > section.productsection > div > div > div.organicproductcontent > div.divcustomtabpanels > ul > li.weekly.tablinks').value_of_css_property(
-            'background-color')
-        hex = Color.from_string(colorLabel).hex
-        print(hex)
-        self.assertEqual(self.actual19, hex)
+        self.Payment()
+        thankYou = self.roti_page.get_attribute(RotiKit.ThankYou, 'innerHTML')
+        print(thankYou)
+        self.assertEqual(self.actual22, thankYou)
 
     def test_clickbiweekly(self):
-        self.roti_page.click_OrderRotiKit()
         self.roti_page.click_Biweekly()
-        colorLabel = self.driver.find_element_by_css_selector(
-            '#searchhide > section.productsection > div > div > div.organicproductcontent > div.divcustomtabpanels > ul > li.bi-weekly.tablinks').value_of_css_property(
-            'background-color')
-        hex = Color.from_string(colorLabel).hex
-        print(hex)
-        self.assertEqual(self.actual19, hex)
+        self.Payment()
+        thankYou = self.roti_page.get_attribute(RotiKit.ThankYou, 'innerHTML')
+        print(thankYou)
+        self.assertEqual(self.actual22, thankYou)
 
     def test_monthly(self):
-        # self.roti_page.click_OIG()
         self.roti_page.click_Monthly()
-        colorLabel = self.driver.find_element_by_css_selector(
-            '#searchhide > section.productsection > div > div > div.organicproductcontent > div.divcustomtabpanels > ul > li.monthly.tablinks').value_of_css_property(
-            'background-color')
-        hex = Color.from_string(colorLabel).hex
-        print(hex)
-        self.assertEqual(self.actual19, hex)
+        self.Payment()
+        thankYou = self.roti_page.get_attribute(RotiKit.ThankYou, 'innerHTML')
+        print(thankYou)
+        self.assertEqual(self.actual22, thankYou)
 
     def test_once(self):
+        self.BactToPage()
         self.roti_page.click_Once()
-        colorLabel = self.driver.find_element_by_css_selector(
-            '#searchhide > section.productsection > div > div > div.organicproductcontent > div.divcustomtabpanels > ul > li.one-time.tablinks.active').value_of_css_property(
-            'background-color')
-        hex = Color.from_string(colorLabel).hex
-        print(hex)
-        self.assertEqual(self.actual19, hex)
+        self.Payment()
+        thankYou = self.roti_page.get_attribute(RotiKit.ThankYou, 'innerHTML')
+        print(thankYou)
+        self.assertEqual(self.actual22, thankYou)
 
     def test_labelFreeDeliveryOnMinimumOrder(self):
-        label = self.roti_page.get_attribute(RotiKit.FreeDeiveryOnMinimumOrder, 'innerHTML')
+        label = self.roti_page.get_attribute(RotiKit.FreeDeiveryOnMinimumOrder, 'textContent')
         print(label)
         self.assertEqual(self.actual20, label)
 
-    def test_clickwholeWheat(self):
-        self.roti_page.click_OrderRotiKit()
-        self.roti_page.click_WholeWheat()
-        label = self.roti_page.get_attribute(RotiKit.IndianBread, 'innerHTML')
-        print(label)
-        self.assertEqual(self.actual21, label)
-
-    def test_clickroti(self):
-        self.roti_page.click_OrderRotiKit()
-        self.roti_page.click_roti()
-        label = self.roti_page.get_attribute(RotiKit.IndianBread, 'innerHTML')
-        print(label)
-        self.assertEqual(self.actual21, label)
-
-    def test_clickmultiGrain(self):
-        self.roti_page.click_OrderRotiKit()
-        self.roti_page.click_multiGrain()
-        label = self.roti_page.get_attribute(RotiKit.IndianBread, 'innerHTML')
-        print(label)
-        self.assertEqual(self.actual21, label)
-
-    def test_clickrotla(self):
-        self.roti_page.click_OrderRotiKit()
-        self.roti_page.click_rotla()
-        label = self.roti_page.get_attribute(RotiKit.IndianBread, 'innerHTML')
-        print(label)
-        self.assertEqual(self.actual21, label)
-
-    def test_clickparatha(self):
-        self.roti_page.click_OrderRotiKit()
-        self.roti_page.click_Paratha()
-        label = self.roti_page.get_attribute(RotiKit.IndianBread, 'innerHTML')
-        print(label)
-        self.assertEqual(self.actual21, label)
-
-    def test_clickspecialRoti(self):
-        self.roti_page.click_OrderRotiKit()
-        self.roti_page.click_SpecialRoti()
-        label = self.roti_page.get_attribute(RotiKit.IndianBread, 'innerHTML')
-        print(label)
-        self.assertEqual(self.actual21, label)
-
-    def test_clickbakhri(self):
-        self.roti_page.click_Bakhri()
-        label = self.roti_page.get_attribute(RotiKit.IndianBread, 'innerHTML')
-        print(label)
-        self.assertEqual(self.actual21, label)
-
     def test_clickbuildABox(self):
+        self.BactToPage()
         self.roti_page.click_buildABox()
         label = self.roti_page.get_attribute(RotiKit.IndianBread, 'innerHTML')
         print(label)

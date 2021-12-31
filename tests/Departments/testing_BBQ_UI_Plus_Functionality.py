@@ -47,9 +47,17 @@ class TesINDIANBBQKIT(ui_test_class.UVXVXVIClass):
         super(TesINDIANBBQKIT, cls).tearDownClass()
         cls.driver.quit()
 
+    def Signin(self):
+        self.bbq_page.select_dropdown()
+        self.bbq_page.click_signin()
+        self.bbq_page.EnterEmail("testaccount@quicklly.com")
+        self.bbq_page.EnterPass("123456")
+        self.bbq_page.click_login()
+
     def test_EnterZipCode(self):
         self.bbq_page.zip("60611")
         self.bbq_page.submit_zip()
+        self.Signin()
         search = self.bbq_page.get_attribute(BBQ.SearchForProducts, 'placeholder')
         print(search)
         self.assertEqual(self.actual3, search)
@@ -219,3 +227,14 @@ class TesINDIANBBQKIT(ui_test_class.UVXVXVIClass):
         label = self.bbq_page.get_attribute(BBQ.Price, 'textContent')
         print(label)
         self.assertEqual(self.actual21, label)
+
+    def test_mpayment(self):
+        time.sleep(2)
+        self.bbq_page.click_MiniCart()
+        self.bbq_page.click_Checkout()
+        self.bbq_page.click_Checkout2()
+        self.bbq_page.click_payment1()
+        time.sleep(5)
+        self.bbq_page.click_Pay()
+        thankYou = self.bbq_page.get_attribute(BBQ.ThankYou, 'innerHTML')
+        print(thankYou)

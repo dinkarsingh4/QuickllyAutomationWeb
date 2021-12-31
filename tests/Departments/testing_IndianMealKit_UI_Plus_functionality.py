@@ -26,6 +26,7 @@ class TesROTIKIT(ui_test_class.UVXVXIVClass):
     actual15 = "Enjoy the comfort of homely Indian food"
     actual16 = " Indian Food Subscription Box"
     actual17 = "Free Delivery"
+    actual18 = "Thank you"
 
     @classmethod
     def setUpClass(cls):
@@ -36,9 +37,58 @@ class TesROTIKIT(ui_test_class.UVXVXIVClass):
         super(TesROTIKIT, cls).tearDownClass()
         cls.driver.quit()
 
+    def BactToPage(self):
+        self.mealkit_page.click_quicklly()
+        self.mealkit_page.zip("60611")
+        self.mealkit_page.submit_zip()
+        time.sleep(2)
+        for i in range(4):
+            time.sleep(1)
+            self.mealkit_page.click_RightArrow()
+        self.mealkit_page.click_MealKit()
+        self.mealkit_page.click_indianMealKit()
+
+    def Payment(self):
+        self.mealkit_page.click_selectProduct()
+        self.mealkit_page.click_AddBhindiMasala()
+        time.sleep(2)
+        for i in range(5):
+            time.sleep(1)
+            self.mealkit_page.plusBhindiMasala()
+        self.mealkit_page.click_AddToCart()
+        time.sleep(2)
+        self.mealkit_page.click_MiniCart()
+        self.mealkit_page.click_Checkout()
+        time.sleep(10)
+        self.mealkit_page.click_selectStore()
+        time.sleep(5)
+        self.mealkit_page.click_CurryBox()
+        time.sleep(5)
+        self.mealkit_page.click_selectDate()
+        time.sleep(5)
+        self.mealkit_page.click_Date()
+        time.sleep(5)
+        self.mealkit_page.click_ChangeSlot()
+        time.sleep(2)
+        self.mealkit_page.click_MiniCart()
+        self.mealkit_page.click_Checkout()
+        self.mealkit_page.click_Checkout2()
+        time.sleep(5)
+        self.mealkit_page.click_payment1()
+        time.sleep(5)
+        self.mealkit_page.click_Pay()
+
+    def Signin(self):
+        self.mealkit_page.select_dropdown()
+        self.mealkit_page.click_signin()
+        self.mealkit_page.EnterEmail("testaccount@quicklly.com")
+        self.mealkit_page.EnterPass("123456")
+        self.mealkit_page.click_login()
+
     def test_EnterZipCode(self):
         self.mealkit_page.zip("60611")
         self.mealkit_page.submit_zip()
+        self.Signin()
         search = self.mealkit_page.get_attribute(IndianMealKit.SearchForProducts, 'placeholder')
         print(search)
         self.assertEqual(self.actual3, search)
@@ -124,27 +174,24 @@ class TesROTIKIT(ui_test_class.UVXVXIVClass):
 
     def test_clickbiweekly(self):
         self.mealkit_page.click_Biweekly()
-        colorLabel = self.driver.find_element_by_css_selector(
-            '#searchhide > section.productsection > div > div > div.organicproductcontent.icecreamsubscription.firstpp1 > div > div.divcustomtabpanels > ul > li.bi-weekly.tablinks').value_of_css_property('background-color')
-        hex = Color.from_string(colorLabel).hex
-        print(hex)
-        self.assertEqual(self.actual13, hex)
+        self.Payment()
+        thankYou = self.mealkit_page.get_attribute(IndianMealKit.ThankYou, 'innerHTML')
+        print(thankYou)
+        self.assertEqual(self.actual18, thankYou)
 
     def test_clickmonthly(self):
         self.mealkit_page.click_Monthly()
-        colorLabel = self.driver.find_element_by_css_selector(
-            '#searchhide > section.productsection > div > div > div.organicproductcontent.icecreamsubscription.firstpp1 > div > div.divcustomtabpanels > ul > li.monthly.tablinks').value_of_css_property('background-color')
-        hex = Color.from_string(colorLabel).hex
-        print(hex)
-        self.assertEqual(self.actual13, hex)
+        self.Payment()
+        thankYou = self.mealkit_page.get_attribute(IndianMealKit.ThankYou, 'innerHTML')
+        print(thankYou)
+        self.assertEqual(self.actual18, thankYou)
 
     def test_clickonce(self):
         self.mealkit_page.click_Once()
-        colorLabel = self.driver.find_element_by_css_selector(
-            '#searchhide > section.productsection > div > div > div.organicproductcontent.icecreamsubscription.firstpp1 > div > div.divcustomtabpanels > ul > li.one-time.tablinks').value_of_css_property('background-color')
-        hex = Color.from_string(colorLabel).hex
-        print(hex)
-        self.assertEqual(self.actual13, hex)
+        self.Payment()
+        thankYou = self.mealkit_page.get_attribute(IndianMealKit.ThankYou, 'innerHTML')
+        print(thankYou)
+        self.assertEqual(self.actual18, thankYou)
 
     def test_clickweekly1(self):
         self.mealkit_page.click_weekly2()
@@ -155,6 +202,7 @@ class TesROTIKIT(ui_test_class.UVXVXIVClass):
         self.assertEqual(self.actual13, hex)
 
     def test_clickbiweekly2(self):
+        self.BactToPage()
         self.mealkit_page.click_Biweekly2()
         colorLabel = self.driver.find_element_by_css_selector(
             '#searchhide > section.productsection > div > div > div.organicproductcontent.icecreamsubscription.firstpp2 > div > div.divcustomtabpanels > ul > li.bi-weekly.tablinks').value_of_css_property('background-color')
@@ -163,6 +211,7 @@ class TesROTIKIT(ui_test_class.UVXVXIVClass):
         self.assertEqual(self.actual13, hex)
 
     def test_clickmonthly2(self):
+        self.BactToPage()
         self.mealkit_page.click_Monthly2()
         colorLabel = self.driver.find_element_by_css_selector(
             '#searchhide > section.productsection > div > div > div.organicproductcontent.icecreamsubscription.firstpp2 > div > div.divcustomtabpanels > ul > li.monthly.tablinks').value_of_css_property('background-color')
@@ -171,6 +220,7 @@ class TesROTIKIT(ui_test_class.UVXVXIVClass):
         self.assertEqual(self.actual13, hex)
 
     def test_clickonce2(self):
+        self.BactToPage()
         self.mealkit_page.click_Once2()
         colorLabel = self.driver.find_element_by_css_selector(
             '#searchhide > section.productsection > div > div > div.organicproductcontent.icecreamsubscription.firstpp2 > div > div.divcustomtabpanels > ul > li.one-time.tablinks.active').value_of_css_property('background-color')

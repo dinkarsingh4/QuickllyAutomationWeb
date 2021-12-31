@@ -27,6 +27,7 @@ class TesINDIANGROCERY(ui_test_class.UVXVXIIClass):
     actual16 = "Order Customized Organic Grocery Box"
     actual17 = "#f9660d"
     actual18 = "Organic Products"
+    actual19 = "Thank you"
 
     @classmethod
     def setUpClass(cls):
@@ -37,9 +38,40 @@ class TesINDIANGROCERY(ui_test_class.UVXVXIIClass):
         super(TesINDIANGROCERY, cls).tearDownClass()
         cls.driver.quit()
 
+    def BactToPage(self):
+        self.grocerybox_page.click_quicklly()
+        self.grocerybox_page.zip("60611")
+        self.grocerybox_page.submit_zip()
+        time.sleep(2)
+        for i in range(4):
+            time.sleep(1)
+            self.grocerybox_page.click_RightArrow()
+        self.grocerybox_page.click_MealKit()
+        self.grocerybox_page.click_indianGrocery()
+
+    def Payment(self):
+        self.grocerybox_page.click_buildABox()
+        self.grocerybox_page.click_AddTurmeric()
+        self.grocerybox_page.click_AddToCart()
+        time.sleep(2)
+        self.grocerybox_page.click_MiniCart()
+        self.grocerybox_page.click_Checkout()
+        self.grocerybox_page.click_Checkout2()
+        self.grocerybox_page.click_payment1()
+        time.sleep(5)
+        self.grocerybox_page.click_Pay()
+
+    def Signin(self):
+        self.grocerybox_page.select_dropdown()
+        self.grocerybox_page.click_signin()
+        self.grocerybox_page.EnterEmail("testaccount@quicklly.com")
+        self.grocerybox_page.EnterPass("123456")
+        self.grocerybox_page.click_login()
+
     def test_EnterZipCode(self):
         self.grocerybox_page.zip("60611")
         self.grocerybox_page.submit_zip()
+        self.Signin()
         search = self.grocerybox_page.get_attribute(IndianGroceryBox.SearchForProducts, 'placeholder')
         print(search)
         self.assertEqual(self.actual3, search)
@@ -85,6 +117,7 @@ class TesINDIANGROCERY(ui_test_class.UVXVXIIClass):
         self.assertEqual(self.actual8, label)
 
     def test_labelAuthentic(self):
+        self.BactToPage()
         label = self.grocerybox_page.get_attribute(IndianGroceryBox.Authentic, 'innerHTML')
         print(label)
         self.assertEqual(self.actual9, label)
@@ -125,43 +158,38 @@ class TesINDIANGROCERY(ui_test_class.UVXVXIIClass):
         self.assertEqual(self.actual16, label)
 
     def test_clickweekly(self):
+        self.BactToPage()
         self.grocerybox_page.click_weekly()
-        colorLabel = self.driver.find_element_by_css_selector(
-            '#searchhide > section.productsection > div > div > div.organicproductcontent > div.divcustomtabpanels > ul > li.weekly.tablinks.active').value_of_css_property(
-            'background-color')
-        hex = Color.from_string(colorLabel).hex
-        print(hex)
-        self.assertEqual(self.actual17, hex)
+        self.Payment()
+        thankYou = self.grocerybox_page.get_attribute(IndianGroceryBox.ThankYou, 'innerHTML')
+        print(thankYou)
+        self.assertEqual(self.actual19, thankYou)
 
     def test_clickbiweekly(self):
         self.grocerybox_page.click_Biweekly()
-        colorLabel = self.driver.find_element_by_css_selector(
-            '#searchhide > section.productsection > div > div > div.organicproductcontent > div.divcustomtabpanels > ul > li.bi-weekly.tablinks').value_of_css_property(
-            'background-color')
-        hex = Color.from_string(colorLabel).hex
-        print(hex)
-        self.assertEqual(self.actual17, hex)
+        self.Payment()
+        thankYou = self.grocerybox_page.get_attribute(IndianGroceryBox.ThankYou, 'innerHTML')
+        print(thankYou)
+        self.assertEqual(self.actual19, thankYou)
 
     def test_clickmonthly(self):
         self.grocerybox_page.click_OIG()
         self.grocerybox_page.click_Monthly()
-        colorLabel = self.driver.find_element_by_css_selector(
-            '#searchhide > section.productsection > div > div > div.organicproductcontent > div.divcustomtabpanels > ul > li.monthly.tablinks').value_of_css_property(
-            'background-color')
-        hex = Color.from_string(colorLabel).hex
-        print(hex)
-        self.assertEqual(self.actual17, hex)
+        self.Payment()
+        thankYou = self.grocerybox_page.get_attribute(IndianGroceryBox.ThankYou, 'innerHTML')
+        print(thankYou)
+        self.assertEqual(self.actual19, thankYou)
 
     def test_clickonce(self):
+        self.BactToPage()
         self.grocerybox_page.click_Once()
-        colorLabel = self.driver.find_element_by_css_selector(
-            '#searchhide > section.productsection > div > div > div.organicproductcontent > div.divcustomtabpanels > ul > li.one-time.tablinks').value_of_css_property(
-            'background-color')
-        hex = Color.from_string(colorLabel).hex
-        print(hex)
-        self.assertEqual(self.actual17, hex)
+        self.Payment()
+        thankYou = self.grocerybox_page.get_attribute(IndianGroceryBox.ThankYou, 'innerHTML')
+        print(thankYou)
+        self.assertEqual(self.actual19, thankYou)
 
     def test_clickbuildABox(self):
+        self.BactToPage()
         self.grocerybox_page.click_buildABox()
         label = self.grocerybox_page.get_attribute(IndianGroceryBox.organicProducts, 'innerHTML')
         print(label)
