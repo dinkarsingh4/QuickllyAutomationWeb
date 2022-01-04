@@ -220,6 +220,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/tests/Departments/testing_indianGroceryBox_UI_Plus_Functionality.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/tests/Departments/testing_indianSeasoningKit_UI.py">
           <value>
             <Attribute>

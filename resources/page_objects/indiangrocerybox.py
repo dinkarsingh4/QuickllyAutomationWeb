@@ -99,7 +99,9 @@ class IndianGrocery(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_AddTurmeric(self):
-        self.click(IndianGroceryBox.turmericPowder)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[2]/div[3]/div/div[1]/div[3]/div[1]/a')
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_AddToCart(self):
-        self.click(IndianGroceryBox.AddToCart)
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[3]/div/div/div[3]/button')
+        self.driver.execute_script("arguments[0].click();", element)
