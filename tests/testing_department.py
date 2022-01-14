@@ -12,7 +12,7 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
     depart_page: Department
 
     actual1 = "Thank you"
-    actual2 = "Your account"
+    actual2 = "Your Account"
     actual3 = "Search for products..."
 
     @classmethod
@@ -367,11 +367,10 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         print(ThankYouLabel)
         self.assertEqual(self.actual1, ThankYouLabel)
 
-    # def test_shopWithRecipes(self):
-    #     self.recipes()
-    #     ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
-    #     print(ThankYouLabel)
-    #     self.assertEqual(self.actual1, ThankYouLabel)
+#    def test_shopWithRecipes(self):
+#       ThankYouLabel = self.depart_page.get_attribute(Department.ThankYou, 'innerHTML')
+#         print(ThankYouLabel)
+#         self.assertEqual(self.actual1, ThankYouLabel)
 
     def test_shopWithOrganicGrocery(self):
         self.OrganicGrocery()
