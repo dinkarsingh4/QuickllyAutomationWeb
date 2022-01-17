@@ -256,7 +256,7 @@ class Department:
     Pass = (By.ID, 'password')
     LoginButton = (By.XPATH, '//*[@id="btn-login"]')
     proceed_to_checkOut = (By.ID, 'lnkProceedToCheckout')
-    additem = (By.XPATH, '//*[@id="img_44766"]')
+    additem = (By.XPATH, '//*[@id="img_270"]')
     Pay = (By.ID, 'pay_amount')
     Pot = (By.XPATH, '//*[@id="searchhide"]/div[6]/div/div/div/div/a[12]/img')
     Department = (By.XPATH, '//*[@id="searchhide"]/header/div[2]/div/div[1]/div[1]/span')
