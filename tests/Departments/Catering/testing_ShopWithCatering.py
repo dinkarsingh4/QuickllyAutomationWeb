@@ -25,10 +25,10 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         cls.driver.quit()
 
     def Catering(self):
-
+        time.sleep(5)
         self.depart_page.click_LeftArrow()
         self.depart_page.click_Catering()
-        time.sleep(1)
+        time.sleep(2)
         self.depart_page.click_Hyderabad()
         self.depart_page.click_AddBeef()
         self.depart_page.click_AddToCartBeef()
