@@ -145,7 +145,7 @@ class Dept(BasePage):
         self.click(Department.Catering)
 
     def click_Hyderabad(self):
-        element = self.driver.find_element_by_css_selector('#searchhide > div.clsFoodStore > div > div > div:nth-child(1) > a')
+        element = self.driver.find_element_by_css_selector('#Catering > div > div:nth-child(1) > a')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_AddBeef(self):
