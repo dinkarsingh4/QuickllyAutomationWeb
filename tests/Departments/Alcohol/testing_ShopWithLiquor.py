@@ -25,6 +25,7 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         cls.driver.quit()
 
     def Liquor(self):
+        time.sleep(5)
         self.depart_page.click_Liquor()
         self.depart_page.click_beer()
         self.depart_page.click_classicLime()
