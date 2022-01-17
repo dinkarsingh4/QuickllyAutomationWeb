@@ -25,9 +25,9 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         cls.driver.quit()
 
     def food(self):
-        time.sleep(2)
+        time.sleep(3)
         self.depart_page.click_food()
-        time.sleep(2)
+        time.sleep(5)
         self.depart_page.click_MakkiFood()
         self.depart_page.click_addTenders()
         self.depart_page.click_AddToCartTenders()
