@@ -59,7 +59,7 @@ class Dept(BasePage):
 
     def click_additem(self):
         self.scroll_to_element(Department.additem)
-        element = self.driver.find_element_by_xpath('//*[@id="img_44766"]')
+        element = self.driver.find_element_by_xpath('//*[@id="img_270"]')
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_Pay(self):
