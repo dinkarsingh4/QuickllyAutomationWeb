@@ -34,7 +34,6 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
         self.depart_page.click_AddAlooSam()
         self.depart_page.click_AddtoCartAlooSam()
         time.sleep(4)
-        self.depart_page.click_timeOfDeliveryAlooSam()
         self.depart_page.click_submitAlooSam()
         self.depart_page.click_MiniCart()
         self.depart_page.click_Checkout()
