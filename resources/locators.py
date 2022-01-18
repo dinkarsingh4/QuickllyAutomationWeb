@@ -300,6 +300,8 @@ class Department:
     MealKit = (By.XPATH, '/html/body/header/div[2]/div/div[1]/div[1]/div/div/ul/li[9]/a')
     CuminClub = (By.XPATH, '//*[@id="home"]/div/div[4]/div/a/div/img')
     MakkahCafe = (By.XPATH, '//*[@id="load_data"]/div[7]/a')
+    Aloosam = (By.XPATH, '//*[@id="load_data"]/div[2]/div/div[2]/a')
+    submitAlooSam = (By.XPATH, '//*[@id="dvDialog-DateTime"]/div/div[2]/a')
     selectMealKit = (By.XPATH, '//*[@id="meal-kit"]/div[2]/div[1]/form/a')
     AddPapad = (By.XPATH, '/html/body/div[5]/div/div/div[1]/div[3]/div[3]/a')
     plusPapad = (By.XPATH, '/html/body/div[6]/div/div/div[1]/p/a/span[3]')
