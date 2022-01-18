@@ -27,6 +27,7 @@ class TesDEPARTMENT(ui_test_class.UVIIClass):
     def Liquor(self):
         time.sleep(5)
         self.depart_page.click_Liquor()
+        time.sleep(2)
         self.depart_page.click_beer()
         self.depart_page.click_Becks12()
         self.depart_page.click_Becks12p12()
