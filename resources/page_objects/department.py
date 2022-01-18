@@ -343,6 +343,25 @@ class Dept(BasePage):
         element = self.driver.find_element_by_xpath('//*[@id="meal-kit"]/div[2]/div[3]/form/a')
         self.driver.execute_script("arguments[0].click();", element)
 
+    def click_MakkahCafe(self):
+        element = self.driver.find_element_by_xpath('//*[@id="load_data"]/div[7]/a')
+        self.driver.execute_script("arguments[0].click();", element)
+
+    def click_AddAlooSam(self):
+        element = self.driver.find_element_by_css_selector('#load_data > div:nth-child(2) > div > div.clsFoodProdCnt > a')
+        self.driver.execute_script("arguments[0].click();", element)
+
+    def click_AddtoCartAlooSam(self):
+        element = self.driver.find_element_by_xpath('//*[@id="dvDialog-Custom"]/div/div[2]/a')
+        self.driver.execute_script("arguments[0].click();", element)
+
+    def click_submitAlooSam(self):
+        self.click(Department.submitMP)
+
+    def click_timeOfDeliveryAlooSam(self):
+        element = self.driver.find_element_by_css_selector('#ddlDeliveryTime > option:nth-child(2)')
+        self.driver.execute_script("arguments[0].click();", element)
+    
     def click_AddMixVegetable(self):
         element = self.driver.find_element_by_xpath(
             '//*[@id="searchhide"]/section[3]/div/div/div[1]/div[1]/div[3]/a')
