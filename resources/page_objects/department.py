@@ -378,20 +378,19 @@ class Dept(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_legalCheckBox(self):
-        element = self.driver.find_element_by_xpath(
-            '//*[@id="dvDialog-DateTime"]/div/div[1]/p[1]/label/input')
+        element = self.driver.find_element_by_css_selector(
+            '#dvDialog-DateTime > div > div.clsContent > p:nth-child(3) > label > input[type=checkbox]')
         self.driver.execute_script("arguments[0].click();", element)
         # self.click(Department.legalCheckBox)
 
     def click_elderCheckBox(self):
-        element = self.driver.find_element_by_xpath(
-            '//*[@id="dvDialog-DateTime"]/div/div[1]/p[2]/label/input')
+        element = self.driver.find_element_by_css_selector(
+            '#dvDialog-DateTime > div > div.clsContent > p:nth-child(4) > label > input[type=checkbox]')
         self.driver.execute_script("arguments[0].click();", element)
         # self.click(Department.elderCheckBox)
 
     def click_submitAlcohol(self):
-        element = self.driver.find_element_by_xpath(
-            '//*[@id="dvDialog-DateTime"]/div/div[2]/a')
+        element = self.driver.find_element_by_css_selector('#dvDialog-DateTime > div > div.clsFooter > a')
         self.driver.execute_script("arguments[0].click();", element)
         # self.click(Department.submitALcohol)
 
