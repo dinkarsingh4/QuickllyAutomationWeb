@@ -302,11 +302,23 @@ class Dept(BasePage):
         element = self.driver.find_element_by_xpath('//*[@id="img_137860"]')
         self.driver.execute_script("arguments[0].click();", element)
 
-    def click_AddToCartBeer(self):
+    def click_AddToCartLime(self):
         element = self.driver.find_element_by_xpath('//*[@id="storeproductlist"]/div/div[2]/a')
         self.driver.execute_script("arguments[0].click();", element)
-        # self.click(Department.AddToCartBeer)
+        # self.click(Department.AddToCartLime)
+    
+    def click_Becks12(self):
+        element = self.driver.find_element_by_xpath('//*[@id="img_137801"]')
+        self.driver.execute_script("arguments[0].click();", element)
+    
+    def click_Becks12p12(self):
+        element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[2]/div[1]/div/div[2]/div/ul/li[2]/span[2]')
+        self.driver.execute_script("arguments[0].click();", element)
 
+    def click_AddToCartBecks12(self):
+        element = self.driver.find_element_by_xpath('//*[@id="storeproductlist"]/div[2]/div[2]/a')
+        self.driver.execute_script("arguments[0].click();", element)
+    
     def click_ChaiAndCoffee(self):
         element = self.driver.find_element_by_xpath('//*[@id="searchhide"]/div[6]/div/div/div/div/a[4]/img')
         self.driver.execute_script("arguments[0].click();", element)
