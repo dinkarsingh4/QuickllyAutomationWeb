@@ -356,7 +356,7 @@ class Dept(BasePage):
         self.driver.execute_script("arguments[0].click();", element)
 
     def click_submitAlooSam(self):
-        self.click(Department.submitMP)
+        self.click(Department.submitAlooSam)
 
     def click_timeOfDeliveryAlooSam(self):
         element = self.driver.find_element_by_css_selector('#ddlDeliveryTime > option:nth-child(2)')
