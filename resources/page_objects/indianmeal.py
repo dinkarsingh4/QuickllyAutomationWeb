@@ -143,6 +143,9 @@ class IndianMeal(BasePage):
     def click_selectStore(self):
         self.click(IndianMealKit.selectStore)
 
+    def click_ProceedtoCheckout(self):
+        self.click(IndianMealKit.ProceedtoCheckout)
+
     def click_CurryBox(self):
         self.click(IndianMealKit.curryBox)
 
