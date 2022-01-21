@@ -896,6 +896,7 @@ class IndianMealKit:
     curryBox = (By.XPATH, '//*[@id="selctProductStore"]/option[2]')
     selectDate = (By.XPATH, '//*[@id="ddlDeliveryDateChange"]')
     chooseDate = (By.XPATH, '//*[@id="ddlDeliveryDateChange"]/option[2]')
+    ProceedtoCheckout = (By.XPATH, '//*[@id="dvFoodSuggestPopup"]/div/div/a')
 
 class IndianMealKitAndSauces:
     enter_zip = (By.ID, 'zipcode')
